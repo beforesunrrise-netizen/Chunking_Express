@@ -18,7 +18,7 @@ class Language(Enum):
 
 
 class ChunkingStrategy(Enum):
-    """청킹 전략 유형"""
+    FIXED_SIZE = "fixed_size"
     SEMANTIC = "semantic"
     KEYWORD = "keyword"
     QUERY_AWARE = "query_aware"
@@ -136,7 +136,7 @@ class LoggingConfig:
 @dataclass
 class DatasetConfig:
     """데이터셋 설정"""
-    data_path: str = "data/squad_train_100_random.json"
+    data_path: str = "data/rag_squad_train_100_samples.json"
     train_split: float = 0.8
     val_split: float = 0.1
     test_split: float = 0.1

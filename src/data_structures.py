@@ -79,6 +79,7 @@ class Chunk:
 @dataclass
 class RAGResponse:
     """RAG 응답 구조"""
+    query: Query
     query_id: str
     response: str
     chunks_used: List[Chunk]
@@ -87,6 +88,7 @@ class RAGResponse:
     generation_time: float = 0.0
     model_used: str = ""
     metadata: Dict[str, Any] = field(default_factory=dict)
+
 
     def get_chunk_ids(self) -> List[str]:
         """사용된 청크 ID 목록 반환"""
@@ -122,6 +124,8 @@ class EvaluationResult:
     hallucination_auroc: float
     context_relevance_rmse: float
     utilization_rmse: float
+    recall_at_k: float   # <--- 수정된 부분
+    mrr: float           # <--- 수정된 부분
     num_samples: int = 0
     ensemble_method: Optional[EnsembleMethod] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
@@ -135,6 +139,8 @@ class EvaluationResult:
             "hallucination_auroc": self.hallucination_auroc,
             "context_relevance_rmse": self.context_relevance_rmse,
             "utilization_rmse": self.utilization_rmse,
+            "recall_at_k": self.recall_at_k, # <--- 수정된 부분
+            "mrr": self.mrr,                 # <--- 수정된 부분
             "num_samples": self.num_samples,
             "ensemble_method": self.ensemble_method.value if self.ensemble_method else None,
             "metadata": self.metadata,
@@ -144,12 +150,16 @@ class EvaluationResult:
     def get_overall_score(self) -> float:
         """전체 점수 계산 (정규화된 점수)"""
         # AUROC는 높을수록 좋고, RMSE는 낮을수록 좋음
-        auroc_score = self.hallucination_auroc  # 0~1 범위
-        rmse_score = 1 - min(self.context_relevance_rmse, 1)  # 0~1로 정규화
-        util_score = 1 - min(self.utilization_rmse, 1)  # 0~1로 정규화
+        auroc_score = self.hallucination_auroc
+        rmse_score = 1 - min(self.context_relevance_rmse, 1)
+        util_score = 1 - min(self.utilization_rmse, 1)
 
-        # 가중 평균 (각 지표의 중요도를 동일하게 설정)
-        return (auroc_score + rmse_score + util_score) / 3
+        # 새로운 지표 추가 (Recall@K, MRR) - 둘 다 높을수록 좋음
+        recall_score = self.recall_at_k
+        mrr_score = self.mrr
+
+        # 가중 평균 (모든 지표의 중요도를 동일하게 설정)
+        return (auroc_score + rmse_score + util_score + recall_score + mrr_score) / 5
 
 
 @dataclass

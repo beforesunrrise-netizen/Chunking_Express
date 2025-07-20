@@ -59,13 +59,17 @@ class FusionEnsemble(BaseEnsemble):
             avg_confidence = sum(r.confidence for r in responses) / len(responses)
             fusion_confidence = min(0.95, avg_confidence * 1.1)  # 융합 보너스
 
+            # 원본 query 객체 가져오기
+            original_query = responses[0].query
+
             # 융합된 응답 생성
             fused_response = RAGResponse(
-                query_id=responses[0].query_id,
+                query=original_query, # <--- 수정된 부분
+                query_id=original_query.id, # <--- 수정된 부분
                 response=fused_response_text,
                 chunks_used=all_chunks,
                 confidence=fusion_confidence,
-                strategy=ChunkingStrategy.SEMANTIC,  # 기본값
+                strategy=ChunkingStrategy.SEMANTIC,  # 앙상블은 대표 전략을 가짐
                 generation_time=sum(r.generation_time for r in responses) / len(responses),
                 model_used=self.model,
                 metadata={
