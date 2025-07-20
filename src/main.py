@@ -35,6 +35,8 @@ from src.ensembles import (
 # 데이터 처리 및 통계
 from src.data_processor import DataProcessor
 from src.statistical_analyzer import StatisticalAnalyzer
+from src.embedders.openai_embedder import OpenAIEmbedderWithStorage
+from src.storage.chunk_storage import ChunkEmbeddingStorage
 
 
 # from src.visualization import ResultsVisualizer  <- 시각화 클래스 제거
@@ -74,6 +76,10 @@ class RAGExperimentPipeline:
             config=self.config.to_dict(),
             start_time=datetime.now()
         )
+
+        # 청킹 임베딩 저장소 초기화 (새로 추가)
+        self.enable_embedding_storage = False  # 기본값은 False
+        self.storage_path = "./src/data"
 
     async def run_full_experiment(self) -> Dict[str, Any]:
         """전체 실험 실행"""
@@ -176,8 +182,18 @@ class RAGExperimentPipeline:
             ChunkingStrategy.KEYWORD: KeywordChunker(language),
             ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language)
         }
+
+        # 임베더 선택 - 저장 기능 활성화 여부에 따라
+        if self.enable_embedding_storage:
+            embedder = OpenAIEmbedderWithStorage(
+                language=language,
+                enable_storage=True,
+                storage_path=self.storage_path
+            )
+        else:
+            embedder = OpenAIEmbedder(language)
+
         # 나머지는 동일...
-        embedder = OpenAIEmbedder(language)
         retriever = VectorRetriever(embedder)
         generator = GPTGenerator(language)
         evaluator = RAGEvaluator(language)
@@ -191,7 +207,6 @@ class RAGExperimentPipeline:
             "generator": generator, "evaluator": evaluator, "ensembles": ensembles
         }
 
-
     async def _run_single_strategy(
             self,
             strategy: ChunkingStrategy,
@@ -200,11 +215,12 @@ class RAGExperimentPipeline:
             components: Dict[str, Any],
             language: Language
     ) -> EvaluationResult:
-        """단일 청킹 전략 실행 (시간 측정 포함)"""
+        """단일 청킹 전략 실행 (시간 측정 및 임베딩 저장 포함)"""
         import time
         strategy_start_time = time.time()
 
         chunker = components["chunkers"][strategy]
+        embedder = components["embedder"]
         retriever = components["retriever"]
         generator = components["generator"]
         evaluator = components["evaluator"]
@@ -217,7 +233,8 @@ class RAGExperimentPipeline:
         processing_times = {
             "chunking": [],
             "retrieval": [],
-            "generation": []
+            "generation": [],
+            "embedding_storage": []  # 새로 추가
         }
 
         for i in range(sample_size):
@@ -233,6 +250,24 @@ class RAGExperimentPipeline:
 
                 if not chunks:
                     continue
+
+                # 임베딩 저장 (저장 기능이 활성화된 경우)
+                if self.enable_embedding_storage and isinstance(embedder, OpenAIEmbedderWithStorage):
+                    storage_start = time.time()
+
+                    # 임베딩 생성 및 저장
+                    embeddings = await embedder.embed_and_store_chunks(
+                        chunks=chunks,
+                        chunk_type=strategy.value,
+                        document_id=doc.id,
+                        additional_metadata={
+                            "run_id": self.run_id,
+                            "language": language.value,
+                            "query_id": query.id if strategy == ChunkingStrategy.QUERY_AWARE else None
+                        }
+                    )
+
+                    processing_times["embedding_storage"].append(time.time() - storage_start)
 
                 # 검색 시간 측정
                 retrieval_start = time.time()
@@ -263,8 +298,11 @@ class RAGExperimentPipeline:
                 "avg_chunking_time": np.mean(processing_times["chunking"]) if processing_times["chunking"] else 0,
                 "avg_retrieval_time": np.mean(processing_times["retrieval"]) if processing_times["retrieval"] else 0,
                 "avg_generation_time": np.mean(processing_times["generation"]) if processing_times["generation"] else 0,
+                "avg_embedding_storage_time": np.mean(processing_times["embedding_storage"]) if processing_times[
+                    "embedding_storage"] else 0,
                 "evaluation_time": eval_time,
-                "samples_processed": len(responses)
+                "samples_processed": len(responses),
+                "embedding_storage_enabled": self.enable_embedding_storage
             })
 
             # 상세 로그 출력
@@ -274,6 +312,11 @@ class RAGExperimentPipeline:
                 f"처리 샘플: {len(responses)}개, "
                 f"평균 처리 시간: {eval_result.metadata['total_time_seconds'] / len(responses):.2f}초/샘플"
             )
+
+            if self.enable_embedding_storage:
+                logger.info(
+                    f"임베딩 저장 시간: {eval_result.metadata['avg_embedding_storage_time']:.2f}초/샘플"
+                )
 
             return eval_result
 
@@ -332,7 +375,7 @@ class RAGExperimentPipeline:
             results: List[EvaluationResult],
             analysis: Dict[str, Any]
     ):
-        """결과 저장 (시각화 제외, 데이터셋 이름으로 하위 폴더 생성)"""
+        """결과 저장 (임베딩 저장소 통계 포함)"""
         # 데이터셋 파일 경로에서 이름만 추출 (예: "squad_train_100_random")
         dataset_name = Path(self.config.dataset.data_path).stem
 
@@ -349,14 +392,27 @@ class RAGExperimentPipeline:
         with open(results_dir / "analysis_results.json", "w", encoding="utf-8") as f:
             json.dump(analysis, f, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder)
 
-        # 3. 시각화 저장 (제거됨)
+        # 3. 임베딩 저장소 통계 저장 (새로 추가)
+        if self.enable_embedding_storage:
+            from src.storage.chunk_storage import ChunkEmbeddingStorage
+            storage = ChunkEmbeddingStorage(self.storage_path)
+            storage_stats = storage.get_statistics()
+            with open(results_dir / "embedding_storage_stats.json", "w", encoding="utf-8") as f:
+                json.dump(storage_stats, f, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder)
+
+            logger.info(f"임베딩 저장소 통계: {storage_stats['total_chunks']}개 청크, "
+                        f"{storage_stats['storage_info']['total_size_mb']:.2f} MB")
 
         # 4. 실험 메타데이터 저장
         experiment_metadata = {
             "run_id": self.run_id,
             "config": self.config.to_dict(),
             "summary": self.experiment_run.get_summary(),
-            "errors": self.experiment_run.errors
+            "errors": self.experiment_run.errors,
+            "embedding_storage": {
+                "enabled": self.enable_embedding_storage,
+                "path": self.storage_path if self.enable_embedding_storage else None
+            }
         }
         with open(results_dir / "experiment_metadata.json", "w", encoding="utf-8") as f:
             json.dump(experiment_metadata, f, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder)
@@ -381,7 +437,7 @@ class RAGExperimentPipeline:
 
         # 최고 성능과 baseline 비교
         improvement = ((
-                                   best_result.hallucination_auroc - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
+                               best_result.hallucination_auroc - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
 
         # 각 전략별 baseline 대비 개선율 계산
         strategy_improvements = {}
@@ -410,7 +466,6 @@ class RAGExperimentPipeline:
             "total_duration": self.experiment_run.get_duration()
         }
         return summary
-
 
 class DataProcessor:
     """데이터 처리 클래스"""
@@ -528,34 +583,99 @@ async def main():
         logger.info("실험 종료")
 
 
+async def search_embeddings_demo():
+    """저장된 임베딩에서 유사 청크 검색 데모"""
+    storage = ChunkEmbeddingStorage("./src/data")
+    embedder = OpenAIEmbedderWithStorage(
+        language=Language.ENGLISH,
+        storage_path="./src/data"
+    )
+
+    # 검색 쿼리
+    query = "What is the main concept discussed in this document?"
+
+    logger.info(f"\n=== 임베딩 검색 데모 ===")
+    logger.info(f"검색 쿼리: {query}")
+
+    # 유사 청크 검색
+    similar_chunks = await embedder.search_similar_chunks(
+        query=query,
+        top_k=5,
+        threshold=0.7
+    )
+
+    # 결과 출력
+    logger.info(f"\n검색 결과 (상위 5개):")
+    for i, result in enumerate(similar_chunks, 1):
+        logger.info(f"\n{i}. 문서: {result['document_id']}, 청킹 타입: {result['chunk_type']}")
+        logger.info(f"   유사도: {result['similarity']:.3f}")
+        logger.info(f"   내용: {result['chunk']['content'][:200]}...")
+
+
 if __name__ == "__main__":
-    # --- 수정 시작 ---
     import argparse
     from pathlib import Path
 
-    # 1. 터미널에서 인자를 받을 수 있도록 파서(parser) 설정
     parser = argparse.ArgumentParser(description="RAG 청킹 전략 비교 연구")
     parser.add_argument(
         "--data_path",
         type=str,
-        # 사용자가 별도 경로를 입력하지 않으면 config 파일의 기본값을 사용
         default=config.dataset.data_path,
         help=f"실험에 사용할 데이터셋 파일 경로입니다. (기본값: {config.dataset.data_path})"
     )
+
+    # 새로운 옵션 추가
+    parser.add_argument(
+        "--enable_embedding_storage",
+        action="store_true",
+        help="청킹별 임베딩을 파일로 저장합니다."
+    )
+    parser.add_argument(
+        "--storage_path",
+        type=str,
+        default="./src/data",
+        help="임베딩 저장 경로 (기본값: ./src/data)"
+    )
+
     args = parser.parse_args()
 
-    # 2. 프로그램 설정(config)을 터미널에서 입력받은 값으로 업데이트
-    # 이 한 줄을 통해 프로그램 실행 시 동적으로 데이터셋 경로가 변경됩니다.
     config.dataset.data_path = args.data_path
-
     logger.info(f"실험에 사용될 데이터셋: {config.dataset.data_path}")
-    # --- 수정 끝 ---
 
     if not config.api.openai_api_key:
         print("오류: OPENAI_API_KEY 환경 변수가 설정되지 않았습니다.")
         exit(1)
 
-    # 이제 프로그램의 나머지 부분은 업데이트된 데이터 경로를 사용하게 됩니다.
-    asyncio.run(main())
 
-# python main.py --data_path "data/new_dataset.json"
+    # main() 함수 실행 전에 pipeline 설정
+    async def main_with_storage():
+        pipeline = RAGExperimentPipeline()
+        pipeline.enable_embedding_storage = args.enable_embedding_storage
+        pipeline.storage_path = args.storage_path
+
+        logger.info("=" * 50)
+        logger.info("RAG 청킹 전략 비교 연구 시작 (Baseline 포함)")
+        if args.enable_embedding_storage:
+            logger.info(f"임베딩 저장 활성화: {args.storage_path}")
+        logger.info("=" * 50)
+
+        try:
+            results = await pipeline.run_full_experiment()
+            # 기존 결과 출력 코드...
+            print("\n" + "=" * 50)
+            print("실험 결과 요약")
+            print("=" * 50)
+            summary = results["summary"]
+            if summary:
+                print(f"Baseline 전략: {summary['baseline_strategy']}")
+                print(f"Baseline AUROC: {summary['baseline_auroc']:.3f}")
+                # ... 나머지 출력 코드
+        except Exception as e:
+            logger.error(f"실험 실패: {e}")
+            raise
+        finally:
+            logger.info("실험 종료")
+
+
+    # 수정된 main 함수 실행
+    asyncio.run(main_with_storage())
