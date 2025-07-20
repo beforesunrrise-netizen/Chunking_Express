@@ -136,7 +136,7 @@ class LoggingConfig:
 @dataclass
 class DatasetConfig:
     """데이터셋 설정"""
-    data_path: str = "data/rag_squad_train_100_samples.json"
+    data_path: str = "data/rag_squad_train_5_samples.json"
     train_split: float = 0.8
     val_split: float = 0.1
     test_split: float = 0.1

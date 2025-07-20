@@ -1,12 +1,12 @@
 """
-OpenAI 임베딩 구현 (파일 기반 영구 캐싱 적용)
-OpenAI embedder implementation (with file-based persistent caching)
+OpenAI 임베딩 구현 (파일 기반 영구 캐싱 및 청킹별 저장 기능 추가)
+OpenAI embedder implementation (with file-based persistent caching and chunk storage)
 """
 
 import hashlib
 import json
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import numpy as np
 import openai
 from loguru import logger
@@ -16,6 +16,8 @@ from src.config import Language, config
 from src.data_structures import Chunk
 from .base_embedder import BaseEmbedder
 from src.config import APIConfig
+from src.storage.chunk_storage import ChunkEmbeddingStorage
+
 
 class OpenAIEmbedder(BaseEmbedder):
     """OpenAI 임베딩 구현 (파일 캐싱 기능 포함)"""
@@ -50,7 +52,7 @@ class OpenAIEmbedder(BaseEmbedder):
     def _save_cache(self):
         """캐시를 로컬 JSON 파일에 저장합니다."""
         with open(self.cache_path, "w", encoding="utf-8") as f:
-            json.dump(self.embedding_cache, f) # indent 제거로 파일 크기 최적화
+            json.dump(self.embedding_cache, f)  # indent 제거로 파일 크기 최적화
         logger.debug(f"임베딩 캐시 저장 완료. 총 {len(self.embedding_cache)}개 항목.")
 
     def _get_cache_key(self, text: str) -> str:
@@ -74,7 +76,7 @@ class OpenAIEmbedder(BaseEmbedder):
             )
             embedding = response.data[0].embedding
             self.embedding_cache[key] = embedding
-            self._save_cache() # 변경 시마다 저장
+            self._save_cache()  # 변경 시마다 저장
             return np.array(embedding)
 
         except Exception as e:
@@ -165,3 +167,111 @@ class OpenAIEmbedder(BaseEmbedder):
             "cache_file": str(self.cache_path),
             "cache_size": len(self.embedding_cache)
         }
+
+
+class OpenAIEmbedderWithStorage(OpenAIEmbedder):
+    """청킹별 임베딩 저장 기능이 추가된 OpenAI Embedder"""
+
+    def __init__(
+        self,
+        language: Language,
+        model: str = None,
+        storage_path: str = "./src/data",
+        enable_storage: bool = True
+    ):
+        super().__init__(language, model)
+        self.enable_storage = enable_storage
+        if self.enable_storage:
+            self.storage = ChunkEmbeddingStorage(storage_path)
+            logger.info(f"청킹 임베딩 저장소 초기화 완료: {storage_path}")
+
+    async def embed_and_store_chunks(
+        self,
+        chunks: List[Chunk],
+        chunk_type: str,
+        document_id: str,
+        additional_metadata: Optional[Dict] = None,
+        force_recompute: bool = False
+    ) -> List[np.ndarray]:
+        """청크를 임베딩하고 저장"""
+
+        # 저장 기능이 비활성화된 경우
+        if not self.enable_storage:
+            return await self.embed_chunks(chunks)
+
+        # 1. 이미 저장된 임베딩이 있는지 확인 (force_recompute가 False인 경우)
+        if not force_recompute:
+            existing_data = self.storage.load_chunk_embeddings(document_id, chunk_type)
+            if existing_data and chunk_type in existing_data.get("chunk_types", {}):
+                existing_chunks = existing_data["chunk_types"][chunk_type]
+                if len(existing_chunks.get("chunks", [])) == len(chunks):
+                    logger.info(f"기존 임베딩 사용: {document_id} ({chunk_type})")
+                    return [np.array(emb) for emb in existing_chunks["embeddings"]]
+
+        # 2. 새로운 임베딩 생성
+        logger.info(f"새 임베딩 생성 중: {document_id} ({chunk_type})")
+        embeddings = await self.embed_chunks(chunks)
+
+        # 3. 저장
+        if self.enable_storage:
+            metadata = additional_metadata or {}
+            metadata["model"] = self.model
+
+            success = self.storage.save_chunk_embeddings(
+                chunks=chunks,
+                embeddings=embeddings,
+                chunk_type=chunk_type,
+                document_id=document_id,
+                language=self.language,
+                additional_metadata=metadata
+            )
+
+            if not success:
+                logger.warning("임베딩 저장 실패, 하지만 임베딩은 반환됩니다.")
+
+        return embeddings
+
+    async def search_similar_chunks(
+        self,
+        query: str,
+        document_id: Optional[str] = None,
+        chunk_type: Optional[str] = None,
+        top_k: int = 10,
+        threshold: float = 0.7
+    ) -> List[Dict[str, Any]]:
+        """쿼리와 유사한 청크 검색"""
+        if not self.enable_storage:
+            logger.warning("저장소가 비활성화되어 있어 검색할 수 없습니다.")
+            return []
+
+        # 쿼리 임베딩 생성
+        query_embedding = await self.embed_text(query)
+
+        # 유사 청크 검색
+        return self.storage.search_similar_chunks(
+            query_embedding=query_embedding,
+            document_id=document_id,
+            chunk_type=chunk_type,
+            top_k=top_k,
+            threshold=threshold
+        )
+
+    def get_storage_stats(self) -> Dict[str, Any]:
+        """저장소 통계 반환"""
+        stats = {
+            "cache_stats": self.get_cache_stats(),
+            "storage_enabled": self.enable_storage
+        }
+
+        if self.enable_storage:
+            stats["storage_stats"] = self.storage.get_statistics()
+
+        return stats
+
+    def clear_document_embeddings(self, document_id: str) -> bool:
+        """특정 문서의 모든 임베딩 삭제"""
+        if not self.enable_storage:
+            logger.warning("저장소가 비활성화되어 있습니다.")
+            return False
+
+        return self.storage.clear_document(document_id)
