@@ -68,6 +68,7 @@ class GPTGenerator(BaseGenerator):
 
             # 응답 객체 생성
             rag_response = RAGResponse(
+                query=query,
                 query_id=query.id,
                 response=generated_text,
                 chunks_used=chunks,
@@ -192,6 +193,7 @@ Please answer the question based on the reference documents above."""
             error_text = f"Sorry, an error occurred while generating the response: {error_message}"
 
         return RAGResponse(
+            query=query,
             query_id=query.id,
             response=error_text,
             chunks_used=chunks,

@@ -61,7 +61,7 @@ python main.py
 
 ```python
 import asyncio
-from src.main import RAGExperimentPipeline
+from main_version.main import RAGExperimentPipeline
 from src.config import Language
 
 

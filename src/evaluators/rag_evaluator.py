@@ -1,3 +1,4 @@
+
 import json
 from typing import List, Dict, Any, Tuple
 import numpy as np
@@ -5,52 +6,71 @@ import openai
 from loguru import logger
 from sklearn.metrics import roc_auc_score
 from rouge_score import rouge_scorer
-import bert_score
+import asyncio  # asyncio 추가
 
 from src.config import Language, config
 from src.data_structures import RAGResponse, EvaluationResult
 from .base_evaluator import BaseEvaluator
 from src.config import APIConfig
 
-class RAGEvaluator(BaseEvaluator):
-    """RAG 시스템 평가기"""
 
-    def __init__(self, language: Language):
+class RAGEvaluator(BaseEvaluator):
+    """
+    RAG 시스템 평가기 (Recall@K, MRR 추가)
+    """
+
+    def __init__(self, language: Language, k: int = 5):
         self.language = language
+        self.k = k  # Recall@K의 K 값 설정
         config_data = APIConfig()
         self.client = openai.AsyncOpenAI(api_key=config_data.openai_api_key)
+        self.judge_model = "gpt-4o-mini"  # 심판 역할을 할 모델 (성능을 위해 "gpt-4o" 사용 권장)
         self.rouge_scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+        logger.info(f"RAGEvaluator initialized for {language.value} with k={k}")
 
     async def evaluate_responses(
-        self,
-        responses: List[RAGResponse],
-        ground_truths: List[str]
+            self,
+            responses: List[RAGResponse],
+            ground_truth_answers: List[str]  # --- MODIFIED: 변수명을 명확하게 변경 ---
     ) -> EvaluationResult:
-        """응답들을 평가"""
+        """응답들을 평가하여 논문용 지표(Recall@K, MRR)를 포함한 결과를 반환합니다."""
         if not responses:
             return self._create_empty_result()
 
+        # --- MODIFIED: 새로운 지표 리스트 추가 ---
+        recall_at_k_scores = []
+        mrr_scores = []
+
+        # 기존 지표 리스트
         hallucination_scores = []
         context_relevance_scores = []
         utilization_scores = []
-        retrieval_recall_scores = []
 
-        # 각 응답 평가
+        tasks = []
         for i, response in enumerate(responses):
-            if i < len(ground_truths):
-                scores = await self.evaluate_single_response(response, ground_truths[i])
+            if i < len(ground_truth_answers):
+                # evaluate_single_response를 비동기 태스크로 생성
+                tasks.append(self.evaluate_single_response(response, ground_truth_answers[i]))
 
+        # 모든 평가 태스크를 병렬로 실행
+        results = await asyncio.gather(*tasks)
+
+        # 결과 취합
+        for scores in results:
+            if scores:
+                recall_at_k_scores.append(scores["recall_at_k"])
+                mrr_scores.append(scores["mrr"])
                 hallucination_scores.append(scores["hallucination"])
                 context_relevance_scores.append(scores["context_relevance"])
                 utilization_scores.append(scores["utilization"])
-                retrieval_recall_scores.append(scores["retrieval_recall"])
 
-        # AUROC 및 RMSE 계산
+
+        final_recall_at_k = np.mean(recall_at_k_scores) if recall_at_k_scores else 0.0
+        final_mrr = np.mean(mrr_scores) if mrr_scores else 0.0
+
         hallucination_auroc = self._calculate_auroc(hallucination_scores)
         context_relevance_rmse = self._calculate_rmse(context_relevance_scores)
         utilization_rmse = self._calculate_rmse(utilization_scores)
-
-        # 전략 추출
         strategy = responses[0].strategy.value if responses and responses[0].strategy else "unknown"
 
         return EvaluationResult(
@@ -59,39 +79,100 @@ class RAGEvaluator(BaseEvaluator):
             hallucination_auroc=hallucination_auroc,
             context_relevance_rmse=context_relevance_rmse,
             utilization_rmse=utilization_rmse,
+            recall_at_k=final_recall_at_k,  # 신규 지표
+            mrr=final_mrr,  # 신규 지표
             num_samples=len(responses),
             metadata={
+                "recall_at_k_scores": recall_at_k_scores,
+                "mrr_scores": mrr_scores,
                 "hallucination_scores": hallucination_scores,
                 "context_relevance_scores": context_relevance_scores,
                 "utilization_scores": utilization_scores,
-                "retrieval_recall_scores": retrieval_recall_scores
             }
         )
 
     async def evaluate_single_response(
-        self,
-        response: RAGResponse,
-        ground_truth: str
+            self,
+            response: RAGResponse,
+            ground_truth_answer: str
     ) -> Dict[str, float]:
-        """단일 응답을 모든 지표에 대해 평가"""
-        # 1. Hallucination 평가
-        hallucination_score = await self._evaluate_hallucination(response, ground_truth)
+        """단일 응답을 모든 지표에 대해 평가합니다."""
 
-        # 2. Context Relevance 평가
-        context_relevance_score = await self._evaluate_context_relevance(response)
+        # --- NEW: Recall@K와 MRR 계산 로직 ---
+        # LLM-as-a-Judge를 사용하여 각 청크의 관련성 판단
+        relevance_judgements = []
+        if response.chunks_used:
+            judge_tasks = [self._is_document_relevant(response.query.question, chunk.content, ground_truth_answer) for
+                           chunk in response.chunks_used]
+            relevance_judgements = await asyncio.gather(*judge_tasks)
 
-        # 3. Utilization 평가
+        first_relevant_rank = -1
+        for i, is_relevant in enumerate(relevance_judgements):
+            if is_relevant:
+                first_relevant_rank = i + 1  # 순위는 1부터 시작
+                break
+
+        recall_at_k_score = 1.0 if 0 < first_relevant_rank <= self.k else 0.0
+        mrr_score = 1.0 / first_relevant_rank if first_relevant_rank > 0 else 0.0
+
+        # --- 기존 평가 로직 (병렬 실행을 위해 await 호출 분리) ---
+        hallucination_task = self._evaluate_hallucination(response, ground_truth_answer)
+        context_relevance_task = self._evaluate_context_relevance(response)
+
+        # 기존 평가 비동기 실행
+        hallucination_score, context_relevance_score = await asyncio.gather(
+            hallucination_task,
+            context_relevance_task
+        )
         utilization_score = self._evaluate_utilization(response)
 
-        # 4. Retrieval Recall 평가
-        retrieval_recall_score = self._evaluate_retrieval_recall(response, ground_truth)
-
         return {
+            "recall_at_k": recall_at_k_score,
+            "mrr": mrr_score,
             "hallucination": hallucination_score,
             "context_relevance": context_relevance_score,
             "utilization": utilization_score,
-            "retrieval_recall": retrieval_recall_score
         }
+
+    # --- NEW: LLM-as-a-Judge 헬퍼 함수 ---
+    async def _is_document_relevant(self, question: str, document_content: str, ground_truth_answer: str) -> bool:
+        """
+        심판 LLM을 사용하여 문서가 질문과 정답에 대해 관련성이 있는지 판단합니다.
+        """
+        system_prompt = """You are a precise and impartial judge evaluating an information retrieval system.
+Your task is to determine if the provided 'Document' contains enough information to answer the 'Question'.
+The expected answer is provided as 'Ground Truth Answer' for your reference.
+You must respond with only 'Yes' or 'No' in a JSON format: {"is_relevant": "Yes"} or {"is_relevant": "No"}."""
+
+        user_prompt = f"""[Question]
+{question}
+
+[Ground Truth Answer]
+{ground_truth_answer}
+
+[Document]
+{document_content}
+
+Based *only* on the information within the 'Document', can you fully answer the 'Question'?
+"""
+        try:
+            response = await self.client.chat.completions.create(
+                model=self.judge_model,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                temperature=0.0,
+                response_format={"type": "json_object"}
+            )
+            result = json.loads(response.choices[0].message.content)
+            judgement = result.get("is_relevant", "No").strip().lower()
+            logger.debug(
+                f"LLM Judge: Q='{question[:30]}...' Doc='{document_content[:30]}...' -> Judgement: {judgement}")
+            return judgement == "yes"
+        except Exception as e:
+            logger.error(f"LLM Judge failed: {e}")
+            return False
 
     async def _evaluate_hallucination(self, response: RAGResponse, ground_truth: str) -> float:
         """환각 현상 평가 (0: 환각 없음, 1: 환각 있음)"""
@@ -156,7 +237,7 @@ class RAGEvaluator(BaseEvaluator):
             logger.debug(f"\n청크 {i + 1} 평가:")
             logger.debug(f"청크 내용 (처음 100자): {chunk_content_lower[:100]}...")
 
-            if ground_truth_lower in chunk_content_lower:
+            if chunk_content_lower in ground_truth_lower:
                 logger.debug(f"  -> Exact match 발견!")
                 relevant_chunks.append(chunk)
                 continue

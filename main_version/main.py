@@ -16,7 +16,7 @@ from src.data_structures import (
 
 # 청킹 전략
 from src.chunkers import (
-    SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker
+    SemanticChunker, KeywordChunker, QueryAwareChunker
 )
 
 # 임베딩 및 검색
@@ -35,14 +35,11 @@ from src.ensembles import (
 # 데이터 처리 및 통계
 from src.data_processor import DataProcessor
 from src.statistical_analyzer import StatisticalAnalyzer
-
-
 # from src.visualization import ResultsVisualizer  <- 시각화 클래스 제거
 
 
 class NumpyJSONEncoder(json.JSONEncoder):
     """ NumPy 데이터 타입을 처리할 수 있는 JSON 인코더 """
-
     def default(self, obj):
         if isinstance(obj, (np.integer, np.int_, np.intc, np.intp, np.int8,
                             np.int16, np.int32, np.int64, np.uint8,
@@ -56,6 +53,7 @@ class NumpyJSONEncoder(json.JSONEncoder):
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return super(NumpyJSONEncoder, self).default(obj)
+
 
 
 class RAGExperimentPipeline:
@@ -146,24 +144,22 @@ class RAGExperimentPipeline:
                 logger.error(f"{strategy.value} 전략 실패: {e}")
                 self.experiment_run.add_error(e, f"{language.value}-{strategy.value}")
 
-        # --- 수정된 부분: 앙상블 전략 실험을 주석 처리하여 비활성화 ---
-        # # 4. 앙상블 전략 실험
-        # for ensemble_method in EnsembleMethod:
-        #     logger.info(f"{language.value} - {ensemble_method.value} 앙상블 실험 시작")
-        #     try:
-        #         result = await self._run_ensemble_strategy(
-        #             ensemble_method, documents, queries, components, language
-        #         )
-        #         results.append(result)
-        #         self.experiment_run.add_result(result)
-        #         logger.info(
-        #             f"{ensemble_method.value} 앙상블 완료 - "
-        #             f"AUROC: {result.hallucination_auroc:.3f}"
-        #         )
-        #     except Exception as e:
-        #         logger.error(f"{ensemble_method.value} 앙상블 실패: {e}")
-        #         self.experiment_run.add_error(e, f"{language.value}-ensemble-{ensemble_method.value}")
-        # --- 수정 완료 ---
+        # 4. 앙상블 전략 실험
+        for ensemble_method in EnsembleMethod:
+            logger.info(f"{language.value} - {ensemble_method.value} 앙상블 실험 시작")
+            try:
+                result = await self._run_ensemble_strategy(
+                    ensemble_method, documents, queries, components, language
+                )
+                results.append(result)
+                self.experiment_run.add_result(result)
+                logger.info(
+                    f"{ensemble_method.value} 앙상블 완료 - "
+                    f"AUROC: {result.hallucination_auroc:.3f}"
+                )
+            except Exception as e:
+                logger.error(f"{ensemble_method.value} 앙상블 실패: {e}")
+                self.experiment_run.add_error(e, f"{language.value}-ensemble-{ensemble_method.value}")
 
         return results
 
@@ -171,16 +167,17 @@ class RAGExperimentPipeline:
         """언어별 컴포넌트 초기화"""
         # 청킹 전략
         chunkers = {
-            ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(language),
             ChunkingStrategy.SEMANTIC: SemanticChunker(language),
             ChunkingStrategy.KEYWORD: KeywordChunker(language),
             ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language)
         }
-        # 나머지는 동일...
+        # 임베딩 및 검색
         embedder = OpenAIEmbedder(language)
         retriever = VectorRetriever(embedder)
+        # 생성 및 평가
         generator = GPTGenerator(language)
         evaluator = RAGEvaluator(language)
+        # 앙상블
         ensembles = {
             EnsembleMethod.VOTING: VotingEnsemble("weighted"),
             EnsembleMethod.RERANKING: RerankingEnsemble("combined"),
@@ -190,7 +187,6 @@ class RAGExperimentPipeline:
             "chunkers": chunkers, "embedder": embedder, "retriever": retriever,
             "generator": generator, "evaluator": evaluator, "ensembles": ensembles
         }
-
 
     async def _run_single_strategy(
             self,
@@ -308,8 +304,7 @@ class RAGExperimentPipeline:
                     else:
                         chunks = await chunker.chunk_document(doc)
                     if chunks:
-                        retrieved_chunks = await retriever.retrieve(query, chunks,
-                                                                    k=self.config.experiment.top_k_retrieval)
+                        retrieved_chunks = await retriever.retrieve(query, chunks, k=self.config.experiment.top_k_retrieval)
                         response = await generator.generate_response(query, retrieved_chunks)
                         strategy_responses.append(response)
                 if strategy_responses:
@@ -324,8 +319,7 @@ class RAGExperimentPipeline:
             eval_result.strategy = f"ensemble_{ensemble_method.value}"
             eval_result.ensemble_method = ensemble_method
             return eval_result
-        return EvaluationResult(strategy=f"ensemble_{ensemble_method.value}", language=language, num_samples=0,
-                                ensemble_method=ensemble_method)
+        return EvaluationResult(strategy=f"ensemble_{ensemble_method.value}", language=language, num_samples=0, ensemble_method=ensemble_method)
 
     def _save_results(
             self,
@@ -375,35 +369,21 @@ class RAGExperimentPipeline:
         en_results = [r for r in results if r.language == Language.ENGLISH]
         en_avg_auroc = np.mean([r.hallucination_auroc for r in en_results]) if en_results else 0
 
-        # Baseline (fixed_size) 성능 찾기
-        baseline_results = [r for r in results if r.strategy == "fixed_size"]
-        baseline_auroc = baseline_results[0].hallucination_auroc if baseline_results else 0.57  # 기본값 유지
+        # 한국어 결과는 현재 실험에서 제외되었으므로 0으로 처리
+        kr_results = []
+        kr_avg_auroc = 0
 
-        # 최고 성능과 baseline 비교
-        improvement = ((
-                                   best_result.hallucination_auroc - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
-
-        # 각 전략별 baseline 대비 개선율 계산
-        strategy_improvements = {}
-        for result in results:
-            if result.strategy != "fixed_size" and baseline_auroc > 0:
-                improvement_pct = ((result.hallucination_auroc - baseline_auroc) / baseline_auroc) * 100
-                strategy_improvements[result.strategy] = {
-                    "auroc": result.hallucination_auroc,
-                    "improvement_over_baseline": f"{improvement_pct:.1f}%"
-                }
+        baseline_auroc = 0.57
+        improvement = ((best_result.hallucination_auroc - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
 
         summary = {
-            "baseline_strategy": "fixed_size",
-            "baseline_auroc": baseline_auroc,
             "best_strategy": best_result.strategy,
             "best_language": best_result.language.value,
             "best_auroc": best_result.hallucination_auroc,
             "improvement_over_baseline": f"{improvement:.1f}%",
-            "strategy_comparisons": strategy_improvements,  # 새로 추가
             "language_performance": {
                 "english": {"avg_auroc": en_avg_auroc, "num_experiments": len(en_results)},
-                "korean": {"avg_auroc": 0, "num_experiments": 0}  # 현재 실험에서 제외
+                "korean": {"avg_auroc": kr_avg_auroc, "num_experiments": len(kr_results)}
             },
             "statistical_significance": analysis.get("statistical_tests", {}),
             "total_experiments": len(results),
@@ -414,7 +394,6 @@ class RAGExperimentPipeline:
 
 class DataProcessor:
     """데이터 처리 클래스"""
-
     def __init__(self):
         self.logger = logger
 
@@ -428,8 +407,7 @@ class DataProcessor:
             for i, item in enumerate(data[:config.experiment.sample_size]):
                 doc_id = str(i)
                 documents.append(Document(id=doc_id, content=item["context"], language=language))
-                queries.append(Query(id=doc_id, question=item["question"], language=language,
-                                     expected_answer=item.get("answer", ""), context_id=doc_id))
+                queries.append(Query(id=doc_id, question=item["question"], language=language, expected_answer=item.get("answer", ""), context_id=doc_id))
             return documents, queries
         except Exception as e:
             self.logger.error(f"데이터 로드 실패: {e}")
@@ -438,7 +416,6 @@ class DataProcessor:
 
 class StatisticalAnalyzer:
     """통계 분석 클래스"""
-
     def analyze_results(self, results: List[EvaluationResult]) -> Dict[str, Any]:
         """결과 통계 분석"""
         from scipy import stats
@@ -453,8 +430,7 @@ class StatisticalAnalyzer:
         for result in results:
             strategy = result.strategy
             if strategy not in stats_by_strategy:
-                stats_by_strategy[strategy] = {"auroc_scores": [], "context_rmse_scores": [],
-                                               "utilization_rmse_scores": []}
+                stats_by_strategy[strategy] = {"auroc_scores": [], "context_rmse_scores": [], "utilization_rmse_scores": []}
             stats_by_strategy[strategy]["auroc_scores"].append(result.hallucination_auroc)
             stats_by_strategy[strategy]["context_rmse_scores"].append(result.context_relevance_rmse)
             stats_by_strategy[strategy]["utilization_rmse_scores"].append(result.utilization_rmse)
@@ -463,10 +439,8 @@ class StatisticalAnalyzer:
         for strategy, scores in stats_by_strategy.items():
             descriptive_stats[strategy] = {
                 "auroc": {"mean": np.mean(scores["auroc_scores"]), "std": np.std(scores["auroc_scores"])},
-                "context_rmse": {"mean": np.mean(scores["context_rmse_scores"]),
-                                 "std": np.std(scores["context_rmse_scores"])},
-                "utilization_rmse": {"mean": np.mean(scores["utilization_rmse_scores"]),
-                                     "std": np.std(scores["utilization_rmse_scores"])}
+                "context_rmse": {"mean": np.mean(scores["context_rmse_scores"]), "std": np.std(scores["context_rmse_scores"])},
+                "utilization_rmse": {"mean": np.mean(scores["utilization_rmse_scores"]), "std": np.std(scores["utilization_rmse_scores"])}
             }
         return descriptive_stats
 
@@ -481,16 +455,18 @@ class StatisticalAnalyzer:
             tests["baseline_comparison"] = {
                 "test": "one_sample_t_test", "baseline": baseline_auroc, "proposed_mean": np.mean(proposed_auroc),
                 "t_statistic": t_stat, "p_value": p_value, "significant": p_value < 0.05,
-                "improvement": ((np.mean(
-                    proposed_auroc) - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
+                "improvement": ((np.mean(proposed_auroc) - baseline_auroc) / baseline_auroc) * 100 if baseline_auroc else 0
             }
         return tests
+
+
+# ResultsVisualizer 클래스는 완전히 제거되었습니다.
 
 
 async def main():
     """메인 실행 함수"""
     logger.info("=" * 50)
-    logger.info("RAG 청킹 전략 비교 연구 시작 (Baseline 포함)")
+    logger.info("RAG 청킹 전략 비교 연구 시작")
     logger.info("=" * 50)
 
     pipeline = RAGExperimentPipeline()
@@ -501,18 +477,9 @@ async def main():
         print("=" * 50)
         summary = results["summary"]
         if summary:
-            print(f"Baseline 전략: {summary['baseline_strategy']}")
-            print(f"Baseline AUROC: {summary['baseline_auroc']:.3f}")
-            print(f"\n최고 성능 전략: {summary['best_strategy']} ({summary['best_language']})")
+            print(f"최고 성능 전략: {summary['best_strategy']} ({summary['best_language']})")
             print(f"최고 AUROC: {summary['best_auroc']:.3f}")
-            print(f"Baseline 대비 개선율: {summary['improvement_over_baseline']}")
-
-            # 각 전략별 성능 비교 출력
-            if summary.get('strategy_comparisons'):
-                print(f"\n전략별 Baseline 대비 성능:")
-                for strategy, perf in summary['strategy_comparisons'].items():
-                    print(f"  - {strategy}: {perf['auroc']:.3f} ({perf['improvement_over_baseline']})")
-
+            print(f"베이스라인 대비 개선율: {summary['improvement_over_baseline']}")
             print("\n언어별 평균 성능:")
             print(f"  - 영어: {summary['language_performance']['english']['avg_auroc']:.3f}")
             print(f"\n총 실험 수: {summary['total_experiments']}")
@@ -557,5 +524,6 @@ if __name__ == "__main__":
 
     # 이제 프로그램의 나머지 부분은 업데이트된 데이터 경로를 사용하게 됩니다.
     asyncio.run(main())
+
 
 # python main.py --data_path "data/new_dataset.json"
