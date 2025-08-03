@@ -22,6 +22,8 @@ class ChunkingStrategy(Enum):
     SEMANTIC = "semantic"
     KEYWORD = "keyword"
     QUERY_AWARE = "query_aware"
+    RECURSIVE = 'recursive'
+    LANGCHAIN_SEMANTIC = 'langchain_semantic'
 
 
 class EnsembleMethod(Enum):
@@ -77,6 +79,7 @@ class PathConfig:
     results_dir: Path = None
     logs_dir: Path = None
     cache_dir: Path = None
+    embedding_storage_path: Path = None  # ◀◀◀ 이 줄을 추가하세요.
 
     def __post_init__(self):
         self.data_dir = self.root_dir / "data"
@@ -84,8 +87,13 @@ class PathConfig:
         self.logs_dir = self.root_dir / "logs"
         self.cache_dir = self.root_dir / "cache"
 
-        # 디렉토리 생성
-        for dir_path in [self.data_dir, self.results_dir, self.logs_dir, self.cache_dir]:
+
+        self.embedding_storage_path = self.data_dir / "embeddings"
+
+        for dir_path in [
+            self.data_dir, self.results_dir, self.logs_dir,
+            self.cache_dir, self.embedding_storage_path
+        ]:
             dir_path.mkdir(exist_ok=True)
 
 

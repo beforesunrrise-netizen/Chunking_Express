@@ -89,7 +89,7 @@ class BaseChunker(ABC):
         """청크 객체 생성 헬퍼"""
         chunk_id = f"{document_id}_{self.strategy.value}_{sequence_num}"
 
-        return Chunk(
+        chunk = Chunk(
             id=chunk_id,
             content=content,
             document_id=document_id,
@@ -99,6 +99,11 @@ class BaseChunker(ABC):
             sequence_num=sequence_num,
             metadata=metadata or {}
         )
+
+        # doc_id 속성 추가
+        chunk.doc_id = document_id
+
+        return chunk
 
     def split_by_sentences(self, text: str) -> List[str]:
         """문장 단위로 텍스트 분할"""

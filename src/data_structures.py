@@ -55,7 +55,7 @@ class Chunk:
     """청크 데이터 구조"""
     id: str
     content: str
-    document_id: str
+    document_id: str  # 이미 있음
     start_idx: int
     end_idx: int
     strategy: ChunkingStrategy

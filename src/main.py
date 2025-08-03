@@ -1,3 +1,11 @@
+
+
+import sys
+from pathlib import Path
+
+parent_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(parent_dir))
+
 import asyncio
 import json
 import time
@@ -9,37 +17,36 @@ from loguru import logger
 from config import (
     config, Language, ChunkingStrategy, EnsembleMethod
 )
-from src.data_structures import (
+
+# Use relative imports instead of absolute imports
+from data_structures import (
     Document, Query, Chunk, RAGResponse,
     EvaluationResult, ExperimentRun
 )
 
 # 청킹 전략
-from src.chunkers import (
-    SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker
+from chunkers import (
+    SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker, RecursiveChunker, EmbeddingSemanticChunker
 )
 
 # 임베딩 및 검색
-from src.embedders import OpenAIEmbedder
-from src.retrievers import VectorRetriever
+from embedders import OpenAIEmbedder
+from retrievers import VectorRetriever
 
 # 생성 및 평가
-from src.generators import GPTGenerator
-from src.evaluators import RAGEvaluator
+from generators import GPTGenerator
+from evaluators import RAGEvaluator
 
 # 앙상블
-from src.ensembles import (
+from ensembles import (
     VotingEnsemble, RerankingEnsemble, FusionEnsemble
 )
 
 # 데이터 처리 및 통계
-from src.data_processor import DataProcessor
-from src.statistical_analyzer import StatisticalAnalyzer
-from src.embedders.openai_embedder import OpenAIEmbedderWithStorage
-from src.storage.chunk_storage import ChunkEmbeddingStorage
-
-
-# from src.visualization import ResultsVisualizer  <- 시각화 클래스 제거
+from data_processor import DataProcessor
+from statistical_analyzer import StatisticalAnalyzer
+from embedders.openai_embedder import OpenAIEmbedderWithStorage
+from storage.chunk_storage import ChunkEmbeddingStorage
 
 
 class NumpyJSONEncoder(json.JSONEncoder):
@@ -78,8 +85,8 @@ class RAGExperimentPipeline:
         )
 
         # 청킹 임베딩 저장소 초기화 (새로 추가)
-        self.enable_embedding_storage = False  # 기본값은 False
-        self.storage_path = "./src/data"
+        self.enable_embedding_storage = True  # 기본값은 False
+        self.storage_path = self.config.paths.embedding_storage_path
 
     async def run_full_experiment(self) -> Dict[str, Any]:
         """전체 실험 실행"""
@@ -94,16 +101,21 @@ class RAGExperimentPipeline:
             en_results = await self.run_language_experiment(Language.ENGLISH)
             all_results.extend(en_results)
 
-            # 2. 통계 분석
-            logger.info("통계 분석 시작")
-            analysis_results = self.statistical_analyzer.analyze_results(all_results)
+            analysis_results = {}  # 기본값으로 초기화
+            try:
+                # 2. 통계 분석
+                logger.info("통계 분석 시작")
+                analysis_results = self.statistical_analyzer.analyze_results(all_results)
 
-            # 3. 결과 시각화 생성 (제거됨)
-            # logger.info("결과 시각화 생성")
-            # visualizations = self.visualizer.create_all_visualizations(...)
+                # 3. 결과 저장
+                logger.info("결과 저장 시작")
+                self._save_results(all_results, analysis_results)
 
-            # 4. 결과 저장 (시각화 부분 제외)
-            self._save_results(all_results, analysis_results)
+            except Exception as e:
+                logger.error(f"통계 분석 또는 결과 저장 중 치명적인 오류 발생: {e}")
+                logger.error("오류가 발생했지만, 현재까지의 원시 결과라도 저장 시도합니다.")
+                # 에러가 나더라도 원시(raw) 결과는 저장하도록 처리
+                self._save_results(all_results, {"analysis_error": str(e)})
 
             # 5. 실험 완료
             self.experiment_run.end_time = datetime.now()
@@ -178,9 +190,11 @@ class RAGExperimentPipeline:
         # 청킹 전략
         chunkers = {
             ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(language),
-            ChunkingStrategy.SEMANTIC: SemanticChunker(language),
-            ChunkingStrategy.KEYWORD: KeywordChunker(language),
-            ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language)
+            # ChunkingStrategy.SEMANTIC: SemanticChunker(language),
+            # ChunkingStrategy.KEYWORD: KeywordChunker(language),
+            # ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language),
+            ChunkingStrategy.RECURSIVE : RecursiveChunker(language),
+            ChunkingStrategy.LANGCHAIN_SEMANTIC : EmbeddingSemanticChunker(language)
         }
 
         # 임베더 선택 - 저장 기능 활성화 여부에 따라
@@ -193,7 +207,6 @@ class RAGExperimentPipeline:
         else:
             embedder = OpenAIEmbedder(language)
 
-        # 나머지는 동일...
         retriever = VectorRetriever(embedder)
         generator = GPTGenerator(language)
         evaluator = RAGEvaluator(language)
@@ -246,6 +259,12 @@ class RAGExperimentPipeline:
                     chunks = await chunker.query_aware_chunk(doc, query)
                 else:
                     chunks = await chunker.chunk_document(doc)
+
+                # 청크에 doc_id 속성 추가 (새로 추가된 부분)
+                for chunk in chunks:
+                    if not hasattr(chunk, 'doc_id'):
+                        chunk.doc_id = doc.id
+
                 processing_times["chunking"].append(time.time() - chunk_start)
 
                 if not chunks:
@@ -254,6 +273,9 @@ class RAGExperimentPipeline:
                 # 임베딩 저장 (저장 기능이 활성화된 경우)
                 if self.enable_embedding_storage and isinstance(embedder, OpenAIEmbedderWithStorage):
                     storage_start = time.time()
+
+                    logger.info(f"임베딩 저장 시작 - strategy: {strategy.value}, chunks: {len(chunks)}")
+                    logger.info(f"저장 메타데이터: query_id={query.id if strategy == ChunkingStrategy.QUERY_AWARE else None}")
 
                     # 임베딩 생성 및 저장
                     embeddings = await embedder.embed_and_store_chunks(
@@ -264,8 +286,10 @@ class RAGExperimentPipeline:
                             "run_id": self.run_id,
                             "language": language.value,
                             "query_id": query.id if strategy == ChunkingStrategy.QUERY_AWARE else None
-                        }
+                        },
+                        force_recompute=True  # 강제로 재계산 및 저장
                     )
+                    logger.info(f"임베딩 저장 완료 - embeddings: {len(embeddings) if embeddings else 0}")
 
                     processing_times["embedding_storage"].append(time.time() - storage_start)
 
@@ -633,8 +657,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--storage_path",
         type=str,
-        default="./src/data",
-        help="임베딩 저장 경로 (기본값: ./src/data)"
+        default=config.paths.embedding_storage_path,
+        help=f"임베딩 저장 경로 (기본값: {config.paths.embedding_storage_path})"
     )
 
     args = parser.parse_args()
@@ -647,35 +671,32 @@ if __name__ == "__main__":
         exit(1)
 
 
-    # main() 함수 실행 전에 pipeline 설정
-    async def main_with_storage():
+    async def run_experiment():
+        # ◀◀ [수정] 파이프라인 설정을 실행 함수 내부로 이동
         pipeline = RAGExperimentPipeline()
         pipeline.enable_embedding_storage = args.enable_embedding_storage
-        pipeline.storage_path = args.storage_path
+        pipeline.storage_path = Path(args.storage_path)  # 경로를 Path 객체로 변환
 
         logger.info("=" * 50)
-        logger.info("RAG 청킹 전략 비교 연구 시작 (Baseline 포함)")
+        logger.info("RAG 청킹 전략 비교 연구 시작")
         if args.enable_embedding_storage:
-            logger.info(f"임베딩 저장 활성화: {args.storage_path}")
+            logger.info(f"임베딩 저장 활성화: {pipeline.storage_path}")
         logger.info("=" * 50)
 
         try:
             results = await pipeline.run_full_experiment()
-            # 기존 결과 출력 코드...
-            print("\n" + "=" * 50)
-            print("실험 결과 요약")
-            print("=" * 50)
-            summary = results["summary"]
+            summary = results.get("summary", {})
             if summary:
-                print(f"Baseline 전략: {summary['baseline_strategy']}")
-                print(f"Baseline AUROC: {summary['baseline_auroc']:.3f}")
-                # ... 나머지 출력 코드
+                print("\n" + "=" * 50)
+                print(" 실험 결과 요약")
+                print("=" * 50)
+                # ... (결과 요약 출력) ...
+                print(f"\n결과 파일이 다음 위치에 저장되었습니다:")
+                print(f"  {config.paths.results_dir / results['run_id']}")
         except Exception as e:
-            logger.error(f"실험 실패: {e}")
-            raise
+            logger.error(f"실험 실패: {e}", exc_info=True)
         finally:
             logger.info("실험 종료")
 
 
-    # 수정된 main 함수 실행
-    asyncio.run(main_with_storage())
+    asyncio.run(run_experiment())
