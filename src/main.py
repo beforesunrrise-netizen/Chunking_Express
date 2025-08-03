@@ -190,9 +190,9 @@ class RAGExperimentPipeline:
         # 청킹 전략
         chunkers = {
             ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(language),
-            # ChunkingStrategy.SEMANTIC: SemanticChunker(language),
-            # ChunkingStrategy.KEYWORD: KeywordChunker(language),
-            # ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language),
+            ChunkingStrategy.SEMANTIC: SemanticChunker(language),
+            ChunkingStrategy.KEYWORD: KeywordChunker(language),
+            ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language),
             ChunkingStrategy.RECURSIVE : RecursiveChunker(language),
             ChunkingStrategy.LANGCHAIN_SEMANTIC : EmbeddingSemanticChunker(language)
         }
