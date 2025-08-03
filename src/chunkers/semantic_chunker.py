@@ -11,15 +11,9 @@ from .base_chunker import BaseChunker
 from openai import AsyncOpenAI
 
 class SemanticChunker(BaseChunker):
-    """
-    GPT-4o 모델을 활용하여 문서의 의미 구조를 파악하고,
-    이를 기반으로 문서를 영어(English)로 청킹하는 클래스입니다.
-    """
-
-    # --- 수정된 부분: __init__에서 language 매개변수 제거 ---
-    def __init__(self, chunk_size_limit: int = 512):
-        # 부모 클래스에는 기본 언어로 ENGLISH를 고정하여 전달합니다.
-        super().__init__(Language.ENGLISH, chunk_size_limit)
+    def __init__(self, language: Language, chunk_size_limit: int = 512):
+        # 부모 클래스의 __init__을 호출하여 인자를 전달합니다.
+        super().__init__(language, chunk_size_limit)
         self.strategy = ChunkingStrategy.SEMANTIC
         config = APIConfig()
         self.client = AsyncOpenAI(api_key=config.openai_api_key)
@@ -58,7 +52,6 @@ class SemanticChunker(BaseChunker):
             return self._fallback_chunking(document)
         return self._create_chunks_from_response(response_data, document)
 
-    # --- Core Logic (변경 없음) ---
 
     async def _get_gpt_response(self, system_prompt: str, user_prompt: str) -> Optional[Dict[str, Any]]:
         """GPT 모델에 요청을 보내고 JSON 응답을 파싱합니다."""
