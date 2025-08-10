@@ -1,0 +1,70 @@
+{
+  "document_id": "309",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "5463427490bab187",
+      "content": "A self-described \"modern-day feminist\", Beyoncé creates songs that are often characterized by themes of love, relationships, and monogamy, as well as female sexuality and empowerment. On stage, her dynamic, highly choreographed performances have led to critics hailing her as one of the best entertainers in contemporary popular music. Throughout a career spanning 19 years, she has sold over 118 million records as a solo artist, and a further 60 million with Destiny's Child, making her one of the best-selling",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "records",
+          "sell"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "Destiny's Child"
+          ],
+          "keywords": [
+            "records",
+            "sell"
+          ],
+          "required_info": [
+            "number of records sold"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "35cdb3505e61e7e4",
+      "content": " music artists of all time. She has won 20 Grammy Awards and is the most nominated woman in the award's history. The Recording Industry Association of America recognized her as the Top Certified Artist in America during the 2000s decade. In 2009, Billboard named her the Top Radio Songs Artist of the Decade, the Top Female Artist of the 2000s and their Artist of the Millennium in 2011. Time listed her among the 100 most influential people in the world in 2013 and 2014. Forbes magazine also listed her as the  most powerful female musician of 2015.",
+      "start_idx": 512,
+      "end_idx": 1062,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "sell",
+          "records"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "309_query_aware_1",
+          "309_query_aware_2"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:56.723038",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "309",
+    "model": "text-embedding-3-large"
+  }
+}

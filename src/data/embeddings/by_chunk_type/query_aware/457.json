@@ -1,0 +1,49 @@
+{
+  "document_id": "457",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9a43fa9a9c26cda6",
+      "content": "On April 4, 2008, Beyoncé married Jay Z.",
+      "start_idx": 0,
+      "end_idx": 43,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about who Beyoncé married.",
+        "answer_contribution": "Provides the name of Beyoncé's spouse.",
+        "keywords": [
+          "marry",
+          "Beyoncé"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "husband"
+          ],
+          "keywords": [
+            "marry",
+            "Beyoncé"
+          ],
+          "required_info": [
+            "name of Beyoncé's spouse"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:16:06.703800",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "457",
+    "model": "text-embedding-3-large"
+  }
+}

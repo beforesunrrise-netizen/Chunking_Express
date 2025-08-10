@@ -1,0 +1,51 @@
+{
+  "document_id": "224",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "bbbfca38d9fa43d7",
+      "content": "The Irish left the Big East for the ACC during a prolonged period of instability in the Big East; while they maintain their football independence, they have committed to play five games per season against ACC opponents.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly answers the question by stating that the Fighting Irish moved from the Big East to the ACC.",
+        "answer_contribution": "Identifies the conference the Fighting Irish joined after leaving the Big East.",
+        "keywords": [
+          "Fighting Irish",
+          "Big East",
+          "ACC"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Fighting Irish",
+            "Big East"
+          ],
+          "keywords": [
+            "conference",
+            "Fighting Irish",
+            "Big East"
+          ],
+          "required_info": [
+            "conference after Big East"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:03:54.605181",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "224",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "document_id": "385",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "7b6c7d509aa359dc",
+      "content": "Beyoncé released 'Work It Out' as the lead single from its soundtrack album which entered the top ten in the UK, Norway, and Belgium.",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the countries where 'Work It Out' achieved top ten status.",
+        "answer_contribution": "Identifies the three countries: UK, Norway, and Belgium.",
+        "keywords": [
+          "top ten status",
+          "Work It Out",
+          "UK",
+          "Norway",
+          "Belgium"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "Work It Out",
+            "countries"
+          ],
+          "keywords": [
+            "top ten status",
+            "song"
+          ],
+          "required_info": [
+            "three countries",
+            "top ten status of the song"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.728298",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "385",
+    "model": "text-embedding-3-large"
+  }
+}

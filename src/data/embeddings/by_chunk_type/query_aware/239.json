@@ -1,0 +1,56 @@
+{
+  "document_id": "239",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "763294e4aff484f8",
+      "content": "George Gipp was the school's legendary football player during 1916–20.",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about a notable football player at Notre Dame during the specified years.",
+        "answer_contribution": "Identifies George Gipp as the notable football player.",
+        "keywords": [
+          "notable",
+          "football player",
+          "Notre Dame",
+          "1916",
+          "1920"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "football player",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "notable",
+            "football player",
+            "Notre Dame",
+            "1916",
+            "1920"
+          ],
+          "required_info": [
+            "name of the football player",
+            "years played"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:19:27.854891",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "239",
+    "model": "text-embedding-3-large"
+  }
+}

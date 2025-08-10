@@ -1,0 +1,85 @@
+{
+  "document_id": "78",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "c8826f5a84e28c7a",
+      "content": "About 80% of undergraduates and 20% of graduate students live on campus. The majority of the graduate students on campus live in one of four graduate housing complexes on campus, while all on-campus undergraduates live in one of the 29 residence halls.",
+      "start_idx": 0,
+      "end_idx": 227,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Campus Housing Statistics",
+        "keywords": [
+          "undergraduates",
+          "graduate students",
+          "housing complexes",
+          "residence halls"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "2b5ba27ed5e19b6e",
+      "content": "Because of the religious affiliation of the university, all residence halls are single-sex, with 15 male dorms and 14 female dorms. The university maintains a visiting policy (known as parietal hours) for those students who live in dormitories, specifying times when members of the opposite sex are allowed to visit other students' dorm rooms; however, all residence halls have 24-hour social spaces for students regardless of gender.",
+      "start_idx": 227,
+      "end_idx": 469,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Residence Hall Policies",
+        "keywords": [
+          "religious affiliation",
+          "single-sex",
+          "visiting policy",
+          "social spaces"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "17ba6991d67af18c",
+      "content": "Many residence halls have at least one nun and/or priest as a resident. There are no traditional social fraternities or sororities at the university, but a majority of students live in the same residence hall for all four years.",
+      "start_idx": 469,
+      "end_idx": 617,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Residence Hall Community",
+        "keywords": [
+          "nun",
+          "priest",
+          "fraternities",
+          "sororities",
+          "community"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "667f54cd15224c39",
+      "content": "Some intramural sports are based on residence hall teams, where the university offers the only non-military academy program of full-contact intramural American football. At the end of the intramural season, the championship game is played on the field in Notre Dame Stadium.",
+      "start_idx": 617,
+      "end_idx": 754,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Intramural Sports",
+        "keywords": [
+          "intramural sports",
+          "residence hall teams",
+          "American football",
+          "championship game"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:11:38.411537",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

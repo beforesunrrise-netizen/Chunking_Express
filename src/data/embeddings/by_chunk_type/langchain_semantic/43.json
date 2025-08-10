@@ -1,0 +1,40 @@
+{
+  "document_id": "43",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "880fb218894fd66f",
+      "content": "Notre Dame is known for its competitive admissions, with the incoming class enrolling in fall 2015 admitting 3,577 from a pool of 18,156 (19.7%). The academic profile of the enrolled class continues to rate among the top 10 to 15 in the nation for national research universities. The university practices a non-restrictive early action policy that allows admitted students to consider admission to Notre Dame as well as any other colleges to which they were accepted.",
+      "start_idx": 0,
+      "end_idx": 467,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "c16fbd1536f09d89",
+      "content": "1,400 of the 3,577 (39.1%) were admitted under the early action plan. Admitted students came from 1,311 high schools and the average student traveled more than 750 miles to Notre Dame, making it arguably the most representative university in the United States. While all entering students begin in the College of the First Year of Studies, 25% have indicated they plan to study in the liberal arts or social sciences, 24% in engineering, 24% in business, 24% in science, and 3% in architecture.",
+      "start_idx": 468,
+      "end_idx": 962,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T13:25:56.250548",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

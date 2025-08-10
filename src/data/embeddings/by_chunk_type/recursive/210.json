@@ -1,0 +1,38 @@
+{
+  "document_id": "210",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "022ed31aef0f122f",
+      "content": "The television station, NDtv, grew from one show in 2002 to a full 24-hour channel with original programming by September 2006. WSND-FM serves the student body and larger South Bend community at 88.9 FM, offering students a chance to become involved in bringing classical music, fine arts and educational programming, and alternative rock to the airwaves. Another radio station, WVFI, began as a partner of WSND-FM. More recently, however, WVFI has been airing independently and is streamed on the Internet.",
+      "start_idx": 0,
+      "end_idx": 507,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "2b6617e353b94c95",
+      "content": "ndependently and is streamed on the Internet.",
+      "start_idx": 462,
+      "end_idx": 507,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T12:56:54.491771",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

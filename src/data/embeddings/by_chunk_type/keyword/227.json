@@ -1,0 +1,67 @@
+{
+  "document_id": "227",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "28850323c9e24851",
+      "content": "Notre Dame's conference affiliations for all of its sports except football and fencing changed in July 2013 as a result of major conference realignment, and its fencing affiliation will change in July 2014. The Irish left the Big East for the ACC during a prolonged period of instability in the Big East; while they maintain their football independence, they have committed to play five games per season against ACC opponents. In ice hockey, the Irish were forced to find a new conference home after the Big Ten Conference's decision to add the sport in 2013–14 led to a cascade of conference moves that culminated in the dissolution of the school's former hockey home, the Central Collegiate Hockey Association, after the 2012–13 season.",
+      "start_idx": 0,
+      "end_idx": 738,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "Notre Dame's conference affiliations for all of its sports except football and fencing changed in July 2013 as a result of major conference realignment.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Notre Dame",
+          "conference affiliations",
+          "realignment"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "84cfbcbed25b4837",
+      "content": "In ice hockey, the Irish were forced to find a new conference home after the Big Ten Conference's decision to add the sport in 2013–14 led to a cascade of conference moves that culminated in the dissolution of the school's former hockey home, the Central Collegiate Hockey Association, after the 2012–13 season. Notre Dame moved its hockey team to Hockey East. After Notre Dame joined the ACC, the conference announced it would add fencing as a sponsored sport beginning in the 2014–15 school year. There are many theories behind the adoption of the athletics moniker but it is known that the Fighting Irish name was used in the early 1920s with respect to the football team and was popularized by alumnus Francis Wallace in his New York Daily News columns. The official colors of Notre Dame are Navy Blue and Gold Rush which are worn in competition by its athletic teams.",
+      "start_idx": 427,
+      "end_idx": 1299,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "After Notre Dame joined the ACC, the conference announced it would add fencing as a sponsored sport beginning in the 2014–15 school year.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "ACC",
+          "fencing",
+          "sponsored sport"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "1a5f61626e52592f",
+      "content": "The official colors of Notre Dame are Navy Blue and Gold Rush which are worn in competition by its athletic teams. In addition, the color green is often worn because of the Fighting Irish nickname. The Notre Dame Leprechaun is the mascot of the athletic teams. Created by Theodore W. Drake in 1964, the leprechaun was first used on the football pocket schedule and later on the football program covers. The leprechaun was featured on the cover of Time in November 1964 and gained national exposure.",
+      "start_idx": 1185,
+      "end_idx": 1683,
+      "sequence_num": 2,
+      "metadata": {
+        "key_sentence": "The Notre Dame Leprechaun is the mascot of the athletic teams.",
+        "importance_score": 0.7,
+        "context_window": 2,
+        "keywords": [
+          "Leprechaun",
+          "mascot",
+          "athletic teams"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:50:48.466546",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

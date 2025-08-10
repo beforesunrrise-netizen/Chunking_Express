@@ -1,0 +1,53 @@
+{
+  "document_id": "119",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3aa693f2b8291d04",
+      "content": "In that time the annual operating budget rose by a factor of 18 from $9.7 million to $176.6 million.",
+      "start_idx": 0,
+      "end_idx": 85,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the increase in the operating budget during Hesburgh's presidency.",
+        "answer_contribution": "Provides the specific factor by which the operating budget increased.",
+        "keywords": [
+          "operating budget",
+          "increase",
+          "Hesburgh",
+          "president"
+        ],
+        "query_analysis": {
+          "question_type": "information/comparison",
+          "key_entities": [
+            "Hesburgh",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "operating budget",
+            "increase",
+            "president"
+          ],
+          "required_info": [
+            "factor of increase",
+            "time period of presidency"
+          ],
+          "complexity": "moderate"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:48:26.073741",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "119",
+    "model": "text-embedding-3-large"
+  }
+}

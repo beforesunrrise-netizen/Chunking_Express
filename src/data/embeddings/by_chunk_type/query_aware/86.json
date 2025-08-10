@@ -1,0 +1,115 @@
+{
+  "document_id": "86",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "1abfb83b1f7f9174",
+      "content": "The university is affiliated with the Congregation of Holy Cross (Latin: Congregatio a Sancta Cruce, abbreviated postnominals: \"CSC\"). While religious affiliation is not a criterion for admission, more than 93% of students identify as Christian, with over 80% of the total being Catholic. Collectively, Catholic Mass is celebrated over 100 times per week on campus, and a large campus ministry program provides for the faith needs of the community. There are multitudes of religious statues and artwork around ca",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "chapels",
+          "Notre Dame campus"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "chapels"
+          ],
+          "keywords": [
+            "chapels",
+            "Notre Dame campus"
+          ],
+          "required_info": [
+            "number of chapels"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "92a8f79e7f683a44",
+      "content": "mpus, most prominent of which are the statue of Mary on the Main Building, the Notre Dame Grotto, and the Word of Life mural on Hesburgh Library depicting Christ as a teacher. Additionally, every classroom displays a crucifix. There are many religious clubs (catholic and non-Catholic) at the school, including Council #1477 of the Knights of Columbus (KOC), Baptist Collegiate Ministry (BCM), Jewish Club, Muslim Student Association, Orthodox Christian Fellowship, The Mormon Club, and many more. The Notre Dame",
+      "start_idx": 512,
+      "end_idx": 1024,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "chapels",
+          "Notre Dame campus"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "chapels"
+          ],
+          "keywords": [
+            "chapels",
+            "Notre Dame campus"
+          ],
+          "required_info": [
+            "number of chapels"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "5a218ddf978d1cfa",
+      "content": " KofC are known for being the first collegiate council of KofC, operating a charitable concession stand during every home football game and owning their own building on campus which can be used as a cigar lounge. Fifty-seven chapels are located throughout the campus.",
+      "start_idx": 1024,
+      "end_idx": 1291,
+      "sequence_num": 2,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "chapels",
+          "Notre Dame campus"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "chapels"
+          ],
+          "keywords": [
+            "chapels",
+            "Notre Dame campus"
+          ],
+          "required_info": [
+            "number of chapels"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:52:01.644501",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "86",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "document_id": "316",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "425211fdf6ebe7f8",
+      "content": "Beyoncé Giselle Knowles was born in Houston, Texas, to Celestine Ann \"Tina\" Knowles (née Beyincé), a hairdresser and salon owner, and Mathew Knowles, a Xerox sales manager. Beyoncé's name is a tribute to her mother's maiden name.",
+      "start_idx": 0,
+      "end_idx": 215,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's early life and family background",
+        "keywords": [
+          "Beyoncé",
+          "birth",
+          "family"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "c0ad3fe8b700950f",
+      "content": "Beyoncé's younger sister Solange is also a singer and a former member of Destiny's Child. Mathew is African-American, while Tina is of Louisiana Creole descent (with African, Native American, French, Cajun, and distant Irish and Spanish ancestry).",
+      "start_idx": 216,
+      "end_idx": 396,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Family and heritage",
+        "keywords": [
+          "Solange",
+          "Destiny's Child",
+          "heritage"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "fb546ca2b170d0de",
+      "content": "Through her mother, Beyoncé is a descendant of Acadian leader Joseph Broussard. She was raised in a Methodist household.",
+      "start_idx": 397,
+      "end_idx": 466,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Ancestry and upbringing",
+        "keywords": [
+          "ancestry",
+          "Joseph Broussard",
+          "Methodist"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:36:57.186692",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

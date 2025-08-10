@@ -1,0 +1,50 @@
+{
+  "document_id": "207",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "91557ef5be0d5939",
+      "content": "Beginning in 1873, a library collection was started by Father Lemonnier.",
+      "start_idx": 0,
+      "end_idx": 78,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about who began a library at Notre Dame.",
+        "answer_contribution": "Identifies Father Lemonnier as the individual who started the library.",
+        "keywords": [
+          "library",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "individual",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "library",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "name of the individual",
+            "details about the library"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.115198",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "207",
+    "model": "text-embedding-3-large"
+  }
+}

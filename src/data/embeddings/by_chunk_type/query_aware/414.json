@@ -1,0 +1,49 @@
+{
+  "document_id": "414",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "94d66373b1f3b626",
+      "content": "Destiny's Child accepted a star on the Hollywood Walk of Fame in March 2006.",
+      "start_idx": 0,
+      "end_idx": 83,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the year Destiny's Child received their star.",
+        "answer_contribution": "Provides the specific year (2006) when Destiny's Child got their star.",
+        "keywords": [
+          "star",
+          "year"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Destiny's Child",
+            "Hollywood Walk of Fame"
+          ],
+          "keywords": [
+            "star",
+            "year"
+          ],
+          "required_info": [
+            "year of the star ceremony"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:09:58.821699",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "414",
+    "model": "text-embedding-3-large"
+  }
+}

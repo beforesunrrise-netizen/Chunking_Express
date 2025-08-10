@@ -1,0 +1,48 @@
+{
+  "document_id": "409",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "446d212e501995d1",
+      "content": "Her first solo album Dangerously in Love was released on June 24, 2003.",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about the release date of Beyoncé's first solo album.",
+        "answer_contribution": "Provides the exact release date of the album.",
+        "keywords": [
+          "first solo album",
+          "release"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé"
+          ],
+          "keywords": [
+            "release",
+            "first solo album"
+          ],
+          "required_info": [
+            "release date of first solo album"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:18:30.999924",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "409",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "document_id": "155",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "1ce51c8f255d049e",
+      "content": "The University of Notre Dame has made being a sustainability leader an integral part of its mission, creating the Office of Sustainability in 2008 to achieve a number of goals in the areas of power generation, design and construction, waste reduction, procurement, food services, transportation, and water.As of 2012[update] four building construction projects were pursuing LEED-Certified status and three were pursuing LEED Silver. Notre Dame's dining services sources 40% of its food locally and offers sustai",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "baf2e8eb1828bf26",
+      "content": " sources 40% of its food locally and offers sustainably caught seafood as well as many organic, fair-trade, and vegan options. On the Sustainable Endowments Institute's College Sustainability Report Card 2010, University of Notre Dame received a \"B\" grade. The university also houses the Kroc Institute for International Peace Studies. Father Gustavo Gutierrez, the founder of Liberation Theology is a current faculty member.",
+      "start_idx": 462,
+      "end_idx": 887,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T13:12:56.329120",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

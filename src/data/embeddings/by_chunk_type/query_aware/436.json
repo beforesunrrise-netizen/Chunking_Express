@@ -1,0 +1,39 @@
+{
+  "document_id": "436",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "1bafefb176a4e3c3",
+      "content": "Her second film Dreamgirls, the film version of the 1981 Broadway musical loosely based on The Supremes, received acclaim from critics and grossed $154 million internationally. To promote the film, Beyoncé released 'Listen' as the lead single from the soundtrack album.",
+      "start_idx": 164,
+      "end_idx": 305,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.9,
+        "keywords": [
+          "Listen",
+          "film",
+          "Dreamgirls",
+          "single"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "436_query_aware_1",
+          "436_query_aware_0"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:48:46.223834",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "436",
+    "model": "text-embedding-3-large"
+  }
+}

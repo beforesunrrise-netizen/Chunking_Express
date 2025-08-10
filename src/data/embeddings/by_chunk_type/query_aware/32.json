@@ -1,0 +1,51 @@
+{
+  "document_id": "32",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e87bbe45a75c2d03",
+      "content": "Joan B. Kroc, the widow of McDonald's owner Ray Kroc.",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.8,
+        "relevance_reason": "This part mentions Joan B. Kroc, who was married to Ray Kroc, providing context about John B. Kroc's marital connection.",
+        "answer_contribution": "While it does not directly answer the question about John B. Kroc's marriage, it provides relevant context about his connection to Joan B. Kroc.",
+        "keywords": [
+          "married",
+          "John B. Kroc",
+          "Joan B. Kroc",
+          "Ray Kroc"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "John B. Kroc",
+            "spouse"
+          ],
+          "keywords": [
+            "married",
+            "John B. Kroc"
+          ],
+          "required_info": [
+            "name of spouse"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "20%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:55.292997",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "32",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "document_id": "99",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "37072e45e9a1dc4a",
+      "content": "Under Rockne, the Irish would post a record of 105 wins, 12 losses, and five ties.",
+      "start_idx": 85,
+      "end_idx": 134,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the number of wins Knute Rockne achieved as head coach.",
+        "answer_contribution": "Provides the exact number of wins (105) attained by Knute Rockne.",
+        "keywords": [
+          "wins",
+          "Knute Rockne",
+          "head coach"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Knute Rockne",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "wins",
+            "head coach"
+          ],
+          "required_info": [
+            "amount of wins",
+            "time period as head coach"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:40:34.697701",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "99",
+    "model": "text-embedding-3-large"
+  }
+}

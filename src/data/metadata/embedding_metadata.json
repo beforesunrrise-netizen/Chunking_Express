@@ -1,0 +1,6108 @@
+{
+  "documents": {
+    "0": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-07-20T20:19:29.509082",
+      "updated_at": "2025-08-10T11:25:22.039911"
+    },
+    "1": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-07-20T20:19:30.587800",
+      "updated_at": "2025-08-10T11:25:43.689403"
+    },
+    "2": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-07-20T20:19:31.546372",
+      "updated_at": "2025-08-10T10:40:48.402441"
+    },
+    "3": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-07-20T20:19:32.465488",
+      "updated_at": "2025-08-10T10:40:34.097086"
+    },
+    "4": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-07-20T20:19:33.494742",
+      "updated_at": "2025-08-10T11:24:49.099779"
+    },
+    "5": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.646872",
+      "updated_at": "2025-08-10T11:43:23.291507"
+    },
+    "6": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 7,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 24,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.658782",
+      "updated_at": "2025-08-10T12:24:56.367147"
+    },
+    "7": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 23,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.665246",
+      "updated_at": "2025-08-10T12:25:42.249442"
+    },
+    "8": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 23,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.681094",
+      "updated_at": "2025-08-10T12:28:03.182684"
+    },
+    "9": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.690436",
+      "updated_at": "2025-08-10T10:40:22.411713"
+    },
+    "10": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.700317",
+      "updated_at": "2025-08-10T10:40:48.044084"
+    },
+    "11": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.705950",
+      "updated_at": "2025-08-10T10:40:47.366511"
+    },
+    "12": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.711166",
+      "updated_at": "2025-08-10T10:40:34.746960"
+    },
+    "13": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.721760",
+      "updated_at": "2025-08-10T10:40:47.396652"
+    },
+    "14": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.732031",
+      "updated_at": "2025-08-10T10:40:42.920008"
+    },
+    "15": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.746435",
+      "updated_at": "2025-08-10T10:40:34.471544"
+    },
+    "16": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.759470",
+      "updated_at": "2025-08-10T10:40:47.484935"
+    },
+    "17": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.774075",
+      "updated_at": "2025-08-10T10:40:46.592703"
+    },
+    "18": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.786468",
+      "updated_at": "2025-08-10T10:40:43.374738"
+    },
+    "19": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.798268",
+      "updated_at": "2025-08-10T10:40:44.641357"
+    },
+    "20": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.810475",
+      "updated_at": "2025-08-10T10:40:34.132163"
+    },
+    "21": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.822197",
+      "updated_at": "2025-08-10T10:40:34.049080"
+    },
+    "22": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.835572",
+      "updated_at": "2025-08-10T10:40:48.490376"
+    },
+    "23": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.845644",
+      "updated_at": "2025-08-10T11:34:51.085184"
+    },
+    "24": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.856392",
+      "updated_at": "2025-08-10T10:40:43.730582"
+    },
+    "25": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.866372",
+      "updated_at": "2025-08-10T10:40:43.199413"
+    },
+    "26": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 22,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.873767",
+      "updated_at": "2025-08-10T12:25:50.962213"
+    },
+    "27": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.883557",
+      "updated_at": "2025-08-10T10:40:34.788120"
+    },
+    "28": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 22,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.890516",
+      "updated_at": "2025-08-10T12:28:03.384024"
+    },
+    "29": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.897195",
+      "updated_at": "2025-08-10T10:40:46.643590"
+    },
+    "30": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.905991",
+      "updated_at": "2025-08-10T10:40:46.063151"
+    },
+    "31": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.912562",
+      "updated_at": "2025-08-10T10:40:46.836208"
+    },
+    "32": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.921654",
+      "updated_at": "2025-08-10T10:40:44.091746"
+    },
+    "33": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.930999",
+      "updated_at": "2025-08-10T10:40:47.328419"
+    },
+    "34": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.942961",
+      "updated_at": "2025-08-10T10:40:44.996160"
+    },
+    "35": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.949292",
+      "updated_at": "2025-08-10T10:40:44.434787"
+    },
+    "36": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.955019",
+      "updated_at": "2025-08-10T10:40:33.429575"
+    },
+    "37": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.960896",
+      "updated_at": "2025-08-10T10:40:44.730552"
+    },
+    "38": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.968198",
+      "updated_at": "2025-08-10T10:40:44.246557"
+    },
+    "39": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.974982",
+      "updated_at": "2025-08-10T12:21:38.333353"
+    },
+    "40": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.982153",
+      "updated_at": "2025-08-10T12:22:15.464241"
+    },
+    "41": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:32.988486",
+      "updated_at": "2025-08-10T12:38:27.113862"
+    },
+    "42": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.000020",
+      "updated_at": "2025-08-10T12:27:48.146687"
+    },
+    "43": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.009829",
+      "updated_at": "2025-08-10T10:40:48.217999"
+    },
+    "44": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.021059",
+      "updated_at": "2025-08-10T10:40:34.242266"
+    },
+    "45": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.028787",
+      "updated_at": "2025-08-10T10:40:34.188357"
+    },
+    "46": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.042946",
+      "updated_at": "2025-08-10T12:24:43.374991"
+    },
+    "47": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.054240",
+      "updated_at": "2025-08-10T12:24:47.806752"
+    },
+    "48": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.070781",
+      "updated_at": "2025-08-10T12:23:14.759512"
+    },
+    "49": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.081068",
+      "updated_at": "2025-08-10T12:24:20.797134"
+    },
+    "50": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.097678",
+      "updated_at": "2025-08-10T10:40:44.125920"
+    },
+    "51": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.105670",
+      "updated_at": "2025-08-10T12:27:23.846338"
+    },
+    "52": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.115204",
+      "updated_at": "2025-08-10T12:23:45.598947"
+    },
+    "53": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.124693",
+      "updated_at": "2025-08-10T12:23:28.010605"
+    },
+    "54": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.134940",
+      "updated_at": "2025-08-10T10:40:43.936120"
+    },
+    "55": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.141298",
+      "updated_at": "2025-08-10T10:40:22.607730"
+    },
+    "56": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.147778",
+      "updated_at": "2025-08-10T10:40:34.502466"
+    },
+    "57": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.154322",
+      "updated_at": "2025-08-10T10:40:22.444327"
+    },
+    "58": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.160941",
+      "updated_at": "2025-08-10T10:40:22.497982"
+    },
+    "59": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.171019",
+      "updated_at": "2025-08-10T10:40:45.558271"
+    },
+    "60": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.182249",
+      "updated_at": "2025-08-10T12:28:03.986139"
+    },
+    "61": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.193773",
+      "updated_at": "2025-08-10T10:40:47.289144"
+    },
+    "62": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.203610",
+      "updated_at": "2025-08-10T12:23:58.359143"
+    },
+    "63": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.214465",
+      "updated_at": "2025-08-10T10:40:47.230099"
+    },
+    "64": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.231107",
+      "updated_at": "2025-08-10T10:40:49.000047"
+    },
+    "65": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.242548",
+      "updated_at": "2025-08-10T10:40:47.904543"
+    },
+    "66": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.251604",
+      "updated_at": "2025-08-10T10:40:48.070911"
+    },
+    "67": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.261631",
+      "updated_at": "2025-08-10T10:40:43.871179"
+    },
+    "68": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.273596",
+      "updated_at": "2025-08-10T12:22:56.546667"
+    },
+    "69": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.281748",
+      "updated_at": "2025-08-10T10:40:43.492335"
+    },
+    "70": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.288787",
+      "updated_at": "2025-08-10T12:28:03.124464"
+    },
+    "71": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.299751",
+      "updated_at": "2025-08-10T10:40:48.601855"
+    },
+    "72": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.310245",
+      "updated_at": "2025-08-10T12:24:07.491310"
+    },
+    "73": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.320705",
+      "updated_at": "2025-08-10T12:24:52.043140"
+    },
+    "74": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.337217",
+      "updated_at": "2025-08-10T10:40:45.431265"
+    },
+    "75": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.345363",
+      "updated_at": "2025-08-10T12:22:38.839425"
+    },
+    "76": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.354410",
+      "updated_at": "2025-08-10T10:40:45.501886"
+    },
+    "77": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.365544",
+      "updated_at": "2025-08-10T10:40:45.663101"
+    },
+    "78": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.373201",
+      "updated_at": "2025-08-10T10:40:44.967748"
+    },
+    "79": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.379697",
+      "updated_at": "2025-08-10T10:40:45.048952"
+    },
+    "80": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.388487",
+      "updated_at": "2025-08-10T12:50:07.232015"
+    },
+    "81": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.395674",
+      "updated_at": "2025-08-10T12:25:33.067613"
+    },
+    "82": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.402679",
+      "updated_at": "2025-08-10T12:25:37.406309"
+    },
+    "83": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.412197",
+      "updated_at": "2025-08-10T10:40:48.320660"
+    },
+    "84": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.424965",
+      "updated_at": "2025-08-10T10:40:47.127955"
+    },
+    "85": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.435741",
+      "updated_at": "2025-08-10T12:24:12.201031"
+    },
+    "86": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.446305",
+      "updated_at": "2025-08-10T10:40:43.431538"
+    },
+    "87": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.456151",
+      "updated_at": "2025-08-10T10:40:46.748645"
+    },
+    "88": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.464843",
+      "updated_at": "2025-08-10T12:26:09.092535"
+    },
+    "89": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.476033",
+      "updated_at": "2025-08-10T10:40:45.118393"
+    },
+    "90": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.484091",
+      "updated_at": "2025-08-10T10:40:47.996860"
+    },
+    "91": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.494620",
+      "updated_at": "2025-08-10T10:40:45.992957"
+    },
+    "92": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.502021",
+      "updated_at": "2025-08-10T10:40:45.863764"
+    },
+    "93": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.509170",
+      "updated_at": "2025-08-10T10:40:44.349909"
+    },
+    "94": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.519454",
+      "updated_at": "2025-08-10T10:40:44.510975"
+    },
+    "95": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.526991",
+      "updated_at": "2025-08-10T12:26:17.875836"
+    },
+    "96": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.536560",
+      "updated_at": "2025-08-10T10:40:44.692339"
+    },
+    "97": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.547629",
+      "updated_at": "2025-08-10T10:40:44.571362"
+    },
+    "98": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.555171",
+      "updated_at": "2025-08-10T10:40:46.283454"
+    },
+    "99": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-09T20:50:33.570567",
+      "updated_at": "2025-08-10T10:40:48.451188"
+    },
+    "100": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.323825",
+      "updated_at": "2025-08-10T10:40:47.771940"
+    },
+    "101": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.334424",
+      "updated_at": "2025-08-10T12:55:06.928896"
+    },
+    "102": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.348719",
+      "updated_at": "2025-08-10T10:40:46.424886"
+    },
+    "488": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.646238",
+      "updated_at": "2025-08-10T10:40:22.879855"
+    },
+    "489": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.654104",
+      "updated_at": "2025-08-10T10:40:22.996548"
+    },
+    "490": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.662689",
+      "updated_at": "2025-08-10T10:40:34.814636"
+    },
+    "491": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.669036",
+      "updated_at": "2025-08-10T10:40:23.021181"
+    },
+    "492": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.674881",
+      "updated_at": "2025-08-10T10:40:23.046356"
+    },
+    "493": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.681719",
+      "updated_at": "2025-08-10T10:40:42.987890"
+    },
+    "494": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.689010",
+      "updated_at": "2025-08-10T10:40:43.012281"
+    },
+    "495": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.695754",
+      "updated_at": "2025-08-10T10:40:43.151730"
+    },
+    "496": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.702520",
+      "updated_at": "2025-08-10T10:40:22.963272"
+    },
+    "497": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.709137",
+      "updated_at": "2025-08-10T10:40:43.290966"
+    },
+    "498": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:46.716883",
+      "updated_at": "2025-08-10T10:40:23.074965"
+    },
+    "132": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:10:55.047754",
+      "updated_at": "2025-08-10T09:41:29.551955"
+    },
+    "114": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:10.163684",
+      "updated_at": "2025-08-10T10:24:27.348684"
+    },
+    "118": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 1
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:16.566220",
+      "updated_at": "2025-08-10T10:40:44.209030"
+    },
+    "112": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:22.590441",
+      "updated_at": "2025-08-10T10:34:07.110518"
+    },
+    "113": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 1
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:34.089017",
+      "updated_at": "2025-08-10T12:56:30.981485"
+    },
+    "115": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:39.733472",
+      "updated_at": "2025-08-10T12:35:10.237068"
+    },
+    "117": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 1
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:45.336418",
+      "updated_at": "2025-08-10T12:54:25.333725"
+    },
+    "109": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:11:56.636888",
+      "updated_at": "2025-08-10T09:55:26.612472"
+    },
+    "105": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "query_aware": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:02.351649",
+      "updated_at": "2025-08-10T12:28:03.686804"
+    },
+    "111": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:07.997028",
+      "updated_at": "2025-08-10T09:38:13.967884"
+    },
+    "108": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:13.613510",
+      "updated_at": "2025-08-10T09:42:01.195662"
+    },
+    "137": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:19.249125",
+      "updated_at": "2025-08-10T10:46:24.322057"
+    },
+    "144": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:24.979666",
+      "updated_at": "2025-08-10T13:10:48.536997"
+    },
+    "145": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:30.719530",
+      "updated_at": "2025-08-10T13:10:15.336341"
+    },
+    "135": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:36.358011",
+      "updated_at": "2025-08-10T10:41:42.625338"
+    },
+    "152": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "recursive": 4
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:42.027116",
+      "updated_at": "2025-08-10T13:11:32.696040"
+    },
+    "156": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:47.712617",
+      "updated_at": "2025-08-10T13:11:16.085518"
+    },
+    "122": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 1
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:53.387818",
+      "updated_at": "2025-08-10T10:40:43.977989"
+    },
+    "107": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:12:59.092673",
+      "updated_at": "2025-08-10T10:14:44.420252"
+    },
+    "133": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:04.784973",
+      "updated_at": "2025-08-10T10:44:58.584851"
+    },
+    "129": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:11.370553",
+      "updated_at": "2025-08-10T13:12:11.880669"
+    },
+    "141": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:17.024543",
+      "updated_at": "2025-08-10T13:10:26.057661"
+    },
+    "128": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:22.667946",
+      "updated_at": "2025-08-10T13:07:06.334588"
+    },
+    "119": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 1
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:28.393526",
+      "updated_at": "2025-08-10T10:40:45.196522"
+    },
+    "104": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:34.076722",
+      "updated_at": "2025-08-10T10:36:32.084907"
+    },
+    "131": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:39.719551",
+      "updated_at": "2025-08-10T13:12:01.152578"
+    },
+    "143": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:47.966508",
+      "updated_at": "2025-08-10T13:10:59.514573"
+    },
+    "110": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:53.677927",
+      "updated_at": "2025-08-10T10:04:55.935082"
+    },
+    "153": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:13:59.376733",
+      "updated_at": "2025-08-10T13:11:43.493579"
+    },
+    "160": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:06.098754",
+      "updated_at": "2025-08-10T13:12:34.831193"
+    },
+    "139": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:14.079581",
+      "updated_at": "2025-08-10T13:10:54.219913"
+    },
+    "127": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:23.212942",
+      "updated_at": "2025-08-10T10:46:49.864033"
+    },
+    "125": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:30.790210",
+      "updated_at": "2025-08-10T10:17:22.724888"
+    },
+    "123": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:37.589681",
+      "updated_at": "2025-08-10T12:25:23.874044"
+    },
+    "116": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:44.440388",
+      "updated_at": "2025-08-10T11:50:10.586452"
+    },
+    "161": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:51.803901",
+      "updated_at": "2025-08-10T10:47:50.140052"
+    },
+    "181": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:14:58.272083",
+      "updated_at": "2025-08-10T13:19:26.894783"
+    },
+    "173": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:05.039127",
+      "updated_at": "2025-08-10T10:17:48.091050"
+    },
+    "120": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 1
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:11.281507",
+      "updated_at": "2025-08-10T10:40:45.584705"
+    },
+    "126": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2,
+        "query_aware": 1
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:17.976670",
+      "updated_at": "2025-08-10T12:58:14.698641"
+    },
+    "134": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:25.098866",
+      "updated_at": "2025-08-10T10:44:06.623602"
+    },
+    "150": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:31.283711",
+      "updated_at": "2025-08-10T11:43:37.344033"
+    },
+    "175": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:37.237468",
+      "updated_at": "2025-08-10T10:42:16.593781"
+    },
+    "138": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:43.421997",
+      "updated_at": "2025-08-10T13:10:37.284389"
+    },
+    "154": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:49.661608",
+      "updated_at": "2025-08-10T09:47:47.511007"
+    },
+    "106": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:15:56.202998",
+      "updated_at": "2025-08-10T09:38:59.775327"
+    },
+    "454": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "query_aware": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:02.832461",
+      "updated_at": "2025-08-10T14:17:28.683135"
+    },
+    "452": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "query_aware": 1,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:09.251670",
+      "updated_at": "2025-08-10T14:02:39.770874"
+    },
+    "446": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:15.965379",
+      "updated_at": "2025-08-10T14:18:58.686767"
+    },
+    "420": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:22.564858",
+      "updated_at": "2025-08-10T14:19:24.676009"
+    },
+    "445": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:29.281944",
+      "updated_at": "2025-08-10T14:10:46.121420"
+    },
+    "392": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:36.814576",
+      "updated_at": "2025-08-10T14:10:07.024601"
+    },
+    "347": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:43.528956",
+      "updated_at": "2025-08-10T14:20:35.168988"
+    },
+    "408": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:50.620796",
+      "updated_at": "2025-08-10T14:27:22.734146"
+    },
+    "279": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:16:56.639896",
+      "updated_at": "2025-08-10T13:36:20.308667"
+    },
+    "466": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:03.400191",
+      "updated_at": "2025-08-10T14:11:57.915138"
+    },
+    "387": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:09.397304",
+      "updated_at": "2025-08-10T14:18:20.573426"
+    },
+    "395": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:16.216122",
+      "updated_at": "2025-08-10T14:26:15.425367"
+    },
+    "381": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:23.137771",
+      "updated_at": "2025-08-10T14:22:26.045275"
+    },
+    "412": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:31.783925",
+      "updated_at": "2025-08-10T14:17:22.658492"
+    },
+    "433": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:38.524439",
+      "updated_at": "2025-08-10T14:14:53.855029"
+    },
+    "180": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:45.564671",
+      "updated_at": "2025-08-10T13:20:00.688555"
+    },
+    "177": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:52.100334",
+      "updated_at": "2025-08-10T09:51:29.366892"
+    },
+    "146": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:17:58.957446",
+      "updated_at": "2025-08-10T10:49:16.409928"
+    },
+    "121": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 2,
+        "keyword": 1
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:07.153436",
+      "updated_at": "2025-08-10T10:40:43.690658"
+    },
+    "174": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:13.324375",
+      "updated_at": "2025-08-10T10:43:49.632317"
+    },
+    "163": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:19.530973",
+      "updated_at": "2025-08-10T10:52:09.739256"
+    },
+    "147": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:25.643322",
+      "updated_at": "2025-08-10T10:53:02.083049"
+    },
+    "187": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:31.616464",
+      "updated_at": "2025-08-10T13:15:21.470816"
+    },
+    "142": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:37.680494",
+      "updated_at": "2025-08-10T13:12:29.053672"
+    },
+    "162": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:43.516160",
+      "updated_at": "2025-08-10T10:51:27.185637"
+    },
+    "169": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:49.382583",
+      "updated_at": "2025-08-10T09:48:46.796138"
+    },
+    "209": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:18:55.222237",
+      "updated_at": "2025-08-10T13:24:25.501418"
+    },
+    "201": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:01.133029",
+      "updated_at": "2025-08-10T10:25:59.857168"
+    },
+    "203": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:07.017395",
+      "updated_at": "2025-08-10T10:22:29.989471"
+    },
+    "186": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:12.866254",
+      "updated_at": "2025-08-10T13:14:36.518942"
+    },
+    "206": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:18.760646",
+      "updated_at": "2025-08-10T10:22:39.110381"
+    },
+    "159": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:24.608797",
+      "updated_at": "2025-08-10T13:11:27.273128"
+    },
+    "193": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:30.527827",
+      "updated_at": "2025-08-10T12:45:27.697550"
+    },
+    "208": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:36.382559",
+      "updated_at": "2025-08-10T13:22:32.863751"
+    },
+    "182": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:42.246725",
+      "updated_at": "2025-08-10T13:31:37.284432"
+    },
+    "188": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:48.169156",
+      "updated_at": "2025-08-10T13:23:23.820702"
+    },
+    "222": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:54.070830",
+      "updated_at": "2025-08-10T14:26:27.673425"
+    },
+    "216": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:19:59.939670",
+      "updated_at": "2025-08-10T10:40:43.562537"
+    },
+    "238": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:05.828950",
+      "updated_at": "2025-08-10T13:22:44.390071"
+    },
+    "235": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:11.700502",
+      "updated_at": "2025-08-10T13:24:54.036427"
+    },
+    "229": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:17.579282",
+      "updated_at": "2025-08-10T10:24:10.416508"
+    },
+    "164": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:23.428077",
+      "updated_at": "2025-08-10T13:28:09.233042"
+    },
+    "184": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:29.288348",
+      "updated_at": "2025-08-10T13:20:17.726311"
+    },
+    "183": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:35.187499",
+      "updated_at": "2025-08-10T12:54:19.901887"
+    },
+    "176": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:41.056255",
+      "updated_at": "2025-08-10T13:17:24.165960"
+    },
+    "239": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "recursive": 3,
+        "langchain_semantic": 5
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:47.060762",
+      "updated_at": "2025-08-10T14:28:57.395552"
+    },
+    "215": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:20:54.898817",
+      "updated_at": "2025-08-10T10:40:43.586349"
+    },
+    "204": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:02.512093",
+      "updated_at": "2025-08-10T13:23:46.267534"
+    },
+    "155": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:08.374163",
+      "updated_at": "2025-08-10T13:12:56.329664"
+    },
+    "185": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:14.216247",
+      "updated_at": "2025-08-10T10:40:47.552366"
+    },
+    "245": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:20.362619",
+      "updated_at": "2025-08-10T13:18:53.529589"
+    },
+    "200": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:26.197888",
+      "updated_at": "2025-08-10T13:21:20.077214"
+    },
+    "246": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:32.498071",
+      "updated_at": "2025-08-10T14:06:09.021336"
+    },
+    "170": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:38.335764",
+      "updated_at": "2025-08-10T13:10:20.852372"
+    },
+    "136": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:44.169814",
+      "updated_at": "2025-08-10T13:10:09.381957"
+    },
+    "166": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:50.314380",
+      "updated_at": "2025-08-10T13:13:24.294930"
+    },
+    "248": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:21:56.134119",
+      "updated_at": "2025-08-10T13:35:07.443746"
+    },
+    "167": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:02.534093",
+      "updated_at": "2025-08-10T13:23:35.387788"
+    },
+    "124": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "keyword": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:08.476902",
+      "updated_at": "2025-08-10T10:42:42.207943"
+    },
+    "340": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:14.286873",
+      "updated_at": "2025-08-10T14:11:19.165288"
+    },
+    "172": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:20.379672",
+      "updated_at": "2025-08-10T13:10:31.383495"
+    },
+    "259": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:26.231765",
+      "updated_at": "2025-08-10T14:23:44.076838"
+    },
+    "304": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:32.451862",
+      "updated_at": "2025-08-10T14:07:33.466136"
+    },
+    "280": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:38.349209",
+      "updated_at": "2025-08-10T13:32:34.640934"
+    },
+    "234": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:44.182175",
+      "updated_at": "2025-08-10T13:15:26.834771"
+    },
+    "231": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:50.515836",
+      "updated_at": "2025-08-10T14:26:39.856578"
+    },
+    "207": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:22:56.348638",
+      "updated_at": "2025-08-10T13:15:03.758479"
+    },
+    "281": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:02.510353",
+      "updated_at": "2025-08-10T13:34:52.024359"
+    },
+    "286": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:08.391245",
+      "updated_at": "2025-08-10T10:27:23.334395"
+    },
+    "318": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:14.274796",
+      "updated_at": "2025-08-10T14:16:05.058241"
+    },
+    "283": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:20.910016",
+      "updated_at": "2025-08-10T13:25:13.531144"
+    },
+    "282": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:27.595076",
+      "updated_at": "2025-08-10T13:24:48.598318"
+    },
+    "292": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:34.784028",
+      "updated_at": "2025-08-10T14:31:00.712817"
+    },
+    "250": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "recursive": 4
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:41.587121",
+      "updated_at": "2025-08-10T13:18:08.987244"
+    },
+    "226": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "query_aware": 3,
+        "recursive": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:48.020756",
+      "updated_at": "2025-08-10T13:23:01.474225"
+    },
+    "196": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:23:54.421257",
+      "updated_at": "2025-08-10T13:24:14.642299"
+    },
+    "313": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:00.522012",
+      "updated_at": "2025-08-10T14:18:07.964734"
+    },
+    "218": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:06.891509",
+      "updated_at": "2025-08-10T13:21:02.544890"
+    },
+    "323": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:12.969709",
+      "updated_at": "2025-08-10T14:16:56.227723"
+    },
+    "324": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:19.388022",
+      "updated_at": "2025-08-10T14:10:58.550666"
+    },
+    "290": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:25.579885",
+      "updated_at": "2025-08-10T14:28:26.825507"
+    },
+    "309": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 6,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:32.806967",
+      "updated_at": "2025-08-10T14:09:21.552681"
+    },
+    "165": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:39.204866",
+      "updated_at": "2025-08-10T13:19:21.525015"
+    },
+    "255": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:45.904240",
+      "updated_at": "2025-08-10T14:03:19.764461"
+    },
+    "263": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:52.398384",
+      "updated_at": "2025-08-10T13:33:18.396849"
+    },
+    "224": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:24:58.938312",
+      "updated_at": "2025-08-10T14:25:05.314604"
+    },
+    "210": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:05.767955",
+      "updated_at": "2025-08-10T10:50:52.403321"
+    },
+    "247": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:12.887890",
+      "updated_at": "2025-08-10T13:18:36.484802"
+    },
+    "237": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:20.526287",
+      "updated_at": "2025-08-10T12:54:30.315310"
+    },
+    "322": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:27.888567",
+      "updated_at": "2025-08-10T14:11:32.629443"
+    },
+    "228": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "query_aware": 3,
+        "recursive": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:35.686000",
+      "updated_at": "2025-08-10T13:23:29.958413"
+    },
+    "278": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:42.894876",
+      "updated_at": "2025-08-10T13:34:19.659655"
+    },
+    "277": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:51.139477",
+      "updated_at": "2025-08-10T13:25:25.219945"
+    },
+    "230": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 3
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:25:58.822902",
+      "updated_at": "2025-08-10T13:20:06.141440"
+    },
+    "271": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:05.972638",
+      "updated_at": "2025-08-10T11:24:18.124249"
+    },
+    "211": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:12.979462",
+      "updated_at": "2025-08-10T10:51:43.822475"
+    },
+    "269": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:20.266674",
+      "updated_at": "2025-08-10T10:10:43.846529"
+    },
+    "295": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:26.521971",
+      "updated_at": "2025-08-10T14:31:07.033245"
+    },
+    "192": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:35.392900",
+      "updated_at": "2025-08-10T10:08:17.307676"
+    },
+    "199": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:42.306532",
+      "updated_at": "2025-08-10T13:24:09.175175"
+    },
+    "315": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:48.603800",
+      "updated_at": "2025-08-10T14:20:48.567316"
+    },
+    "310": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 6,
+        "query_aware": 1,
+        "recursive": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:26:56.356805",
+      "updated_at": "2025-08-10T13:43:37.324096"
+    },
+    "301": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 2,
+        "recursive": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:03.245550",
+      "updated_at": "2025-08-10T13:34:26.065955"
+    },
+    "251": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "keyword": 3,
+        "recursive": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:10.079112",
+      "updated_at": "2025-08-10T13:23:18.355744"
+    },
+    "213": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:17.415925",
+      "updated_at": "2025-08-10T13:19:55.204929"
+    },
+    "254": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:24.632446",
+      "updated_at": "2025-08-10T14:07:18.757505"
+    },
+    "312": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:31.194315",
+      "updated_at": "2025-08-10T14:03:48.015354"
+    },
+    "223": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 3
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:37.389530",
+      "updated_at": "2025-08-10T13:24:43.079741"
+    },
+    "225": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:44.151388",
+      "updated_at": "2025-08-10T14:03:07.378925"
+    },
+    "348": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 4,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:51.131164",
+      "updated_at": "2025-08-10T14:04:02.472055"
+    },
+    "232": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:27:57.303590",
+      "updated_at": "2025-08-10T14:19:18.146934"
+    },
+    "352": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:03.533011",
+      "updated_at": "2025-08-10T14:20:41.635562"
+    },
+    "233": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 3
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:09.746598",
+      "updated_at": "2025-08-10T13:17:13.516208"
+    },
+    "316": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:16.000034",
+      "updated_at": "2025-08-10T14:10:52.401022"
+    },
+    "327": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:22.227018",
+      "updated_at": "2025-08-10T13:44:08.963251"
+    },
+    "205": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 4,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:29.217299",
+      "updated_at": "2025-08-10T13:20:57.019334"
+    },
+    "194": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:35.518777",
+      "updated_at": "2025-08-10T13:21:08.507769"
+    },
+    "249": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "query_aware": 3,
+        "recursive": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:41.828070",
+      "updated_at": "2025-08-10T13:34:00.379783"
+    },
+    "168": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:48.244768",
+      "updated_at": "2025-08-10T10:03:57.823699"
+    },
+    "212": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:28:54.471487",
+      "updated_at": "2025-08-10T13:21:13.883859"
+    },
+    "325": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:00.514673",
+      "updated_at": "2025-08-10T14:09:02.230171"
+    },
+    "338": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:06.437663",
+      "updated_at": "2025-08-10T14:13:55.810068"
+    },
+    "303": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 3
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:12.581620",
+      "updated_at": "2025-08-10T13:34:06.964048"
+    },
+    "191": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:18.809707",
+      "updated_at": "2025-08-10T13:20:29.079727"
+    },
+    "285": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:24.916282",
+      "updated_at": "2025-08-10T13:33:24.648728"
+    },
+    "335": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:31.233620",
+      "updated_at": "2025-08-10T13:46:45.208375"
+    },
+    "151": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "query_aware": 3,
+        "recursive": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:37.417183",
+      "updated_at": "2025-08-10T13:12:45.779787"
+    },
+    "353": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:43.917383",
+      "updated_at": "2025-08-10T14:21:34.430388"
+    },
+    "178": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:50.236111",
+      "updated_at": "2025-08-10T13:17:46.460697"
+    },
+    "219": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:29:57.011847",
+      "updated_at": "2025-08-10T10:27:49.228970"
+    },
+    "272": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:03.448148",
+      "updated_at": "2025-08-10T13:25:42.528679"
+    },
+    "442": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:09.816546",
+      "updated_at": "2025-08-10T14:08:55.015796"
+    },
+    "266": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:17.186554",
+      "updated_at": "2025-08-10T14:31:57.927074"
+    },
+    "189": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:23.562415",
+      "updated_at": "2025-08-10T13:21:25.470306"
+    },
+    "341": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:29.791914",
+      "updated_at": "2025-08-10T14:18:14.101149"
+    },
+    "343": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:36.320911",
+      "updated_at": "2025-08-10T14:23:21.948203"
+    },
+    "214": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:42.521263",
+      "updated_at": "2025-08-10T13:24:19.992764"
+    },
+    "217": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:50.488423",
+      "updated_at": "2025-08-10T10:40:43.516694"
+    },
+    "289": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:30:56.971006",
+      "updated_at": "2025-08-10T14:06:52.066418"
+    },
+    "202": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:03.494495",
+      "updated_at": "2025-08-10T13:21:36.924838"
+    },
+    "268": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:13.067285",
+      "updated_at": "2025-08-10T14:02:53.273883"
+    },
+    "388": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:19.677995",
+      "updated_at": "2025-08-10T14:06:21.237624"
+    },
+    "302": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 1,
+        "recursive": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:26.018718",
+      "updated_at": "2025-08-10T13:28:43.240591"
+    },
+    "357": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:32.409948",
+      "updated_at": "2025-08-10T14:17:42.175638"
+    },
+    "241": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 3,
+        "recursive": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:40.039630",
+      "updated_at": "2025-08-10T13:24:03.274860"
+    },
+    "274": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:46.343358",
+      "updated_at": "2025-08-10T10:47:41.860325"
+    },
+    "375": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:52.672849",
+      "updated_at": "2025-08-10T14:30:54.088252"
+    },
+    "326": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:31:58.855181",
+      "updated_at": "2025-08-10T13:36:30.172188"
+    },
+    "400": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:05.274700",
+      "updated_at": "2025-08-10T14:27:16.375348"
+    },
+    "252": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "keyword": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:11.506596",
+      "updated_at": "2025-08-10T14:07:05.805160"
+    },
+    "308": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:17.793339",
+      "updated_at": "2025-08-10T14:32:48.029614"
+    },
+    "287": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:24.094197",
+      "updated_at": "2025-08-10T10:43:25.092627"
+    },
+    "291": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 1,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:30.347457",
+      "updated_at": "2025-08-10T14:05:04.140794"
+    },
+    "425": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:36.523848",
+      "updated_at": "2025-08-10T14:22:04.419184"
+    },
+    "377": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:42.514351",
+      "updated_at": "2025-08-10T14:07:42.300897"
+    },
+    "261": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:48.460913",
+      "updated_at": "2025-08-10T13:26:26.082889"
+    },
+    "262": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:32:54.398993",
+      "updated_at": "2025-08-10T14:29:58.334342"
+    },
+    "236": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:00.356626",
+      "updated_at": "2025-08-10T13:27:57.539776"
+    },
+    "267": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:06.276033",
+      "updated_at": "2025-08-10T14:28:45.226104"
+    },
+    "307": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:12.185873",
+      "updated_at": "2025-08-10T14:24:52.847076"
+    },
+    "389": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:18.095635",
+      "updated_at": "2025-08-10T14:10:33.210266"
+    },
+    "314": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:24.052492",
+      "updated_at": "2025-08-10T14:06:59.055710"
+    },
+    "297": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:29.971189",
+      "updated_at": "2025-08-10T13:34:31.792385"
+    },
+    "346": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:35.899723",
+      "updated_at": "2025-08-10T14:12:44.174536"
+    },
+    "344": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:41.814104",
+      "updated_at": "2025-08-10T14:11:12.385874"
+    },
+    "317": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:47.744547",
+      "updated_at": "2025-08-10T14:32:35.011047"
+    },
+    "371": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:53.655492",
+      "updated_at": "2025-08-10T14:16:43.457841"
+    },
+    "260": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:33:59.608060",
+      "updated_at": "2025-08-10T14:06:35.447617"
+    },
+    "342": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:05.589671",
+      "updated_at": "2025-08-10T14:08:42.211836"
+    },
+    "256": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:11.569370",
+      "updated_at": "2025-08-10T14:30:27.822177"
+    },
+    "294": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:17.506527",
+      "updated_at": "2025-08-10T12:41:18.353147"
+    },
+    "443": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:23.478557",
+      "updated_at": "2025-08-10T14:18:33.318298"
+    },
+    "270": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:29.427408",
+      "updated_at": "2025-08-10T13:27:17.086810"
+    },
+    "438": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:35.409398",
+      "updated_at": "2025-08-10T14:09:47.755734"
+    },
+    "331": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:41.429003",
+      "updated_at": "2025-08-10T13:39:02.653004"
+    },
+    "275": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:47.371121",
+      "updated_at": "2025-08-10T13:24:59.451364"
+    },
+    "349": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:53.318823",
+      "updated_at": "2025-08-10T14:12:56.856946"
+    },
+    "361": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:34:59.277881",
+      "updated_at": "2025-08-10T14:33:14.037388"
+    },
+    "171": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:05.233806",
+      "updated_at": "2025-08-10T10:45:41.346260"
+    },
+    "405": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:11.200238",
+      "updated_at": "2025-08-10T14:04:57.071533"
+    },
+    "264": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 18,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:17.141617",
+      "updated_at": "2025-08-10T14:31:26.582312"
+    },
+    "409": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:23.071369",
+      "updated_at": "2025-08-10T14:33:07.346586"
+    },
+    "382": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:29.013845",
+      "updated_at": "2025-08-10T14:18:26.575543"
+    },
+    "244": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:35.053330",
+      "updated_at": "2025-08-10T14:25:38.157099"
+    },
+    "356": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:41.051816",
+      "updated_at": "2025-08-10T14:30:16.078196"
+    },
+    "413": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:47.001344",
+      "updated_at": "2025-08-10T14:28:33.051910"
+    },
+    "366": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:52.926367",
+      "updated_at": "2025-08-10T14:05:32.800226"
+    },
+    "373": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:35:58.881249",
+      "updated_at": "2025-08-10T14:04:09.633260"
+    },
+    "411": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:04.835835",
+      "updated_at": "2025-08-10T14:16:17.659946"
+    },
+    "390": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:10.766021",
+      "updated_at": "2025-08-10T14:21:04.511941"
+    },
+    "432": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:16.702821",
+      "updated_at": "2025-08-10T14:17:36.055834"
+    },
+    "379": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:22.655753",
+      "updated_at": "2025-08-10T14:32:41.638651"
+    },
+    "220": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:28.628812",
+      "updated_at": "2025-08-10T10:10:04.708136"
+    },
+    "351": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:34.624616",
+      "updated_at": "2025-08-10T14:02:32.715604"
+    },
+    "453": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:40.627096",
+      "updated_at": "2025-08-10T14:32:54.484863"
+    },
+    "179": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:46.566962",
+      "updated_at": "2025-08-10T09:59:54.347928"
+    },
+    "407": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:36:52.956147",
+      "updated_at": "2025-08-10T14:03:13.792775"
+    },
+    "336": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:01.427362",
+      "updated_at": "2025-08-10T13:39:12.589862"
+    },
+    "391": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:07.856650",
+      "updated_at": "2025-08-10T14:27:49.442734"
+    },
+    "430": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:14.611808",
+      "updated_at": "2025-08-10T14:30:10.129500"
+    },
+    "319": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:22.802701",
+      "updated_at": "2025-08-10T14:05:11.279979"
+    },
+    "449": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:30.171311",
+      "updated_at": "2025-08-10T14:15:25.694420"
+    },
+    "426": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:38.051294",
+      "updated_at": "2025-08-10T14:25:44.626744"
+    },
+    "157": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3
+      },
+      "total_chunks": 4,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:45.587040",
+      "updated_at": "2025-08-10T10:21:04.226960"
+    },
+    "300": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:37:54.512035",
+      "updated_at": "2025-08-10T14:14:22.023743"
+    },
+    "447": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "query_aware": 1,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:02.185779",
+      "updated_at": "2025-08-10T14:03:55.557776"
+    },
+    "418": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:08.480331",
+      "updated_at": "2025-08-10T14:08:04.012326"
+    },
+    "354": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:14.572305",
+      "updated_at": "2025-08-10T14:09:41.137929"
+    },
+    "374": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:21.890348",
+      "updated_at": "2025-08-10T14:13:43.040073"
+    },
+    "393": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:28.102881",
+      "updated_at": "2025-08-10T14:19:57.355805"
+    },
+    "148": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:35.592529",
+      "updated_at": "2025-08-10T10:37:05.454983"
+    },
+    "273": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:43.983421",
+      "updated_at": "2025-08-10T13:35:13.927752"
+    },
+    "440": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:51.007038",
+      "updated_at": "2025-08-10T14:25:11.432353"
+    },
+    "330": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:38:57.157726",
+      "updated_at": "2025-08-10T13:39:34.848941"
+    },
+    "296": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:03.735221",
+      "updated_at": "2025-08-10T14:07:12.233192"
+    },
+    "372": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:10.779090",
+      "updated_at": "2025-08-10T14:29:52.406519"
+    },
+    "436": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:17.196433",
+      "updated_at": "2025-08-10T14:32:15.670037"
+    },
+    "369": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:23.266673",
+      "updated_at": "2025-08-10T14:09:15.170286"
+    },
+    "427": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:29.736985",
+      "updated_at": "2025-08-10T14:12:05.485728"
+    },
+    "339": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:35.783545",
+      "updated_at": "2025-08-10T14:15:57.861929"
+    },
+    "383": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:41.824723",
+      "updated_at": "2025-08-10T14:15:13.108357"
+    },
+    "450": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "query_aware": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 23,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:47.866057",
+      "updated_at": "2025-08-10T14:23:50.959168"
+    },
+    "396": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:53.813187",
+      "updated_at": "2025-08-10T14:21:13.321525"
+    },
+    "464": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:39:59.796763",
+      "updated_at": "2025-08-10T14:10:25.969900"
+    },
+    "460": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "query_aware": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:05.772263",
+      "updated_at": "2025-08-10T14:17:09.858266"
+    },
+    "227": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:11.776668",
+      "updated_at": "2025-08-10T13:22:21.951688"
+    },
+    "265": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:17.704890",
+      "updated_at": "2025-08-10T14:29:15.707755"
+    },
+    "258": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:23.657285",
+      "updated_at": "2025-08-10T13:28:30.519515"
+    },
+    "401": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:29.600337",
+      "updated_at": "2025-08-10T14:19:36.800524"
+    },
+    "380": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:35.552874",
+      "updated_at": "2025-08-10T14:29:40.633176"
+    },
+    "458": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:41.498560",
+      "updated_at": "2025-08-10T14:22:38.847165"
+    },
+    "355": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:47.475976",
+      "updated_at": "2025-08-10T14:13:10.495692"
+    },
+    "242": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 3,
+        "recursive": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:53.426132",
+      "updated_at": "2025-08-10T13:25:36.992771"
+    },
+    "337": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 21,
+      "language": "en",
+      "created_at": "2025-08-10T08:40:59.388868",
+      "updated_at": "2025-08-10T14:12:24.519844"
+    },
+    "321": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:05.388891",
+      "updated_at": "2025-08-10T14:21:40.788507"
+    },
+    "456": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:11.347254",
+      "updated_at": "2025-08-10T14:15:19.781386"
+    },
+    "424": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:17.283804",
+      "updated_at": "2025-08-10T14:30:33.736468"
+    },
+    "451": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "query_aware": 1,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:23.229454",
+      "updated_at": "2025-08-10T14:12:50.830758"
+    },
+    "419": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:29.158148",
+      "updated_at": "2025-08-10T14:27:09.969148"
+    },
+    "398": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:35.102649",
+      "updated_at": "2025-08-10T14:33:26.412090"
+    },
+    "350": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:41.071614",
+      "updated_at": "2025-08-10T14:08:22.865585"
+    },
+    "434": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:48.093698",
+      "updated_at": "2025-08-10T14:20:04.097941"
+    },
+    "416": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 1,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:41:54.468290",
+      "updated_at": "2025-08-10T14:15:39.312891"
+    },
+    "358": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:00.815581",
+      "updated_at": "2025-08-10T14:06:02.822484"
+    },
+    "462": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:07.217407",
+      "updated_at": "2025-08-10T14:03:26.752448"
+    },
+    "195": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:14.299796",
+      "updated_at": "2025-08-10T10:34:41.740177"
+    },
+    "288": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:21.132576",
+      "updated_at": "2025-08-10T13:29:38.821298"
+    },
+    "368": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:28.952640",
+      "updated_at": "2025-08-10T14:03:40.647040"
+    },
+    "397": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:35.986008",
+      "updated_at": "2025-08-10T14:26:09.523714"
+    },
+    "311": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2,
+        "recursive": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:44.126763",
+      "updated_at": "2025-08-10T13:32:58.458146"
+    },
+    "298": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:51.660884",
+      "updated_at": "2025-08-10T14:05:39.945796"
+    },
+    "364": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:42:58.869594",
+      "updated_at": "2025-08-10T14:21:20.930191"
+    },
+    "437": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:05.216353",
+      "updated_at": "2025-08-10T12:35:14.939176"
+    },
+    "362": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:12.211627",
+      "updated_at": "2025-08-10T14:23:57.703196"
+    },
+    "410": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:18.652642",
+      "updated_at": "2025-08-10T14:32:03.866516"
+    },
+    "435": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:25.367986",
+      "updated_at": "2025-08-10T14:26:33.909702"
+    },
+    "417": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:31.943409",
+      "updated_at": "2025-08-10T14:23:37.360409"
+    },
+    "197": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:39.145787",
+      "updated_at": "2025-08-10T13:17:57.643718"
+    },
+    "328": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:45.686826",
+      "updated_at": "2025-08-10T12:31:39.370524"
+    },
+    "444": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:52.344966",
+      "updated_at": "2025-08-10T14:10:13.133043"
+    },
+    "423": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:43:59.578962",
+      "updated_at": "2025-08-10T14:15:45.200169"
+    },
+    "363": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:06.150063",
+      "updated_at": "2025-08-10T14:29:21.862949"
+    },
+    "376": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:13.085976",
+      "updated_at": "2025-08-10T14:20:12.565444"
+    },
+    "158": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:19.103627",
+      "updated_at": "2025-08-10T10:52:36.437112"
+    },
+    "403": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:25.692695",
+      "updated_at": "2025-08-10T14:27:29.101169"
+    },
+    "253": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 6,
+        "keyword": 3,
+        "query_aware": 3,
+        "recursive": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 24,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:32.319044",
+      "updated_at": "2025-08-10T14:24:32.762381"
+    },
+    "429": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:39.768597",
+      "updated_at": "2025-08-10T14:14:47.716237"
+    },
+    "305": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 3
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:46.243479",
+      "updated_at": "2025-08-10T13:26:00.396974"
+    },
+    "221": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:44:52.886399",
+      "updated_at": "2025-08-10T14:33:32.587875"
+    },
+    "360": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:00.131528",
+      "updated_at": "2025-08-10T14:08:10.159349"
+    },
+    "332": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:06.640058",
+      "updated_at": "2025-08-10T13:47:19.772028"
+    },
+    "441": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:13.813959",
+      "updated_at": "2025-08-10T14:13:29.123827"
+    },
+    "359": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 16,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:19.973544",
+      "updated_at": "2025-08-10T14:30:04.278832"
+    },
+    "299": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:27.307383",
+      "updated_at": "2025-08-10T14:07:50.113097"
+    },
+    "428": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:33.888255",
+      "updated_at": "2025-08-10T14:18:39.982633"
+    },
+    "367": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:40.788692",
+      "updated_at": "2025-08-10T14:15:51.930328"
+    },
+    "365": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:46.918897",
+      "updated_at": "2025-08-10T14:18:45.939347"
+    },
+    "276": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "recursive": 2
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:45:53.959460",
+      "updated_at": "2025-08-10T13:35:32.408897"
+    },
+    "463": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:00.620424",
+      "updated_at": "2025-08-10T12:33:18.392929"
+    },
+    "334": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:08.618987",
+      "updated_at": "2025-08-10T13:43:50.483835"
+    },
+    "406": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:17.004557",
+      "updated_at": "2025-08-10T14:24:19.191837"
+    },
+    "431": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:23.974581",
+      "updated_at": "2025-08-10T14:31:13.528485"
+    },
+    "329": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:31.133398",
+      "updated_at": "2025-08-10T13:45:26.433349"
+    },
+    "402": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 1,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:39.575409",
+      "updated_at": "2025-08-10T14:05:56.076951"
+    },
+    "333": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:47.369974",
+      "updated_at": "2025-08-10T13:36:21.115897"
+    },
+    "284": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 2,
+        "keyword": 1,
+        "recursive": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:46:54.822657",
+      "updated_at": "2025-08-10T13:35:58.063301"
+    },
+    "385": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:00.846480",
+      "updated_at": "2025-08-10T14:02:46.059179"
+    },
+    "394": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:07.477853",
+      "updated_at": "2025-08-10T14:22:47.059888"
+    },
+    "306": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4
+      },
+      "total_chunks": 6,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:13.480295",
+      "updated_at": "2025-08-10T09:41:45.076653"
+    },
+    "386": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:20.158365",
+      "updated_at": "2025-08-10T14:17:48.843425"
+    },
+    "457": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:26.193828",
+      "updated_at": "2025-08-10T14:26:03.350996"
+    },
+    "345": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "keyword": 4,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 19,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:32.241536",
+      "updated_at": "2025-08-10T14:27:42.400678"
+    },
+    "399": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:38.793915",
+      "updated_at": "2025-08-10T14:26:51.504193"
+    },
+    "384": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 13,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:44.746335",
+      "updated_at": "2025-08-10T14:06:42.811461"
+    },
+    "293": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:51.403063",
+      "updated_at": "2025-08-10T14:27:35.644249"
+    },
+    "414": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "recursive": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:47:57.373020",
+      "updated_at": "2025-08-10T14:29:28.327818"
+    },
+    "415": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:03.368418",
+      "updated_at": "2025-08-10T14:24:25.736278"
+    },
+    "257": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:09.887930",
+      "updated_at": "2025-08-10T14:25:50.596552"
+    },
+    "240": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 3,
+        "langchain_semantic": 5
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:15.836447",
+      "updated_at": "2025-08-10T14:28:38.936509"
+    },
+    "421": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:22.597704",
+      "updated_at": "2025-08-10T14:23:29.946055"
+    },
+    "378": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5,
+        "query_aware": 2,
+        "recursive": 3,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 17,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:28.572024",
+      "updated_at": "2025-08-10T14:11:51.872742"
+    },
+    "130": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:35.169229",
+      "updated_at": "2025-08-10T12:46:11.053851"
+    },
+    "422": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:41.248876",
+      "updated_at": "2025-08-10T14:11:06.257371"
+    },
+    "468": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:47.235287",
+      "updated_at": "2025-08-10T14:12:31.343135"
+    },
+    "439": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:53.813754",
+      "updated_at": "2025-08-10T14:13:17.062471"
+    },
+    "404": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:48:59.801254",
+      "updated_at": "2025-08-10T14:17:03.181908"
+    },
+    "140": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 4,
+        "keyword": 3,
+        "query_aware": 1,
+        "recursive": 2
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:06.565827",
+      "updated_at": "2025-08-10T13:11:37.895185"
+    },
+    "320": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 2,
+        "recursive": 2,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:12.575226",
+      "updated_at": "2025-08-10T14:02:25.570315"
+    },
+    "243": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 6,
+        "query_aware": 1,
+        "langchain_semantic": 5
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:18.534051",
+      "updated_at": "2025-08-10T14:29:09.452220"
+    },
+    "198": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 5
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:25.152584",
+      "updated_at": "2025-08-10T10:16:56.003423"
+    },
+    "370": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 5,
+        "recursive": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:31.202062",
+      "updated_at": "2025-08-10T14:22:53.770901"
+    },
+    "190": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "keyword": 2,
+        "query_aware": 2,
+        "recursive": 2
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:37.998038",
+      "updated_at": "2025-08-10T13:26:50.469166"
+    },
+    "149": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "recursive": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:44.097740",
+      "updated_at": "2025-08-10T13:11:49.754798"
+    },
+    "103": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 5,
+        "query_aware": 1,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 14,
+      "language": "en",
+      "created_at": "2025-08-10T08:49:50.868183",
+      "updated_at": "2025-08-10T14:01:55.902898"
+    },
+    "476": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:51:38.739310",
+      "updated_at": "2025-08-10T14:16:11.195860"
+    },
+    "461": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:52:11.006286",
+      "updated_at": "2025-08-10T14:32:21.960248"
+    },
+    "484": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T08:53:22.130534",
+      "updated_at": "2025-08-10T10:00:16.813320"
+    },
+    "467": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 1,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 11,
+      "language": "en",
+      "created_at": "2025-08-10T08:53:35.894146",
+      "updated_at": "2025-08-10T14:23:08.073797"
+    },
+    "459": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 15,
+      "language": "en",
+      "created_at": "2025-08-10T08:53:43.394765",
+      "updated_at": "2025-08-10T14:19:04.733717"
+    },
+    "470": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T08:55:28.887510",
+      "updated_at": "2025-08-10T14:14:09.272481"
+    },
+    "474": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T08:55:36.852571",
+      "updated_at": "2025-08-10T14:04:23.057630"
+    },
+    "483": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:19:47.905289",
+      "updated_at": "2025-08-10T14:28:20.235983"
+    },
+    "455": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "query_aware": 4,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 23,
+      "language": "en",
+      "created_at": "2025-08-10T09:20:02.496170",
+      "updated_at": "2025-08-10T14:32:28.462095"
+    },
+    "480": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:21:07.032721",
+      "updated_at": "2025-08-10T14:04:49.340006"
+    },
+    "448": {
+      "chunk_types": {
+        "fixed_size": 4,
+        "semantic": 7,
+        "keyword": 4,
+        "query_aware": 1,
+        "langchain_semantic": 4
+      },
+      "total_chunks": 20,
+      "language": "en",
+      "created_at": "2025-08-10T09:23:19.346777",
+      "updated_at": "2025-08-10T14:10:39.582415"
+    },
+    "479": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:23:56.850242",
+      "updated_at": "2025-08-10T14:26:21.559080"
+    },
+    "499": {
+      "chunk_types": {
+        "fixed_size": 1,
+        "semantic": 3,
+        "keyword": 1
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T09:24:59.326458",
+      "updated_at": "2025-08-10T10:40:44.859351"
+    },
+    "478": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T09:25:08.040825",
+      "updated_at": "2025-08-10T10:18:42.838889"
+    },
+    "471": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2
+      },
+      "total_chunks": 9,
+      "language": "en",
+      "created_at": "2025-08-10T09:25:34.588507",
+      "updated_at": "2025-08-10T12:35:54.676519"
+    },
+    "475": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T09:26:17.564724",
+      "updated_at": "2025-08-10T14:21:27.192859"
+    },
+    "487": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:27:29.991405",
+      "updated_at": "2025-08-10T14:14:41.005698"
+    },
+    "472": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T09:27:46.104982",
+      "updated_at": "2025-08-10T14:04:42.797626"
+    },
+    "486": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:28:08.414475",
+      "updated_at": "2025-08-10T14:30:40.565968"
+    },
+    "482": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:28:45.722214",
+      "updated_at": "2025-08-10T14:03:00.594333"
+    },
+    "473": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T09:29:08.416685",
+      "updated_at": "2025-08-10T14:16:29.940774"
+    },
+    "485": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3
+      },
+      "total_chunks": 5,
+      "language": "en",
+      "created_at": "2025-08-10T09:29:45.334464",
+      "updated_at": "2025-08-10T09:42:50.183168"
+    },
+    "465": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "query_aware": 2,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 12,
+      "language": "en",
+      "created_at": "2025-08-10T09:30:00.389334",
+      "updated_at": "2025-08-10T14:08:48.937614"
+    },
+    "477": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 7,
+      "language": "en",
+      "created_at": "2025-08-10T09:30:07.737120",
+      "updated_at": "2025-08-10T14:13:36.934640"
+    },
+    "481": {
+      "chunk_types": {
+        "fixed_size": 2,
+        "semantic": 3,
+        "query_aware": 1,
+        "langchain_semantic": 2
+      },
+      "total_chunks": 8,
+      "language": "en",
+      "created_at": "2025-08-10T09:30:15.325906",
+      "updated_at": "2025-08-10T14:32:09.750097"
+    },
+    "469": {
+      "chunk_types": {
+        "fixed_size": 3,
+        "semantic": 4,
+        "langchain_semantic": 3
+      },
+      "total_chunks": 10,
+      "language": "en",
+      "created_at": "2025-08-10T09:30:23.103192",
+      "updated_at": "2025-08-10T14:09:27.581826"
+    }
+  },
+  "statistics": {
+    "total_chunks": 5633,
+    "total_embeddings": 5633,
+    "total_documents": 500,
+    "by_chunk_type": {
+      "fixed_size": 3378,
+      "semantic": 4301,
+      "keyword": 1496,
+      "query_aware": 836,
+      "recursive": 1516,
+      "langchain_semantic": 1476
+    },
+    "by_language": {
+      "ko": 0,
+      "en": 13003
+    }
+  },
+  "last_updated": "2025-08-10T14:33:32.587966"
+}

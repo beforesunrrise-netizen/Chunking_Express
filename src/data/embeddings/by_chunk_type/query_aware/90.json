@@ -1,0 +1,52 @@
+{
+  "document_id": "90",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "021248379633d750",
+      "content": "the university founder, Fr. Sorin and the president at the time, the Rev. William Corby",
+      "start_idx": 100,
+      "end_idx": 160,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states who the president of Notre Dame was in 1879.",
+        "answer_contribution": "Identifies Rev. William Corby as the president of Notre Dame in 1879.",
+        "keywords": [
+          "president",
+          "Notre Dame",
+          "1879"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "president"
+          ],
+          "keywords": [
+            "president",
+            "Notre Dame",
+            "1879"
+          ],
+          "required_info": [
+            "name of the president",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:44:28.812167",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "90",
+    "model": "text-embedding-3-large"
+  }
+}

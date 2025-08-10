@@ -1,0 +1,47 @@
+{
+  "document_id": "12",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "6f145478a655f2d5",
+      "content": "Old College, the oldest building on campus and located near the shore of St. Mary lake, houses undergraduate seminarians.",
+      "start_idx": 0,
+      "end_idx": 134,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the oldest structure at Notre Dame.",
+        "answer_contribution": "Identifies Old College as the oldest building on campus.",
+        "keywords": [
+          "oldest structure",
+          "Old College"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame"
+          ],
+          "keywords": [
+            "oldest structure"
+          ],
+          "required_info": [
+            "oldest structure at Notre Dame"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:52.947657",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "12",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "document_id": "16",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c2a2b1982634e389",
+      "content": "The College of Engineering was established in 1920.",
+      "start_idx": 0,
+      "end_idx": 45,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about the year the College of Engineering was formed.",
+        "answer_contribution": "It provides the specific year of establishment.",
+        "keywords": [
+          "year",
+          "formed",
+          "established",
+          "College of Engineering"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "College of Engineering",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "year",
+            "formed"
+          ],
+          "required_info": [
+            "year of formation"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:57.262599",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "16",
+    "model": "text-embedding-3-large"
+  }
+}

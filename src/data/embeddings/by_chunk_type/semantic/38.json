@@ -1,0 +1,50 @@
+{
+  "document_id": "38",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "423e98f1979e3a42",
+      "content": "The library system of the university is divided between the main library and each of the colleges and schools. The main building is the 14-story Theodore M. Hesburgh Library, completed in 1963, which is the third building to house the main collection of books.",
+      "start_idx": 0,
+      "end_idx": 246,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overview of the university library system",
+        "keywords": [
+          "library system",
+          "main library",
+          "colleges",
+          "schools"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "49c256bb63030238",
+      "content": "The front of the library is adorned with the Word of Life mural designed by artist Millard Sheets. This mural is popularly known as 'Touchdown Jesus' because of its proximity to Notre Dame Stadium and Jesus' arms appearing to make the signal for a touchdown.",
+      "start_idx": 247,
+      "end_idx": 511,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Description of the library's mural",
+        "keywords": [
+          "Word of Life mural",
+          "Millard Sheets",
+          "Touchdown Jesus",
+          "Notre Dame Stadium"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:21.110477",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "document_id": "258",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "a42e7dc0c95e88da",
+      "content": "The \"Notre Dame Victory March\" is the fight song for the University of Notre Dame. It was written by two brothers who were Notre Dame graduates. The Rev.",
+      "start_idx": 0,
+      "end_idx": 153,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "f1ad11e9a2f91778",
+      "content": "Michael J. Shea, a 1904 graduate, wrote the music, and his brother, John F. Shea, who earned degrees in 1906 and 1908, wrote the original lyrics. The lyrics were revised in the 1920s; it first appeared under the copyright of the University of Notre Dame in 1928. The chorus is, \"Cheer cheer for old Notre Dame, wake up the echos cheering her name.",
+      "start_idx": 154,
+      "end_idx": 501,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "7be0334c0071a593",
+      "content": "Send a volley cheer on high, shake down the thunder from the sky! What though the odds be great or small, old Notre Dame will win over all. While her loyal sons are marching, onward to victory!\"",
+      "start_idx": 502,
+      "end_idx": 696,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T13:43:22.197961",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

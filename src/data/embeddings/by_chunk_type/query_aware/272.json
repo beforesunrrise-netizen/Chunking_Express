@@ -1,0 +1,39 @@
+{
+  "document_id": "272",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3b84d1abebfb4cb9",
+      "content": "Beyoncé Giselle Knowles-Carter (/biːˈjɒnseɪ/ bee-YON-say) (born September 4, 1981) is an American singer, songwriter, record producer and actress. Born and raised in Houston, Texas, she performed in various singing and dancing competitions as a child, and rose to fame in the late 1990s as lead singer of R&B girl-group Destiny's Child. Managed by her father, Mathew Knowles, the group became one of the world's best-selling girl groups of all time. Their hiatus saw the release of Beyoncé's debut album, Dangero usly in Love (2003), which established her as a solo artist worldwide, earned five Grammy Awards and featured the Billboard Hot 100 number-one singles \"Crazy in Love\" and \"Baby Boy\".",
+      "start_idx": 0,
+      "end_idx": 694,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "grow up",
+          "state",
+          "city",
+          "Beyonce"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "272_query_aware_0",
+          "272_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:01:22.906760",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "272",
+    "model": "text-embedding-3-large"
+  }
+}

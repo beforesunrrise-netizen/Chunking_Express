@@ -1,0 +1,48 @@
+{
+  "document_id": "336",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "847aec8691f909d2",
+      "content": "Beyoncé was also a member of the choir at St. John's United Methodist Church as a soloist for two years.",
+      "start_idx": 0,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about which choir Beyoncé sang in for two years.",
+        "answer_contribution": "Identifies the specific choir (St. John's United Methodist Church) and the duration (two years) of her participation.",
+        "keywords": [
+          "choir",
+          "sing",
+          "two years"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "choir"
+          ],
+          "keywords": [
+            "choir",
+            "sing",
+            "two years"
+          ],
+          "required_info": [
+            "name of the choir"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:55:43.058753",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "document_id": "402",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9cabde45f5c04488",
+      "content": "The album's lead single, 'Crazy in Love', featuring Jay Z, became Beyoncé's first number-one single as a solo artist in the US.",
+      "start_idx": 246,
+      "end_idx": 307,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about Beyoncé's first number one song.",
+        "answer_contribution": "Identifies 'Crazy in Love' as the first number one song.",
+        "keywords": [
+          "first",
+          "number one",
+          "song"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "number one song"
+          ],
+          "keywords": [
+            "first",
+            "number one",
+            "song"
+          ],
+          "required_info": [
+            "Beyonce's first number one song"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:49:16.788044",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

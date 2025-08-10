@@ -1,0 +1,46 @@
+{
+  "document_id": "445",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "dbc405a41b6b2bb6",
+      "content": "In April 2007, Beyoncé embarked on The Beyoncé Experience, her first worldwide concert tour, visiting 97 venues and grossed over $24 million.",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly states the name of Beyoncé's first international tour.",
+        "answer_contribution": "The Beyoncé Experience is the answer to the question.",
+        "keywords": [
+          "Beyoncé",
+          "first international tour",
+          "The Beyoncé Experience"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé"
+          ],
+          "keywords": [
+            "first international tour",
+            "Beyoncé"
+          ],
+          "required_info": [
+            "name of the tour"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:25:10.666562",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

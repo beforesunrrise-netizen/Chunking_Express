@@ -1,0 +1,49 @@
+{
+  "document_id": "400",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "d8243231fd4fa5d5",
+      "content": "Beyoncé's first solo recording was a feature on Jay Z's \"'03 Bonnie & Clyde\" that was released in October 2002, peaking at number four on the U.S. Billboard Hot 100 chart. Her first solo album Dangerously in Love was released on June 24, 2003, after Michelle Williams and Kelly Rowland had released their solo efforts.",
+      "start_idx": 0,
+      "end_idx": 318,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "4fc5e906628582ae",
+      "content": "The album sold 317,000 copies in its first week, debuted atop the Billboard 200, and has since sold 11 million copies worldwide. The album's lead single, \"Crazy in Love\", featuring Jay Z, became Beyoncé's first number-one single as a solo artist in the US. The single \"Baby Boy\" also reached number one, and singles, \"Me, Myself and I\" and \"Naughty Girl\", both reached the top-five.",
+      "start_idx": 319,
+      "end_idx": 701,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "d2f29a9b55005dab",
+      "content": "The album earned Beyoncé a then record-tying five awards at the 46th Annual Grammy Awards; Best Contemporary R&B Album, Best Female R&B Vocal Performance for \"Dangerously in Love 2\", Best R&B Song and Best Rap/Sung Collaboration for \"Crazy in Love\", and Best R&B Performance by a Duo or Group with Vocals for \"The Closer I Get to You\" with Luther Vandross.",
+      "start_idx": 702,
+      "end_idx": 1058,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T14:27:16.374612",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

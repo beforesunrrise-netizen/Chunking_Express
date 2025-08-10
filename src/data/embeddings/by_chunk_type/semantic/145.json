@@ -1,0 +1,81 @@
+{
+  "document_id": "145",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "8fa00e8d9be123ac",
+      "content": "A Science Hall was built in 1883 under the direction of Fr. Zahm, but in 1950 it was converted to a student union building and named LaFortune Center, after Joseph LaFortune, an oil executive from Tulsa, Oklahoma.",
+      "start_idx": 0,
+      "end_idx": 218,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "History of LaFortune Center",
+        "keywords": [
+          "Science Hall",
+          "LaFortune Center",
+          "Fr. Zahm",
+          "Joseph LaFortune"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3efce2339dca591f",
+      "content": "Commonly known as 'LaFortune' or 'LaFun,' it is a 4-story building of 83,000 square feet that provides the Notre Dame community with a meeting place for social, recreational, cultural, and educational activities.",
+      "start_idx": 219,
+      "end_idx": 366,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Description and Purpose of LaFortune Center",
+        "keywords": [
+          "LaFortune",
+          "LaFun",
+          "meeting place",
+          "Notre Dame"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3138d1c8bb54f6eb",
+      "content": "LaFortune employs 35 part-time student staff and 29 full-time non-student staff and has an annual budget of $1.2 million.",
+      "start_idx": 367,
+      "end_idx": 455,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Staffing and Budget of LaFortune Center",
+        "keywords": [
+          "staff",
+          "budget",
+          "part-time",
+          "full-time"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "a6bb980025cba3bb",
+      "content": "Many businesses, services, and divisions of The Office of Student Affairs are found within. The building also houses restaurants from national restaurant chains.",
+      "start_idx": 456,
+      "end_idx": 532,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Facilities and Services in LaFortune Center",
+        "keywords": [
+          "businesses",
+          "services",
+          "Office of Student Affairs",
+          "restaurants"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:25:36.728976",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

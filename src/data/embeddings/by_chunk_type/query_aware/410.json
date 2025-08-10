@@ -1,0 +1,68 @@
+{
+  "document_id": "410",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "b0843ed4e93f3ee7",
+      "content": "Beyoncé's first solo recording was a feature on Jay Z's \"'03 Bonnie & Clyde\" that was released in October 2002, peaking at number four on the U.S. Billboard Hot 100 chart. Her first solo album Dangerously in Love was released on June 24, 2003, after Michelle Williams and Kelly Rowland had released their solo efforts. The album sold 317,000 copies in its first week, debuted atop the Billboard 200, and has since sold 11 million copies worldwide. The album's lead single, \"Crazy in Love\", featuring Jay Z, becam",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "lead single",
+          "first album"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "first album"
+          ],
+          "keywords": [
+            "lead single",
+            "first album"
+          ],
+          "required_info": [
+            "lead single title",
+            "album name"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "5bf927c06cb666d5",
+      "content": "e Beyoncé's first number-one single as a solo artist in the US. The single \"Baby Boy\" also reached number one, and singles, \"Me, Myself and I\" and \"Naughty Girl\", both reached the top-five. The album earned Beyoncé a then record-tying five awards at the 46th Annual Grammy Awards; Best Contemporary R&B Album, Best Female R&B Vocal Performance for \"Dangerously in Love 2\", Best R&B Song and Best Rap/Sung Collaboration for \"Crazy in Love\", and Best R&B Performance by a Duo or Group with Vocals for \"The Closer I  Get to You\" with Luther Vandross.",
+      "start_idx": 512,
+      "end_idx": 1058,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "lead single",
+          "first album"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "410_query_aware_1",
+          "410_query_aware_2"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:39:20.651703",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

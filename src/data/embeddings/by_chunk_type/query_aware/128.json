@@ -1,0 +1,48 @@
+{
+  "document_id": "128",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "09f8f6aad3f16ada",
+      "content": "In the 18 years under the presidency of Edward Malloy, C.S.C., (1987–2005)",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly states the years Edward Malloy served as president.",
+        "answer_contribution": "Provides the specific years of Edward Malloy's presidency.",
+        "keywords": [
+          "president",
+          "years",
+          "Edward Malloy"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Edward Malloy",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "president",
+            "years"
+          ],
+          "required_info": [
+            "start year",
+            "end year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:49:36.724532",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

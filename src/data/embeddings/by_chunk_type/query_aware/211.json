@@ -1,0 +1,48 @@
+{
+  "document_id": "211",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "fc16199794c0c086",
+      "content": "The television station, NDtv, grew from one show in 2002 to a full 24-hour channel with original programming by September 2006.",
+      "start_idx": 0,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states that NDtv had one show in 2002, which answers the question about the number of programs.",
+        "answer_contribution": "NDtv featured one program in 2002.",
+        "keywords": [
+          "programs",
+          "2002"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "NDtv"
+          ],
+          "keywords": [
+            "programs",
+            "2002"
+          ],
+          "required_info": [
+            "number of programs featured by NDtv in 2002"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.579573",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "211",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "document_id": "60",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "a3f099f564fd30fd",
+      "content": "The Lobund Institute grew out of pioneering research in germ-free-life which began in 1928. This area of research originated in a question posed by Pasteur as to whether animal life was possible without bacteria. Though others had taken up this idea, their research was short lived and inconclusive.",
+      "start_idx": 0,
+      "end_idx": 276,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Origins of Lobund Institute and germ-free research",
+        "keywords": [
+          "Lobund Institute",
+          "germ-free-life",
+          "Pasteur",
+          "research origins"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "ee20c641c56d248f",
+      "content": "Lobund was the first research organization to answer definitively, that such life is possible and that it can be prolonged through generations. But the objective was not merely to answer Pasteur's question but also to produce the germ free animal as a new tool for biological and medical research.",
+      "start_idx": 277,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Definitive findings and objectives of Lobund",
+        "keywords": [
+          "germ free animal",
+          "biological research",
+          "medical research",
+          "objectives"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "566d971fd088a7e6",
+      "content": "This objective was reached and for years Lobund was a unique center for the study and production of germ free animals and for their use in biological and medical investigations. Today the work has spread to other universities.",
+      "start_idx": 488,
+      "end_idx": 610,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Achievements and influence of Lobund",
+        "keywords": [
+          "unique center",
+          "germ free animals",
+          "biological investigations",
+          "influence"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6709a66c2e2e590f",
+      "content": "In the beginning it was under the Department of Biology and a program leading to the master's degree accompanied the research program. In the 1940s Lobund achieved independent status as a purely research organization and in 1950 was raised to the status of an Institute.",
+      "start_idx": 611,
+      "end_idx": 764,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Evolution of Lobund's academic status",
+        "keywords": [
+          "Department of Biology",
+          "master's degree",
+          "independent status",
+          "Institute"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "058d501281b002a4",
+      "content": "In 1958 it was brought back into the Department of Biology as integral part of that department, but with its own program leading to the degree of PhD in Gnotobiotics.",
+      "start_idx": 765,
+      "end_idx": 868,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Reintegration and PhD program in Gnotobiotics",
+        "keywords": [
+          "Department of Biology",
+          "PhD program",
+          "Gnotobiotics",
+          "reintegration"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:23.974645",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

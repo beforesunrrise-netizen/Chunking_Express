@@ -1,0 +1,54 @@
+{
+  "document_id": "0",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "248d1e5e600170ce",
+      "content": "the Virgin Mary reputedly appeared to Saint Bernadette Soubirous in 1858",
+      "start_idx": 186,
+      "end_idx": 227,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about the apparition of the Virgin Mary in 1858.",
+        "answer_contribution": "Identifies Saint Bernadette Soubirous as the person to whom the Virgin Mary appeared.",
+        "keywords": [
+          "Virgin Mary",
+          "1858",
+          "Lourdes",
+          "Saint Bernadette Soubirous"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Virgin Mary",
+            "Lourdes",
+            "France"
+          ],
+          "keywords": [
+            "appear",
+            "1858"
+          ],
+          "required_info": [
+            "who",
+            "location",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:54.221003",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "0",
+    "model": "text-embedding-3-large"
+  }
+}

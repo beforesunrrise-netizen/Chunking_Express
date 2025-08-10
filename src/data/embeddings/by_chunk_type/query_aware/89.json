@@ -1,0 +1,51 @@
+{
+  "document_id": "89",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "17b48d05e2dcd836",
+      "content": "This Main Building, and the library collection, was entirely destroyed by a fire in April 1879.",
+      "start_idx": 0,
+      "end_idx": 82,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question regarding the year the Main Building was razed in a fire.",
+        "answer_contribution": "Provides the specific year (1879) when the fire occurred.",
+        "keywords": [
+          "Main Building",
+          "fire",
+          "1879"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Main Building",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "year",
+            "razed",
+            "fire"
+          ],
+          "required_info": [
+            "year of the fire"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:40:34.785933",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "89",
+    "model": "text-embedding-3-large"
+  }
+}

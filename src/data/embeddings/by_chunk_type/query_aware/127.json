@@ -1,0 +1,118 @@
+{
+  "document_id": "127",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "441ece0bddb24897",
+      "content": "Hesburgh is also credited with transforming the face of Notre Dame by making it a coeducational institution. In the mid-1960s Notre Dame and Saint Mary's College developed a co-exchange program whereby several hundred students took classes not offered at their home institution, an arrangement that added undergraduate women to a campus that already had a few women in the graduate schools. After extensive debate, merging with St. Mary's was rejected, primarily because of the differential in faculty qualificat",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "exchange program",
+          "1960s"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "institute"
+          ],
+          "keywords": [
+            "exchange program",
+            "1960s"
+          ],
+          "required_info": [
+            "name of the institute",
+            "details about the exchange program"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "8ec1dc998162b6be",
+      "content": "ions and pay scales. \"In American college education,\" explained the Rev. Charles E. Sheedy, C.S.C., Notre Dame's Dean of Arts and Letters, \"certain features formerly considered advantageous and enviable are now seen as anachronistic and out of place.... In this environment of diversity, the integration of the sexes is a normal and expected aspect, replacing separatism.\" Thomas Blantz, C.S.C., Notre Dame's Vice President of Student Affairs, added that coeducation \"opened up a whole other pool of very bright ",
+      "start_idx": 512,
+      "end_idx": 1024,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "exchange program",
+          "1960s"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "institute"
+          ],
+          "keywords": [
+            "exchange program",
+            "1960s"
+          ],
+          "required_info": [
+            "name of the institute",
+            "details about the exchange program"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "c0c74d7a4b22b8b7",
+      "content": "students.\" Two of the male residence halls were converted for the newly admitted female students that first year, while two others were converted for the next school year. In 1971 Mary Ann Proctor became the first female undergraduate; she transferred from St. Mary's College. In 1972 the first woman to graduate was Angela Sienko, who earned a bachelor's degree in marketing.",
+      "start_idx": 1024,
+      "end_idx": 1400,
+      "sequence_num": 2,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "exchange program",
+          "1960s"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "institute"
+          ],
+          "keywords": [
+            "exchange program",
+            "1960s"
+          ],
+          "required_info": [
+            "name of the institute",
+            "details about the exchange program"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:48:26.418267",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "127",
+    "model": "text-embedding-3-large"
+  }
+}

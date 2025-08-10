@@ -1,0 +1,50 @@
+{
+  "document_id": "25",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "fb89c1f06f628341",
+      "content": "a professional Master of Divinity (M.Div.) program also exists.",
+      "start_idx": 192,
+      "end_idx": 232,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly states the existence of the M.Div. program and its classification as a professional degree.",
+        "answer_contribution": "Confirms that an M.Div. is a type of professional degree.",
+        "keywords": [
+          "M.Div.",
+          "degree",
+          "professional"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "M.Div."
+          ],
+          "keywords": [
+            "degree",
+            "M.Div."
+          ],
+          "required_info": [
+            "type of degree",
+            "field of study"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:54.066363",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "25",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "document_id": "164",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "357a92734133b685",
+      "content": "The College of Arts and Letters was established as the university's first college in 1842 with the first degrees given in 1849. The university's first academic curriculum was modeled after the Jesuit Ratio Studiorum from Saint Louis University. Today the college, housed in O'Shaughnessy Hall, includes 20 departments in the areas of fine arts, humanities, and social sciences, and awards Bachelor of Arts (B.A.) degrees in 33 majors, making it the largest of the university's colleges. There are around 2,500 un dergraduates and 750 graduates enrolled in the college.",
+      "start_idx": 0,
+      "end_idx": 567,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "base",
+          "curriculum"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "164_query_aware_0",
+          "164_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:42:12.095226",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

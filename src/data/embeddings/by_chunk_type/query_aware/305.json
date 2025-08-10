@@ -1,0 +1,74 @@
+{
+  "document_id": "305",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "547d12564352e932",
+      "content": "A self-described \"modern-day feminist\", Beyoncé creates songs that are often characterized by themes of love, relationships, and monogamy, as well as female sexuality and empowerment. On stage, her dynamic, highly choreographed performances have led to critics hailing her as one of the best entertainers in contemporary popular music. Throughout a career spanning 19 years, she has sold over 118 million records as a solo artist, and a further 60 million with Destiny's Child, making her one of the best-selling",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "rated",
+          "most powerful female musician",
+          "2015"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "magazine"
+          ],
+          "keywords": [
+            "rated",
+            "most powerful female musician",
+            "2015"
+          ],
+          "required_info": [
+            "name of the magazine",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "37caf43d1bc24b8f",
+      "content": " music artists of all time. She has won 20 Grammy Awards and is the most nominated woman in the award's history. The Recording Industry Association of America recognized her as the Top Certified Artist in America during the 2000s decade. In 2009, Billboard named her the Top Radio Songs Artist of the Decade, the Top Female Artist of the 2000s and their Artist of the Millennium in 2011. Time listed her among the 100 most influential people in the world in 2013 and 2014. Forbes magazine also listed her as the  most powerful female musician of 2015.",
+      "start_idx": 512,
+      "end_idx": 1062,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "most powerful female musician",
+          "rated",
+          "2015"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "305_query_aware_1",
+          "305_query_aware_2"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:54:02.657684",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "305",
+    "model": "text-embedding-3-large"
+  }
+}

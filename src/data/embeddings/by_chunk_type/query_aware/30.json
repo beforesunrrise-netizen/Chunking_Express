@@ -1,0 +1,51 @@
+{
+  "document_id": "30",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "ce2bfc5c47e32652",
+      "content": "the Rev. Theodore M. Hesburgh CSC, President Emeritus of the University of Notre Dame.",
+      "start_idx": 156,
+      "end_idx": 204,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly mentions Theodore Hesburgh's title as 'President Emeritus' of the University of Notre Dame.",
+        "answer_contribution": "Provides the title of Theodore Hesburgh.",
+        "keywords": [
+          "title",
+          "Notre Dame",
+          "Theodore Hesburgh"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "Theodore Hesburgh"
+          ],
+          "keywords": [
+            "title",
+            "Notre Dame",
+            "Theodore Hesburgh"
+          ],
+          "required_info": [
+            "title of Theodore Hesburgh"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:54.179083",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "30",
+    "model": "text-embedding-3-large"
+  }
+}

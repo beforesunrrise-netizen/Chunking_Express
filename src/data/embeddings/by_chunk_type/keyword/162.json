@@ -1,0 +1,54 @@
+{
+  "document_id": "162",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "f79ae265dbc8fb5b",
+      "content": "The College of Arts and Letters was established as the university's first college in 1842 with the first degrees given in 1849. The university's first academic curriculum was modeled after the Jesuit Ratio Studiorum from Saint Louis University. Today the college, housed in O'Shaughnessy Hall, includes 20 departments in the areas of fine arts, humanities, and social sciences, and awards Bachelor of Arts (B.A.)",
+      "start_idx": 0,
+      "end_idx": 412,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "The College of Arts and Letters was established as the university's first college in 1842 with the first degrees given in 1849.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "College of Arts and Letters",
+          "established",
+          "1842",
+          "first degrees",
+          "1849"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "80f1a1342f3790da",
+      "content": "Today the college, housed in O'Shaughnessy Hall, includes 20 departments in the areas of fine arts, humanities, and social sciences, and awards Bachelor of Arts (B.A.) degrees in 33 majors, making it the largest of the university's colleges. There are around 2,500 undergraduates and 750 graduates enrolled in the college.",
+      "start_idx": 245,
+      "end_idx": 567,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "There are around 2,500 undergraduates and 750 graduates enrolled in the college.",
+        "importance_score": 0.8,
+        "context_window": 2,
+        "keywords": [
+          "2,500 undergraduates",
+          "750 graduates",
+          "enrollment"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:51:27.185015",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

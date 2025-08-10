@@ -1,0 +1,47 @@
+{
+  "document_id": "72",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3ad70ab682eceb5c",
+      "content": "the Notre Dame Global Adaptation Index which ranks countries annually based on how vulnerable they are to climate change and how prepared they are to adapt.",
+      "start_idx": 276,
+      "end_idx": 351,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly addresses the focus of the Global Adaptation Index study, which is on vulnerability to climate change.",
+        "answer_contribution": "The Global Adaptation Index studies the threat of climate change vulnerability and adaptation preparedness.",
+        "keywords": [
+          "Global Adaptation Index",
+          "climate change",
+          "vulnerability",
+          "adaptation"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Global Adaptation Index"
+          ],
+          "keywords": [
+            "threat",
+            "study"
+          ],
+          "required_info": [
+            "type of threat studied by the Global Adaptation Index"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:24:07.490375",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

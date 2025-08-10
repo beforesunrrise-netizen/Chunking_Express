@@ -1,0 +1,51 @@
+{
+  "document_id": "341",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "f9bc9d3ee15f9934",
+      "content": "In 1995 Beyoncé's father resigned from his job to manage the group.",
+      "start_idx": 0,
+      "end_idx": 78,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question regarding the year Beyoncé's father quit his job.",
+        "answer_contribution": "Provides the specific year (1995) when her father quit to manage the group.",
+        "keywords": [
+          "year",
+          "quit",
+          "manage",
+          "group"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "father"
+          ],
+          "keywords": [
+            "year",
+            "quit",
+            "manage",
+            "group"
+          ],
+          "required_info": [
+            "year when Beyonce's father quit his job",
+            "Beyonce's group"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:50:22.224564",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

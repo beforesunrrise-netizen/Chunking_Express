@@ -1,0 +1,84 @@
+{
+  "document_id": "392",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "605d225fc9f6e785",
+      "content": "Beyoncé released \"Work It Out\" as the lead single from its soundtrack album",
+      "start_idx": 134,
+      "end_idx": 182,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the lead single from the film's soundtrack.",
+        "answer_contribution": "Identifies the song 'Work It Out' as the lead single.",
+        "keywords": [
+          "lead single",
+          "soundtrack"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "song",
+            "film"
+          ],
+          "keywords": [
+            "lead single",
+            "soundtrack"
+          ],
+          "required_info": [
+            "title of the song",
+            "name of the film"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "c019f8d12cec0dce",
+      "content": "Beyoncé released \"Fighting Temptation\" as the lead single from the film's soundtrack album",
+      "start_idx": 265,
+      "end_idx": 319,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "Provides information about another lead single from a different film's soundtrack.",
+        "answer_contribution": "Mentions another song but is not the answer to the specific question.",
+        "keywords": [
+          "lead single",
+          "soundtrack"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "song",
+            "film"
+          ],
+          "keywords": [
+            "lead single",
+            "soundtrack"
+          ],
+          "required_info": [
+            "title of the song",
+            "name of the film"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:08:22.591849",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "392",
+    "model": "text-embedding-3-large"
+  }
+}

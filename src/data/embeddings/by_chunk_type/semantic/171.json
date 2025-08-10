@@ -1,0 +1,63 @@
+{
+  "document_id": "171",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "5f6894fbddbf7375",
+      "content": "The School of Architecture was established in 1899, although degrees in architecture were first awarded by the university in 1898. Today the school, housed in Bond Hall, offers a five-year undergraduate program leading to the Bachelor of Architecture degree.",
+      "start_idx": 0,
+      "end_idx": 218,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "History and Overview of the School of Architecture",
+        "keywords": [
+          "School of Architecture",
+          "established",
+          "Bachelor of Architecture"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "4b7b4b040c1b4fbc",
+      "content": "All undergraduate students study the third year of the program in Rome. The university is globally recognized for its Notre Dame School of Architecture, a faculty that teaches (pre-modernist) traditional and classical architecture and urban planning.",
+      "start_idx": 219,
+      "end_idx": 348,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Program Structure and Global Recognition",
+        "keywords": [
+          "undergraduate program",
+          "Rome",
+          "Notre Dame School of Architecture"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "e186e56cd20d41de",
+      "content": "It also awards the renowned annual Driehaus Architecture Prize.",
+      "start_idx": 349,
+      "end_idx": 386,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Driehaus Architecture Prize",
+        "keywords": [
+          "Driehaus Architecture Prize",
+          "awards"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:07:00.686016",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

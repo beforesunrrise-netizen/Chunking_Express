@@ -1,0 +1,51 @@
+{
+  "document_id": "362",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "110b6e1b12f949a1",
+      "content": "During this time, Beyoncé recorded a duet with Marc Nelson, an original member of Boyz II Men, on the song 'After All Is Said and Done' for the soundtrack to the 1999 film, The Best Man.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question by stating who Beyoncé sang a duet with for 'The Best Man'.",
+        "answer_contribution": "Identifies Marc Nelson as the duet partner for the song in the film.",
+        "keywords": [
+          "Beyoncé",
+          "duet",
+          "The Best Man"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "duet partner"
+          ],
+          "keywords": [
+            "Beyoncé",
+            "duet",
+            "The Best Man"
+          ],
+          "required_info": [
+            "duet partner for 'The Best Man'"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:03:07.421379",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "362",
+    "model": "text-embedding-3-large"
+  }
+}

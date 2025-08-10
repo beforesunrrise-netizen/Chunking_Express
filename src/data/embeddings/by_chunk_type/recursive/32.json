@@ -1,0 +1,38 @@
+{
+  "document_id": "32",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "6abef23d682fed97",
+      "content": "The Joan B. Kroc Institute for International Peace Studies at the University of Notre Dame is dedicated to research, education and outreach on the causes of violent conflict and the conditions for sustainable peace. It offers PhD, Master's, and undergraduate degrees in peace studies. It was founded in 1986 through the donations of Joan B. Kroc, the widow of McDonald's owner Ray Kroc. The institute was inspired by the vision of the Rev. Theodore M. Hesburgh CSC, President Emeritus of the University of Notre ",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "d3a090b2174f98cc",
+      "content": "SC, President Emeritus of the University of Notre Dame. The institute has contributed to international policy discussions about peace building practices.",
+      "start_idx": 462,
+      "end_idx": 615,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T12:29:19.767261",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

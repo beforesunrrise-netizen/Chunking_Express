@@ -1,0 +1,49 @@
+{
+  "document_id": "146",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "0628598d0d4da3d9",
+      "content": "it is a 4-story building of 83,000 square feet",
+      "start_idx": 136,
+      "end_idx": 164,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly provides the size of the LaFortune Center in square feet.",
+        "answer_contribution": "The size of the LaFortune Center is 83,000 square feet.",
+        "keywords": [
+          "square feet",
+          "size"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "LaFortune Center",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "square feet",
+            "size"
+          ],
+          "required_info": [
+            "size of LaFortune Center in square feet"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:15:38.188466",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "146",
+    "model": "text-embedding-3-large"
+  }
+}

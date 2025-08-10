@@ -1,0 +1,114 @@
+{
+  "document_id": "250",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 6,
+  "chunks": [
+    {
+      "hash": "f2e874402a611627",
+      "content": "The men's basketball team has over 1,600 wins, one of only 12 schools who have reached that mark, and have appeared in 28 NCAA tournaments. Former player Austin Carr holds the record for most points scored in a single game of the tournament with 61. Although the team has never won the NCAA Tournament, they were named by the Helms Athletic Foundation as national champions twice.",
+      "start_idx": 0,
+      "end_idx": 307,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Team achievements and records",
+        "keywords": [
+          "basketball",
+          "NCAA",
+          "Austin Carr",
+          "national champions"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "4529e5ea7507aadb",
+      "content": "The team has orchestrated a number of upsets of number one ranked teams, the most notable of which was ending UCLA's record 88-game winning streak in 1974. The team has beaten an additional eight number-one teams, and those nine wins rank second, to UCLA's 10, all-time in wins against the top team.",
+      "start_idx": 308,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Notable upsets and rankings",
+        "keywords": [
+          "upsets",
+          "UCLA",
+          "number one teams"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "cc7c617b61ae4a0d",
+      "content": "The team plays in newly renovated Purcell Pavilion (within the Edmund P. Joyce Center), which reopened for the beginning of the 2009–2010 season. The team is coached by Mike Brey, who, as of the 2014–15 season, has achieved a 332-165 record.",
+      "start_idx": 488,
+      "end_idx": 570,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Current facilities and coaching",
+        "keywords": [
+          "Purcell Pavilion",
+          "Mike Brey",
+          "coaching record"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "4cf250e26ddece89",
+      "content": "In 2009 they were invited to the NIT, where they advanced to the semifinals but were beaten by Penn State who went on and beat Baylor in the championship. The 2010–11 team concluded its regular season ranked number seven in the country, with a record of 25–5, Brey's fifth straight 20-win season, and a second-place finish in the Big East.",
+      "start_idx": 571,
+      "end_idx": 682,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "NIT performance and 2010-11 season",
+        "keywords": [
+          "NIT",
+          "semifinals",
+          "Big East",
+          "20-win season"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "cdf4699938b11b62",
+      "content": "During the 2014-15 season, the team went 32-6 and won the ACC conference tournament, later advancing to the Elite 8, where the Fighting Irish lost on a missed buzzer-beater against then undefeated Kentucky. Led by NBA draft picks Jerian Grant and Pat Connaughton, the Fighting Irish beat the eventual national champion Duke Blue Devils twice during the season.",
+      "start_idx": 683,
+      "end_idx": 786,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "2014-15 season highlights",
+        "keywords": [
+          "ACC tournament",
+          "Elite 8",
+          "Jerian Grant",
+          "Pat Connaughton"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "f5bebae3454e3fd6",
+      "content": "The 32 wins were the most by the Fighting Irish team since 1908-09.",
+      "start_idx": 787,
+      "end_idx": 823,
+      "sequence_num": 5,
+      "metadata": {
+        "topic": "Historical significance of wins",
+        "keywords": [
+          "32 wins",
+          "historical record"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:32:09.279308",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

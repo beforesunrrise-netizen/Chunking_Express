@@ -1,0 +1,97 @@
+{
+  "document_id": "268",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "7cde3aba950b4a68",
+      "content": "Notre Dame alumni work in various fields. Alumni working in political fields include state governors, members of the United States Congress, and former United States Secretary of State Condoleezza Rice.",
+      "start_idx": 0,
+      "end_idx": 173,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Political Alumni",
+        "keywords": [
+          "Notre Dame",
+          "politics",
+          "Condoleezza Rice"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "29c76e441220ed0e",
+      "content": "A notable alumnus of the College of Science is Medicine Nobel Prize winner Eric F. Wieschaus. A number of university heads are alumni, including Notre Dame's current president, the Rev. John Jenkins.",
+      "start_idx": 173,
+      "end_idx": 307,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Academic and Leadership Alumni",
+        "keywords": [
+          "Nobel Prize",
+          "Eric F. Wieschaus",
+          "John Jenkins"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "8ef011e53a11af14",
+      "content": "Additionally, many alumni are in the media, including talk show hosts Regis Philbin and Phil Donahue, and television and radio personalities such as Mike Golic and Hannah Storm.",
+      "start_idx": 307,
+      "end_idx": 442,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Media Alumni",
+        "keywords": [
+          "media",
+          "Regis Philbin",
+          "Phil Donahue"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "28612a80452a3603",
+      "content": "With the university having high profile sports teams itself, a number of alumni went on to become involved in athletics outside the university, including professional baseball, basketball, football, and ice hockey players, such as Joe Theismann, Joe Montana, Tim Brown, Ross Browner, Rocket Ismail, Ruth Riley, Jeff Samardzija, Jerome Bettis, Brett Lebda, Olympic gold medalist Mariel Zagunis, professional boxer Mike Lee, former football coaches such as Charlie Weis, Frank Leahy and Knute Rockne, and Basketball Hall of Famers Austin Carr and Adrian Dantley.",
+      "start_idx": 442,
+      "end_idx": 748,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Athletic Alumni",
+        "keywords": [
+          "sports",
+          "athletics",
+          "Joe Montana",
+          "Mariel Zagunis"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "090c75f127a3b1d4",
+      "content": "Other notable alumni include prominent businessman Edward J. DeBartolo, Jr. and astronaut Jim Wetherbee.",
+      "start_idx": 748,
+      "end_idx": 804,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Business and Space Alumni",
+        "keywords": [
+          "business",
+          "Edward J. DeBartolo",
+          "Jim Wetherbee"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:35:15.742471",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

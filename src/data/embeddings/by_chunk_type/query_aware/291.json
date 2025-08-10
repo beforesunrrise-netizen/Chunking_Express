@@ -1,0 +1,47 @@
+{
+  "document_id": "291",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "4468ce8481c8b121",
+      "content": "I Am... Sasha Fierce (2008), which saw the birth of her alter-ego Sasha Fierce and earned a record-setting six Grammy Awards in 2010, including Song of the Year for 'Single Ladies (Put a Ring on It)'.",
+      "start_idx": 292,
+      "end_idx": 392,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states the number of Grammy Awards Beyoncé won, which is essential to answering the question.",
+        "answer_contribution": "Beyoncé won six Grammy Awards.",
+        "keywords": [
+          "Grammys",
+          "win",
+          "record"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "Grammys"
+          ],
+          "keywords": [
+            "record",
+            "win"
+          ],
+          "required_info": [
+            "number of Grammys won by Beyonce"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:49:42.189889",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "document_id": "118",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "22dab5716583945f",
+      "content": "The Rev. Theodore Hesburgh, C.S.C., (1917–2015)",
+      "start_idx": 0,
+      "end_idx": 36,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part provides the birth and death years of Theodore Hesburgh, which directly indicates his lifespan.",
+        "answer_contribution": "This information directly answers the question about the lifespan of Theodore Hesburgh.",
+        "keywords": [
+          "lifespan",
+          "Theodore Hesburgh"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Theodore Hesburgh"
+          ],
+          "keywords": [
+            "lifespan",
+            "Theodore Hesburgh"
+          ],
+          "required_info": [
+            "birth year",
+            "death year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:54:39.667184",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "118",
+    "model": "text-embedding-3-large"
+  }
+}

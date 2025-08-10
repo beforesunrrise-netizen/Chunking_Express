@@ -1,0 +1,37 @@
+{
+  "document_id": "64",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "a2326eceb6e00957",
+      "content": "The Review of Politics was founded in 1939 by Gurian, modeled after German Catholic journals. It quickly emerged as part of an international Catholic intellectual revival, offering an alternative vision to positivist philosophy. For 44 years, the Review was edited by Gurian, Matthew Fitzsimons, Frederick Crosson, and Thomas Stritch. Intellectual leaders included Gurian, Jacques Maritain, Frank O'Malley, Leo Richard Ward, F. A. Hermens, and John U. Nef. It became a major forum for political ideas and modern  political concerns, especially from a Catholic and scholastic tradition.",
+      "start_idx": 0,
+      "end_idx": 584,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "created",
+          "1939"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "64_query_aware_0",
+          "64_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:46:08.574756",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "64",
+    "model": "text-embedding-3-large"
+  }
+}

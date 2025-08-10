@@ -1,0 +1,80 @@
+{
+  "document_id": "154",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "70be775b523ca987",
+      "content": "The University of Notre Dame has made being a sustainability leader an integral part of its mission, creating the Office of Sustainability in 2008 to achieve a number of goals in the areas of power generation, design and construction, waste reduction, procurement, food services, transportation, and water.",
+      "start_idx": 0,
+      "end_idx": 292,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "University's commitment to sustainability",
+        "keywords": [
+          "sustainability",
+          "Office of Sustainability",
+          "mission"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "eb44f2eaff2ff8c6",
+      "content": "As of 2012[update] four building construction projects were pursuing LEED-Certified status and three were pursuing LEED Silver. Notre Dame's dining services sources 40% of its food locally and offers sustainably caught seafood as well as many organic, fair-trade, and vegan options.",
+      "start_idx": 293,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Sustainability initiatives and dining services",
+        "keywords": [
+          "LEED-Certified",
+          "local food",
+          "sustainable dining"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "11c6295664d26adf",
+      "content": "On the Sustainable Endowments Institute's College Sustainability Report Card 2010, University of Notre Dame received a 'B' grade. The university also houses the Kroc Institute for International Peace Studies.",
+      "start_idx": 488,
+      "end_idx": 578,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Sustainability report card and academic institutions",
+        "keywords": [
+          "Sustainability Report Card",
+          "B grade",
+          "Kroc Institute"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6832477f2a130e07",
+      "content": "Father Gustavo Gutierrez, the founder of Liberation Theology is a current faculty member.",
+      "start_idx": 579,
+      "end_idx": 634,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Notable faculty member",
+        "keywords": [
+          "Gustavo Gutierrez",
+          "Liberation Theology",
+          "faculty"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:47:47.510312",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

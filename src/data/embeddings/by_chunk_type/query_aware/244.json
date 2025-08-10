@@ -1,0 +1,37 @@
+{
+  "document_id": "244",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c9fd7669fa987a4a",
+      "content": "Football gameday traditions During home games, activities occur all around campus and different dorms decorate their halls with a traditional item (e.g. Zahm House's two-story banner). Traditional activities begin at the stroke of midnight with the Drummers' Circle. This tradition involves the drum line of the Band of the Fighting Irish and ushers in the rest of the festivities that will continue the rest of the gameday Saturday. Later that day, the trumpet section will play the Notre Dame Victory March and  the Notre Dame Alma Mater under the dome. The band entire will play a concert at the steps of Bond Hall, from where they will march into Notre Dame Stadium, leading fans and students alike across campus to the game.",
+      "start_idx": 0,
+      "end_idx": 728,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "displayed",
+          "football home games"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "244_query_aware_0",
+          "244_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:17:23.945323",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "244",
+    "model": "text-embedding-3-large"
+  }
+}

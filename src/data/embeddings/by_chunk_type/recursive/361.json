@@ -1,0 +1,46 @@
+{
+  "document_id": "361",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "fb13916703b3e3c2",
+      "content": "The group changed their name to Destiny's Child in 1996, based upon a passage in the Book of Isaiah. In 1997, Destiny's Child released their major label debut song \"Killing Time\" on the soundtrack to the 1997 film, Men in Black. The following year, the group released their self-titled debut album, scoring their first major hit \"No, No, No\". The album established the group as a viable act in the music industry, with moderate sales and winning the group three Soul Train Lady of Soul Awards for Best R&B/Soul A",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "b0e86495fc92f2e0",
+      "content": "Soul Train Lady of Soul Awards for Best R&B/Soul Album of the Year, Best R&B/Soul or Rap New Artist, and Best R&B/Soul Single for \"No, No, No\". The group released their multi-platinum second album The Writing's on the Wall in 1999. The record features some of the group's most widely known songs such as \"Bills, Bills, Bills\", the group's first number-one single, \"Jumpin' Jumpin'\" and \"Say My Name\", which became their most successful song at the time, and would remain one of their signature songs. \"Say My Nam",
+      "start_idx": 462,
+      "end_idx": 974,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "006a2063090abf08",
+      "content": "d remain one of their signature songs. \"Say My Name\" won the Best R&B Performance by a Duo or Group with Vocals and the Best R&B Song at the 43rd Annual Grammy Awards. The Writing's on the Wall sold more than eight million copies worldwide. During this time, Beyoncé recorded a duet with Marc Nelson, an original member of Boyz II Men, on the song \"After All Is Said and Done\" for the soundtrack to the 1999 film, The Best Man.",
+      "start_idx": 924,
+      "end_idx": 1351,
+      "sequence_num": 2,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T13:38:11.456095",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

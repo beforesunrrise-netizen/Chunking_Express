@@ -1,0 +1,52 @@
+{
+  "document_id": "21",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "85edb570ae1cf17f",
+      "content": "All of Notre Dame's undergraduate students are a part of one of the five undergraduate colleges at the school or are in the First Year of Studies program.",
+      "start_idx": 0,
+      "end_idx": 118,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly states the number of undergraduate colleges at Notre Dame.",
+        "answer_contribution": "Indicates that there are five undergraduate colleges.",
+        "keywords": [
+          "colleges",
+          "undergraduates",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "colleges for undergraduates"
+          ],
+          "keywords": [
+            "colleges",
+            "undergraduates",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "number of colleges",
+            "type of colleges"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:44:28.244485",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "21",
+    "model": "text-embedding-3-large"
+  }
+}

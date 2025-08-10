@@ -1,0 +1,97 @@
+{
+  "document_id": "23",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "d19b4c75315ecf39",
+      "content": "All of Notre Dame's undergraduate students are a part of one of the five undergraduate colleges at the school or are in the First Year of Studies program.",
+      "start_idx": 0,
+      "end_idx": 138,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overview of Undergraduate Programs",
+        "keywords": [
+          "Notre Dame",
+          "undergraduate students",
+          "colleges",
+          "First Year of Studies"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "b7f36c0a05f5273f",
+      "content": "The First Year of Studies program was established in 1962 to guide incoming freshmen in their first year at the school before they have declared a major.",
+      "start_idx": 139,
+      "end_idx": 238,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "First Year of Studies Program Introduction",
+        "keywords": [
+          "First Year of Studies",
+          "established 1962",
+          "incoming freshmen",
+          "declared major"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6e86137798be09fe",
+      "content": "Each student is given an academic advisor from the program who helps them to choose classes that give them exposure to any major in which they are interested.",
+      "start_idx": 239,
+      "end_idx": 348,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Academic Advising in the Program",
+        "keywords": [
+          "academic advisor",
+          "choose classes",
+          "exposure",
+          "majors"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "d4ddc69071b0d139",
+      "content": "The program also includes a Learning Resource Center which provides time management, collaborative learning, and subject tutoring.",
+      "start_idx": 349,
+      "end_idx": 448,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Learning Resource Center Services",
+        "keywords": [
+          "Learning Resource Center",
+          "time management",
+          "collaborative learning",
+          "tutoring"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "83296c40c384db78",
+      "content": "This program has been recognized previously, by U.S. News & World Report, as outstanding.",
+      "start_idx": 449,
+      "end_idx": 493,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Recognition of the Program",
+        "keywords": [
+          "recognized",
+          "U.S. News & World Report",
+          "outstanding"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:34:51.084136",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

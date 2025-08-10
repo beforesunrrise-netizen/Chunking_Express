@@ -1,0 +1,52 @@
+{
+  "document_id": "204",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3b382f7e74f86738",
+      "content": "Fr. Sorin arrived on the site with eight Holy Cross brothers from France and Ireland on November 26, 1842, and began the school using Father Stephen Badin's old log chapel.",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states that the first structure used for the college was Father Stephen Badin's old log chapel.",
+        "answer_contribution": "Identifies the first structure used for the college.",
+        "keywords": [
+          "first",
+          "used",
+          "college"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "structure",
+            "college"
+          ],
+          "keywords": [
+            "first",
+            "used",
+            "purposes"
+          ],
+          "required_info": [
+            "structure name",
+            "college name"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:40:34.865877",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "204",
+    "model": "text-embedding-3-large"
+  }
+}

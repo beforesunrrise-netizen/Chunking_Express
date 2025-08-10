@@ -1,0 +1,89 @@
+{
+  "document_id": "241",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "139df5577901f695",
+      "content": "George Gipp was the school's legendary football player during 1916–20. He played semiprofessional baseball and smoked, drank, and gambled when not playing sports. He was also humble, generous to the needy, and a man of integrity.",
+      "start_idx": 0,
+      "end_idx": 229,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "George Gipp was the school's legendary football player during 1916–20.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "George Gipp",
+          "football player",
+          "1916-20"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "9300d54ad68c94db",
+      "content": "He played semiprofessional baseball and smoked, drank, and gambled when not playing sports. He was also humble, generous to the needy, and a man of integrity. It was in 1928 that famed coach Knute Rockne used his final conversation with the dying Gipp to inspire the Notre Dame team to beat the Army team and \"win one for the Gipper.\" The 1940 film, Knute Rockne, All American, starred Pat O'Brien as Knute Rockne and Ronald Reagan as Gipp. Today the team competes in Notre Dame Stadium, an 80,795-seat stadium on campus.",
+      "start_idx": 71,
+      "end_idx": 592,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "It was in 1928 that famed coach Knute Rockne used his final conversation with the dying Gipp to inspire the Notre Dame team to beat the Army team and 'win one for the Gipper.'",
+        "importance_score": 0.85,
+        "context_window": 2,
+        "keywords": [
+          "Knute Rockne",
+          "inspiration",
+          "win one for the Gipper"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "90848dab4a26cb65",
+      "content": "The 1940 film, Knute Rockne, All American, starred Pat O'Brien as Knute Rockne and Ronald Reagan as Gipp. Today the team competes in Notre Dame Stadium, an 80,795-seat stadium on campus. The current head coach is Brian Kelly, hired from the University of Cincinnati on December 11, 2009. Kelly's record in midway through his sixth season at Notre Dame is 52–21. In 2012, Kelly's Fighting Irish squad went undefeated and played in the BCS National Championship Game.",
+      "start_idx": 406,
+      "end_idx": 871,
+      "sequence_num": 2,
+      "metadata": {
+        "key_sentence": "The current head coach is Brian Kelly, hired from the University of Cincinnati on December 11, 2009.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "Brian Kelly",
+          "head coach",
+          "University of Cincinnati"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "7dca4cf8fe42f3f4",
+      "content": "Although Weis led his team to two Bowl Championship Series bowl games, his overall record was 35–27, mediocre by Notre Dame standards, and the 2007 team had the most losses in school history. The football team generates enough revenue to operate independently while $22.1 million is retained from the team's profits for academic use. Forbes named the team as the most valuable in college football, worth a total of $101 million in 2007.",
+      "start_idx": 953,
+      "end_idx": 1389,
+      "sequence_num": 3,
+      "metadata": {
+        "key_sentence": "Forbes named the team as the most valuable in college football, worth a total of $101 million in 2007.",
+        "importance_score": 0.7,
+        "context_window": 2,
+        "keywords": [
+          "Forbes",
+          "most valuable",
+          "college football",
+          "$101 million"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:32:53.766044",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

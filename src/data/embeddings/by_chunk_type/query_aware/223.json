@@ -1,0 +1,82 @@
+{
+  "document_id": "223",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "1adf939250201c72",
+      "content": "Notre Dame teams are known as the Fighting Irish. They compete as a member of the National Collegiate Athletic Association (NCAA) Division I, primarily competing in the Atlantic Coast Conference (ACC) for all sports since the 2013–14 school year. The Fighting Irish previously competed in the Horizon League from 1982-83 to 1985-86, and again from 1987-88 to 1994-95, and then in the Big East Conference through 2012–13. Men's sports include baseball, basketball, crew, cross country, fencing, football, golf, ic",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "conference",
+          "2012"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Fighting Irish"
+          ],
+          "keywords": [
+            "conference",
+            "2012"
+          ],
+          "required_info": [
+            "conference name",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "f315a47fc43dacf2",
+      "content": "e hockey, lacrosse, soccer, swimming & diving, tennis and track & field; while women's sports include basketball, cross country, fencing, golf, lacrosse, rowing, soccer, softball, swimming & diving, tennis, track & field and volleyball. The football team competes as an Football Bowl Subdivision (FBS) Independent since its inception in 1887. Both fencing teams compete in the Midwest Fencing Conference, and the men's ice hockey team competes in Hockey East.",
+      "start_idx": 512,
+      "end_idx": 971,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "conference",
+          "2012"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Fighting Irish"
+          ],
+          "keywords": [
+            "conference",
+            "2012"
+          ],
+          "required_info": [
+            "conference name",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:08:56.721960",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "223",
+    "model": "text-embedding-3-large"
+  }
+}

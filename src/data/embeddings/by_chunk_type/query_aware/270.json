@@ -1,0 +1,51 @@
+{
+  "document_id": "270",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c6911c3d92919160",
+      "content": "she performed in various singing and dancing competitions as a child",
+      "start_idx": 100,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about the areas in which Beyoncé competed while growing up.",
+        "answer_contribution": "Beyoncé competed in singing and dancing.",
+        "keywords": [
+          "singing",
+          "dancing",
+          "competitions"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce"
+          ],
+          "keywords": [
+            "compete",
+            "growing up",
+            "areas"
+          ],
+          "required_info": [
+            "areas of competition",
+            "activities during childhood"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:17:52.910681",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "270",
+    "model": "text-embedding-3-large"
+  }
+}

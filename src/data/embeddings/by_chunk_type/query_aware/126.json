@@ -1,0 +1,50 @@
+{
+  "document_id": "126",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "90ef991bf34d2c74",
+      "content": "In 1971 Mary Ann Proctor became the first female undergraduate; she transferred from St. Mary's College.",
+      "start_idx": 0,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the year when Notre Dame had its earliest female undergraduate.",
+        "answer_contribution": "Provides the specific year (1971) when the first female undergraduate was admitted.",
+        "keywords": [
+          "year",
+          "earliest",
+          "female",
+          "undergraduate"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "female undergraduate"
+          ],
+          "keywords": [
+            "year",
+            "earliest",
+            "female",
+            "undergraduate"
+          ],
+          "required_info": [
+            "year of earliest female undergraduate admission"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:58:14.698044",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

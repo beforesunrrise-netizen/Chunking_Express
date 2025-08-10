@@ -1,0 +1,29 @@
+{
+  "document_id": "159",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "a25627ca11438e9e",
+      "content": "The university owns several centers around the world used for international studies and research, conferences abroad, and alumni support. The university has had a presence in London, England, since 1968. Since 1998, its London center has been based in the former United University Club at 1 Suffolk Street in Trafalgar Square. The center enables the Colleges of Arts & Letters, Business Administration, Science, Engineering and the Law School to develop their own programs in London, as well as hosting conferences and symposia. Other Global Gateways are located in Beijing, Chicago, Dublin, Jerusalem and Rome.",
+      "start_idx": 0,
+      "end_idx": 611,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "merged_last",
+        "overlap_size": 51,
+        "merged": true
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T08:19:24.608312",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

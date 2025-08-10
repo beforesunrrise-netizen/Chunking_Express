@@ -1,0 +1,51 @@
+{
+  "document_id": "144",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "73b2b8149c72b7b3",
+      "content": "in 1950 it was converted to a student union building and named LaFortune Center, after Joseph LaFortune",
+      "start_idx": 56,
+      "end_idx": 118,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states the year when the student union building was renamed to LaFortune Center.",
+        "answer_contribution": "The year 1950 is the specific year the building was renamed.",
+        "keywords": [
+          "renamed",
+          "year",
+          "LaFortune Center"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "student union building",
+            "LaFortune Center",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "renamed",
+            "year"
+          ],
+          "required_info": [
+            "year of renaming"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:58:53.368690",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "144",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "document_id": "473",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "20efa21213ec1fd1",
+      "content": "Beyoncé starred opposite Ali Larter and Idris Elba in the thriller, Obsessed.",
+      "start_idx": 157,
+      "end_idx": 203,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the thriller film Beyoncé starred in with Ali Larter.",
+        "answer_contribution": "Identifies the film 'Obsessed' as the thriller featuring both Beyoncé and Ali Larter.",
+        "keywords": [
+          "thriller film",
+          "star"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "Ali Larter"
+          ],
+          "keywords": [
+            "thriller film",
+            "star"
+          ],
+          "required_info": [
+            "title of the film"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:12:08.104635",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "473",
+    "model": "text-embedding-3-large"
+  }
+}

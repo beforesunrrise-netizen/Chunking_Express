@@ -1,0 +1,61 @@
+{
+  "document_id": "379",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "e8689767d4434ba5",
+      "content": "The remaining band members recorded \"Independent Women Part I\", which appeared on the soundtrack to the 2000 film, Charlie's Angels. It became their best-charting single, topping the U.S. Billboard Hot 100 chart for eleven consecutive weeks.",
+      "start_idx": 0,
+      "end_idx": 241,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "d425d267210d45ba",
+      "content": "In early 2001, while Destiny's Child was completing their third album, Beyoncé landed a major role in the MTV made-for-television film, Carmen: A Hip Hopera, starring alongside American actor Mekhi Phifer. Set in Philadelphia, the film is a modern interpretation of the 19th century opera Carmen by French composer Georges Bizet. When the third album Survivor was released in May 2001, Luckett and Roberson filed a lawsuit claiming that the songs were aimed at them.",
+      "start_idx": 242,
+      "end_idx": 708,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "da168ed1b19f1571",
+      "content": "The album debuted at number one on the U.S. Billboard 200, with first-week sales of 663,000 copies sold. The album spawned other number-one hits, \"Bootylicious\" and the title track, \"Survivor\", the latter of which earned the group a Grammy Award for Best R&B Performance by a Duo or Group with Vocals.",
+      "start_idx": 709,
+      "end_idx": 1010,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "50ee6bf5757ca2cd",
+      "content": "After releasing their holiday album 8 Days of Christmas in October 2001, the group announced a hiatus to further pursue solo careers.",
+      "start_idx": 1011,
+      "end_idx": 1144,
+      "sequence_num": 3,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T14:32:41.638044",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

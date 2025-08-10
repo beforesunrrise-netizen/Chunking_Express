@@ -1,0 +1,50 @@
+{
+  "document_id": "162",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "b2de10dab98a9ca6",
+      "content": "The College of Arts and Letters was established as the university's first college in 1842",
+      "start_idx": 0,
+      "end_idx": 78,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the year the College of Arts and Letters was created.",
+        "answer_contribution": "It provides the exact year of establishment.",
+        "keywords": [
+          "College of Arts and Letters",
+          "established",
+          "1842"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "The College of Arts and Letters",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "year",
+            "created"
+          ],
+          "required_info": [
+            "year of creation"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:18:11.939654",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "162",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "document_id": "7",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 6,
+  "chunks": [
+    {
+      "hash": "d1bc65eedd8e669f",
+      "content": "As at most other universities, Notre Dame's students run a number of news media outlets. The nine student-run outlets include three newspapers, both a radio and television station, and several magazines and journals.",
+      "start_idx": 0,
+      "end_idx": 215,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overview of student-run media at Notre Dame",
+        "keywords": [
+          "Notre Dame",
+          "student media",
+          "news outlets"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "b577fb77080770c8",
+      "content": "Begun as a one-page journal in September 1876, the Scholastic magazine is issued twice monthly and claims to be the oldest continuous collegiate publication in the United States. The other magazine, The Juggler, is released twice a year and focuses on student literature and artwork.",
+      "start_idx": 216,
+      "end_idx": 388,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Scholastic magazine and The Juggler",
+        "keywords": [
+          "Scholastic",
+          "The Juggler",
+          "collegiate publication"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "18f5aea80ffa42ef",
+      "content": "The Dome yearbook is published annually. The newspapers have varying publication interests, with The Observer published daily and mainly reporting university and other news, and staffed by students from both Notre Dame and Saint Mary's College.",
+      "start_idx": 389,
+      "end_idx": 516,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "The Dome yearbook and The Observer newspaper",
+        "keywords": [
+          "Dome",
+          "The Observer",
+          "yearbook"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6aa92068dd02cdde",
+      "content": "Unlike Scholastic and The Dome, The Observer is an independent publication and does not have a faculty advisor or any editorial oversight from the University. In 1987, when some students believed that The Observer began to show a conservative bias, a liberal newspaper, Common Sense was published.",
+      "start_idx": 517,
+      "end_idx": 688,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Independence of The Observer and emergence of Common Sense",
+        "keywords": [
+          "independent publication",
+          "Common Sense",
+          "bias"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "8c3a4d1a529602bc",
+      "content": "Likewise, in 2003, when other students believed that the paper showed a liberal bias, the conservative paper Irish Rover went into production. Neither paper is published as often as The Observer; however, all three are distributed to all students.",
+      "start_idx": 689,
+      "end_idx": 826,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Irish Rover and distribution of student newspapers",
+        "keywords": [
+          "Irish Rover",
+          "distribution",
+          "student newspapers"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "a8628312aced11d8",
+      "content": "Finally, in Spring 2008 an undergraduate journal for political science research, Beyond Politics, made its debut.",
+      "start_idx": 827,
+      "end_idx": 887,
+      "sequence_num": 5,
+      "metadata": {
+        "topic": "Introduction of Beyond Politics journal",
+        "keywords": [
+          "Beyond Politics",
+          "political science",
+          "undergraduate journal"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:23.719265",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

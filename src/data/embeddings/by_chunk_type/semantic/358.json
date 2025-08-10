@@ -1,0 +1,96 @@
+{
+  "document_id": "358",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "c52cb00d7db9a443",
+      "content": "The group changed their name to Destiny's Child in 1996, based upon a passage in the Book of Isaiah. In 1997, Destiny's Child released their major label debut song \"Killing Time\" on the soundtrack to the 1997 film, Men in Black.",
+      "start_idx": 0,
+      "end_idx": 197,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Formation and Early Releases",
+        "keywords": [
+          "Destiny's Child",
+          "Killing Time",
+          "Men in Black"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "2aa3b27b56560e53",
+      "content": "The following year, the group released their self-titled debut album, scoring their first major hit \"No, No, No\". The album established the group as a viable act in the music industry, with moderate sales and winning the group three Soul Train Lady of Soul Awards for Best R&B/Soul Album of the Year, Best R&B/Soul or Rap New Artist, and Best R&B/Soul Single for \"No, No, No\".",
+      "start_idx": 198,
+      "end_idx": 396,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Debut Album Success",
+        "keywords": [
+          "self-titled album",
+          "No, No, No",
+          "Soul Train Awards"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "54a5da5eb3e0e440",
+      "content": "The group released their multi-platinum second album The Writing's on the Wall in 1999. The record features some of the group's most widely known songs such as \"Bills, Bills, Bills\", the group's first number-one single, \"Jumpin' Jumpin'\" and \"Say My Name\", which became their most successful song at the time, and would remain one of their signature songs.",
+      "start_idx": 397,
+      "end_idx": 570,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "The Writing's on the Wall",
+        "keywords": [
+          "The Writing's on the Wall",
+          "Bills, Bills, Bills",
+          "Say My Name"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "abd6da73d32c7a3e",
+      "content": "\"Say My Name\" won the Best R&B Performance by a Duo or Group with Vocals and the Best R&B Song at the 43rd Annual Grammy Awards. The Writing's on the Wall sold more than eight million copies worldwide.",
+      "start_idx": 571,
+      "end_idx": 661,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Awards and Sales",
+        "keywords": [
+          "Say My Name",
+          "Grammy Awards",
+          "sales"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "a30c16e22907f1d4",
+      "content": "During this time, Beyoncé recorded a duet with Marc Nelson, an original member of Boyz II Men, on the song \"After All Is Said and Done\" for the soundtrack to the 1999 film, The Best Man.",
+      "start_idx": 662,
+      "end_idx": 749,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Collaborations",
+        "keywords": [
+          "Beyoncé",
+          "Marc Nelson",
+          "The Best Man"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:59:14.710983",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

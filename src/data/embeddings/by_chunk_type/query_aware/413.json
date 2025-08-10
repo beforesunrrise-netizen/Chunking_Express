@@ -1,0 +1,48 @@
+{
+  "document_id": "413",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "37665ab85520fe18",
+      "content": "Destiny Fulfilled, the final studio album by Destiny's Child. Released on November 15, 2004, in the US...",
+      "start_idx": 164,
+      "end_idx": 215,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states the name of Destiny's Child's final album.",
+        "answer_contribution": "It provides the exact name of the final album.",
+        "keywords": [
+          "final album",
+          "Destiny Fulfilled"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Destiny's Child"
+          ],
+          "keywords": [
+            "final album",
+            "name"
+          ],
+          "required_info": [
+            "album name"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:19:08.967866",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "413",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "document_id": "104",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "27c0fb1dc8e9b7bd",
+      "content": "The success of its football team made Notre Dame a household name. The success of Note Dame reflected rising status of Irish Americans and Catholics in the 1920s. Catholics rallied up around the team and listen to the games on the radio, especially when it knocked off the schools that symbolized the Protestant establishment in America — Harvard, Yale, Princeton, and Army.",
+      "start_idx": 0,
+      "end_idx": 374,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "The success of its football team made Notre Dame a household name.",
+        "importance_score": 0.7,
+        "context_window": 2,
+        "keywords": [
+          "Notre Dame",
+          "football team",
+          "household name"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "18a7c9af60fd157f",
+      "content": "Catholics rallied up around the team and listen to the games on the radio, especially when it knocked off the schools that symbolized the Protestant establishment in America — Harvard, Yale, Princeton, and Army. Yet this role as high-profile flagship institution of Catholicism made it an easy target of anti-Catholicism. The most remarkable episode of violence was the clash between Notre Dame students and the Ku Klux Klan in 1924. Nativism and anti-Catholicism, especially when directed towards immigrants, were cornerstones of the KKK's rhetoric, and Notre Dame was seen as a symbol of the threat posed by the Catholic Church. The Klan decided to have a week-long Klavern in South Bend.",
+      "start_idx": 163,
+      "end_idx": 853,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "The most remarkable episode of violence was the clash between Notre Dame students and the Ku Klux Klan in 1924.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "violence",
+          "Notre Dame",
+          "Ku Klux Klan",
+          "1924"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "bc0841bd30c7c2bd",
+      "content": "Nativism and anti-Catholicism, especially when directed towards immigrants, were cornerstones of the KKK's rhetoric, and Notre Dame was seen as a symbol of the threat posed by the Catholic Church. The Klan decided to have a week-long Klavern in South Bend. Clashes with the student body started on March 17, when students, aware of the anti-Catholic animosity, blocked the Klansmen from descending from their trains in the South Bend station and ripped the KKK clothes and regalia. On May 19 thousands of students massed downtown protesting the Klavern, and only the arrival of college president Fr. Matthew Walsh prevented any further clashes.",
+      "start_idx": 597,
+      "end_idx": 1241,
+      "sequence_num": 2,
+      "metadata": {
+        "key_sentence": "Clashes with the student body started on March 17, when students, aware of the anti-Catholic animosity, blocked the Klansmen from descending from their trains in the South Bend station.",
+        "importance_score": 0.85,
+        "context_window": 2,
+        "keywords": [
+          "clashes",
+          "students",
+          "anti-Catholic",
+          "South Bend"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "897c0c942ae2d11b",
+      "content": "Matthew Walsh prevented any further clashes. The next day, football coach Knute Rockne spoke at a campus rally and implored the students to obey the college president and refrain from further violence. A few days later the Klavern broke up, but the hostility shown by the students was an omen and a contribution to the downfall of the KKK in Indiana.",
+      "start_idx": 1197,
+      "end_idx": 1547,
+      "sequence_num": 3,
+      "metadata": {
+        "key_sentence": "The hostility shown by the students was an omen and a contribution to the downfall of the KKK in Indiana.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "hostility",
+          "students",
+          "downfall",
+          "KKK",
+          "Indiana"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:02:06.345244",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

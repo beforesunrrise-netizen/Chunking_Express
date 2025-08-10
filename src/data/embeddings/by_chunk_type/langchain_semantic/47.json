@@ -1,0 +1,64 @@
+{
+  "document_id": "47",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "79f3f08277681422",
+      "content": "In 2015-2016, Notre Dame ranked 18th overall among \"national universities\" in the United States in U.S. News & World Report's Best Colleges 2016. In 2014, USA Today ranked Notre Dame 10th overall for American universities based on data from College Factual. Forbes.com's America's Best Colleges ranks Notre Dame 13th among colleges in the United States in 2015, 8th among Research Universities, and 1st in the Midwest.",
+      "start_idx": 0,
+      "end_idx": 418,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "aa31bcf85a841d2f",
+      "content": "U.S. News & World Report also lists Notre Dame Law School as 22nd overall. BusinessWeek ranks Mendoza College of Business undergraduate school as 1st overall. It ranks the MBA program as 20th overall.",
+      "start_idx": 419,
+      "end_idx": 619,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "a7eaf2284caf25ec",
+      "content": "The Philosophical Gourmet Report ranks Notre Dame's graduate philosophy program as 15th nationally, while ARCHITECT Magazine ranked the undergraduate architecture program as 12th nationally. Additionally, the study abroad program ranks sixth in highest participation percentage in the nation, with 57.6% of students choosing to study abroad in 17 countries. According to payscale.com, undergraduate alumni of University of Notre Dame have a mid-career median salary $110,000, making it the 24th highest among colleges and universities in the United States.",
+      "start_idx": 620,
+      "end_idx": 1176,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "d6fce6f8878232e8",
+      "content": "The median starting salary of $55,300 ranked 58th in the same peer group.",
+      "start_idx": 1177,
+      "end_idx": 1250,
+      "sequence_num": 3,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T13:25:56.537670",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

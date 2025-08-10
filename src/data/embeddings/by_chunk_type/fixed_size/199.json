@@ -1,0 +1,58 @@
+{
+  "document_id": "199",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "d08b390248127d05",
+      "content": "Besides its prominence in sports, Notre Dame is also a large, four-year, highly residential research University, and is consistently ranked among the top twenty universities in the United States  and as a major global university. The undergraduate component of the university is organized into four colleges (Arts and Letters, Science, Engineering, Business) and the Architecture School. The latter is known for teaching New Classical Architecture and for awarding the globally renowned annual Driehaus Architect",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 0,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "c6956fa1ee84fa68",
+      "content": "ing the globally renowned annual Driehaus Architecture Prize. Notre Dame's graduate program has more than 50 master's, doctoral and professional degree programs offered by the five schools, with the addition of the Notre Dame Law School and a MD-PhD program offered in combination with IU medical School. It maintains a system of libraries, cultural venues, artistic and scientific museums, including Hesburgh Library and the Snite Museum of Art.",
+      "start_idx": 461,
+      "end_idx": 907,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": true
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "f066a557c604836b",
+      "content": "e university's 8,000 undergraduates live on campus in one of 29 single-sex residence halls, each with its own traditions, legacies, events and intramural sports teams. The university counts approximately 120,000 alumni, considered among the strongest alumni networks among U.S. colleges.",
+      "start_idx": 922,
+      "end_idx": 1209,
+      "sequence_num": 2,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T08:26:42.302953",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

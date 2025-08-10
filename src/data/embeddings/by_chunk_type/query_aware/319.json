@@ -1,0 +1,50 @@
+{
+  "document_id": "319",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "826b40a6ab170a49",
+      "content": "Beyoncé's younger sister Solange is also a singer and a former member of Destiny's Child.",
+      "start_idx": 132,
+      "end_idx": 178,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question by identifying Solange as Beyoncé's younger sister who was in Destiny's Child.",
+        "answer_contribution": "Identifies Solange as the younger sister of Beyoncé who appeared in Destiny's Child.",
+        "keywords": [
+          "younger sister",
+          "Destiny's Child"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "younger sister"
+          ],
+          "keywords": [
+            "younger sister",
+            "Destiny's Child"
+          ],
+          "required_info": [
+            "name of Beyonce's younger sister",
+            "her role in Destiny's Child"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:26:05.737128",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "319",
+    "model": "text-embedding-3-large"
+  }
+}

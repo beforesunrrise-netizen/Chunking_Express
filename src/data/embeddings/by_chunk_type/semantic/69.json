@@ -1,0 +1,81 @@
+{
+  "document_id": "69",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "a12e3ec61cad465f",
+      "content": "As of 2012[update] research continued in many fields. The university president, John Jenkins, described his hope that Notre Dame would become \"one of the pre–eminent research institutions in the world\" in his inaugural address.",
+      "start_idx": 0,
+      "end_idx": 215,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "University Research Aspirations",
+        "keywords": [
+          "research",
+          "Notre Dame",
+          "John Jenkins"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "78a662fce496bb92",
+      "content": "The university has many multi-disciplinary institutes devoted to research in varying fields, including the Medieval Institute, the Kellogg Institute for International Studies, the Kroc Institute for International Peace studies, and the Center for Social Concerns.",
+      "start_idx": 216,
+      "end_idx": 367,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Research Institutes at Notre Dame",
+        "keywords": [
+          "multi-disciplinary",
+          "institutes",
+          "research"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "a7df2f5f71b0e0e3",
+      "content": "Recent research includes work on family conflict and child development, genome mapping, the increasing trade deficit of the United States with China, studies in fluid mechanics, computational science and engineering, and marketing trends on the Internet.",
+      "start_idx": 368,
+      "end_idx": 487,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Recent Research Areas",
+        "keywords": [
+          "family conflict",
+          "genome mapping",
+          "trade deficit",
+          "fluid mechanics"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "5b22fb631d8222a1",
+      "content": "As of 2013, the university is home to the Notre Dame Global Adaptation Index which ranks countries annually based on how vulnerable they are to climate change and how prepared they are to adapt.",
+      "start_idx": 488,
+      "end_idx": 605,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Global Adaptation Index",
+        "keywords": [
+          "climate change",
+          "adaptation",
+          "ranking"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:22.423291",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

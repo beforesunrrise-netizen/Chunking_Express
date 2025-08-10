@@ -1,0 +1,46 @@
+{
+  "document_id": "239",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "8a5c81157a0ef244",
+      "content": "George Gipp was the school's legendary football player during 1916–20. He played semiprofessional baseball and smoked, drank, and gambled when not playing sports. He was also humble, generous to the needy, and a man of integrity. It was in 1928 that famed coach Knute Rockne used his final conversation with the dying Gipp to inspire the Notre Dame team to beat the Army team and \"win one for the Gipper.\" The 1940 film, Knute Rockne, All American, starred Pat O'Brien as Knute Rockne and Ronald Reagan as Gipp. ",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "bdfd461eb9b47981",
+      "content": "'Brien as Knute Rockne and Ronald Reagan as Gipp. Today the team competes in Notre Dame Stadium, an 80,795-seat stadium on campus. The current head coach is Brian Kelly, hired from the University of Cincinnati on December 11, 2009. Kelly's record in midway through his sixth season at Notre Dame is 52–21. In 2012, Kelly's Fighting Irish squad went undefeated and played in the BCS National Championship Game. Kelly succeeded Charlie Weis, who was fired in November 2009 after five seasons. Although Weis led his",
+      "start_idx": 462,
+      "end_idx": 974,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "99cff8851776555d",
+      "content": "ber 2009 after five seasons. Although Weis led his team to two Bowl Championship Series bowl games, his overall record was 35–27, mediocre by Notre Dame standards, and the 2007 team had the most losses in school history. The football team generates enough revenue to operate independently while $22.1 million is retained from the team's profits for academic use. Forbes named the team as the most valuable in college football, worth a total of $101 million in 2007.",
+      "start_idx": 924,
+      "end_idx": 1389,
+      "sequence_num": 2,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T13:22:10.558075",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

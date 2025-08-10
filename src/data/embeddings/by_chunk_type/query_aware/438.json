@@ -1,0 +1,47 @@
+{
+  "document_id": "438",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "211a4caa3d5a11bf",
+      "content": "In April 2007, Beyoncé embarked on The Beyoncé Experience, her first worldwide concert tour, visiting 97 venues and grossed over $24 million.",
+      "start_idx": 0,
+      "end_idx": 140,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly answers the question about the money made by Beyoncé's tour in 2007.",
+        "answer_contribution": "The information specifies that the tour grossed over $24 million.",
+        "keywords": [
+          "money",
+          "2007"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "tour"
+          ],
+          "keywords": [
+            "money",
+            "2007"
+          ],
+          "required_info": [
+            "tour earnings",
+            "year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:25:10.271180",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

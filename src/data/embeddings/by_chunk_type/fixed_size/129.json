@@ -1,0 +1,44 @@
+{
+  "document_id": "129",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "ec0ec1d850aa6d25",
+      "content": "In the 18 years under the presidency of Edward Malloy, C.S.C., (1987–2005), there was a rapid growth in the school's reputation, faculty, and resources. He increased the faculty by more than 500 professors; the academic quality of the student body has improved dramatically, with the average SAT score rising from 1240 to 1360; the number of minority students more than doubled; the endowment grew from $350 million to more than $3 billion; the annual operating budget rose from $177 million to more than $650 mi",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 0,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "5b7a80675626cd4f",
+      "content": " budget rose from $177 million to more than $650 million; and annual research funding improved from $15 million to more than $70 million. Notre Dame's most recent[when?] capital campaign raised $1.1 billion, far exceeding its goal of $767 million, and is the largest in the history of Catholic higher education.",
+      "start_idx": 461,
+      "end_idx": 772,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T09:47:01.985194",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_094621",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

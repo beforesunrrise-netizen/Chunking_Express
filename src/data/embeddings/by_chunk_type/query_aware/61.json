@@ -1,0 +1,49 @@
+{
+  "document_id": "61",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "53381667df7377a5",
+      "content": "In 1950 Lobund was raised to the status of an Institute.",
+      "start_idx": 194,
+      "end_idx": 232,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about the year Lobund became an Institute.",
+        "answer_contribution": "Provides the specific year when Lobund achieved the status of an Institute.",
+        "keywords": [
+          "year",
+          "Institute"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Lobund",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "year",
+            "Institute"
+          ],
+          "required_info": [
+            "year Lobund became an Institute"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:40:07.149681",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "61",
+    "model": "text-embedding-3-large"
+  }
+}

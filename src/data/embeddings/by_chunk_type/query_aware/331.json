@@ -1,0 +1,45 @@
+{
+  "document_id": "331",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e3813270795a0b38",
+      "content": "Parker Elementary School, a music magnet school in Houston",
+      "start_idx": 157,
+      "end_idx": 197,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the type of school.",
+        "answer_contribution": "Identifies Parker Elementary School as a music magnet school.",
+        "keywords": [
+          "Parker Elementary School",
+          "music magnet school"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Parker Elementary School"
+          ],
+          "keywords": [
+            "type",
+            "school"
+          ],
+          "required_info": [
+            "type of school"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:27:43.460212",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

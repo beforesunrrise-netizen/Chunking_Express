@@ -1,0 +1,44 @@
+{
+  "document_id": "363",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "c3034501b8d0a411",
+      "content": "LeToya Luckett and Roberson became unhappy with Mathew's managing of the band and eventually were replaced by Farrah Franklin and Michelle Williams. Beyoncé experienced depression following the split with Luckett and Roberson after being publicly blamed by the media, critics, and blogs for its cause. Her long-standing boyfriend left her at this time. The depression was so severe it lasted for a couple of years, during which she occasionally kept herself in her bedroom for days and refused to eat anything.",
+      "start_idx": 0,
+      "end_idx": 510,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 0,
+        "step_size": 461,
+        "boundary_adjusted": true
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "4b16f45be46b9eb5",
+      "content": "her bedroom for days and refused to eat anything. Beyoncé stated that she struggled to speak about her depression because Destiny's Child had just won their first Grammy Award and she feared no one would take her seriously. Beyoncé would later speak of her mother as the person who helped her fight it. Franklin was dismissed, leaving just Beyoncé, Rowland, and Williams.",
+      "start_idx": 461,
+      "end_idx": 832,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T08:44:06.149516",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

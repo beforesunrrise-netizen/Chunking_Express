@@ -1,0 +1,51 @@
+{
+  "document_id": "153",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e4f310fddd123927",
+      "content": "creating the Office of Sustainability in 2008",
+      "start_idx": 66,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states the year the Office of Sustainability was created.",
+        "answer_contribution": "It provides the exact year (2008) when the Office of Sustainability was established.",
+        "keywords": [
+          "year",
+          "create",
+          "Office of Sustainability"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "Office of Sustainability"
+          ],
+          "keywords": [
+            "year",
+            "create",
+            "Office of Sustainability"
+          ],
+          "required_info": [
+            "year of creation"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:19:56.354173",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "153",
+    "model": "text-embedding-3-large"
+  }
+}

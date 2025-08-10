@@ -1,0 +1,58 @@
+{
+  "document_id": "264",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "a2547275bb017bf5",
+      "content": "Notre Dame alumni work in various fields. Alumni working in political fields include state governors, members of the United States Congress, and former United States Secretary of State Condoleezza Rice. A notable alumnus of the College of Science is Medicine Nobel Prize winner Eric F. Wieschaus. A number of university heads are alumni, including Notre Dame's current president, the Rev. John Jenkins. Additionally, many alumni are in the media, including talk show hosts Regis Philbin and Phil Donahue, and tel",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 0,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "a1e483625353d59f",
+      "content": " show hosts Regis Philbin and Phil Donahue, and television and radio personalities such as Mike Golic and Hannah Storm. With the university having high profile sports teams itself, a number of alumni went on to become involved in athletics outside the university, including professional baseball, basketball, football, and ice hockey players, such as Joe Theismann, Joe Montana, Tim Brown, Ross Browner, Rocket Ismail, Ruth Riley, Jeff Samardzija, Jerome Bettis, Brett Lebda, Olympic gold medalist Mariel Zagunis",
+      "start_idx": 461,
+      "end_idx": 973,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    },
+    {
+      "hash": "d6ac87ed4cd63545",
+      "content": ", Brett Lebda, Olympic gold medalist Mariel Zagunis, professional boxer Mike Lee, former football coaches such as Charlie Weis, Frank Leahy and Knute Rockne, and Basketball Hall of Famers Austin Carr and Adrian Dantley. Other notable alumni include prominent businessman Edward J. DeBartolo, Jr. and astronaut Jim Wetherbee.",
+      "start_idx": 922,
+      "end_idx": 1246,
+      "sequence_num": 2,
+      "metadata": {
+        "chunk_method": "fixed_size",
+        "overlap_size": 51,
+        "step_size": 461,
+        "boundary_adjusted": false
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T08:35:17.141014",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

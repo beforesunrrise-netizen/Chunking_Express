@@ -1,0 +1,67 @@
+{
+  "document_id": "187",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "ae82ea7566f4da1f",
+      "content": "The University of Notre Dame du Lac (or simply Notre Dame /ˌnoʊtərˈdeɪm/ NOH-tər-DAYM) is a Catholic research university located adjacent to South Bend, Indiana, in the United States.",
+      "start_idx": 0,
+      "end_idx": 157,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overview of Notre Dame University",
+        "keywords": [
+          "Notre Dame",
+          "Catholic university",
+          "South Bend",
+          "Indiana"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6b55d5aa95928561",
+      "content": "In French, Notre Dame du Lac means 'Our Lady of the Lake' and refers to the university's patron saint, the Virgin Mary.",
+      "start_idx": 158,
+      "end_idx": 239,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Meaning of the Name",
+        "keywords": [
+          "Notre Dame du Lac",
+          "Our Lady of the Lake",
+          "Virgin Mary"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "41da3d4377f56a9a",
+      "content": "The main campus covers 1,250 acres in a suburban setting and it contains a number of recognizable landmarks, such as the Golden Dome, the 'Word of Life' mural (commonly known as Touchdown Jesus), and the Basilica.",
+      "start_idx": 240,
+      "end_idx": 358,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Campus Description and Landmarks",
+        "keywords": [
+          "campus",
+          "landmarks",
+          "Golden Dome",
+          "Touchdown Jesus",
+          "Basilica"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:00:30.042046",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

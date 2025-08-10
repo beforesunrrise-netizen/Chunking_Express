@@ -1,0 +1,101 @@
+{
+  "document_id": "47",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "06281d3253688703",
+      "content": "In 2015-2016, Notre Dame ranked 18th overall among \"national universities\" in the United States in U.S. News & World Report's Best Colleges 2016. In 2014, USA Today ranked Notre Dame 10th overall for American universities based on data from College Factual.",
+      "start_idx": 0,
+      "end_idx": 218,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overall Rankings of Notre Dame",
+        "keywords": [
+          "Notre Dame",
+          "rankings",
+          "U.S. News",
+          "USA Today"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "48523d82955d6702",
+      "content": "Forbes.com's America's Best Colleges ranks Notre Dame 13th among colleges in the United States in 2015, 8th among Research Universities, and 1st in the Midwest. U.S. News & World Report also lists Notre Dame Law School as 22nd overall.",
+      "start_idx": 219,
+      "end_idx": 366,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Specific Rankings by Forbes and U.S. News",
+        "keywords": [
+          "Forbes",
+          "America's Best Colleges",
+          "Law School",
+          "rankings"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3e485872c3f76c8b",
+      "content": "BusinessWeek ranks Mendoza College of Business undergraduate school as 1st overall. It ranks the MBA program as 20th overall. The Philosophical Gourmet Report ranks Notre Dame's graduate philosophy program as 15th nationally.",
+      "start_idx": 367,
+      "end_idx": 487,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Business and Philosophy Program Rankings",
+        "keywords": [
+          "Mendoza College",
+          "BusinessWeek",
+          "Philosophical Gourmet Report",
+          "philosophy"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "e09a6886e3386afa",
+      "content": "ARCHITECT Magazine ranked the undergraduate architecture program as 12th nationally. Additionally, the study abroad program ranks sixth in highest participation percentage in the nation, with 57.6% of students choosing to study abroad in 17 countries.",
+      "start_idx": 488,
+      "end_idx": 617,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Architecture and Study Abroad Rankings",
+        "keywords": [
+          "ARCHITECT Magazine",
+          "architecture",
+          "study abroad",
+          "participation"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "c32063f6983e4bd7",
+      "content": "According to payscale.com, undergraduate alumni of University of Notre Dame have a mid-career median salary $110,000, making it the 24th highest among colleges and universities in the United States. The median starting salary of $55,300 ranked 58th in the same peer group.",
+      "start_idx": 618,
+      "end_idx": 754,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Alumni Salary Statistics",
+        "keywords": [
+          "payscale.com",
+          "mid-career salary",
+          "starting salary",
+          "alumni"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:38:02.965774",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

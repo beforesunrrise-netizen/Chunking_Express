@@ -1,0 +1,53 @@
+{
+  "document_id": "131",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "965d8cff4dbf2d23",
+      "content": "In the 18 years under the presidency of Edward Malloy, C.S.C., (1987–2005), there was a rapid growth in the school's reputation, faculty, and resources. He increased the faculty by more than 500 professors; the academic quality of the student body has improved dramatically, with the average SAT score rising from 1240 to 1360; the number of minority students more than doubled; the endowment grew from $350 million to more than $3 billion; the annual operating budget rose from $177 million to more than $650 million; and annual research funding improved from $15 million to more than $70 million. Notre Dame's most recent[when?]",
+      "start_idx": 0,
+      "end_idx": 630,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "In the 18 years under the presidency of Edward Malloy, C.S.C., (1987–2005), there was a rapid growth in the school's reputation, faculty, and resources.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Edward Malloy",
+          "presidency",
+          "growth",
+          "reputation"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "26588935689d47e3",
+      "content": "He increased the faculty by more than 500 professors; the academic quality of the student body has improved dramatically, with the average SAT score rising from 1240 to 1360; the number of minority students more than doubled; the endowment grew from $350 million to more than $3 billion; the annual operating budget rose from $177 million to more than $650 million; and annual research funding improved from $15 million to more than $70 million. Notre Dame's most recent[when?] capital campaign raised $1.1 billion, far exceeding its goal of $767 million, and is the largest in the history of Catholic higher education.",
+      "start_idx": 153,
+      "end_idx": 772,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Notre Dame's most recent capital campaign raised $1.1 billion, far exceeding its goal of $767 million, and is the largest in the history of Catholic higher education.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "capital campaign",
+          "fundraising",
+          "Catholic education"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:07:14.063853",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

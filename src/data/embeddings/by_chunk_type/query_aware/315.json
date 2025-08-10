@@ -1,0 +1,49 @@
+{
+  "document_id": "315",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e740c6195aee3b6e",
+      "content": "Mathew is African-American",
+      "start_idx": 164,
+      "end_idx": 189,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about Beyoncé's father's race.",
+        "answer_contribution": "Identifies Mathew Knowles' race as African-American.",
+        "keywords": [
+          "race",
+          "Beyonce's father"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "father"
+          ],
+          "keywords": [
+            "race",
+            "Beyonce's father"
+          ],
+          "required_info": [
+            "race of Beyonce's father"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:15:28.310704",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "315",
+    "model": "text-embedding-3-large"
+  }
+}

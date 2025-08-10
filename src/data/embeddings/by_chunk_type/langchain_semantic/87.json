@@ -1,0 +1,52 @@
+{
+  "document_id": "87",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "4ad81554465c1481",
+      "content": "The university is affiliated with the Congregation of Holy Cross (Latin: Congregatio a Sancta Cruce, abbreviated postnominals: \"CSC\"). While religious affiliation is not a criterion for admission, more than 93% of students identify as Christian, with over 80% of the total being Catholic. Collectively, Catholic Mass is celebrated over 100 times per week on campus, and a large campus ministry program provides for the faith needs of the community.",
+      "start_idx": 0,
+      "end_idx": 448,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "5196b6dd511e070e",
+      "content": "There are multitudes of religious statues and artwork around campus, most prominent of which are the statue of Mary on the Main Building, the Notre Dame Grotto, and the Word of Life mural on Hesburgh Library depicting Christ as a teacher. Additionally, every classroom displays a crucifix. There are many religious clubs (catholic and non-Catholic) at the school, including Council #1477 of the Knights of Columbus (KOC), Baptist Collegiate Ministry (BCM), Jewish Club, Muslim Student Association, Orthodox Christian Fellowship, The Mormon Club, and many more.",
+      "start_idx": 449,
+      "end_idx": 1009,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "19e8411a3d9c0002",
+      "content": "The Notre Dame KofC are known for being the first collegiate council of KofC, operating a charitable concession stand during every home football game and owning their own building on campus which can be used as a cigar lounge. Fifty-seven chapels are located throughout the campus.",
+      "start_idx": 1010,
+      "end_idx": 1291,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T13:25:59.068411",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

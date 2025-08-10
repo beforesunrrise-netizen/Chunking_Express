@@ -1,0 +1,67 @@
+{
+  "document_id": "184",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "10ed05b0a56ec5a9",
+      "content": "The rise of Hitler and other dictators in the 1930s forced numerous Catholic intellectuals to flee Europe; president John O'Hara brought many to Notre Dame. From Germany came Anton-Hermann Chroust (1907–1982) in classics and law, and Waldemar Gurian a German Catholic intellectual of Jewish descent.",
+      "start_idx": 0,
+      "end_idx": 276,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Impact of dictators on Catholic intellectuals",
+        "keywords": [
+          "Hitler",
+          "dictators",
+          "Catholic intellectuals",
+          "Notre Dame"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "97d1b44d57edf0af",
+      "content": "Positivism dominated American intellectual life in the 1920s onward but in marked contrast, Gurian received a German Catholic education and wrote his doctoral dissertation under Max Scheler.",
+      "start_idx": 277,
+      "end_idx": 392,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Contrasting educational backgrounds",
+        "keywords": [
+          "Positivism",
+          "American intellectual life",
+          "Gurian",
+          "Max Scheler"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "5d6de90696704a04",
+      "content": "Ivan Meštrović (1883–1962), a renowned sculptor, brought Croatian culture to campus, 1955–62. Yves Simon (1903–61), brought to ND in the 1940s the insights of French studies in the Aristotelian-Thomistic tradition of philosophy; his own teacher Jacques Maritain (1882–73) was a frequent visitor to campus.",
+      "start_idx": 393,
+      "end_idx": 512,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Cultural contributions to Notre Dame",
+        "keywords": [
+          "Ivan Meštrović",
+          "Croatian culture",
+          "Yves Simon",
+          "Jacques Maritain"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:53:38.131410",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

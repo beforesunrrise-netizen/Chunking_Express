@@ -1,0 +1,49 @@
+{
+  "document_id": "159",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9f1205107e336087",
+      "content": "Other Global Gateways are located in Beijing, Chicago, Dublin, Jerusalem and Rome.",
+      "start_idx": 0,
+      "end_idx": 83,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.8,
+        "relevance_reason": "This part mentions the location of the center in Beijing, indicating it is part of the university's Global Gateways.",
+        "answer_contribution": "Identifies the center in Beijing as part of the university's Global Gateways.",
+        "keywords": [
+          "Beijing",
+          "Global Gateways"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "Beijing"
+          ],
+          "keywords": [
+            "center",
+            "referred to"
+          ],
+          "required_info": [
+            "name of the center"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "50%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:44:28.353158",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "159",
+    "model": "text-embedding-3-large"
+  }
+}

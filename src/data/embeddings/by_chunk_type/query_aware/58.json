@@ -1,0 +1,51 @@
+{
+  "document_id": "58",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "0785844bb6004447",
+      "content": "In 1882, Albert Zahm (John Zahm's brother) built an early wind tunnel used to compare lift to drag of aeronautical models.",
+      "start_idx": 0,
+      "end_idx": 116,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about what John Zahm's brother constructed at Notre Dame.",
+        "answer_contribution": "Identifies the specific construction by Albert Zahm at Notre Dame.",
+        "keywords": [
+          "construct",
+          "Notre Dame",
+          "wind tunnel"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "John Zahm",
+            "brother"
+          ],
+          "keywords": [
+            "construct",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "what was constructed",
+            "relation to John Zahm"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:54.611700",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "58",
+    "model": "text-embedding-3-large"
+  }
+}

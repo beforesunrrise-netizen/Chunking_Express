@@ -1,0 +1,47 @@
+{
+  "document_id": "237",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "350cd0337ac1c43f",
+      "content": "its annual game against USC for the Jeweled Shillelagh has been named by some as one of the most important in college football",
+      "start_idx": 215,
+      "end_idx": 290,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the team Notre Dame competes against for the Jeweled Shillelagh.",
+        "answer_contribution": "Identifies USC as the team Notre Dame competes against for the Jeweled Shillelagh.",
+        "keywords": [
+          "Notre Dame",
+          "USC",
+          "Jeweled Shillelagh"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "Jeweled Shillelagh"
+          ],
+          "keywords": [
+            "compete",
+            "team"
+          ],
+          "required_info": [
+            "team Notre Dame competes against for the Jeweled Shillelagh"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:54:30.314723",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

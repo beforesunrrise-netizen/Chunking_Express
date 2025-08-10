@@ -1,0 +1,67 @@
+{
+  "document_id": "330",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "110f3202ae82cec6",
+      "content": "Beyoncé attended St. Mary's Elementary School in Fredericksburg, Texas, where she enrolled in dance classes. Her singing talent was discovered when dance instructor Darlette Johnson began humming a song and she finished it, able to hit the high-pitched notes.",
+      "start_idx": 0,
+      "end_idx": 227,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Early Education and Discovery of Talent",
+        "keywords": [
+          "Beyoncé",
+          "St. Mary's Elementary School",
+          "dance classes",
+          "singing talent"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "4872e89164a34cca",
+      "content": "Beyoncé's interest in music and performing continued after winning a school talent show at age seven, singing John Lennon's 'Imagine' to beat 15/16-year-olds. In fall of 1990, Beyoncé enrolled in Parker Elementary School, a music magnet school in Houston, where she would perform with the school's choir.",
+      "start_idx": 228,
+      "end_idx": 396,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Early Performances and Music Education",
+        "keywords": [
+          "talent show",
+          "John Lennon",
+          "Parker Elementary School",
+          "choir"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "62adb2d683888c7d",
+      "content": "She also attended the High School for the Performing and Visual Arts and later Alief Elsik High School. Beyoncé was also a member of the choir at St. John's United Methodist Church as a soloist for two years.",
+      "start_idx": 397,
+      "end_idx": 511,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "High School Education and Choir Participation",
+        "keywords": [
+          "High School for the Performing and Visual Arts",
+          "Alief Elsik High School",
+          "St. John's United Methodist Church",
+          "choir"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:10:53.612119",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

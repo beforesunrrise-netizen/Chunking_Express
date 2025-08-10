@@ -1,0 +1,50 @@
+{
+  "document_id": "487",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "1140d0fbc615e1a9",
+      "content": "The song topped the US Pop Songs chart, becoming the sixth number-one for both Beyoncé and Gaga, tying them with Mariah Carey for most number-ones since the Nielsen Top 40 airplay chart launched in 1992.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question by stating that Beyoncé and Lady Gaga tied with Mariah Carey for the most number one hits since 1992.",
+        "answer_contribution": "Identifies Mariah Carey as the artist they tied with for number one hits.",
+        "keywords": [
+          "number one hits",
+          "since 1992"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "Lady Gaga"
+          ],
+          "keywords": [
+            "number one hits",
+            "since 1992"
+          ],
+          "required_info": [
+            "the name of the artist they tied with",
+            "the number of hits"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:07:29.636915",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "487",
+    "model": "text-embedding-3-large"
+  }
+}
