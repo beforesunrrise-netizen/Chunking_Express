@@ -1,0 +1,50 @@
+{
+  "document_id": "19",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "179a6b1cdb7224b8",
+      "content": "early courses in civil and mechanical engineering were a part of the College of Science since the 1870s.",
+      "start_idx": 84,
+      "end_idx": 134,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly states when civil engineering courses began at Notre Dame.",
+        "answer_contribution": "indicates that civil engineering courses were offered starting in the 1870s.",
+        "keywords": [
+          "civil engineering courses",
+          "beginning time",
+          "1870s"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "College of Science",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "civil engineering courses",
+            "beginning time"
+          ],
+          "required_info": [
+            "time when civil engineering courses began"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:52.911528",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "19",
+    "model": "text-embedding-3-large"
+  }
+}

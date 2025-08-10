@@ -1,0 +1,47 @@
+{
+  "document_id": "482",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "219fa6743392c091",
+      "content": "the song topped the US Pop Songs chart, becoming the sixth number-one for both Beyoncé and Gaga, tying them with Mariah Carey for most number-ones since the Nielsen Top 40 airplay chart launched in 1992.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly mentions the tie between Beyoncé and Lady Gaga with Mariah Carey regarding the number-one songs.",
+        "answer_contribution": "Identifies that Beyoncé and Lady Gaga tied with Mariah Carey for the most number-one songs.",
+        "keywords": [
+          "tie",
+          "top songs"
+        ],
+        "query_analysis": {
+          "question_type": "information/comparison",
+          "key_entities": [],
+          "keywords": [
+            "tie",
+            "top songs"
+          ],
+          "required_info": [
+            "who",
+            "six top songs"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:21:33.283809",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "482",
+    "model": "text-embedding-3-large"
+  }
+}

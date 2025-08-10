@@ -1,0 +1,55 @@
+{
+  "document_id": "166",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "60fbf1e290ed294a",
+      "content": "The College of Science was established at the university in 1865 by president Father Patrick Dillon.",
+      "start_idx": 0,
+      "end_idx": 83,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about which president created the College of Science.",
+        "answer_contribution": "Identifies Father Patrick Dillon as the president who created the College of Science.",
+        "keywords": [
+          "president",
+          "Notre Dame",
+          "created",
+          "College of Science"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "president",
+            "Notre Dame",
+            "College of Science"
+          ],
+          "keywords": [
+            "president",
+            "Notre Dame",
+            "created",
+            "College of Science"
+          ],
+          "required_info": [
+            "name of the president",
+            "year of establishment"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:09:29.269622",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "166",
+    "model": "text-embedding-3-large"
+  }
+}

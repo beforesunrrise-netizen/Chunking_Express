@@ -1,0 +1,55 @@
+{
+  "document_id": "232",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "59e360b2d3ebab46",
+      "content": "On July 1, 2014, the University of Notre Dame and Under Armour reached an agreement in which Under Armour will provide uniforms, apparel,equipment, and monetary compensation to Notre Dame for 10 years. This contract, worth almost $100 million, is the most lucrative in the history of the NCAA. The university marching band plays at home games for most of the sports.",
+      "start_idx": 0,
+      "end_idx": 366,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "On July 1, 2014, the University of Notre Dame and Under Armour reached an agreement in which Under Armour will provide uniforms, apparel, equipment, and monetary compensation to Notre Dame for 10 years.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "University of Notre Dame",
+          "Under Armour",
+          "agreement",
+          "uniforms",
+          "monetary compensation"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "3aceb5445a477c85",
+      "content": "This contract, worth almost $100 million, is the most lucrative in the history of the NCAA. The university marching band plays at home games for most of the sports. The band, which began in 1846 and has a claim as the oldest university band in continuous existence in the United States, was honored by the National Music Council as a \"Landmark of American Music\" during the United States Bicentennial. The band regularly plays the school's fight song the Notre Dame Victory March, which was named as the most played and most famous fight song by Northern Illinois Professor William Studwell. According to College Fight Songs: An Annotated Anthology published in 1998, the \"Notre Dame Victory March\" ranks as the greatest fight song of all time.",
+      "start_idx": 202,
+      "end_idx": 946,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "The band, which began in 1846 and has a claim as the oldest university band in continuous existence in the United States, was honored by the National Music Council as a 'Landmark of American Music' during the United States Bicentennial.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "band",
+          "1846",
+          "oldest university band",
+          "Landmark of American Music"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:23:48.355180",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

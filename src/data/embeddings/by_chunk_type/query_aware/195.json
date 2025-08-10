@@ -1,0 +1,71 @@
+{
+  "document_id": "195",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "b21294ba2fe0dde5",
+      "content": "Besides its prominence in sports, Notre Dame is also a large, four-year, highly residential research University, and is consistently ranked among the top twenty universities in the United States  and as a major global university. The undergraduate component of the university is organized into four colleges (Arts and Letters, Science, Engineering, Business) and the Architecture School. The latter is known for teaching New Classical Architecture and for awarding the globally renowned annual Driehaus Architect",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "rank",
+          "universities"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "US universities"
+          ],
+          "keywords": [
+            "rank",
+            "universities"
+          ],
+          "required_info": [
+            "ranking of Notre Dame",
+            "comparison with other universities"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "35d0137070e25f7b",
+      "content": "ure Prize. Notre Dame's graduate program has more than 50 master's, doctoral and professional degree programs offered by the five schools, with the addition of the Notre Dame Law School and a MD-PhD program offered in combination with IU medical School. It maintains a system of libraries, cultural venues, artistic and scientific museums, including Hesburgh Library and the Snite Museum of Art. Over 80% of the university's 8,000 undergraduates live on campus in one of 29 single-sex residence halls, each with  its own traditions, legacies, events and intramural sports teams. The university counts approximately 120,000 alumni, considered among the strongest alumni networks among U.S. colleges.",
+      "start_idx": 512,
+      "end_idx": 1209,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "universities",
+          "rank"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "195_query_aware_1",
+          "195_query_aware_2"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:19:37.339377",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "195",
+    "model": "text-embedding-3-large"
+  }
+}

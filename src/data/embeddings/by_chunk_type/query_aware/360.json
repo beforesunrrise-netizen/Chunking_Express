@@ -1,0 +1,45 @@
+{
+  "document_id": "360",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "73489afbdc196c1c",
+      "content": "In 1997, Destiny's Child released their major label debut song 'Killing Time' on the soundtrack to the 1997 film, Men in Black. The following year, the group released their self-titled debut album, scoring their first major hit 'No, No, No'.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly mentions both the first major song hit and the context of its release.",
+        "answer_contribution": "Identifies 'No, No, No' as the first major hit.",
+        "keywords": [
+          "first major song hit",
+          "No, No, No"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Destiny's Child"
+          ],
+          "keywords": [
+            "first major song hit"
+          ],
+          "required_info": [
+            "title of the song",
+            "release year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:49:31.642613",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

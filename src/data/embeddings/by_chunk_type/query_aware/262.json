@@ -1,0 +1,52 @@
+{
+  "document_id": "262",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "a8da6a78bcdeca90",
+      "content": "honoring George Zipp, one of Ted Striker's former comrades.",
+      "start_idx": 157,
+      "end_idx": 203,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly identifies George Zipp as a former comrade of Ted Striker in the film Airplane!",
+        "answer_contribution": "Identifies the specific person who was a former comrade to Ted Striker.",
+        "keywords": [
+          "former comrade",
+          "Airplane!",
+          "Ted Striker",
+          "George Zipp"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Ted Striker",
+            "comrade"
+          ],
+          "keywords": [
+            "former comrade",
+            "Airplane!"
+          ],
+          "required_info": [
+            "name of the comrade",
+            "relationship to Ted Striker"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:14:59.784363",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "262",
+    "model": "text-embedding-3-large"
+  }
+}

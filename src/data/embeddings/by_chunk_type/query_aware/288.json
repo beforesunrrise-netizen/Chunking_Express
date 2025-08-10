@@ -1,0 +1,48 @@
+{
+  "document_id": "288",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "f4b54257bc02d0f0",
+      "content": "Their hiatus saw the release of Beyoncé's debut album, Dangerously in Love (2003), which established her as a solo artist worldwide.",
+      "start_idx": 157,
+      "end_idx": 227,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states the release of Beyoncé's first solo album and the year it was released.",
+        "answer_contribution": "It provides the specific information needed to answer the question about when Beyoncé released her first solo album.",
+        "keywords": [
+          "release",
+          "first solo album"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé"
+          ],
+          "keywords": [
+            "release",
+            "first solo album"
+          ],
+          "required_info": [
+            "release date of first solo album"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:20:25.282049",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "288",
+    "model": "text-embedding-3-large"
+  }
+}

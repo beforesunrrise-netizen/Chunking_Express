@@ -1,0 +1,70 @@
+{
+  "document_id": "490",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "e8cb1edf305210b8",
+      "content": "Beyoncé announced a hiatus from her music career in January 2010, heeding her mother's advice, \"to live life, to be inspired by things again\".",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's hiatus announcement",
+        "keywords": [
+          "Beyoncé",
+          "hiatus",
+          "music career",
+          "mother's advice"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "02f7abbeb135d22f",
+      "content": "During the break she and her father parted ways as business partners.",
+      "start_idx": 140,
+      "end_idx": 183,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Beyoncé's business relationship change",
+        "keywords": [
+          "Beyoncé",
+          "father",
+          "business partners",
+          "break"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "785744fee2bd3cc8",
+      "content": "Beyoncé's musical break lasted nine months and saw her visit multiple European cities, the Great Wall of China, the Egyptian pyramids, Australia, English music festivals and various museums and ballet performances.",
+      "start_idx": 184,
+      "end_idx": 353,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Activities during Beyoncé's hiatus",
+        "keywords": [
+          "musical break",
+          "travel",
+          "European cities",
+          "Great Wall of China",
+          "Egyptian pyramids",
+          "Australia",
+          "music festivals"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:22.263014",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

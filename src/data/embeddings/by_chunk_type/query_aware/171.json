@@ -1,0 +1,37 @@
+{
+  "document_id": "171",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "1bfc15ec1e70442d",
+      "content": "The School of Architecture was established in 1899, although degrees in architecture were first awarded by the university in 1898. Today the school, housed in Bond Hall, offers a five-year undergraduate program leading to the Bachelor of Architecture degree. All undergraduate students study the third year of the program in Rome. The university is globally recognized for its Notre Dame School of Architecture, a faculty that teaches (pre-modernist) traditional and classical architecture and urban planning (e. g. following the principles of New Urbanism and New Classical Architecture). It also awards the renowned annual Driehaus Architecture Prize.",
+      "start_idx": 0,
+      "end_idx": 652,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "1899",
+          "formed"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "171_query_aware_0",
+          "171_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:01:22.320129",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "171",
+    "model": "text-embedding-3-large"
+  }
+}

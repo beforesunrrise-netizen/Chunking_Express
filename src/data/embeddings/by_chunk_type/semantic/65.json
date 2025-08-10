@@ -1,0 +1,67 @@
+{
+  "document_id": "65",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "63b9b2628e98bb53",
+      "content": "The Review of Politics was founded in 1939 by Gurian, modeled after German Catholic journals. It quickly emerged as part of an international Catholic intellectual revival, offering an alternative vision to positivist philosophy.",
+      "start_idx": 0,
+      "end_idx": 224,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Founding and Purpose of The Review of Politics",
+        "keywords": [
+          "Review of Politics",
+          "Gurian",
+          "Catholic journals",
+          "intellectual revival"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "97a8f905cfb77f10",
+      "content": "For 44 years, the Review was edited by Gurian, Matthew Fitzsimons, Frederick Crosson, and Thomas Stritch. Intellectual leaders included Gurian, Jacques Maritain, Frank O'Malley, Leo Richard Ward, F. A. Hermens, and John U. Nef.",
+      "start_idx": 225,
+      "end_idx": 366,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Editorial Leadership and Contributors",
+        "keywords": [
+          "editors",
+          "intellectual leaders",
+          "Gurian",
+          "Maritain"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "96e21a372519a20e",
+      "content": "It became a major forum for political ideas and modern political concerns, especially from a Catholic and scholastic tradition.",
+      "start_idx": 367,
+      "end_idx": 463,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Impact and Focus of The Review of Politics",
+        "keywords": [
+          "forum",
+          "political ideas",
+          "Catholic tradition",
+          "scholastic tradition"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:21.559577",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

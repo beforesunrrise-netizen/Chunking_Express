@@ -1,0 +1,50 @@
+{
+  "document_id": "179",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e9bc0dd26f5c3ef7",
+      "content": "remains one of the 100 largest libraries in the country.",
+      "start_idx": 200,
+      "end_idx": 250,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.9,
+        "relevance_reason": "Directly addresses the ranking of Notre Dame's library in the nation.",
+        "answer_contribution": "Indicates that Notre Dame's library is among the top 100 in the country.",
+        "keywords": [
+          "rank",
+          "nation",
+          "largest libraries"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "library"
+          ],
+          "keywords": [
+            "rank",
+            "nation"
+          ],
+          "required_info": [
+            "current ranking of Notre Dame's library"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:48:16.956341",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "179",
+    "model": "text-embedding-3-large"
+  }
+}

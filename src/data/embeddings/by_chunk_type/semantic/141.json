@@ -1,0 +1,85 @@
+{
+  "document_id": "141",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "2c21b48a02aa1a65",
+      "content": "Because of its Catholic identity, a number of religious buildings stand on campus. The Old College building has become one of two seminaries on campus run by the Congregation of Holy Cross.",
+      "start_idx": 0,
+      "end_idx": 164,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Religious Buildings on Campus",
+        "keywords": [
+          "Catholic identity",
+          "Old College",
+          "seminaries",
+          "Congregation of Holy Cross"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "f9054883f50cd0b4",
+      "content": "The current Basilica of the Sacred Heart is located on the spot of Fr. Sorin's original church, which became too small for the growing college. It is built in French Revival style and it is decorated by stained glass windows imported directly from France.",
+      "start_idx": 165,
+      "end_idx": 319,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Basilica of the Sacred Heart",
+        "keywords": [
+          "Basilica",
+          "Fr. Sorin",
+          "French Revival",
+          "stained glass windows"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "171d8fbd1c24be68",
+      "content": "The interior was painted by Luigi Gregori, an Italian painter invited by Fr. Sorin to be artist in residence. The Basilica also features a bell tower with a carillon. Inside the church there are also sculptures by Ivan Mestrovic.",
+      "start_idx": 320,
+      "end_idx": 487,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Art and Features of the Basilica",
+        "keywords": [
+          "Luigi Gregori",
+          "bell tower",
+          "carillon",
+          "Ivan Mestrovic"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "bab19e21b9f5edbe",
+      "content": "The Grotto of Our Lady of Lourdes, which was built in 1896, is a replica of the original in Lourdes, France. It is very popular among students and alumni as a place of prayer and meditation, and it is considered one of the most beloved spots on campus.",
+      "start_idx": 488,
+      "end_idx": 652,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Grotto of Our Lady of Lourdes",
+        "keywords": [
+          "Grotto",
+          "Lourdes",
+          "prayer",
+          "meditation",
+          "beloved spot"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:03:28.927283",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

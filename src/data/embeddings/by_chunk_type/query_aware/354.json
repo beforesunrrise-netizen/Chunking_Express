@@ -1,0 +1,53 @@
+{
+  "document_id": "354",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e087de337d4fa621",
+      "content": "The group changed their name to Destiny's Child in 1996, based upon a passage in the Book of Isaiah.",
+      "start_idx": 0,
+      "end_idx": 92,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the biblical source of the name Destiny's Child.",
+        "answer_contribution": "Identifies the Book of Isaiah as the source of the name.",
+        "keywords": [
+          "Destiny's Child",
+          "Book of Isaiah",
+          "quote",
+          "Bible"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Destiny's Child",
+            "Bible"
+          ],
+          "keywords": [
+            "Destiny's Child",
+            "quote",
+            "Bible"
+          ],
+          "required_info": [
+            "name origin",
+            "specific book"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:05:37.170046",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "354",
+    "model": "text-embedding-3-large"
+  }
+}

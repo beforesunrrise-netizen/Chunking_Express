@@ -1,0 +1,52 @@
+{
+  "document_id": "160",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "dea9fd4df29b5f8d",
+      "content": "Since 1998, its London center has been based in the former United University Club at 1 Suffolk Street in Trafalgar Square.",
+      "start_idx": 0,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the year when the Suffolk Street location started to house a Notre Dame facility.",
+        "answer_contribution": "The year 1998 is explicitly mentioned as the start year for the Notre Dame facility at Suffolk Street.",
+        "keywords": [
+          "year",
+          "Suffolk Street",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Suffolk Street",
+            "Notre Dame facility"
+          ],
+          "keywords": [
+            "year",
+            "Suffolk Street",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "year of establishment",
+            "location"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:03:06.796696",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "160",
+    "model": "text-embedding-3-large"
+  }
+}

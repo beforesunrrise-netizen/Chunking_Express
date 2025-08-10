@@ -1,0 +1,38 @@
+{
+  "document_id": "499",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "29424373d378bbec",
+      "content": "In 2011, documents obtained by WikiLeaks revealed that Beyoncé was one of many entertainers who performed for the family of Libyan ruler Muammar Gaddafi. Rolling Stone reported that the music industry was urging them to return the money they earned for the concerts; a spokesperson for Beyoncé later confirmed to The Huffington Post that she donated the money to the Clinton Bush Haiti Fund. Later that year she became the first solo female artist to headline the main Pyramid stage at the 2011 Glastonbury Festi val in over twenty years, and was named the highest-paid performer in the world per minute.",
+      "start_idx": 0,
+      "end_idx": 603,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "performing",
+          "reports",
+          "year"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "499_query_aware_0",
+          "499_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:52:29.320071",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "499",
+    "model": "text-embedding-3-large"
+  }
+}

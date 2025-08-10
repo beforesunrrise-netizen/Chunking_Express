@@ -1,0 +1,96 @@
+{
+  "document_id": "28",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "b2439bfb4a15461a",
+      "content": "The university first offered graduate degrees, in the form of a Master of Arts (MA), in the 1854–1855 academic year. The program expanded to include Master of Laws (LL.M.) and Master of Civil Engineering in its early stages of growth, before a formal graduate school education was developed with a thesis not required to receive the degrees.",
+      "start_idx": 0,
+      "end_idx": 276,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "History of Graduate Degrees",
+        "keywords": [
+          "graduate degrees",
+          "Master of Arts",
+          "history"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "a6f62b943cb2ee14",
+      "content": "This changed in 1924 with formal requirements developed for graduate degrees, including offering Doctorate (PhD) degrees. Today each of the five colleges offer graduate education. Most of the departments from the College of Arts and Letters offer PhD programs, while a professional Master of Divinity (M.Div.) program also exists.",
+      "start_idx": 277,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Formalization of Graduate Programs",
+        "keywords": [
+          "PhD",
+          "graduate education",
+          "Master of Divinity"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "b210dfe2d040eb58",
+      "content": "All of the departments in the College of Science offer PhD programs, except for the Department of Pre-Professional Studies. The School of Architecture offers a Master of Architecture, while each of the departments of the College of Engineering offer PhD programs.",
+      "start_idx": 488,
+      "end_idx": 617,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Graduate Programs by College",
+        "keywords": [
+          "College of Science",
+          "Master of Architecture",
+          "College of Engineering"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "e351b4f5322dd757",
+      "content": "The College of Business offers multiple professional programs including MBA and Master of Science in Accountancy programs. It also operates facilities in Chicago and Cincinnati for its executive MBA program.",
+      "start_idx": 618,
+      "end_idx": 748,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Business Graduate Programs",
+        "keywords": [
+          "College of Business",
+          "MBA",
+          "executive MBA"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "1712525e60ec90df",
+      "content": "Additionally, the Alliance for Catholic Education program offers a Master of Education program where students study at the university during the summer and teach in Catholic elementary schools, middle schools, and high schools across the Southern United States for two school years.",
+      "start_idx": 749,
+      "end_idx": 895,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Alliance for Catholic Education",
+        "keywords": [
+          "Master of Education",
+          "Alliance for Catholic Education",
+          "teaching program"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:23.574268",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "document_id": "89",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "27c750bc1393632e",
+      "content": "This Main Building, and the library collection, was entirely destroyed by a fire in April 1879, and the school closed immediately and students were sent home. The university founder, Fr. Sorin and the president at the time, the Rev.",
+      "start_idx": 0,
+      "end_idx": 232,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "This Main Building, and the library collection, was entirely destroyed by a fire in April 1879, and the school closed immediately and students were sent home.",
+        "importance_score": 1.0,
+        "context_window": 2,
+        "keywords": [
+          "Main Building",
+          "fire",
+          "April 1879",
+          "school closure"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "b1f2c8a3fa742f7a",
+      "content": "Sorin and the president at the time, the Rev. William Corby, immediately planned for the rebuilding of the structure that had housed virtually the entire University. Construction was started on the 17th of May and by the incredible zeal of administrator and workers the building was completed before the fall semester of 1879. The library collection was also rebuilt and stayed housed in the new Main Building for years afterwards. Around the time of the fire, a music hall was opened.",
+      "start_idx": 187,
+      "end_idx": 672,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Construction was started on the 17th of May and by the incredible zeal of administrator and workers the building was completed before the fall semester of 1879.",
+        "importance_score": 0.8,
+        "context_window": 2,
+        "keywords": [
+          "construction",
+          "May 17",
+          "completion",
+          "fall semester 1879"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "b2d9f48ccce57a34",
+      "content": "Around the time of the fire, a music hall was opened. Eventually becoming known as Washington Hall, it hosted plays and musical acts put on by the school. By 1880, a science program was established at the university, and a Science Hall (today LaFortune Student Center) was built in 1883. The hall housed multiple classrooms and science labs needed for early research at the university.",
+      "start_idx": 619,
+      "end_idx": 1004,
+      "sequence_num": 2,
+      "metadata": {
+        "key_sentence": "By 1880, a science program was established at the university, and a Science Hall (today LaFortune Student Center) was built in 1883.",
+        "importance_score": 0.8,
+        "context_window": 2,
+        "keywords": [
+          "science program",
+          "Science Hall",
+          "LaFortune Student Center",
+          "1883"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:40:45.117373",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

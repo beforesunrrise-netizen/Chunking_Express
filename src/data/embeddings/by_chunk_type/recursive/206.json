@@ -1,0 +1,38 @@
+{
+  "document_id": "206",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "d61ca688092611ae",
+      "content": "The first degrees from the college were awarded in 1849. The university was expanded with new buildings to accommodate more students and faculty. With each new president, new academic programs were offered and new buildings built to accommodate them. The original Main Building built by Sorin just after he arrived was replaced by a larger \"Main Building\" in 1865, which housed the university's administration, classrooms, and dormitories. Beginning in 1873, a library collection was started by Father Lemonnier.",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "16729ddb3fc7eaf4",
+      "content": "ibrary collection was started by Father Lemonnier. By 1879 it had grown to ten thousand volumes that were housed in the Main Building.",
+      "start_idx": 462,
+      "end_idx": 596,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T12:49:33.744526",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

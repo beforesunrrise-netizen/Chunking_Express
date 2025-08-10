@@ -1,0 +1,96 @@
+{
+  "document_id": "381",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "ae63b16a885a356c",
+      "content": "The remaining band members recorded \"Independent Women Part I\", which appeared on the soundtrack to the 2000 film, Charlie's Angels. It became their best-charting single, topping the U.S. Billboard Hot 100 chart for eleven consecutive weeks.",
+      "start_idx": 0,
+      "end_idx": 239,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Success of 'Independent Women Part I'",
+        "keywords": [
+          "Independent Women Part I",
+          "Charlie's Angels",
+          "Billboard Hot 100"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "8cc8520f856adc9e",
+      "content": "In early 2001, while Destiny's Child was completing their third album, Beyoncé landed a major role in the MTV made-for-television film, Carmen: A Hip Hopera, starring alongside American actor Mekhi Phifer. Set in Philadelphia, the film is a modern interpretation of the 19th century opera Carmen by French composer Georges Bizet.",
+      "start_idx": 240,
+      "end_idx": 426,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Beyoncé's role in Carmen: A Hip Hopera",
+        "keywords": [
+          "Beyoncé",
+          "Carmen: A Hip Hopera",
+          "Mekhi Phifer"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "9d9077689cc1c77f",
+      "content": "When the third album Survivor was released in May 2001, Luckett and Roberson filed a lawsuit claiming that the songs were aimed at them. The album debuted at number one on the U.S. Billboard 200, with first-week sales of 663,000 copies sold.",
+      "start_idx": 427,
+      "end_idx": 570,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Release of Survivor and legal issues",
+        "keywords": [
+          "Survivor",
+          "lawsuit",
+          "Billboard 200"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "186622827a1e218d",
+      "content": "The album spawned other number-one hits, \"Bootylicious\" and the title track, \"Survivor\", the latter of which earned the group a Grammy Award for Best R&B Performance by a Duo or Group with Vocals.",
+      "start_idx": 571,
+      "end_idx": 688,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Hits from Survivor and Grammy Award",
+        "keywords": [
+          "Bootylicious",
+          "Survivor",
+          "Grammy Award"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "7eb9f9f4032fe9ef",
+      "content": "After releasing their holiday album 8 Days of Christmas in October 2001, the group announced a hiatus to further pursue solo careers.",
+      "start_idx": 689,
+      "end_idx": 758,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Hiatus after 8 Days of Christmas",
+        "keywords": [
+          "8 Days of Christmas",
+          "hiatus",
+          "solo careers"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:12:02.760780",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

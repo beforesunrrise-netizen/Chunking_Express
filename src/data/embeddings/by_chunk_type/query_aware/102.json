@@ -1,0 +1,51 @@
+{
+  "document_id": "102",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "1b98f8491a9b230b",
+      "content": "During his 13 years the Irish won three national championships.",
+      "start_idx": 134,
+      "end_idx": 174,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question about the number of national titles won under Knute Rockne's coaching.",
+        "answer_contribution": "It specifies that three national championships were won.",
+        "keywords": [
+          "national championships",
+          "Knute Rockne",
+          "coached"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Knute Rockne",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "national titles",
+            "coached"
+          ],
+          "required_info": [
+            "number of national titles",
+            "time period of coaching"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:12:46.130490",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "102",
+    "model": "text-embedding-3-large"
+  }
+}

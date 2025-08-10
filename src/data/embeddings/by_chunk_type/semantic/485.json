@@ -1,0 +1,66 @@
+{
+  "document_id": "485",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "15ce096a8affbade",
+      "content": "At the 52nd Annual Grammy Awards, Beyoncé received ten nominations, including Album of the Year for I Am... Sasha Fierce, Record of the Year for 'Halo', and Song of the Year for 'Single Ladies (Put a Ring on It)', among others. She tied with Lauryn Hill for most Grammy nominations in a single year by a female artist.",
+      "start_idx": 0,
+      "end_idx": 290,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's Grammy Nominations",
+        "keywords": [
+          "Beyoncé",
+          "Grammy Awards",
+          "nominations",
+          "I Am... Sasha Fierce"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "01d1d605f56c48fb",
+      "content": "In 2010, Beyoncé was featured on Lady Gaga's single 'Telephone' and its music video. The song topped the US Pop Songs chart, becoming the sixth number-one for both Beyoncé and Gaga, tying them with Mariah Carey for most number-ones since the Nielsen Top 40 airplay chart launched in 1992.",
+      "start_idx": 291,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Beyoncé and Lady Gaga's Collaboration",
+        "keywords": [
+          "Beyoncé",
+          "Lady Gaga",
+          "Telephone",
+          "US Pop Songs chart"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "d0833f89d9933de3",
+      "content": "'Telephone' received a Grammy Award nomination for Best Pop Collaboration with Vocals.",
+      "start_idx": 488,
+      "end_idx": 533,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Grammy Nomination for 'Telephone'",
+        "keywords": [
+          "Telephone",
+          "Grammy Award",
+          "Best Pop Collaboration"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:42:50.182526",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "document_id": "55",
+  "chunk_type": "fixed_size",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "6e3df6debaf74535",
+      "content": "In 1882, Albert Zahm (John Zahm's brother) built an early wind tunnel used to compare lift to drag of aeronautical models. Around 1899, Professor Jerome Green became the first American to send a wireless message. In 1931, Father Julius Nieuwland performed early work on basic reactions that was used to create neoprene. Study of nuclear physics at the university began with the building of a nuclear accelerator in 1936, and continues now partly through a partnership in the Joint Institute for Nuclear Astrophysics.",
+      "start_idx": 0,
+      "end_idx": 516,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_method": "merged_last",
+        "overlap_size": 51,
+        "merged": true
+      },
+      "chunk_type": "fixed_size"
+    }
+  ],
+  "created_at": "2025-08-10T09:46:37.115812",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_094621",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

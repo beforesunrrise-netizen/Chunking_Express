@@ -1,0 +1,52 @@
+{
+  "document_id": "429",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c20e887a5c0131f0",
+      "content": "The album's lead single \"Déjà Vu\", featuring Jay Z, reached the top five on the Billboard Hot 100 chart.",
+      "start_idx": 174,
+      "end_idx": 223,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the chart performance of 'Déjà Vu'.",
+        "answer_contribution": "Indicates that 'Déjà Vu' climbed into the top five on the Billboard Hot 100.",
+        "keywords": [
+          "how high",
+          "climb",
+          "Billboard"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Deja Vu",
+            "Billboard chart"
+          ],
+          "keywords": [
+            "how high",
+            "climb",
+            "Billboard"
+          ],
+          "required_info": [
+            "peak position",
+            "chart name"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:23:37.210249",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "429",
+    "model": "text-embedding-3-large"
+  }
+}

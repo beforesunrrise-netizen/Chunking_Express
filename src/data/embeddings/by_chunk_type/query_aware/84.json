@@ -1,0 +1,50 @@
+{
+  "document_id": "84",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "0eb83022eaafc631",
+      "content": "more than 93% of students identify as Christian, with over 80% of the total being Catholic.",
+      "start_idx": 0,
+      "end_idx": 92,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the percentage of students identifying as Christian.",
+        "answer_contribution": "Provides the specific percentage of Notre Dame students who feel they are Christian.",
+        "keywords": [
+          "percentage",
+          "Christian"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "students"
+          ],
+          "keywords": [
+            "percentage",
+            "Christian"
+          ],
+          "required_info": [
+            "percentage of students",
+            "religious affiliation"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.505723",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "84",
+    "model": "text-embedding-3-large"
+  }
+}

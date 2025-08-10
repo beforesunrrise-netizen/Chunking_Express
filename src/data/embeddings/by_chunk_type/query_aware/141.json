@@ -1,0 +1,46 @@
+{
+  "document_id": "141",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "48dac1110601a815",
+      "content": "The interior was painted by Luigi Gregori, an Italian painter invited by Fr. Sorin to be artist in residence.",
+      "start_idx": 174,
+      "end_idx": 233,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question by identifying the individual who painted the interior of the Basilica.",
+        "answer_contribution": "Identifies Luigi Gregori as the painter of the Basilica's interior.",
+        "keywords": [
+          "painted",
+          "Luigi Gregori"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Basilica of the Sacred Heart",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "painted",
+            "individual"
+          ],
+          "required_info": [
+            "name of the painter"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:25:28.637039",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

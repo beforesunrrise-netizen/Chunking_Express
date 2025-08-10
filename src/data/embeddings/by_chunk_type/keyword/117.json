@@ -1,0 +1,70 @@
+{
+  "document_id": "117",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "f9787fadd375ad27",
+      "content": "The Rev. John J. Cavanaugh, C.S.C. served as president from 1946 to 1952.",
+      "start_idx": 0,
+      "end_idx": 73,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "The Rev. John J. Cavanaugh, C.S.C. served as president from 1946 to 1952.",
+        "importance_score": 0.7,
+        "context_window": 2,
+        "keywords": [
+          "Rev. John J. Cavanaugh",
+          "president",
+          "1946-1952"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "58d189170c9379ef",
+      "content": "served as president from 1946 to 1952. Cavanaugh's legacy at Notre Dame in the post-war years was devoted to raising academic standards and reshaping the university administration to suit it to an enlarged educational mission and an expanded student body and stressing advanced studies and research at a time when Notre Dame quadrupled in student census, undergraduate enrollment increased by more than half, and graduate student enrollment grew fivefold. Cavanaugh also established the Lobund Institute for Animal Studies and Notre Dame's Medieval Institute. Cavanaugh also presided over the construction of the Nieuwland Science Hall, Fisher Hall, and the Morris Inn, as well as the Hall of Liberal Arts (now O'Shaughnessy Hall), made possible by a donation from I.A. O'Shaughnessy, at the time the largest ever made to an American Catholic university.",
+      "start_idx": 35,
+      "end_idx": 889,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Cavanaugh also established the Lobund Institute for Animal Studies and Notre Dame's Medieval Institute.",
+        "importance_score": 0.8,
+        "context_window": 2,
+        "keywords": [
+          "Lobund Institute",
+          "Animal Studies",
+          "Medieval Institute"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "0a39aa70f9cfba98",
+      "content": "Cavanaugh also presided over the construction of the Nieuwland Science Hall, Fisher Hall, and the Morris Inn, as well as the Hall of Liberal Arts (now O'Shaughnessy Hall), made possible by a donation from I.A. O'Shaughnessy, at the time the largest ever made to an American Catholic university. Cavanaugh also established a system of advisory councils at the university, which continue today and are vital to the university's governance and development",
+      "start_idx": 595,
+      "end_idx": 1047,
+      "sequence_num": 2,
+      "metadata": {
+        "key_sentence": "Cavanaugh also established a system of advisory councils at the university, which continue today and are vital to the university's governance and development.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "advisory councils",
+          "governance",
+          "development"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:55:18.697995",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

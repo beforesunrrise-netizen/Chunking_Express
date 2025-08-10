@@ -1,0 +1,51 @@
+{
+  "document_id": "290",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "6d28482da80c2672",
+      "content": "Her marriage to rapper Jay Z",
+      "start_idx": 157,
+      "end_idx": 182,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about which artist Beyoncé married.",
+        "answer_contribution": "Identifies Jay Z as the artist Beyoncé married.",
+        "keywords": [
+          "marriage",
+          "artist",
+          "Jay Z"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "artist"
+          ],
+          "keywords": [
+            "marry",
+            "artist"
+          ],
+          "required_info": [
+            "name of the artist",
+            "relationship status"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:13:33.965029",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "290",
+    "model": "text-embedding-3-large"
+  }
+}

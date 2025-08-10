@@ -1,0 +1,49 @@
+{
+  "document_id": "116",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3335fac982af2c0e",
+      "content": "The Rev. John J. Cavanaugh, C.S.C. served as president from 1946 to 1952.",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the president of Notre Dame in 1947.",
+        "answer_contribution": "Identifies Rev. John J. Cavanaugh as the president during the specified year.",
+        "keywords": [
+          "president",
+          "1947"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "president"
+          ],
+          "keywords": [
+            "president",
+            "1947"
+          ],
+          "required_info": [
+            "name of the president of Notre Dame in 1947"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:44:28.567387",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "116",
+    "model": "text-embedding-3-large"
+  }
+}

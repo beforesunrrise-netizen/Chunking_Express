@@ -1,0 +1,135 @@
+{
+  "document_id": "450",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 7,
+  "chunks": [
+    {
+      "hash": "8922a3c8cf9953dd",
+      "content": "On April 4, 2008, Beyoncé married Jay Z. She publicly revealed their marriage in a video montage at the listening party for her third studio album, I Am... Sasha Fierce, in Manhattan's Sony Club on October 22, 2008.",
+      "start_idx": 0,
+      "end_idx": 197,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's marriage to Jay Z and album reveal",
+        "keywords": [
+          "Beyoncé",
+          "Jay Z",
+          "marriage",
+          "I Am... Sasha Fierce"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "04b10557e9f3d2c4",
+      "content": "I Am... Sasha Fierce was released on November 18, 2008 in the United States. The album formally introduces Beyoncé's alter ego Sasha Fierce, conceived during the making of her 2003 single \"Crazy in Love\", selling 482,000 copies in its first week, debuting atop the Billboard 200, and giving Beyoncé her third consecutive number-one album in the US.",
+      "start_idx": 198,
+      "end_idx": 396,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Release and success of I Am... Sasha Fierce",
+        "keywords": [
+          "I Am... Sasha Fierce",
+          "release",
+          "success",
+          "Billboard 200"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "1675898fbb247ce9",
+      "content": "The album featured the number-one song \"Single Ladies (Put a Ring on It)\" and the top-five songs \"If I Were a Boy\" and \"Halo\". Achieving the accomplishment of becoming her longest-running Hot 100 single in her career, \"Halo\"'s success in the US helped Beyoncé attain more top-ten singles on the list than any other woman during the 2000s.",
+      "start_idx": 397,
+      "end_idx": 570,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Hit singles from the album",
+        "keywords": [
+          "Single Ladies",
+          "Halo",
+          "top-ten singles",
+          "success"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "8d0aedd698483477",
+      "content": "It also included the successful \"Sweet Dreams\", and singles \"Diva\", \"Ego\", \"Broken-Hearted Girl\" and \"Video Phone\". The music video for \"Single Ladies\" has been parodied and imitated around the world, spawning the \"first major dance craze\" of the Internet age according to the Toronto Star.",
+      "start_idx": 571,
+      "end_idx": 754,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Additional singles and cultural impact of 'Single Ladies'",
+        "keywords": [
+          "Sweet Dreams",
+          "Single Ladies",
+          "dance craze",
+          "cultural impact"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "dd4ca9e006257510",
+      "content": "The video has won several awards, including Best Video at the 2009 MTV Europe Music Awards, the 2009 Scottish MOBO Awards, and the 2009 BET Awards. At the 2009 MTV Video Music Awards, the video was nominated for nine awards, ultimately winning three including Video of the Year.",
+      "start_idx": 755,
+      "end_idx": 925,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Awards and recognition for 'Single Ladies' video",
+        "keywords": [
+          "awards",
+          "MTV Europe Music Awards",
+          "Video of the Year",
+          "recognition"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "1e614d2a8ddee05f",
+      "content": "Its failure to win the Best Female Video category, which went to American country pop singer Taylor Swift's \"You Belong with Me\", led to Kanye West interrupting the ceremony and Beyoncé improvising a re-presentation of Swift's award during her own acceptance speech.",
+      "start_idx": 926,
+      "end_idx": 1099,
+      "sequence_num": 5,
+      "metadata": {
+        "topic": "Controversy at the 2009 MTV Video Music Awards",
+        "keywords": [
+          "Kanye West",
+          "Taylor Swift",
+          "MTV Video Music Awards",
+          "controversy"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "389647297ac5cace",
+      "content": "In March 2009, Beyoncé embarked on the I Am... World Tour, her second headlining worldwide concert tour, consisting of 108 shows, grossing $119.5 million.",
+      "start_idx": 1100,
+      "end_idx": 1176,
+      "sequence_num": 6,
+      "metadata": {
+        "topic": "I Am... World Tour details",
+        "keywords": [
+          "I Am... World Tour",
+          "concert tour",
+          "gross revenue",
+          "shows"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:36:05.872792",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

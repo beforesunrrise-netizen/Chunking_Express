@@ -1,0 +1,104 @@
+{
+  "document_id": "366",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "a02874b23b8a3ed0",
+      "content": "LeToya Luckett and Roberson became unhappy with Mathew's managing of the band and eventually were replaced by Farrah Franklin and Michelle Williams.",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Changes in Destiny's Child lineup",
+        "keywords": [
+          "LeToya Luckett",
+          "Roberson",
+          "Farrah Franklin",
+          "Michelle Williams",
+          "Mathew"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "d4cfbd23a0122bb5",
+      "content": "Beyoncé experienced depression following the split with Luckett and Roberson after being publicly blamed by the media, critics, and blogs for its cause.",
+      "start_idx": 140,
+      "end_idx": 239,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Beyoncé's depression after band changes",
+        "keywords": [
+          "Beyoncé",
+          "depression",
+          "media blame",
+          "Luckett",
+          "Roberson"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "d5083a02d0f8dac5",
+      "content": "Her long-standing boyfriend left her at this time. The depression was so severe it lasted for a couple of years, during which she occasionally kept herself in her bedroom for days and refused to eat anything.",
+      "start_idx": 240,
+      "end_idx": 366,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Impact of depression on Beyoncé's life",
+        "keywords": [
+          "boyfriend",
+          "severe depression",
+          "isolation",
+          "refusal to eat"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "245b5aab170b581a",
+      "content": "Beyoncé stated that she struggled to speak about her depression because Destiny's Child had just won their first Grammy Award and she feared no one would take her seriously.",
+      "start_idx": 367,
+      "end_idx": 487,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Beyoncé's struggle with depression and public perception",
+        "keywords": [
+          "Grammy Award",
+          "struggle",
+          "public perception",
+          "seriousness"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "e03734f162ca91c6",
+      "content": "Beyoncé would later speak of her mother as the person who helped her fight it. Franklin was dismissed, leaving just Beyoncé, Rowland, and Williams.",
+      "start_idx": 488,
+      "end_idx": 570,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "Support from family and final band lineup",
+        "keywords": [
+          "mother",
+          "support",
+          "Franklin dismissed",
+          "Rowland",
+          "Williams"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:44:37.895012",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

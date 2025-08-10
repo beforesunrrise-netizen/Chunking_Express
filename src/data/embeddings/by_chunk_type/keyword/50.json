@@ -1,0 +1,56 @@
+{
+  "document_id": "50",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "9f8c620f86cf9404",
+      "content": "Father Joseph Carrier, C.S.C. was Director of the Science Museum and the Library and Professor of Chemistry and Physics until 1874. Carrier taught that scientific research and its promise for progress were not antagonistic to the ideals of intellectual and moral culture endorsed by the Church. One of Carrier's students was Father John Augustine Zahm (1851–1921) who was made Professor and Co-Director of the Science Department at age 23 and by 1900 was a nationally prominent scientist and naturalist.",
+      "start_idx": 0,
+      "end_idx": 503,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "Father Joseph Carrier, C.S.C. was Director of the Science Museum and the Library and Professor of Chemistry and Physics until 1874.",
+        "importance_score": 0.7,
+        "context_window": 2,
+        "keywords": [
+          "Father Joseph Carrier",
+          "Director",
+          "Science Museum",
+          "Professor",
+          "Chemistry",
+          "Physics"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "b48a68098844bd4c",
+      "content": "One of Carrier's students was Father John Augustine Zahm (1851–1921) who was made Professor and Co-Director of the Science Department at age 23 and by 1900 was a nationally prominent scientist and naturalist. Zahm was active in the Catholic Summer School movement, which introduced Catholic laity to contemporary intellectual issues. His book Evolution and Dogma (1896) defended certain aspects of evolutionary theory as true, and argued, moreover, that even the great Church teachers Thomas Aquinas and Augustine taught something like it. The intervention of Irish American Catholics in Rome prevented Zahm's censure by the Vatican. In 1913, Zahm and former President Theodore Roosevelt embarked on a major expedition through the Amazon.",
+      "start_idx": 295,
+      "end_idx": 1033,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "His book Evolution and Dogma (1896) defended certain aspects of evolutionary theory as true, and argued, moreover, that even the great Church teachers Thomas Aquinas and Augustine taught something like it.",
+        "importance_score": 0.85,
+        "context_window": 2,
+        "keywords": [
+          "Evolution and Dogma",
+          "evolutionary theory",
+          "Thomas Aquinas",
+          "Augustine"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:40:44.125283",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

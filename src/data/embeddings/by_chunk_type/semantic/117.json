@@ -1,0 +1,81 @@
+{
+  "document_id": "117",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "054ca684a5be0428",
+      "content": "The Rev. John J. Cavanaugh, C.S.C. served as president from 1946 to 1952. Cavanaugh's legacy at Notre Dame in the post-war years was devoted to raising academic standards and reshaping the university administration to suit it to an enlarged educational mission and an expanded student body.",
+      "start_idx": 0,
+      "end_idx": 267,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Cavanaugh's presidency and legacy",
+        "keywords": [
+          "Cavanaugh",
+          "president",
+          "Notre Dame",
+          "academic standards"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3d4dc5ce9031a693",
+      "content": "During his tenure, Cavanaugh stressed advanced studies and research at a time when Notre Dame quadrupled in student census, undergraduate enrollment increased by more than half, and graduate student enrollment grew fivefold.",
+      "start_idx": 267,
+      "end_idx": 408,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Enrollment growth and academic focus",
+        "keywords": [
+          "enrollment",
+          "advanced studies",
+          "research",
+          "student growth"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "fb30dccf36e263f4",
+      "content": "Cavanaugh also established the Lobund Institute for Animal Studies and Notre Dame's Medieval Institute. He presided over the construction of the Nieuwland Science Hall, Fisher Hall, and the Morris Inn, as well as the Hall of Liberal Arts (now O'Shaughnessy Hall), made possible by a donation from I.A. O'Shaughnessy, at the time the largest ever made to an American Catholic university.",
+      "start_idx": 408,
+      "end_idx": 566,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Institutes and construction projects",
+        "keywords": [
+          "Lobund Institute",
+          "Medieval Institute",
+          "construction",
+          "donation"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "f3ce17757f4bf16f",
+      "content": "Cavanaugh also established a system of advisory councils at the university, which continue today and are vital to the university's governance and development.",
+      "start_idx": 566,
+      "end_idx": 634,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Advisory councils and governance",
+        "keywords": [
+          "advisory councils",
+          "governance",
+          "development",
+          "Cavanaugh"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:32:45.144506",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "document_id": "295",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c24e33b499fad886",
+      "content": "Her marriage to rapper Jay Z and portrayal of Etta James in Cadillac Records (2008) influenced her third album, I Am... Sasha Fierce (2008), which saw the birth of her alter-ego Sasha Fierce.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly answers the question by stating that Beyoncé created Sasha Fierce after portraying Etta James in Cadillac Records.",
+        "answer_contribution": "It specifies the movie (Cadillac Records) and the timeline of creating Sasha Fierce.",
+        "keywords": [
+          "movie",
+          "portraying",
+          "create"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Etta James",
+            "Beyonce",
+            "Sasha Fierce"
+          ],
+          "keywords": [
+            "movie",
+            "portraying",
+            "create"
+          ],
+          "required_info": [
+            "name of the movie",
+            "context of Sasha Fierce's creation"
+          ],
+          "complexity": "moderate"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:51:12.991701",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

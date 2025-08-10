@@ -1,0 +1,55 @@
+{
+  "document_id": "490",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "914ecafedce82f40",
+      "content": "Beyoncé announced a hiatus from her music career in January 2010, heeding her mother's advice, \"to live life, to be inspired by things again\". During the break she and her father parted ways as business partners. Beyoncé's musical break lasted nine months and saw her visit multiple European cities, the Great Wall of China, the Egyptian pyramids, Australia, English music festivals and various museums and ballet performances.",
+      "start_idx": 0,
+      "end_idx": 427,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "famous",
+          "landmark",
+          "Beyonce",
+          "China"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce",
+            "China",
+            "landmark"
+          ],
+          "keywords": [
+            "famous",
+            "landmark",
+            "Beyonce",
+            "China"
+          ],
+          "required_info": [
+            "famous landmark seen by Beyonce",
+            "location in China"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:48:26.529664",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "490",
+    "model": "text-embedding-3-large"
+  }
+}

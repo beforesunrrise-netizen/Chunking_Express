@@ -1,0 +1,118 @@
+{
+  "document_id": "415",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 6,
+  "chunks": [
+    {
+      "hash": "67b8d0c486b17b28",
+      "content": "In November 2003, she embarked on the Dangerously in Love Tour in Europe and later toured alongside Missy Elliott and Alicia Keys for the Verizon Ladies First Tour in North America.",
+      "start_idx": 0,
+      "end_idx": 174,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Touring Activities",
+        "keywords": [
+          "Dangerously in Love Tour",
+          "Missy Elliott",
+          "Alicia Keys",
+          "Verizon Ladies First Tour"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "ba3a7ad0fca0eb55",
+      "content": "On February 1, 2004, Beyoncé performed the American national anthem at Super Bowl XXXVIII, at the Reliant Stadium in Houston, Texas.",
+      "start_idx": 175,
+      "end_idx": 246,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Super Bowl Performance",
+        "keywords": [
+          "Beyoncé",
+          "Super Bowl XXXVIII",
+          "national anthem",
+          "Houston"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "bfa99fc8f88fc3cf",
+      "content": "After the release of Dangerously in Love, Beyoncé had planned to produce a follow-up album using several of the left-over tracks. However, this was put on hold so she could concentrate on recording Destiny Fulfilled, the final studio album by Destiny's Child.",
+      "start_idx": 247,
+      "end_idx": 367,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Album Production",
+        "keywords": [
+          "Dangerously in Love",
+          "follow-up album",
+          "Destiny Fulfilled",
+          "Destiny's Child"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "407caa61fd5ce744",
+      "content": "Released on November 15, 2004, in the US and peaking at number two on the Billboard 200, Destiny Fulfilled included the singles 'Lose My Breath' and 'Soldier', which reached the top five on the Billboard Hot 100 chart.",
+      "start_idx": 368,
+      "end_idx": 487,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Destiny Fulfilled Album Release",
+        "keywords": [
+          "Destiny Fulfilled",
+          "Billboard 200",
+          "Lose My Breath",
+          "Soldier"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "5e26e67f289f61b4",
+      "content": "Destiny's Child embarked on a worldwide concert tour, Destiny Fulfilled... and Lovin' It and during the last stop of their European tour, in Barcelona on June 11, 2005, Rowland announced that Destiny's Child would disband following the North American leg of the tour.",
+      "start_idx": 488,
+      "end_idx": 617,
+      "sequence_num": 4,
+      "metadata": {
+        "topic": "World Tour and Disbandment Announcement",
+        "keywords": [
+          "Destiny's Child",
+          "worldwide concert tour",
+          "Barcelona",
+          "disbandment"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "61f59c21c03ddc9f",
+      "content": "The group released their first compilation album Number 1's on October 25, 2005, in the US and accepted a star on the Hollywood Walk of Fame in March 2006.",
+      "start_idx": 618,
+      "end_idx": 704,
+      "sequence_num": 5,
+      "metadata": {
+        "topic": "Compilation Album and Honors",
+        "keywords": [
+          "Number 1's",
+          "compilation album",
+          "Hollywood Walk of Fame",
+          "March 2006"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:33:25.187076",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

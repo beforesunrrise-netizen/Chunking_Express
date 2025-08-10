@@ -1,0 +1,50 @@
+{
+  "document_id": "27",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "a89e7b3c1550f487",
+      "content": "The university first offered graduate degrees, in the form of a Master of Arts (MA), in the 1854–1855 academic year.",
+      "start_idx": 0,
+      "end_idx": 85,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly answers the question by providing the specific year when the Master of Arts course was first offered.",
+        "answer_contribution": "The year 1854–1855 is the key information needed to answer the question.",
+        "keywords": [
+          "Master of Arts",
+          "first offered",
+          "1854–1855"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "Master of Arts course"
+          ],
+          "keywords": [
+            "year",
+            "first offered"
+          ],
+          "required_info": [
+            "year when Master of Arts course was first offered"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:56.071656",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "27",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "document_id": "94",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "9f744b5c5f5a2418",
+      "content": "In 1919 Father James Burns became president of Notre Dame, and in three years he produced an academic revolution that brought the school up to national standards by adopting the elective system and moving away from the university's traditional scholastic and classical emphasis. By contrast, the Jesuit colleges, bastions of academic conservatism, were reluctant to move to a system of electives. Their graduates were shut out of Harvard Law School for that reason.",
+      "start_idx": 0,
+      "end_idx": 465,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "In 1919 Father James Burns became president of Notre Dame, and in three years he produced an academic revolution that brought the school up to national standards by adopting the elective system and moving away from the university's traditional scholastic and classical emphasis.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Father James Burns",
+          "Notre Dame",
+          "academic revolution",
+          "elective system"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "5c40ea4e3ee724bc",
+      "content": "By contrast, the Jesuit colleges, bastions of academic conservatism, were reluctant to move to a system of electives. Their graduates were shut out of Harvard Law School for that reason. Notre Dame continued to grow over the years, adding more colleges, programs, and sports teams. By 1921, with the addition of the College of Commerce, Notre Dame had grown from a small college to a university with five colleges and a professional law school. The university continued to expand and add new residence halls and buildings with each subsequent president.",
+      "start_idx": 279,
+      "end_idx": 832,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Notre Dame continued to grow over the years, adding more colleges, programs, and sports teams.",
+        "importance_score": 0.6,
+        "context_window": 2,
+        "keywords": [
+          "Notre Dame",
+          "growth",
+          "colleges",
+          "programs",
+          "sports teams"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:40:44.510422",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

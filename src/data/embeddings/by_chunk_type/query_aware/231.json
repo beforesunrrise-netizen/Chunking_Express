@@ -1,0 +1,52 @@
+{
+  "document_id": "231",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "af188b5a415fc12b",
+      "content": "The band, which began in 1846 and has a claim as the oldest university band in continuous existence in the United States.",
+      "start_idx": 0,
+      "end_idx": 116,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about when the Notre Dame marching band was formed.",
+        "answer_contribution": "The formation year of the Notre Dame marching band.",
+        "keywords": [
+          "Notre Dame marching band",
+          "form",
+          "began",
+          "1846"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "marching band"
+          ],
+          "keywords": [
+            "form",
+            "Notre Dame marching band"
+          ],
+          "required_info": [
+            "date of formation",
+            "historical context"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:41:39.044430",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "231",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "document_id": "203",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "649bb9199769e333",
+      "content": "In 1842, the Bishop of Vincennes, Célestine Guynemer de la Hailandière, offered land to Father Edward Sorin of the Congregation of the Holy Cross, on the condition that he build a college in two years. Fr. Sorin arrived on the site with eight Holy Cross brothers from France and Ireland on November 26, 1842, and began the school using Father Stephen Badin's old log chapel. He soon erected additional buildings, including Old College, the first church, and the first main building. They immediately acquired two  students and set about building additions to the campus.",
+      "start_idx": 0,
+      "end_idx": 569,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "date",
+          "arrival"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "203_query_aware_0",
+          "203_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:03:06.605140",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "203",
+    "model": "text-embedding-3-large"
+  }
+}

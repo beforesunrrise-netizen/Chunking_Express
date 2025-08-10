@@ -1,0 +1,73 @@
+{
+  "document_id": "240",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 5,
+  "chunks": [
+    {
+      "hash": "ab158f8154ae92da",
+      "content": "George Gipp was the school's legendary football player during 1916–20. He played semiprofessional baseball and smoked, drank, and gambled when not playing sports. He was also humble, generous to the needy, and a man of integrity.",
+      "start_idx": 0,
+      "end_idx": 229,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "78180555dc47a859",
+      "content": "It was in 1928 that famed coach Knute Rockne used his final conversation with the dying Gipp to inspire the Notre Dame team to beat the Army team and \"win one for the Gipper.\" The 1940 film, Knute Rockne, All American, starred Pat O'Brien as Knute Rockne and Ronald Reagan as Gipp. Today the team competes in Notre Dame Stadium, an 80,795-seat stadium on campus.",
+      "start_idx": 230,
+      "end_idx": 592,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "4f157ff9b50c4ba8",
+      "content": "The current head coach is Brian Kelly, hired from the University of Cincinnati on December 11, 2009. Kelly's record in midway through his sixth season at Notre Dame is 52–21. In 2012, Kelly's Fighting Irish squad went undefeated and played in the BCS National Championship Game.",
+      "start_idx": 593,
+      "end_idx": 871,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "35884c3d9388b7ac",
+      "content": "Kelly succeeded Charlie Weis, who was fired in November 2009 after five seasons. Although Weis led his team to two Bowl Championship Series bowl games, his overall record was 35–27, mediocre by Notre Dame standards, and the 2007 team had the most losses in school history. The football team generates enough revenue to operate independently while $22.1 million is retained from the team's profits for academic use.",
+      "start_idx": 872,
+      "end_idx": 1286,
+      "sequence_num": 3,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "ee69a3f31896de48",
+      "content": "Forbes named the team as the most valuable in college football, worth a total of $101 million in 2007.",
+      "start_idx": 1287,
+      "end_idx": 1389,
+      "sequence_num": 4,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T14:28:38.934166",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

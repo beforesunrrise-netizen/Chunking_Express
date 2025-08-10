@@ -1,0 +1,50 @@
+{
+  "document_id": "110",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "c36f4e00d1df1c0f",
+      "content": "he selected Frank H. Spearman, Jeremiah D. M. Ford, Irvin Abell, and Josephine Brownson for the Laetare Medal, instituted in 1883.",
+      "start_idx": 134,
+      "end_idx": 198,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states that Irvin Abell was selected for the Laetare Medal by Notre Dame.",
+        "answer_contribution": "Identifies the specific award given to Irvin Abell.",
+        "keywords": [
+          "Irvin Abell",
+          "Laetare Medal",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Irvin Abell",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "award",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "award given to Irvin Abell"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:53:52.746560",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "110",
+    "model": "text-embedding-3-large"
+  }
+}

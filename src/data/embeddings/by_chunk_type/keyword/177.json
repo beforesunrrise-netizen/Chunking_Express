@@ -1,0 +1,54 @@
+{
+  "document_id": "177",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "42819f96112b7672",
+      "content": "The library system also includes branch libraries for Architecture, Chemistry & Physics, Engineering, Law, and Mathematics as well as information centers in the Mendoza College of Business, the Kellogg Institute for International Studies, the Joan B. Kroc Institute for International Peace Studies, and a slide library in O'Shaughnessy Hall. A theology library was also opened in fall of 2015. Located on the first floor of Stanford Hall, it is the first branch of the library system to be housed in a dorm room.",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "The library system also includes branch libraries for Architecture, Chemistry & Physics, Engineering, Law, and Mathematics as well as information centers in the Mendoza College of Business, the Kellogg Institute for International Studies, the Joan B. Kroc Institute for International Peace Studies, and a slide library in O'Shaughnessy Hall.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "branch libraries",
+          "information centers",
+          "Mendoza College",
+          "Kellogg Institute",
+          "Kroc Institute"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "8119c8154fb57180",
+      "content": "A theology library was also opened in fall of 2015. Located on the first floor of Stanford Hall, it is the first branch of the library system to be housed in a dorm room. The library system holds over three million volumes, was the single largest university library in the world upon its completion, and remains one of the 100 largest libraries in the country.",
+      "start_idx": 342,
+      "end_idx": 702,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "The library system holds over three million volumes, was the single largest university library in the world upon its completion, and remains one of the 100 largest libraries in the country.",
+        "importance_score": 1.0,
+        "context_window": 2,
+        "keywords": [
+          "three million volumes",
+          "largest university library",
+          "100 largest libraries"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:05:08.462080",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

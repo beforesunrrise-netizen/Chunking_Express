@@ -1,0 +1,22 @@
+{
+  "total_chunks": 5405,
+  "total_embeddings": 5405,
+  "total_documents": 500,
+  "by_chunk_type": {
+    "fixed_size": 3378,
+    "semantic": 4301,
+    "keyword": 1496,
+    "query_aware": 836,
+    "recursive": 1516,
+    "langchain_semantic": 1248
+  },
+  "by_language": {
+    "ko": 0,
+    "en": 12775
+  },
+  "storage_info": {
+    "base_path": "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data",
+    "embeddings_path": "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data/embeddings",
+    "total_size_mb": 101.94
+  }
+}

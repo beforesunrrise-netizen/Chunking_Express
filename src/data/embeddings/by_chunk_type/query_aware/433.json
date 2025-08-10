@@ -1,0 +1,37 @@
+{
+  "document_id": "433",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "50c1f9b2c2f69bf2",
+      "content": "Beyoncé's second solo album B'Day was released on September 5, 2006, in the US, to coincide with her twenty-fifth birthday. It sold 541,000 copies in its first week and debuted atop the Billboard 200, becoming Beyoncé's second consecutive number-one album in the United States. The album's lead single \"Déjà Vu\", featuring Jay Z, reached the top five on the Billboard Hot 100 chart. The second international single \"Irreplaceable\" was a commercial success worldwide, reaching number one in Australia, Hungary, Ir eland, New Zealand and the United States. B'Day also produced three other singles; \"Ring the Alarm\", \"Get Me Bodied\", and \"Green Light\" (released in the United Kingdom only).",
+      "start_idx": 0,
+      "end_idx": 686,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "keywords": [
+          "released",
+          "U.K."
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "433_query_aware_0",
+          "433_query_aware_1"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:01:23.011865",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "433",
+    "model": "text-embedding-3-large"
+  }
+}

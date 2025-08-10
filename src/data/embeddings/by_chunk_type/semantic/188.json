@@ -1,0 +1,69 @@
+{
+  "document_id": "188",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "17da1a5a134b24c7",
+      "content": "The University of Notre Dame du Lac (or simply Notre Dame /ˌnoʊtərˈdeɪm/ NOH-tər-DAYM) is a Catholic research university located adjacent to South Bend, Indiana, in the United States.",
+      "start_idx": 0,
+      "end_idx": 155,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Introduction to Notre Dame University",
+        "keywords": [
+          "University of Notre Dame",
+          "Catholic",
+          "research university",
+          "South Bend"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "0e41af6ce1c2e52d",
+      "content": "In French, Notre Dame du Lac means 'Our Lady of the Lake' and refers to the university's patron saint, the Virgin Mary.",
+      "start_idx": 156,
+      "end_idx": 229,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Meaning of the Name",
+        "keywords": [
+          "Notre Dame du Lac",
+          "Our Lady of the Lake",
+          "Virgin Mary",
+          "patron saint"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "c870c22b93c2d9ba",
+      "content": "The main campus covers 1,250 acres in a suburban setting and it contains a number of recognizable landmarks, such as the Golden Dome, the 'Word of Life' mural (commonly known as Touchdown Jesus), and the Basilica.",
+      "start_idx": 230,
+      "end_idx": 366,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Campus Description and Landmarks",
+        "keywords": [
+          "main campus",
+          "1,250 acres",
+          "landmarks",
+          "Golden Dome",
+          "Touchdown Jesus",
+          "Basilica"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:47:27.823444",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

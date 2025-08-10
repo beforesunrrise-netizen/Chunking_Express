@@ -1,0 +1,50 @@
+{
+  "document_id": "213",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "59347290a74c4c7b",
+      "content": "Another radio station, WVFI, began as a partner of WSND-FM. More recently, however, WVFI has been airing independently and is streamed on the Internet.",
+      "start_idx": 0,
+      "end_idx": 200,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly mentions that WVFI is an internet radio station that is streamed on the Internet.",
+        "answer_contribution": "Identifies WVFI as the internet radio station of Notre Dame that serves as an internet stream.",
+        "keywords": [
+          "internet radio station",
+          "stream"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "internet radio station",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "internet radio station",
+            "stream"
+          ],
+          "required_info": [
+            "name of the internet radio station",
+            "type of stream"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.390623",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "213",
+    "model": "text-embedding-3-large"
+  }
+}

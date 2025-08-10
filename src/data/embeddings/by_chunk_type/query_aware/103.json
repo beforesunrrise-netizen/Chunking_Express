@@ -1,0 +1,47 @@
+{
+  "document_id": "103",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "44359ff00f99e1e9",
+      "content": "The success of Notre Dame reflected rising status of Irish Americans and Catholics in the 1920s. Catholics rallied up around the team and listen to the games on the radio, especially when it knocked off the schools that symbolized the Protestant establishment in America — Harvard, Yale, Princeton, and Army.",
+      "start_idx": 0,
+      "end_idx": 245,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly mentions that Yale represented the Protestant establishment in America, contrasting it with Notre Dame's representation of Catholics.",
+        "answer_contribution": "This provides the necessary context that Yale was associated with the Protestant establishment, which is relevant to the question.",
+        "keywords": [
+          "Notre Dame",
+          "Yale",
+          "Protestant establishment"
+        ],
+        "query_analysis": {
+          "question_type": "comparison",
+          "key_entities": [
+            "Catholic people",
+            "Yale"
+          ],
+          "keywords": [
+            "Notre Dame",
+            "religious group"
+          ],
+          "required_info": [
+            "religious group associated with Yale"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:51:57.288621",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

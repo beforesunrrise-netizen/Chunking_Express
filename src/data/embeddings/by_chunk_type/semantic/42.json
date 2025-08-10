@@ -1,0 +1,81 @@
+{
+  "document_id": "42",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "89795bff8ebc7388",
+      "content": "Notre Dame is known for its competitive admissions, with the incoming class enrolling in fall 2015 admitting 3,577 from a pool of 18,156 (19.7%). The academic profile of the enrolled class continues to rate among the top 10 to 15 in the nation for national research universities.",
+      "start_idx": 0,
+      "end_idx": 256,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Admissions Overview",
+        "keywords": [
+          "Notre Dame",
+          "admissions",
+          "enrollment",
+          "academic profile"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "76c4a08739f4d783",
+      "content": "The university practices a non-restrictive early action policy that allows admitted students to consider admission to Notre Dame as well as any other colleges to which they were accepted. 1,400 of the 3,577 (39.1%) were admitted under the early action plan.",
+      "start_idx": 257,
+      "end_idx": 426,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Early Action Policy",
+        "keywords": [
+          "early action",
+          "admitted students",
+          "policy"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "6e80652b7ef8de48",
+      "content": "Admitted students came from 1,311 high schools and the average student traveled more than 750 miles to Notre Dame, making it arguably the most representative university in the United States.",
+      "start_idx": 427,
+      "end_idx": 516,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Student Demographics",
+        "keywords": [
+          "high schools",
+          "student travel",
+          "representation"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "d258430f01b5dbbe",
+      "content": "While all entering students begin in the College of the First Year of Studies, 25% have indicated they plan to study in the liberal arts or social sciences, 24% in engineering, 24% in business, 24% in science, and 3% in architecture.",
+      "start_idx": 517,
+      "end_idx": 616,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Academic Interests",
+        "keywords": [
+          "College of the First Year of Studies",
+          "majors",
+          "academic plans"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:23.142391",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

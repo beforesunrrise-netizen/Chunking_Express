@@ -1,0 +1,52 @@
+{
+  "document_id": "170",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9eb72511b079b6fa",
+      "content": "Today the college, housed in the newly built Jordan Hall of Science, includes over 1,200 undergraduates in six departments of study.",
+      "start_idx": 0,
+      "end_idx": 118,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the number of undergraduates attending the College of Science today.",
+        "answer_contribution": "Provides the exact number of undergrad students attending the College of Science.",
+        "keywords": [
+          "undergraduates",
+          "today",
+          "College of Science"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "College of Science",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "undergrad students",
+            "attend",
+            "today"
+          ],
+          "required_info": [
+            "number of undergrad students",
+            "current enrollment"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:12:27.073379",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "170",
+    "model": "text-embedding-3-large"
+  }
+}

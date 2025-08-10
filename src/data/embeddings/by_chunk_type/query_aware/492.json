@@ -1,0 +1,49 @@
+{
+  "document_id": "492",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "32ba61f84a97b89b",
+      "content": "Beyoncé announced a hiatus from her music career in January 2010, heeding her mother's advice, \"to live life, to be inspired by things again\".",
+      "start_idx": 0,
+      "end_idx": 118,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly states that Beyoncé's mother inspired her hiatus.",
+        "answer_contribution": "Identifies Beyoncé's mother as the source of inspiration for her hiatus.",
+        "keywords": [
+          "Beyoncé",
+          "hiatus",
+          "inspired",
+          "mother's advice"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [],
+          "keywords": [
+            "inspired",
+            "hiatus"
+          ],
+          "required_info": [
+            "source of inspiration",
+            "context of hiatus"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:55:46.462003",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "492",
+    "model": "text-embedding-3-large"
+  }
+}

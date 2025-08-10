@@ -1,0 +1,52 @@
+{
+  "document_id": "469",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "05aa43aa2c97e2c1",
+      "content": "the movie did well at the US box office, grossing $68 million—$60 million more than Cadillac Records—on a budget of $20 million.",
+      "start_idx": 0,
+      "end_idx": 140,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly provides the gross amount of the film and its budget, which are essential to answer the question.",
+        "answer_contribution": "It states that the film grossed $68 million, which is $60 million more than the budget of $20 million.",
+        "keywords": [
+          "budget",
+          "film",
+          "gross"
+        ],
+        "query_analysis": {
+          "question_type": "comparison",
+          "key_entities": [
+            "budget",
+            "film gross"
+          ],
+          "keywords": [
+            "budget",
+            "film",
+            "gross"
+          ],
+          "required_info": [
+            "budget amount",
+            "film gross amount"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:10:18.322572",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "469",
+    "model": "text-embedding-3-large"
+  }
+}

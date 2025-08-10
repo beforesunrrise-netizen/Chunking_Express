@@ -1,0 +1,54 @@
+{
+  "document_id": "22",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "9728b5ea636eb3ee",
+      "content": "All of Notre Dame's undergraduate students are a part of one of the five undergraduate colleges at the school or are in the First Year of Studies program. The First Year of Studies program was established in 1962 to guide incoming freshmen in their first year at the school before they have declared a major. Each student is given an academic advisor from the program who helps them to choose classes that give them exposure to any major in which they are interested.",
+      "start_idx": 0,
+      "end_idx": 467,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "All of Notre Dame's undergraduate students are a part of one of the five undergraduate colleges at the school or are in the First Year of Studies program.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Notre Dame",
+          "undergraduate students",
+          "colleges",
+          "First Year of Studies"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "2a7305aa2884c1ce",
+      "content": "The First Year of Studies program was established in 1962 to guide incoming freshmen in their first year at the school before they have declared a major. Each student is given an academic advisor from the program who helps them to choose classes that give them exposure to any major in which they are interested. The program also includes a Learning Resource Center which provides time management, collaborative learning, and subject tutoring. This program has been recognized previously, by U.S. News & World Report, as outstanding.",
+      "start_idx": 155,
+      "end_idx": 688,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "The program also includes a Learning Resource Center which provides time management, collaborative learning, and subject tutoring.",
+        "importance_score": 0.75,
+        "context_window": 2,
+        "keywords": [
+          "Learning Resource Center",
+          "time management",
+          "collaborative learning",
+          "tutoring"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:40:48.489726",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

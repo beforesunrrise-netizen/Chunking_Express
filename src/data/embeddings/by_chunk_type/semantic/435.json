@@ -1,0 +1,82 @@
+{
+  "document_id": "435",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "5c875000150cca52",
+      "content": "Her first acting role of 2006 was in the comedy film The Pink Panther starring opposite Steve Martin, grossing $158.8 million at the box office worldwide. Her second film Dreamgirls, the film version of the 1981 Broadway musical loosely based on The Supremes, received acclaim from critics and grossed $154 million internationally.",
+      "start_idx": 0,
+      "end_idx": 290,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's early acting roles",
+        "keywords": [
+          "The Pink Panther",
+          "Dreamgirls",
+          "box office",
+          "acting"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "cd2c0378ab7f8117",
+      "content": "In it, she starred opposite Jennifer Hudson, Jamie Foxx, and Eddie Murphy playing a pop singer based on Diana Ross. To promote the film, Beyoncé released 'Listen' as the lead single from the soundtrack album.",
+      "start_idx": 290,
+      "end_idx": 430,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Dreamgirls cast and promotion",
+        "keywords": [
+          "Jennifer Hudson",
+          "Jamie Foxx",
+          "Eddie Murphy",
+          "Listen",
+          "soundtrack"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "534b1d742783ddd7",
+      "content": "In April 2007, Beyoncé embarked on The Beyoncé Experience, her first worldwide concert tour, visiting 97 venues and grossed over $24 million. Beyoncé conducted pre-concert food donation drives during six major stops in conjunction with her pastor at St. John's and America's Second Harvest.",
+      "start_idx": 430,
+      "end_idx": 590,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "The Beyoncé Experience tour",
+        "keywords": [
+          "concert tour",
+          "food donation",
+          "Beyoncé Experience",
+          "charity"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "c1f12e93e6fca6c0",
+      "content": "At the same time, B'Day was re-released with five additional songs, including her duet with Shakira 'Beautiful Liar'.",
+      "start_idx": 590,
+      "end_idx": 650,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "B'Day re-release",
+        "keywords": [
+          "B'Day",
+          "re-release",
+          "Beautiful Liar",
+          "Shakira"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:38:36.038637",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "document_id": "43",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "1696a6e83f00f8ab",
+      "content": "the average student traveled more than 750 miles to Notre Dame",
+      "start_idx": 267,
+      "end_idx": 313,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about the average distance traveled by students to study at Notre Dame.",
+        "answer_contribution": "Provides the specific mileage that the average student travels.",
+        "keywords": [
+          "miles",
+          "average student",
+          "travel"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "average student"
+          ],
+          "keywords": [
+            "miles",
+            "travel",
+            "average student",
+            "study"
+          ],
+          "required_info": [
+            "average distance traveled by students",
+            "location of students"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:53.222848",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "43",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "document_id": "0",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "c94e56b7c20e437c",
+      "content": "Architecturally, the school has a Catholic character. Atop the Main Building's gold dome is a golden statue of the Virgin Mary. Immediately in front of the Main Building and facing it, is a copper statue of Christ with arms upraised with the legend \"Venite Ad Me Omnes\".",
+      "start_idx": 0,
+      "end_idx": 263,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Architectural Features of the School",
+        "keywords": [
+          "Catholic character",
+          "Main Building",
+          "Virgin Mary",
+          "Christ statue"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "7a265dd70c6b27ad",
+      "content": "Next to the Main Building is the Basilica of the Sacred Heart. Immediately behind the basilica is the Grotto, a Marian place of prayer and reflection. It is a replica of the grotto at Lourdes, France where the Virgin Mary reputedly appeared to Saint Bernadette Soubirous in 1858.",
+      "start_idx": 264,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Basilica and Grotto",
+        "keywords": [
+          "Basilica of the Sacred Heart",
+          "Grotto",
+          "Marian place",
+          "Lourdes"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "00d5f1df9e3d579d",
+      "content": "At the end of the main drive (and in a direct line that connects through 3 statues and the Gold Dome), is a simple, modern stone statue of Mary.",
+      "start_idx": 488,
+      "end_idx": 570,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Statue of Mary",
+        "keywords": [
+          "main drive",
+          "stone statue",
+          "Mary"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:25:22.039277",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

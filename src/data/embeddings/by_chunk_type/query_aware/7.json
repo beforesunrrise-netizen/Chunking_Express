@@ -1,0 +1,118 @@
+{
+  "document_id": "7",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "61254c141cc65eea",
+      "content": "As at most other universities, Notre Dame's students run a number of news media outlets. The nine student-run outlets include three newspapers, both a radio and television station, and several magazines and journals. Begun as a one-page journal in September 1876, the Scholastic magazine is issued twice monthly and claims to be the oldest continuous collegiate publication in the United States. The other magazine, The Juggler, is released twice a year and focuses on student literature and artwork. The Dome ye",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "daily",
+          "student paper",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "student paper"
+          ],
+          "keywords": [
+            "daily",
+            "student paper",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "name of the daily student paper at Notre Dame"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "4bd6cab1d4e71c39",
+      "content": "arbook is published annually. The newspapers have varying publication interests, with The Observer published daily and mainly reporting university and other news, and staffed by students from both Notre Dame and Saint Mary's College. Unlike Scholastic and The Dome, The Observer is an independent publication and does not have a faculty advisor or any editorial oversight from the University. In 1987, when some students believed that The Observer began to show a conservative bias, a liberal newspaper, Common S",
+      "start_idx": 512,
+      "end_idx": 1024,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "daily",
+          "student paper",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "student paper"
+          ],
+          "keywords": [
+            "daily",
+            "student paper",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "name of the daily student paper at Notre Dame"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "73d74f0acbb34828",
+      "content": "ense was published. Likewise, in 2003, when other students believed that the paper showed a liberal bias, the conservative paper Irish Rover went into production. Neither paper is published as often as The Observer; however, all three are distributed to all students. Finally, in Spring 2008 an undergraduate journal for political science research, Beyond Politics, made its debut.",
+      "start_idx": 1024,
+      "end_idx": 1405,
+      "sequence_num": 2,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "daily",
+          "student paper",
+          "Notre Dame"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "student paper"
+          ],
+          "keywords": [
+            "daily",
+            "student paper",
+            "Notre Dame"
+          ],
+          "required_info": [
+            "name of the daily student paper at Notre Dame"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:25:42.248673",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

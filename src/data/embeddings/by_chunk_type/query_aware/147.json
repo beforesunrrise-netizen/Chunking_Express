@@ -1,0 +1,49 @@
+{
+  "document_id": "147",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "5468ca7b5273fe23",
+      "content": "LaFortune Center... has an annual budget of $1.2 million.",
+      "start_idx": 200,
+      "end_idx": 250,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly states the annual budget of LaFortune Center.",
+        "answer_contribution": "Provides the exact figure for the annual budget.",
+        "keywords": [
+          "annual budget",
+          "LaFortune Center"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame",
+            "LaFortune Center"
+          ],
+          "keywords": [
+            "annual budget",
+            "LaFortune Center"
+          ],
+          "required_info": [
+            "annual budget amount"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:16:25.896908",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "147",
+    "model": "text-embedding-3-large"
+  }
+}

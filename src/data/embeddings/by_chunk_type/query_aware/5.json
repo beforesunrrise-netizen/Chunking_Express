@@ -1,0 +1,51 @@
+{
+  "document_id": "5",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "ce1671a2e4b1755f",
+      "content": "Begun as a one-page journal in September 1876, the Scholastic magazine is issued twice monthly and claims to be the oldest continuous collegiate publication in the United States.",
+      "start_idx": 0,
+      "end_idx": 157,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This part directly answers the question about when the Scholastic Magazine began publishing.",
+        "answer_contribution": "It provides the specific date of September 1876 when the Scholastic magazine began publishing.",
+        "keywords": [
+          "Scholastic magazine",
+          "September 1876",
+          "publishing"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Scholastic Magazine",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "publishing",
+            "begin"
+          ],
+          "required_info": [
+            "start date",
+            "publication history"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:55.375418",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "5",
+    "model": "text-embedding-3-large"
+  }
+}

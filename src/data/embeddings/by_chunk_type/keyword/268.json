@@ -1,0 +1,52 @@
+{
+  "document_id": "268",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "b5f7c27a20662ab8",
+      "content": "Notre Dame alumni work in various fields. Alumni working in political fields include state governors, members of the United States Congress, and former United States Secretary of State Condoleezza Rice. A notable alumnus of the College of Science is Medicine Nobel Prize winner Eric F. Wieschaus. A number of university heads are alumni, including Notre Dame's current president, the Rev.",
+      "start_idx": 0,
+      "end_idx": 388,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "Alumni working in political fields include state governors, members of the United States Congress, and former United States Secretary of State Condoleezza Rice.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "political fields",
+          "state governors",
+          "Condoleezza Rice"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "42b289dbaed7d956",
+      "content": "A number of university heads are alumni, including Notre Dame's current president, the Rev. John Jenkins. Additionally, many alumni are in the media, including talk show hosts Regis Philbin and Phil Donahue, and television and radio personalities such as Mike Golic and Hannah Storm. With the university having high profile sports teams itself, a number of alumni went on to become involved in athletics outside the university, including professional baseball, basketball, football, and ice hockey players, such as Joe Theismann, Joe Montana, Tim Brown, Ross Browner, Rocket Ismail, Ruth Riley, Jeff Samardzija, Jerome Bettis, Brett Lebda, Olympic gold medalist Mariel Zagunis, professional boxer Mike Lee, former football coaches such as Charlie Weis, Frank Leahy and Knute Rockne, and Basketball Hall of Famers Austin Carr and Adrian Dantley. Other notable alumni include prominent businessman Edward J. DeBartolo, Jr. and astronaut Jim Wetherbee.",
+      "start_idx": 297,
+      "end_idx": 1246,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Additionally, many alumni are in the media, including talk show hosts Regis Philbin and Phil Donahue, and television and radio personalities such as Mike Golic and Hannah Storm.",
+        "importance_score": 0.8,
+        "context_window": 2,
+        "keywords": [
+          "media",
+          "Regis Philbin",
+          "Phil Donahue"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:34:05.990876",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

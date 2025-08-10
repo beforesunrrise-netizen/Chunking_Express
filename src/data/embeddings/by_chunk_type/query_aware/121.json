@@ -1,0 +1,50 @@
+{
+  "document_id": "121",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9db797c19cea427b",
+      "content": "served as president for 35 years (1952–87)",
+      "start_idx": 0,
+      "end_idx": 40,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly states the years during which Hesburgh served as president.",
+        "answer_contribution": "Provides the specific years of his presidency.",
+        "keywords": [
+          "president",
+          "years"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Theodor Hesburgh",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "president",
+            "years"
+          ],
+          "required_info": [
+            "start year",
+            "end year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:46:54.608283",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "121",
+    "model": "text-embedding-3-large"
+  }
+}

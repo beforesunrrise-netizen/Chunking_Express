@@ -1,0 +1,51 @@
+{
+  "document_id": "37",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "6a722231e4f7db68",
+      "content": "The front of the library is adorned with the Word of Life mural designed by artist Millard Sheets.",
+      "start_idx": 157,
+      "end_idx": 218,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the artist who created the mural.",
+        "answer_contribution": "Identifies Millard Sheets as the creator of the mural.",
+        "keywords": [
+          "mural",
+          "created",
+          "Millard Sheets"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "artist",
+            "Theodore M. Hesburgh Library"
+          ],
+          "keywords": [
+            "mural",
+            "created"
+          ],
+          "required_info": [
+            "artist name",
+            "mural details"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:55.323773",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "37",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "document_id": "469",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "fe44bfd9e7cc03e2",
+      "content": "Beyoncé further expanded her acting career, starring as blues singer Etta James in the 2008 musical biopic, Cadillac Records. Her performance in the film received praise from critics, and she garnered several nominations for her portrayal of James, including a Satellite Award nomination for Best Supporting Actress, and a NAACP Image Award nomination for Outstanding Supporting Actress.",
+      "start_idx": 0,
+      "end_idx": 319,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's role as Etta James in Cadillac Records",
+        "keywords": [
+          "Beyoncé",
+          "Etta James",
+          "Cadillac Records",
+          "acting career",
+          "awards"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "72409f6b22d7f18e",
+      "content": "Beyoncé donated her entire salary from the film to Phoenix House, an organization of rehabilitation centers for heroin addicts around the country. On January 20, 2009, Beyoncé performed James' 'At Last' at the First Couple's first inaugural ball.",
+      "start_idx": 320,
+      "end_idx": 469,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Beyoncé's philanthropy and performance at inaugural ball",
+        "keywords": [
+          "donation",
+          "Phoenix House",
+          "At Last",
+          "inaugural ball"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3c4f0a0ecb8e25c1",
+      "content": "Beyoncé starred opposite Ali Larter and Idris Elba in the thriller, Obsessed. She played Sharon Charles, a mother and wife who learns of a woman's obsessive behavior over her husband. Although the film received negative reviews from critics, the movie did well at the US box office, grossing $68 million—$60 million more than Cadillac Records—on a budget of $20 million.",
+      "start_idx": 470,
+      "end_idx": 661,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Beyoncé's role in Obsessed and its box office performance",
+        "keywords": [
+          "Obsessed",
+          "box office",
+          "Ali Larter",
+          "Idris Elba",
+          "Sharon Charles"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "4bf99709840ee8f9",
+      "content": "The fight scene finale between Sharon and the character played by Ali Larter also won the 2010 MTV Movie Award for Best Fight.",
+      "start_idx": 662,
+      "end_idx": 724,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "MTV Movie Award for Best Fight in Obsessed",
+        "keywords": [
+          "fight scene",
+          "MTV Movie Award",
+          "Best Fight",
+          "Obsessed"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:28:22.701410",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

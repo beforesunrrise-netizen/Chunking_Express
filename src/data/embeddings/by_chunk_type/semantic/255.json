@@ -1,0 +1,61 @@
+{
+  "document_id": "255",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "20c53e583b801666",
+      "content": "The 'Notre Dame Victory March' is the fight song for the University of Notre Dame. It was written by two brothers who were Notre Dame graduates. The Rev. Michael J. Shea, a 1904 graduate, wrote the music, and his brother, John F. Shea, who earned degrees in 1906 and 1908, wrote the original lyrics.",
+      "start_idx": 0,
+      "end_idx": 276,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Introduction to the Notre Dame Victory March",
+        "keywords": [
+          "Notre Dame",
+          "fight song",
+          "Shea brothers"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "5e51222d2afbc804",
+      "content": "The lyrics were revised in the 1920s; it first appeared under the copyright of the University of Notre Dame in 1928. The chorus is, 'Cheer cheer for old Notre Dame, wake up the echos cheering her name. Send a volley cheer on high, shake down the thunder from the sky! What though the odds be great or small, old Notre Dame will win over all.",
+      "start_idx": 276,
+      "end_idx": 512,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "History and Lyrics of the Song",
+        "keywords": [
+          "lyrics",
+          "copyright",
+          "1928"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "245edf0aee9bc3e0",
+      "content": "While her loyal sons are marching, onward to victory!'",
+      "start_idx": 512,
+      "end_idx": 556,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Chorus of the Notre Dame Victory March",
+        "keywords": [
+          "chorus",
+          "victory",
+          "loyal sons"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:23:20.177831",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

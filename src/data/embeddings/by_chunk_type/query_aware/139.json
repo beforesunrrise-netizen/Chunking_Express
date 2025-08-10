@@ -1,0 +1,81 @@
+{
+  "document_id": "139",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "ac4f70c26c5d051f",
+      "content": "Because of its Catholic identity, a number of religious buildings stand on campus. The Old College building has become one of two seminaries on campus run by the Congregation of Holy Cross. The current Basilica of the Sacred Heart is located on the spot of Fr. Sorin's original church, which became too small for the growing college. It is built in French Revival style and it is decorated by stained glass windows imported directly from France. The interior was painted by Luigi Gregori, an Italian painter invi",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "structure",
+          "original church"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Father Sorin",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "structure",
+            "original church"
+          ],
+          "required_info": [
+            "location",
+            "current structure"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "21dd5b9893091663",
+      "content": "ted by Fr. Sorin to be artist in residence. The Basilica also features a bell tower with a carillon. Inside the church there are also sculptures by Ivan Mestrovic. The Grotto of Our Lady of Lourdes, which was built in 1896, is a replica of the original in Lourdes, France. It is very popular among students and alumni as a place of prayer and meditation, and it is considered one of the most beloved spots on campus.",
+      "start_idx": 512,
+      "end_idx": 928,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "structure",
+          "original church"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Father Sorin",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "structure",
+            "original church"
+          ],
+          "required_info": [
+            "location",
+            "current structure"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:34:56.127256",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

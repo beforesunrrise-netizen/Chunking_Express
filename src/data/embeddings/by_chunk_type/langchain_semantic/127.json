@@ -1,0 +1,64 @@
+{
+  "document_id": "127",
+  "chunk_type": "langchain_semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "066a85f318fdbdbf",
+      "content": "Hesburgh is also credited with transforming the face of Notre Dame by making it a coeducational institution. In the mid-1960s Notre Dame and Saint Mary's College developed a co-exchange program whereby several hundred students took classes not offered at their home institution, an arrangement that added undergraduate women to a campus that already had a few women in the graduate schools. After extensive debate, merging with St. Mary's was rejected, primarily because of the differential in faculty qualifications and pay scales.",
+      "start_idx": 0,
+      "end_idx": 532,
+      "sequence_num": 0,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "03b29580a719c69c",
+      "content": "\"In American college education,\" explained the Rev. Charles E. Sheedy, C.S.C., Notre Dame's Dean of Arts and Letters, \"certain features formerly considered advantageous and enviable are now seen as anachronistic and out of place.... In this environment of diversity, the integration of the sexes is a normal and expected aspect, replacing separatism.\"",
+      "start_idx": 533,
+      "end_idx": 884,
+      "sequence_num": 1,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "afc82a0cd5803e45",
+      "content": "Thomas Blantz, C.S.C., Notre Dame's Vice President of Student Affairs, added that coeducation \"opened up a whole other pool of very bright students.\" Two of the male residence halls were converted for the newly admitted female students that first year, while two others were converted for the next school year. In 1971 Mary Ann Proctor became the first female undergraduate; she transferred from St. Mary's College.",
+      "start_idx": 885,
+      "end_idx": 1300,
+      "sequence_num": 2,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    },
+    {
+      "hash": "91a86c5aaff4943c",
+      "content": "In 1972 the first woman to graduate was Angela Sienko, who earned a bachelor's degree in marketing.",
+      "start_idx": 1301,
+      "end_idx": 1400,
+      "sequence_num": 3,
+      "metadata": {
+        "group_size": 3,
+        "similarity_threshold": 0.75
+      },
+      "chunk_type": "langchain_semantic"
+    }
+  ],
+  "created_at": "2025-08-10T13:31:26.916236",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

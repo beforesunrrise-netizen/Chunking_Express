@@ -1,0 +1,55 @@
+{
+  "document_id": "425",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "d421160d32d945a1",
+      "content": "The second international single 'Irreplaceable' was a commercial success worldwide, reaching number one in Australia, Hungary, Ireland, New Zealand and the United States.",
+      "start_idx": 157,
+      "end_idx": 232,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly states the countries where 'Irreplaceable' reached number one.",
+        "answer_contribution": "Lists the countries where the song achieved number one status.",
+        "keywords": [
+          "Irreplaceable",
+          "number one",
+          "Australia",
+          "Hungary",
+          "Ireland",
+          "New Zealand",
+          "United States"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "song",
+            "countries"
+          ],
+          "keywords": [
+            "Irreplaceable",
+            "number one status"
+          ],
+          "required_info": [
+            "number of countries",
+            "song title"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:26:26.937335",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "425",
+    "model": "text-embedding-3-large"
+  }
+}

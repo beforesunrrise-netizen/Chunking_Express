@@ -1,0 +1,302 @@
+[
+  {
+    "strategy": "fixed_size",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 0.99,
+    "mrr": 0.96,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.93,
+          "precision_at_k": 0.93,
+          "recall_at_k": 0.93,
+          "mrr": 0.93,
+          "map": 0.93,
+          "ndcg": 0.93
+        },
+        "3": {
+          "hit_at_k": 0.99,
+          "precision_at_k": 0.6983333333333333,
+          "recall_at_k": 0.99,
+          "mrr": 0.96,
+          "map": 0.9608333333333334,
+          "ndcg": 0.9684807517147456
+        },
+        "5": {
+          "hit_at_k": 0.99,
+          "precision_at_k": 0.6933333333333332,
+          "recall_at_k": 0.99,
+          "mrr": 0.96,
+          "map": 0.9608333333333334,
+          "ndcg": 0.9684807517147456
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 5.737957000732422,
+      "avg_chunking_time": 0.0004224705696105957,
+      "avg_retrieval_time": 0.0012903261184692384,
+      "avg_generation_time": 2.2393831825256347,
+      "avg_embedding_storage_time": 0.01180687665939331,
+      "evaluation_time": 0.03368496894836426,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:56:49.297040"
+  },
+  {
+    "strategy": "semantic",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 0.99,
+    "mrr": 0.9233333333333333,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.86,
+          "precision_at_k": 0.86,
+          "recall_at_k": 0.86,
+          "mrr": 0.86,
+          "map": 0.86,
+          "ndcg": 0.86
+        },
+        "3": {
+          "hit_at_k": 0.99,
+          "precision_at_k": 0.3916666666666667,
+          "recall_at_k": 0.99,
+          "mrr": 0.9233333333333333,
+          "map": 0.92,
+          "ndcg": 0.9391059862115386
+        },
+        "5": {
+          "hit_at_k": 0.99,
+          "precision_at_k": 0.36000000000000015,
+          "recall_at_k": 0.99,
+          "mrr": 0.9233333333333333,
+          "map": 0.9175,
+          "ndcg": 0.9378781393649192
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 17.715461254119873,
+      "avg_chunking_time": 7.570714077949524,
+      "avg_retrieval_time": 0.0015143871307373047,
+      "avg_generation_time": 3.362191219329834,
+      "avg_embedding_storage_time": 0.1184011697769165,
+      "evaluation_time": 0.023597002029418945,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:57:07.013100"
+  },
+  {
+    "strategy": "keyword",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 0.97,
+    "mrr": 0.955,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.94,
+          "precision_at_k": 0.94,
+          "recall_at_k": 0.94,
+          "mrr": 0.94,
+          "map": 0.94,
+          "ndcg": 0.94
+        },
+        "3": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.7383333333333333,
+          "recall_at_k": 0.97,
+          "mrr": 0.955,
+          "map": 0.955,
+          "ndcg": 0.9589278926071438
+        },
+        "5": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.7383333333333333,
+          "recall_at_k": 0.97,
+          "mrr": 0.955,
+          "map": 0.955,
+          "ndcg": 0.9589278926071438
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 14.84117603302002,
+      "avg_chunking_time": 6.817660009860992,
+      "avg_retrieval_time": 0.0010371994972229004,
+      "avg_generation_time": 1.753884437084198,
+      "avg_embedding_storage_time": 0.02171445369720459,
+      "evaluation_time": 0.029579877853393555,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:57:21.854655"
+  },
+  {
+    "strategy": "query_aware",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 0.97,
+    "mrr": 0.97,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.97,
+          "recall_at_k": 0.97,
+          "mrr": 0.97,
+          "map": 0.97,
+          "ndcg": 0.97
+        },
+        "3": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.92,
+          "recall_at_k": 0.97,
+          "mrr": 0.97,
+          "map": 0.97,
+          "ndcg": 0.97
+        },
+        "5": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.92,
+          "recall_at_k": 0.97,
+          "mrr": 0.97,
+          "map": 0.97,
+          "ndcg": 0.97
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 18.72320818901062,
+      "avg_chunking_time": 5.669566745758057,
+      "avg_retrieval_time": 0.0009087872505187988,
+      "avg_generation_time": 8.068182666301727,
+      "avg_embedding_storage_time": 0.16830940961837768,
+      "evaluation_time": 0.010661125183105469,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:57:40.578318"
+  },
+  {
+    "strategy": "recursive",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 1.0,
+    "mrr": 0.96,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.92,
+          "precision_at_k": 0.92,
+          "recall_at_k": 0.92,
+          "mrr": 0.92,
+          "map": 0.92,
+          "ndcg": 0.92
+        },
+        "3": {
+          "hit_at_k": 1.0,
+          "precision_at_k": 0.5516666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 0.96,
+          "map": 0.9591666666666666,
+          "ndcg": 0.9702965546776565
+        },
+        "5": {
+          "hit_at_k": 1.0,
+          "precision_at_k": 0.5461666666666667,
+          "recall_at_k": 1.0,
+          "mrr": 0.96,
+          "map": 0.9591666666666666,
+          "ndcg": 0.9702965546776565
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 6.480368137359619,
+      "avg_chunking_time": 2.158641815185547e-05,
+      "avg_retrieval_time": 0.0011191678047180176,
+      "avg_generation_time": 3.114773750305176,
+      "avg_embedding_storage_time": 0.030046231746673584,
+      "evaluation_time": 0.026342153549194336,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:57:47.059033"
+  },
+  {
+    "strategy": "langchain_semantic",
+    "language": "en",
+    "hallucination_auroc": 0.0,
+    "context_relevance_rmse": 0.0,
+    "utilization_rmse": 0.0,
+    "recall_at_k": 1.0,
+    "mrr": 0.985,
+    "num_samples": 100,
+    "ensemble_method": null,
+    "metadata": {
+      "at_k": {
+        "1": {
+          "hit_at_k": 0.97,
+          "precision_at_k": 0.97,
+          "recall_at_k": 0.97,
+          "mrr": 0.97,
+          "map": 0.97,
+          "ndcg": 0.97
+        },
+        "3": {
+          "hit_at_k": 1.0,
+          "precision_at_k": 0.6233333333333334,
+          "recall_at_k": 1.0,
+          "mrr": 0.985,
+          "map": 0.985,
+          "ndcg": 0.9889278926071438
+        },
+        "5": {
+          "hit_at_k": 1.0,
+          "precision_at_k": 0.622,
+          "recall_at_k": 1.0,
+          "mrr": 0.985,
+          "map": 0.985,
+          "ndcg": 0.9889278926071438
+        }
+      },
+      "strict_raw_topk": true,
+      "leaky_eval": false,
+      "total_time_seconds": 7.4561851024627686,
+      "avg_chunking_time": 0.0012172365188598633,
+      "avg_retrieval_time": 0.0010553884506225586,
+      "avg_generation_time": 3.526331059932709,
+      "avg_embedding_storage_time": 0.03489296913146973,
+      "evaluation_time": 0.0261080265045166,
+      "samples_processed": 100,
+      "embedding_storage_enabled": true
+    },
+    "created_at": "2025-08-09T21:57:54.515594"
+  }
+]

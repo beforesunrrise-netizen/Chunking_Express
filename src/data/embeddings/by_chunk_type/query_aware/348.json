@@ -1,0 +1,50 @@
+{
+  "document_id": "348",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "223b6dcfdd3bd9fa",
+      "content": "In 1995 Beyoncé's father resigned from his job to manage the group.",
+      "start_idx": 0,
+      "end_idx": 66,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly states when Beyoncé's father began managing the group, which is crucial to understanding when Beyoncé was under management.",
+        "answer_contribution": "This indicates that management of the group began in 1995.",
+        "keywords": [
+          "manage",
+          "1995"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "girl group"
+          ],
+          "keywords": [
+            "begin",
+            "manage"
+          ],
+          "required_info": [
+            "date",
+            "context of management"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:18:21.397602",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "348",
+    "model": "text-embedding-3-large"
+  }
+}

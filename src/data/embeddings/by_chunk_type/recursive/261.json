@@ -1,0 +1,35 @@
+{
+  "document_id": "261",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "ba4deaf5f70c0bb6",
+      "content": "In the film Knute Rockne, All American, Knute Rockne (played by Pat O'Brien) delivers the famous \"Win one for the Gipper\" speech, at which point the background music swells with the \"Notre Dame Victory March\". George Gipp was played by Ronald Reagan, whose nickname \"The Gipper\" was derived from this role. This scene was parodied in the movie Airplane! with the same background music, only this time honoring George Zipp, one of Ted Striker's former comrades. The song also was prominent in the movie Rudy, with",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "be71b640c1452fd1",
+      "content": "he song also was prominent in the movie Rudy, with Sean Astin as Daniel \"Rudy\" Ruettiger, who harbored dreams of playing football at the University of Notre Dame despite significant obstacles.",
+      "start_idx": 462,
+      "end_idx": 654,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T13:26:26.082257",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

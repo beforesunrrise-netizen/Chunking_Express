@@ -1,0 +1,82 @@
+{
+  "document_id": "207",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "fa2b038e3b017e9b",
+      "content": "The first degrees from the college were awarded in 1849. The university was expanded with new buildings to accommodate more students and faculty.",
+      "start_idx": 0,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Founding and Expansion of the University",
+        "keywords": [
+          "degrees",
+          "1849",
+          "expansion",
+          "buildings"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "fd32517ad737c9ff",
+      "content": "With each new president, new academic programs were offered and new buildings built to accommodate them.",
+      "start_idx": 140,
+      "end_idx": 203,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Academic Growth and Leadership",
+        "keywords": [
+          "president",
+          "academic programs",
+          "buildings"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "8fbafd2cdb8ddcd4",
+      "content": "The original Main Building built by Sorin just after he arrived was replaced by a larger 'Main Building' in 1865, which housed the university's administration, classrooms, and dormitories.",
+      "start_idx": 204,
+      "end_idx": 319,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Main Building Development",
+        "keywords": [
+          "Main Building",
+          "Sorin",
+          "1865",
+          "administration",
+          "classrooms",
+          "dormitories"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "3a204febfb49e148",
+      "content": "Beginning in 1873, a library collection was started by Father Lemonnier. By 1879 it had grown to ten thousand volumes that were housed in the Main Building.",
+      "start_idx": 320,
+      "end_idx": 466,
+      "sequence_num": 3,
+      "metadata": {
+        "topic": "Library Establishment and Growth",
+        "keywords": [
+          "library",
+          "Father Lemonnier",
+          "1873",
+          "ten thousand volumes"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T11:37:03.593697",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

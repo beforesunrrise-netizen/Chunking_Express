@@ -1,0 +1,51 @@
+{
+  "document_id": "57",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "9ffa711a1ba6a7e3",
+      "content": "In 1931, Father Julius Nieuwland performed early work on basic reactions that was used to create neoprene.",
+      "start_idx": 0,
+      "end_idx": 100,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly mentions the individual (Father Julius Nieuwland) and his work related to neoprene.",
+        "answer_contribution": "Identifies Father Julius Nieuwland as the individual who worked on projects that led to the creation of neoprene.",
+        "keywords": [
+          "Father Julius Nieuwland",
+          "neoprene",
+          "projects"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "individual",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "projects",
+            "neoprene"
+          ],
+          "required_info": [
+            "name of the individual",
+            "details about the projects"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:57.805335",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "57",
+    "model": "text-embedding-3-large"
+  }
+}

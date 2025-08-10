@@ -1,0 +1,50 @@
+{
+  "document_id": "187",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e67416c68e8ee433",
+      "content": "In French, Notre Dame du Lac means \"Our Lady of the Lake\"",
+      "start_idx": 118,
+      "end_idx": 150,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly provides the English translation of the French phrase.",
+        "answer_contribution": "It explicitly states the translation of Notre Dame du Lac.",
+        "keywords": [
+          "Notre Dame du Lac",
+          "translate",
+          "Our Lady of the Lake"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Notre Dame du Lac"
+          ],
+          "keywords": [
+            "French",
+            "translate",
+            "English"
+          ],
+          "required_info": [
+            "translation of Notre Dame du Lac"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:01:12.957030",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "187",
+    "model": "text-embedding-3-large"
+  }
+}

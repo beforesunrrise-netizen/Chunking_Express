@@ -1,0 +1,50 @@
+{
+  "document_id": "38",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "3306f85a3b12663c",
+      "content": "The front of the library is adorned with the Word of Life mural designed by artist Millard Sheets. This mural is popularly known as 'Touchdown Jesus' because of its proximity to Notre Dame Stadium and Jesus' arms appearing to make the signal for a touchdown.",
+      "start_idx": 0,
+      "end_idx": 250,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question by providing the common name of the mural.",
+        "answer_contribution": "Identifies the mural as 'Touchdown Jesus'.",
+        "keywords": [
+          "mural",
+          "common name",
+          "Touchdown Jesus"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Millard Sheets",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "mural",
+            "common name"
+          ],
+          "required_info": [
+            "common name of the mural"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": 100
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:39:54.548881",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "38",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "document_id": "104",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "836a67983f1eb0d7",
+      "content": "The most remarkable episode of violence was the clash between Notre Dame students and the Ku Klux Klan in 1924. Nativism and anti-Catholicism, especially when directed towards immigrants, were cornerstones of the KKK's rhetoric. The Klan decided to have a week-long Klavern in South Bend. Clashes with the student body started on March 17.",
+      "start_idx": 0,
+      "end_idx": 233,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.8333333333333334,
+        "keywords": [
+          "KKK",
+          "1924",
+          "Klavern",
+          "anti-Catholic",
+          "showdown"
+        ],
+        "topics": [],
+        "merged_from": 3,
+        "original_chunks": [
+          "104_query_aware_0",
+          "104_query_aware_1",
+          "104_query_aware_2"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:08:12.234176",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "104",
+    "model": "text-embedding-3-large"
+  }
+}

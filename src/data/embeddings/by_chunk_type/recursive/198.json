@@ -1,0 +1,49 @@
+{
+  "document_id": "198",
+  "chunk_type": "recursive",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "a4586d989b9648d9",
+      "content": "Besides its prominence in sports, Notre Dame is also a large, four-year, highly residential research University, and is consistently ranked among the top twenty universities in the United States  and as a major global university. The undergraduate component of the university is organized into four colleges (Arts and Letters, Science, Engineering, Business) and the Architecture School. The latter is known for teaching New Classical Architecture and for awarding the globally renowned annual Driehaus Architect",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "e6f721f6c6fd117e",
+      "content": "ng the globally renowned annual Driehaus Architecture Prize. Notre Dame's graduate program has more than 50 master's, doctoral and professional degree programs offered by the five schools, with the addition of the Notre Dame Law School and a MD-PhD program offered in combination with IU medical School. It maintains a system of libraries, cultural venues, artistic and scientific museums, including Hesburgh Library and the Snite Museum of Art. Over 80% of the university's 8,000 undergraduates live on campus i",
+      "start_idx": 462,
+      "end_idx": 974,
+      "sequence_num": 1,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    },
+    {
+      "hash": "da64452ee61ecbe4",
+      "content": "university's 8,000 undergraduates live on campus in one of 29 single-sex residence halls, each with its own traditions, legacies, events and intramural sports teams. The university counts approximately 120,000 alumni, considered among the strongest alumni networks among U.S. colleges.",
+      "start_idx": 924,
+      "end_idx": 1209,
+      "sequence_num": 2,
+      "metadata": {
+        "chunk_overlap": 50
+      },
+      "chunk_type": "recursive"
+    }
+  ],
+  "created_at": "2025-08-10T12:43:22.051647",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

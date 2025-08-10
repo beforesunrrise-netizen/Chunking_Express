@@ -1,0 +1,88 @@
+{
+  "document_id": "92",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "d16b06aefbcb164f",
+      "content": "This Main Building, and the library collection, was entirely destroyed by a fire in April 1879, and the school closed immediately and students were sent home. The university founder, Fr. Sorin and the president at the time, the Rev. William Corby, immediately planned for the rebuilding of the structure that had housed virtually the entire University. Construction was started on the 17th of May and by the incredible zeal of administrator and workers the building was completed before the fall semester of 1879",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "Science Hall",
+          "Notre Dame",
+          "known as"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Science Hall",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "Science Hall",
+            "Notre Dame",
+            "known as"
+          ],
+          "required_info": [
+            "name",
+            "nickname"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "f65b996e0e40ed33",
+      "content": ". The library collection was also rebuilt and stayed housed in the new Main Building for years afterwards. Around the time of the fire, a music hall was opened. Eventually becoming known as Washington Hall, it hosted plays and musical acts put on by the school. By 1880, a science program was established at the university, and a Science Hall (today LaFortune Student Center) was built in 1883. The hall housed multiple classrooms and science labs needed for early research at the university.",
+      "start_idx": 512,
+      "end_idx": 1004,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "Science Hall",
+          "Notre Dame",
+          "known as"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Science Hall",
+            "Notre Dame"
+          ],
+          "keywords": [
+            "Science Hall",
+            "Notre Dame",
+            "known as"
+          ],
+          "required_info": [
+            "name",
+            "nickname"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:45:14.131691",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "92",
+    "model": "text-embedding-3-large"
+  }
+}

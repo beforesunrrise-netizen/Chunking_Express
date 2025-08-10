@@ -1,0 +1,53 @@
+{
+  "document_id": "182",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "58be3fcb205480ab",
+      "content": "The rise of Hitler and other dictators in the 1930s forced numerous Catholic intellectuals to flee Europe; president John O'Hara brought many to Notre Dame. From Germany came Anton-Hermann Chroust (1907–1982) in classics and law, and Waldemar Gurian a German Catholic intellectual of Jewish descent. Positivism dominated American intellectual life in the 1920s onward but in marked contrast, Gurian received a German Catholic education and wrote his doctoral dissertation under Max Scheler.",
+      "start_idx": 0,
+      "end_idx": 490,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "The rise of Hitler and other dictators in the 1930s forced numerous Catholic intellectuals to flee Europe; president John O'Hara brought many to Notre Dame.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Hitler",
+          "dictators",
+          "Catholic intellectuals",
+          "Notre Dame"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "9df4c1a37188b1da",
+      "content": "From Germany came Anton-Hermann Chroust (1907–1982) in classics and law, and Waldemar Gurian a German Catholic intellectual of Jewish descent. Positivism dominated American intellectual life in the 1920s onward but in marked contrast, Gurian received a German Catholic education and wrote his doctoral dissertation under Max Scheler. Ivan Meštrović (1883–1962), a renowned sculptor, brought Croatian culture to campus, 1955–62. Yves Simon (1903–61), brought to ND in the 1940s the insights of French studies in the Aristotelian-Thomistic tradition of philosophy; his own teacher Jacques Maritain (1882–73) was a frequent visitor to campus.",
+      "start_idx": 157,
+      "end_idx": 796,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "Ivan Meštrović (1883–1962), a renowned sculptor, brought Croatian culture to campus, 1955–62.",
+        "importance_score": 0.6,
+        "context_window": 2,
+        "keywords": [
+          "Ivan Meštrović",
+          "sculptor",
+          "Croatian culture"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T11:27:07.130601",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

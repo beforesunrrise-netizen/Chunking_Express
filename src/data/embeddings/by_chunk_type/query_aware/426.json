@@ -1,0 +1,40 @@
+{
+  "document_id": "426",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "67cba323c15ad299",
+      "content": "The album's lead single \"Déjà Vu\", featuring Jay Z, reached the top five on the Billboard Hot 100 chart. The second international single \"Irreplaceable\" was a commercial success worldwide, reaching number one in Australia, Hungary, Ireland, New Zealand and the United States. B'Day also produced three other singles; \"Ring the Alarm\", \"Get Me Bodied\", and \"Green Light\" (released in the United Kingdom only).",
+      "start_idx": 164,
+      "end_idx": 358,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.9,
+        "keywords": [
+          "Irreplaceable",
+          "B'Day",
+          "singles",
+          "Déjà Vu",
+          "album"
+        ],
+        "topics": [],
+        "merged_from": 2,
+        "original_chunks": [
+          "426_query_aware_1",
+          "426_query_aware_0"
+        ]
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:00:54.290936",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "426",
+    "model": "text-embedding-3-large"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "descriptive_stats": {
+    "fixed_size": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "semantic": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "keyword": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "query_aware": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "recursive": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "langchain_semantic": {
+      "auroc": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "context_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "utilization_rmse": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "statistical_tests": {}
+}

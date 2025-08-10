@@ -1,0 +1,48 @@
+{
+  "document_id": "150",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "0d466b0c39b20689",
+      "content": "the most prominent of which is the Theodore Hesburgh Library, built in 1963 and today containing almost 4 million books.",
+      "start_idx": 164,
+      "end_idx": 218,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This sentence directly states the number of books housed in the Theodore Hesburgh Library.",
+        "answer_contribution": "The library contains almost 4 million books.",
+        "keywords": [
+          "books",
+          "housed"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Theodore Hesburgh Library"
+          ],
+          "keywords": [
+            "books",
+            "housed"
+          ],
+          "required_info": [
+            "number of books"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:42:05.824486",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "150",
+    "model": "text-embedding-3-large"
+  }
+}

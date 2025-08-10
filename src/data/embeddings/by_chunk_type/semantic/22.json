@@ -1,0 +1,64 @@
+{
+  "document_id": "22",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "6766d1d665bd41d1",
+      "content": "All of Notre Dame's undergraduate students are a part of one of the five undergraduate colleges at the school or are in the First Year of Studies program. The First Year of Studies program was established in 1962 to guide incoming freshmen in their first year at the school before they have declared a major.",
+      "start_idx": 0,
+      "end_idx": 267,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Overview of Undergraduate Programs",
+        "keywords": [
+          "Notre Dame",
+          "undergraduate students",
+          "First Year of Studies"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "58e24927d936a0bc",
+      "content": "Each student is given an academic advisor from the program who helps them to choose classes that give them exposure to any major in which they are interested. The program also includes a Learning Resource Center which provides time management, collaborative learning, and subject tutoring.",
+      "start_idx": 267,
+      "end_idx": 487,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Academic Support and Resources",
+        "keywords": [
+          "academic advisor",
+          "Learning Resource Center",
+          "tutoring"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "93846f4a811dd1cb",
+      "content": "This program has been recognized previously, by U.S. News & World Report, as outstanding.",
+      "start_idx": 487,
+      "end_idx": 533,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Recognition of the Program",
+        "keywords": [
+          "U.S. News & World Report",
+          "recognition",
+          "outstanding"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T09:37:20.977388",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

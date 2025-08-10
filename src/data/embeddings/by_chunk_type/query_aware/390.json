@@ -1,0 +1,51 @@
+{
+  "document_id": "390",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "e8a8787b58bf3795",
+      "content": "the comedy film, Austin Powers in Goldmember, which spent its first weekend atop the US box office and grossed $73 million.",
+      "start_idx": 64,
+      "end_idx": 139,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "Directly answers the question about the gross amount of the movie 'Goldmember'.",
+        "answer_contribution": "Provides the specific gross amount of $73 million.",
+        "keywords": [
+          "gross",
+          "Goldmember",
+          "$73 million"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Goldmember",
+            "movie"
+          ],
+          "keywords": [
+            "gross",
+            "large amount"
+          ],
+          "required_info": [
+            "gross revenue",
+            "box office earnings"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:16:54.859516",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "390",
+    "model": "text-embedding-3-large"
+  }
+}

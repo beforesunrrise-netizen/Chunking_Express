@@ -1,0 +1,48 @@
+{
+  "document_id": "310",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "64f4c8c0db2e37c1",
+      "content": "Throughout a career spanning 19 years, she has sold over 118 million records as a solo artist.",
+      "start_idx": 0,
+      "end_idx": 92,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This directly answers the question about the number of records Beyoncé released under her own name after leaving Destiny's Child.",
+        "answer_contribution": "Beyoncé has released over 118 million records as a solo artist.",
+        "keywords": [
+          "records",
+          "release",
+          "own name"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "Destiny's Child"
+          ],
+          "keywords": [
+            "records",
+            "release",
+            "own name"
+          ],
+          "required_info": [
+            "number of records released by Beyoncé after leaving Destiny's Child"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:53:53.835905",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "model": "text-embedding-3-large"
+  }
+}

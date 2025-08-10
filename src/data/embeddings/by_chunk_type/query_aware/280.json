@@ -1,0 +1,47 @@
+{
+  "document_id": "280",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 1,
+  "chunks": [
+    {
+      "hash": "8a764ee9d865db33",
+      "content": "Beyoncé Giselle Knowles-Carter",
+      "start_idx": 0,
+      "end_idx": 30,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 1.0,
+        "relevance_reason": "This is Beyoncé's full name as stated in the document.",
+        "answer_contribution": "Directly provides the full name of Beyoncé.",
+        "keywords": [
+          "full name",
+          "Beyoncé"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyonce"
+          ],
+          "keywords": [
+            "full name"
+          ],
+          "required_info": [
+            "Beyonce's full name"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "100%"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T12:24:56.645072",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "280",
+    "model": "text-embedding-3-large"
+  }
+}

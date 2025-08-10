@@ -1,0 +1,52 @@
+{
+  "document_id": "260",
+  "chunk_type": "keyword",
+  "language": "en",
+  "num_chunks": 2,
+  "chunks": [
+    {
+      "hash": "f85b1a1ffb05ebe0",
+      "content": "In the film Knute Rockne, All American, Knute Rockne (played by Pat O'Brien) delivers the famous \"Win one for the Gipper\" speech, at which point the background music swells with the \"Notre Dame Victory March\". George Gipp was played by Ronald Reagan, whose nickname \"The Gipper\" was derived from this role. This scene was parodied in the movie Airplane!",
+      "start_idx": 0,
+      "end_idx": 353,
+      "sequence_num": 0,
+      "metadata": {
+        "key_sentence": "In the film Knute Rockne, All American, Knute Rockne (played by Pat O'Brien) delivers the famous 'Win one for the Gipper' speech, at which point the background music swells with the 'Notre Dame Victory March'.",
+        "importance_score": 0.9,
+        "context_window": 2,
+        "keywords": [
+          "Knute Rockne",
+          "Win one for the Gipper",
+          "Notre Dame Victory March"
+        ]
+      },
+      "chunk_type": "keyword"
+    },
+    {
+      "hash": "95b622bfa1262ed4",
+      "content": "George Gipp was played by Ronald Reagan, whose nickname \"The Gipper\" was derived from this role. This scene was parodied in the movie Airplane! with the same background music, only this time honoring George Zipp, one of Ted Striker's former comrades. The song also was prominent in the movie Rudy, with Sean Astin as Daniel \"Rudy\" Ruettiger, who harbored dreams of playing football at the University of Notre Dame despite significant obstacles.",
+      "start_idx": 210,
+      "end_idx": 654,
+      "sequence_num": 1,
+      "metadata": {
+        "key_sentence": "This scene was parodied in the movie Airplane! with the same background music, only this time honoring George Zipp, one of Ted Striker's former comrades.",
+        "importance_score": 0.6,
+        "context_window": 2,
+        "keywords": [
+          "Airplane!",
+          "parody",
+          "George Zipp"
+        ]
+      },
+      "chunk_type": "keyword"
+    }
+  ],
+  "created_at": "2025-08-10T10:53:10.323752",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

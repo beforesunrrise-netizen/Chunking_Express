@@ -1,0 +1,67 @@
+{
+  "document_id": "407",
+  "chunk_type": "semantic",
+  "language": "en",
+  "num_chunks": 3,
+  "chunks": [
+    {
+      "hash": "fe98b5703d937309",
+      "content": "Beyoncé's first solo recording was a feature on Jay Z's \"'03 Bonnie & Clyde\" that was released in October 2002, peaking at number four on the U.S. Billboard Hot 100 chart. Her first solo album Dangerously in Love was released on June 24, 2003, after Michelle Williams and Kelly Rowland had released their solo efforts.",
+      "start_idx": 0,
+      "end_idx": 239,
+      "sequence_num": 0,
+      "metadata": {
+        "topic": "Beyoncé's early solo career",
+        "keywords": [
+          "Beyoncé",
+          "solo recording",
+          "Jay Z",
+          "Dangerously in Love"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "c84f3a821aba6db7",
+      "content": "The album sold 317,000 copies in its first week, debuted atop the Billboard 200, and has since sold 11 million copies worldwide. The album's lead single, \"Crazy in Love\", featuring Jay Z, became Beyoncé's first number-one single as a solo artist in the US.",
+      "start_idx": 240,
+      "end_idx": 396,
+      "sequence_num": 1,
+      "metadata": {
+        "topic": "Success of Dangerously in Love",
+        "keywords": [
+          "album sales",
+          "Billboard 200",
+          "Crazy in Love",
+          "number-one single"
+        ]
+      },
+      "chunk_type": "semantic"
+    },
+    {
+      "hash": "651b56fd8b27b673",
+      "content": "The single \"Baby Boy\" also reached number one, and singles, \"Me, Myself and I\" and \"Naughty Girl\", both reached the top-five. The album earned Beyoncé a then record-tying five awards at the 46th Annual Grammy Awards; Best Contemporary R&B Album, Best Female R&B Vocal Performance for \"Dangerously in Love 2\", Best R&B Song and Best Rap/Sung Collaboration for \"Crazy in Love\", and Best R&B Performance by a Duo or Group with Vocals for \"The Closer I Get to You\" with Luther Vandross.",
+      "start_idx": 397,
+      "end_idx": 670,
+      "sequence_num": 2,
+      "metadata": {
+        "topic": "Chart performance and Grammy Awards",
+        "keywords": [
+          "Baby Boy",
+          "top-five singles",
+          "Grammy Awards",
+          "record-tying"
+        ]
+      },
+      "chunk_type": "semantic"
+    }
+  ],
+  "created_at": "2025-08-10T10:23:20.904966",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": null,
+    "model": "text-embedding-3-large"
+  }
+}

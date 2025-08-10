@@ -1,0 +1,168 @@
+{
+  "document_id": "459",
+  "chunk_type": "query_aware",
+  "language": "en",
+  "num_chunks": 4,
+  "chunks": [
+    {
+      "hash": "3a2abdfe437b9041",
+      "content": "On April 4, 2008, Beyoncé married Jay Z. She publicly revealed their marriage in a video montage at the listening party for her third studio album, I Am... Sasha Fierce, in Manhattan's Sony Club on October 22, 2008. I Am... Sasha Fierce was released on November 18, 2008 in the United States. The album formally introduces Beyoncé's alter ego Sasha Fierce, conceived during the making of her 2003 single \"Crazy in Love\", selling 482,000 copies in its first week, debuting atop the Billboard 200, and giving Beyon",
+      "start_idx": 0,
+      "end_idx": 512,
+      "sequence_num": 0,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "video",
+          "song",
+          "won",
+          "2009"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "MTV Video of the Year award"
+          ],
+          "keywords": [
+            "video",
+            "song",
+            "won",
+            "2009"
+          ],
+          "required_info": [
+            "song title",
+            "award year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "8a281dfb4360b7bb",
+      "content": "cé her third consecutive number-one album in the US. The album featured the number-one song \"Single Ladies (Put a Ring on It)\" and the top-five songs \"If I Were a Boy\" and \"Halo\". Achieving the accomplishment of becoming her longest-running Hot 100 single in her career, \"Halo\"'s success in the US helped Beyoncé attain more top-ten singles on the list than any other woman during the 2000s. It also included the successful \"Sweet Dreams\", and singles \"Diva\", \"Ego\", \"Broken-Hearted Girl\" and \"Video Phone\". The ",
+      "start_idx": 512,
+      "end_idx": 1024,
+      "sequence_num": 1,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "video",
+          "song",
+          "won",
+          "2009"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "MTV Video of the Year award"
+          ],
+          "keywords": [
+            "video",
+            "song",
+            "won",
+            "2009"
+          ],
+          "required_info": [
+            "song title",
+            "award year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "3d38eed10be1a3aa",
+      "content": "music video for \"Single Ladies\" has been parodied and imitated around the world, spawning the \"first major dance craze\" of the Internet age according to the Toronto Star. The video has won several awards, including Best Video at the 2009 MTV Europe Music Awards, the 2009 Scottish MOBO Awards, and the 2009 BET Awards. At the 2009 MTV Video Music Awards, the video was nominated for nine awards, ultimately winning three including Video of the Year. Its failure to win the Best Female Video category, which went ",
+      "start_idx": 1024,
+      "end_idx": 1536,
+      "sequence_num": 2,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "video",
+          "song",
+          "won",
+          "2009"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "MTV Video of the Year award"
+          ],
+          "keywords": [
+            "video",
+            "song",
+            "won",
+            "2009"
+          ],
+          "required_info": [
+            "song title",
+            "award year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    },
+    {
+      "hash": "e9a8ee4222b3e997",
+      "content": "to American country pop singer Taylor Swift's \"You Belong with Me\", led to Kanye West interrupting the ceremony and Beyoncé improvising a re-presentation of Swift's award during her own acceptance speech. In March 2009, Beyoncé embarked on the I Am... World Tour, her second headlining worldwide concert tour, consisting of 108 shows, grossing $119.5 million.",
+      "start_idx": 1536,
+      "end_idx": 1895,
+      "sequence_num": 3,
+      "metadata": {
+        "relevance_score": 0.5,
+        "relevance_reason": "fallback chunking",
+        "answer_contribution": "general content",
+        "keywords": [
+          "video",
+          "song",
+          "won",
+          "2009"
+        ],
+        "query_analysis": {
+          "question_type": "information",
+          "key_entities": [
+            "Beyoncé",
+            "MTV Video of the Year award"
+          ],
+          "keywords": [
+            "video",
+            "song",
+            "won",
+            "2009"
+          ],
+          "required_info": [
+            "song title",
+            "award year"
+          ],
+          "complexity": "simple"
+        },
+        "coverage": "unknown"
+      },
+      "chunk_type": "query_aware"
+    }
+  ],
+  "created_at": "2025-08-10T11:53:34.414161",
+  "embedding_model": "text-embedding-3-large",
+  "additional_metadata": {
+    "run_id": "exp_20250810_081040",
+    "language": "en",
+    "query_id": "459",
+    "model": "text-embedding-3-large"
+  }
+}
