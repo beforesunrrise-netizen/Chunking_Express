@@ -142,8 +142,8 @@ class RAGEvaluator(BaseEvaluator):
 
     def _evaluate_single_response_sync(self, response: RAGResponse, ground_truth_answer: str) -> Dict[str, float]:
         K = self.k
-        ranked_texts_k = self._get_ranked_chunks(response, K)  # strict일 때 없으면 예외
-        rel_k = self._binary_relevance_vector(ranked_texts_k, ground_truth_answer)
+        ranked_texts_k = self._get_ranked_chunks(response, K)  # 관련 문서 추출
+        rel_k = self._binary_relevance_vector(ranked_texts_k, ground_truth_answer) # 정답이랑 비교
 
         # 단일 정답 스팬 가정(오픈QA 관행) → Recall@K = Hit@K
         total_relevant = 1
