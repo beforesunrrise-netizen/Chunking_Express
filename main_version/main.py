@@ -336,7 +336,7 @@ class RAGExperimentPipeline:
 
         # 1. 원시 결과 저장
         results_data = [r.to_dict() for r in results]
-        with open(results_dir / "raw_results.json", "w", encoding="utf-8") as f:
+        with open(results_dir / "100_raw_results.json", "w", encoding="utf-8") as f:
             json.dump(results_data, f, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder)
 
         # 2. 분석 결과 저장
