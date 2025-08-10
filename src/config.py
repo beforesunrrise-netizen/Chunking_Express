@@ -43,11 +43,11 @@ class ModelConfig:
     max_tokens: int = 2000
     embedding_dimension: int = 3072
 
-
+# sample_size --> 문서수와 겹쳐야한다
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 100
+    sample_size: int = 500
     chunk_size_limit: int = 512
     context_window: int = 2
     top_k_retrieval: int = 5
@@ -88,7 +88,8 @@ class PathConfig:
         self.cache_dir = self.root_dir / "cache"
 
 
-        self.embedding_storage_path = self.data_dir / "embeddings"
+        self.embedding_storage_path = Path("/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data")
+
 
         for dir_path in [
             self.data_dir, self.results_dir, self.logs_dir,
@@ -144,7 +145,7 @@ class LoggingConfig:
 @dataclass
 class DatasetConfig:
     """데이터셋 설정"""
-    data_path: str = "data/rag_squad_train_5_samples.json"
+    data_path: str = "rag_squad_train_500_samples.json"
     train_split: float = 0.8
     val_split: float = 0.1
     test_split: float = 0.1
@@ -202,9 +203,18 @@ class Config:
             }
 
     def get_data_path(self, language: Language) -> Path:
-        """언어별 데이터 경로 반환"""
-        if language == Language.KOREAN:
-            return self.paths.data_dir / self.dataset.data_path
+        p = Path(self.dataset.data_path)
+
+        # 절대경로면 그대로
+        if p.is_absolute():
+            return p
+
+        # 상대경로인데 이미 data/로 시작하면 root_dir 기준으로만 결합
+        if str(p).startswith(("data/", "data\\")):
+            return (self.paths.root_dir / p).resolve()
+
+        # 그 외엔 data_dir/파일명
+        return (self.paths.data_dir / p.name).resolve()
 
     def estimate_cost(self, input_tokens: int, output_tokens: int, embedding_tokens: int) -> float:
         """예상 비용 계산"""
