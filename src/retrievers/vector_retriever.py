@@ -29,7 +29,7 @@ class VectorRetriever(BaseRetriever):
             logger.warning("검색할 청크가 없어 빈 리스트를 반환합니다.")
             return []
 
-        question_string = query_text.question
+        question_string = query_text
         query_embedding = await self.embedder.embed_text(question_string)
 
         # 항상 현재 청크들로 인덱스를 새로 구축

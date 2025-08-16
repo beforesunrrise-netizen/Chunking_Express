@@ -40,7 +40,6 @@ def _contains_answer(chunk_text: str, answer: str) -> bool:
     return re.search(ans_re, ct) is not None
 
 
-# ---------- Evaluator (Retrieval-only) ----------
 
 class RAGEvaluator(BaseEvaluator):
     """

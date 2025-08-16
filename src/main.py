@@ -18,7 +18,7 @@ from types import SimpleNamespace
 import argparse
 
 # Assuming config and other modules are available in the path
-from config import (
+from src.config import (
     config, Language, ChunkingStrategy
 )
 
@@ -41,10 +41,6 @@ from retrievers import VectorRetriever
 from generators import GPTGenerator
 from evaluators import RAGEvaluator
 from embedders.openai_embedder import OpenAIEmbedderWithStorage
-
-
-# from storage.chunk_storage import ChunkEmbeddingStorage  <- 미사용 Import 제거
-
 
 class NumpyJSONEncoder(json.JSONEncoder):
     """ NumPy 데이터 타입을 처리할 수 있는 JSON 인코더 """
@@ -187,20 +183,31 @@ class RAGExperimentPipeline:
             queries: List[Query], language: Language
     ) -> Optional[EvaluationResult]:
         """각 전략별로 독립적인 컴포넌트를 사용하여 실행"""
+
         logger.info(f"[{language.value.upper()}] - [{strategy.value}] 전략 실험 시작")
         components = self._initialize_components_for_strategy(strategy, language)
         return await self._run_single_strategy(strategy, documents, queries, components, language)
 
     def _initialize_components_for_strategy(self, strategy: ChunkingStrategy, language: Language) -> Dict[str, Any]:
         """특정 전략을 위한 컴포넌트 초기화 (병렬 처리용)"""
+
+        # config 파일에 정의된 청킹 관련 설정을 가져옵니다. (경로는 실제 config 구조에 맞게 조정)
+        experiment_config = self.config.experiment
+
         chunker_map = {
-            ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(language),
+            ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(
+                language=language,
+                chunk_size_limit=experiment_config.chunk_size_limit,
+                overlap_ratio=experiment_config.overlap_ratio
+            ),
+
             ChunkingStrategy.SEMANTIC: SemanticChunker(language),
             ChunkingStrategy.KEYWORD: KeywordChunker(language),
             ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language),
             ChunkingStrategy.RECURSIVE: RecursiveChunker(language),
             ChunkingStrategy.TEXT_SIMILARITY: Text_Similarity(language)
         }
+
         embedder = OpenAIEmbedderWithStorage(
             language=language,
             enable_storage=self.enable_embedding_storage,
@@ -351,59 +358,114 @@ class RAGExperimentPipeline:
     async def _run_single_strategy(
             self, strategy: ChunkingStrategy, documents: List[Document],
             queries: List[Query], components: Dict[str, Any], language: Language
-    ) -> Optional[EvaluationResult]:  # 반환 타입에 Optional 추가
-        """단일 청킹 전략을 모든 샘플에 대해 동시에 실행합니다."""
+    ) -> Optional[EvaluationResult]:
+        """단일 청킹 전략을 효율적인 병렬 배치 방식으로 실행합니다."""
         strategy_start_time = time.time()
         sample_size = min(len(documents), len(queries), self.config.experiment.sample_size)
-        tasks = [
-            self._process_single_item(documents[i], queries[i], strategy, components, language)
-            for i in range(sample_size)
-        ]
-        results = await asyncio.gather(*tasks)
 
-        responses, ground_truths, total_processing_times = [], [], {
-            "chunking": [], "retrieval": [], "generation": [], "embedding_storage": []
-        }
-        for res in results:
-            if res is not None:
-                response, ground_truth, p_times = res
-                if response and ground_truth is not None:
-                    responses.append(response)
-                    ground_truths.append(ground_truth)
-                    for key, value in p_times.items():
-                        if value is not None:
-                            total_processing_times[key].append(value)
+        # 동시 실행 작업 수를 제어하기 위한 세마포어 (API Rate Limit 및 CPU 부하 방지)
+        # CPU 부하가 큰 'semantic'의 경우 값을 낮추고, 나머지는 높여도 좋습니다.
+        concurrency_limit = 10 if strategy == ChunkingStrategy.SEMANTIC else 50
+        semaphore = asyncio.Semaphore(concurrency_limit)
 
+        chunker = components["chunker"]
+        embedder = components["embedder"]
+        retriever = components["retriever"]
+        evaluator = components["evaluator"]
+
+        logger.info(f"[{strategy.value}] 1단계: {sample_size}개 문서에 대한 병렬 청킹 시작... (동시 실행 수: {concurrency_limit})")
+
+        # --- 1단계: 모든 문서 병렬 청킹 ---
+        async def chunk_doc(doc, query):
+            async with semaphore:
+                if strategy == ChunkingStrategy.QUERY_AWARE:
+                    return await chunker.query_aware_chunk(doc, query)
+                else:
+                    chunks = await chunker.chunk_document(doc)
+                    # 각 청크에 doc_id가 없는 경우 수동으로 할당
+                    for chunk in chunks:
+                        if not hasattr(chunk, 'doc_id') or not chunk.doc_id:
+                            chunk.doc_id = doc.id
+                    return chunks
+
+        chunking_tasks = [chunk_doc(documents[i], queries[i]) for i in range(sample_size)]
+        chunking_results = await asyncio.gather(*chunking_tasks, return_exceptions=True)
+
+        all_chunks = []
+        for i, result in enumerate(chunking_results):
+            if isinstance(result, Exception):
+                logger.error(f"문서 {documents[i].id} 청킹 실패: {result}")
+            elif result:
+                all_chunks.extend(result)
+
+        if not all_chunks:
+            logger.error(f"[{strategy.value}] 전략에서 유효한 청크가 하나도 생성되지 않았습니다.")
+            return None
+
+        logger.success(f"[{strategy.value}] 1단계 완료: 총 {len(all_chunks)}개 청크 생성.")
+
+        # --- 2단계: 모든 청크 임베딩 및 단일 인덱스 구축 ---
+        logger.info(f"[{strategy.value}] 2단계: 전체 청크에 대한 임베딩 및 단일 FAISS 인덱스 구축 시작...")
+        embedding_start_time = time.time()
+        await embedder.embed_chunks(all_chunks)  # embed_chunks가 리스트를 처리한다고 가정
+
+        # VectorRetriever가 내부적으로 인덱스를 만들거나, 여기서 명시적으로 생성
+        # retriever.build_index(all_chunks) 와 같은 메소드가 필요할 수 있습니다.
+        embedding_time = time.time() - embedding_start_time
+        logger.success(f"[{strategy.value}] 2단계 완료. (소요 시간: {embedding_time:.2f}초)")
+
+        # --- 3단계: 모든 쿼리에 대한 병렬 검색 및 평가 ---
+        logger.info(f"[{strategy.value}] 3단계: {sample_size}개 쿼리에 대한 병렬 검색 및 평가 시작...")
+
+        if queries:
+            logger.info(f"DEBUG >>> 'queries' 리스트의 첫 번째 항목 타입: {type(queries[0])}")
+            logger.info(f"DEBUG >>> 'queries' 리스트의 첫 번째 항목 내용: {queries[0]}")
+
+        async def process_query(query):
+            async with semaphore:
+                try:
+                    # retriever.retrieve는 전체 청크 리스트와 쿼리를 받아 검색을 수행해야 합니다.
+                    retrieved_chunks = await retriever.retrieve(query.question, all_chunks,
+                                                                k=self.config.experiment.top_k_retrieval)
+
+                    response = RAGResponse(
+                        strategy=strategy,
+                        query=query.question,
+                        query_id=query.id,
+                        response="[GENERATION BYPASSED FOR RETRIEVAL TEST]",
+                        chunks_used=retrieved_chunks if retrieved_chunks else [],
+                        confidence=0.0
+                    )
+                    return response, query.expected_answer
+                except Exception as e:
+                    logger.error(f"쿼리 {query.id} 처리 중 오류: {e}")
+                    return None, None
+
+        processing_tasks = [process_query(queries[i]) for i in range(sample_size)]
+        processed_results = await asyncio.gather(*processing_tasks)
+
+        responses = [res[0] for res in processed_results if res[0] is not None]
+        ground_truths = [res[1] for res in processed_results if res[1] is not None]
+
+        logger.success(f"[{strategy.value}] 3단계 완료: {len(responses)}개 응답 생성.")
+
+        # --- 최종 평가 ---
         if responses:
             eval_start = time.time()
-            evaluator = components["evaluator"]
             eval_result = await evaluator.evaluate_responses(responses, ground_truths)
             eval_time = time.time() - eval_start
             eval_result.strategy = strategy.value
 
-            if eval_result.metadata.get('at_k'):
-                for k_str in eval_result.metadata['at_k']:
-                    if 'k' not in eval_result.metadata['at_k'][k_str]:
-                        eval_result.metadata['at_k'][k_str]['k'] = int(k_str)
-
             eval_result.metadata.update({
                 "total_time_seconds": time.time() - strategy_start_time,
-                "avg_chunking_time": np.mean(total_processing_times["chunking"]) if total_processing_times[
-                    "chunking"] else 0,
-                "avg_retrieval_time": np.mean(total_processing_times["retrieval"]) if total_processing_times[
-                    "retrieval"] else 0,
-                "avg_generation_time": np.mean(total_processing_times["generation"]) if total_processing_times[
-                    "generation"] else 0,
-                "avg_embedding_storage_time": np.mean(total_processing_times["embedding_storage"]) if
-                total_processing_times["embedding_storage"] else 0,
+                "embedding_and_indexing_time": embedding_time,
                 "evaluation_time": eval_time,
                 "samples_processed": len(responses),
-                "embedding_storage_enabled": self.enable_embedding_storage
             })
             return eval_result
 
         logger.warning(f"{strategy.value} 전략에 대한 유효한 응답이 없어 평가를 건너뜁니다.")
-        return None  # 유효한 응답이 없을 경우 None 반환
+        return None
 
     async def _save_results(self, results: List[EvaluationResult], analysis: Dict[str, Any]):
         """결과를 비동기적으로 저장합니다."""

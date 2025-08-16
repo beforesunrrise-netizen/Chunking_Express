@@ -37,18 +37,18 @@ class EnsembleMethod(Enum):
 class ModelConfig:
     """모델 설정"""
     """gpt model"""
-    gpt_model: str = "gpt-4o-mini"
+    gpt_model: str = "gpt-4.1-mini"
     embedding_model: str = "text-embedding-3-large"
     temperature: float = 0.1
     max_tokens: int = 2000
     embedding_dimension: int = 3072
 
-# sample_size --> 문서수와 겹쳐야한다
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 1000
+    sample_size: int = 5
     chunk_size_limit: int = 512
+    overlap_ratio: float = 0.1  # ◀◀◀ 이 줄을 추가하세요.
     context_window: int = 2
     top_k_retrieval: int = 5
     batch_size: int = 10
@@ -145,7 +145,7 @@ class LoggingConfig:
 @dataclass
 class DatasetConfig:
     """데이터셋 설정"""
-    data_path: str = "rag_squad_train_1000_samples.json"
+    data_path: str = "rag_squad_train_5_samples.json"
     train_split: float = 0.8
     val_split: float = 0.1
     test_split: float = 0.1

@@ -57,7 +57,7 @@ class SemanticChunker(BaseChunker):
         """GPT 모델에 요청을 보내고 JSON 응답을 파싱합니다."""
         try:
             response = await self.client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4.1-mini",
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
