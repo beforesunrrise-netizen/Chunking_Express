@@ -1,6 +1,0 @@
-{
-  "document_id": "42",
-  "chunk_type": "recursive",
-  "doc_path": "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data/embeddings/by_document/42.npz",
-  "type_path": "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data/embeddings/by_chunk_type/recursive/42.json"
-}
