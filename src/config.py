@@ -23,7 +23,7 @@ class ChunkingStrategy(Enum):
     KEYWORD = "keyword"
     QUERY_AWARE = "query_aware"
     RECURSIVE = 'recursive'
-    LANGCHAIN_SEMANTIC = 'langchain_semantic'
+    TEXT_SIMILARITY = 'text_similarity'
 
 
 class EnsembleMethod(Enum):
@@ -47,7 +47,7 @@ class ModelConfig:
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 500
+    sample_size: int = 100
     chunk_size_limit: int = 512
     context_window: int = 2
     top_k_retrieval: int = 5
@@ -145,7 +145,7 @@ class LoggingConfig:
 @dataclass
 class DatasetConfig:
     """데이터셋 설정"""
-    data_path: str = "rag_squad_train_500_samples.json"
+    data_path: str = "rag_squad_train_100_samples.json"
     train_split: float = 0.8
     val_split: float = 0.1
     test_split: float = 0.1

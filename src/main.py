@@ -10,7 +10,7 @@ import json
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
 from loguru import logger
 import aiofiles
@@ -19,7 +19,7 @@ import argparse
 
 # Assuming config and other modules are available in the path
 from config import (
-    config, Language, ChunkingStrategy, EnsembleMethod
+    config, Language, ChunkingStrategy
 )
 
 # Use relative imports instead of absolute imports
@@ -30,7 +30,7 @@ from data_structures import (
 
 # 청킹 전략
 from chunkers import (
-    SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker, RecursiveChunker, EmbeddingSemanticChunker
+    SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker, RecursiveChunker, Text_Similarity
 )
 
 # 임베딩 및 검색
@@ -40,12 +40,10 @@ from retrievers import VectorRetriever
 # 생성 및 평가
 from generators import GPTGenerator
 from evaluators import RAGEvaluator
-
-# 데이터 처리 및 통계
-from data_processor import DataProcessor
-from statistical_analyzer import StatisticalAnalyzer
 from embedders.openai_embedder import OpenAIEmbedderWithStorage
-from storage.chunk_storage import ChunkEmbeddingStorage
+
+
+# from storage.chunk_storage import ChunkEmbeddingStorage  <- 미사용 Import 제거
 
 
 class NumpyJSONEncoder(json.JSONEncoder):
@@ -64,6 +62,36 @@ class NumpyJSONEncoder(json.JSONEncoder):
         elif isinstance(obj, np.ndarray):
             return obj.tolist()
         return super(NumpyJSONEncoder, self).default(obj)
+
+
+# 클래스 정의를 스크립트 상단으로 이동
+class DataProcessor:
+    async def load_data(self, language: Language) -> Tuple[List[Document], List[Query]]:
+        data_path = config.paths.data_dir / config.dataset.data_path
+        try:
+            async with aiofiles.open(data_path, "r", encoding="utf-8") as f:
+                content = await f.read()
+            data = json.loads(content)
+        except Exception as e:
+            logger.error(f"데이터 파일 로드 실패: {data_path}, 오류: {e}")
+            return [], []
+
+        documents, queries = [], []
+        sample_size = min(len(data), config.experiment.sample_size)
+        for i, item in enumerate(data[:sample_size]):
+            if "context" not in item or "question" not in item:
+                continue
+            doc_id = str(i)
+            documents.append(Document(id=doc_id, content=item["context"], language=language))
+            queries.append(Query(id=doc_id, question=item["question"], language=language,
+                                 expected_answer=item.get("answer", ""), context_id=doc_id))
+        return documents, queries
+
+
+class StatisticalAnalyzer:
+    def analyze_results(self, results: List[EvaluationResult]) -> Dict[str, Any]:
+        # 실제 분석 로직이 필요하다면 여기에 구현
+        return {"descriptive_stats": {}, "statistical_tests": {}}
 
 
 class RAGExperimentPipeline:
@@ -101,8 +129,9 @@ class RAGExperimentPipeline:
                     logger.error(f"통계 분석 중 오류 발생: {e}")
                     analysis_results = {"analysis_error": str(e)}
 
-            logger.info("결과 저장 시작")
-            await self._save_results(all_results, analysis_results)
+            # 결과 저장 로직 제거
+            # logger.info("결과 저장 시작")
+            # await self._save_results(all_results, analysis_results)
 
             self.experiment_run.end_time = datetime.now()
             logger.info(f"실험 완료: {self.run_id}")
@@ -115,11 +144,10 @@ class RAGExperimentPipeline:
             }
         except Exception as e:
             logger.error(f"실험 실패: {e}")
-            self.experiment_run.add_error(e, "전체 실험")
+            self.experiment_run.add_error(str(e), "전체 실험")  # Pass string representation of exception
             raise
 
     async def run_language_experiment(self, language: Language) -> List[EvaluationResult]:
-        """특정 언어에 대한 실험 실행"""
         results = []
         documents, queries = await self.data_processor.load_data(language)
         if not documents or not queries:
@@ -128,72 +156,92 @@ class RAGExperimentPipeline:
 
         logger.info(f"{language.value} 데이터 로드 완료: {len(documents)}개 문서, {len(queries)}개 쿼리")
 
-        components = self._initialize_components(language)
+        logger.info("모든 청킹 전략을 병렬로 실행합니다...")
 
-        for strategy in ChunkingStrategy:
-            logger.info(f"[{language.value.upper()}] - [{strategy.value}] 전략 실험 시작")
-            try:
-                result = await self._run_single_strategy(
-                    strategy, documents, queries, components, language
-                )
-                if result:
-                    results.append(result)
-                    self.experiment_run.add_result(result)
-                    if self.evaluation_mode == 'retrieval':
-                        mrr_score = result.mrr
-                        k_value = self.config.experiment.top_k_retrieval
-                        hit_at_k = result.metadata.get('at_k', {}).get(str(k_value), {}).get('hit_at_k',
-                                                                                             result.recall_at_k)
-                        logger.success(
-                            f"{strategy.value} 완료 (검색 평가) - "
-                            f"Hit@{k_value}: {hit_at_k:.3f}, "
-                            f"MRR: {mrr_score:.3f}"
-                        )
-                    else:
-                        logger.success(
-                            f"{strategy.value} 완료 (E2E 평가) - "
-                            f"AUROC: {result.hallucination_auroc:.3f}, "
-                            f"Context RMSE: {result.context_relevance_rmse:.3f}"
-                        )
-            except Exception as e:
-                logger.error(f"{strategy.value} 전략 실행 중 최상위 오류 발생: {e}", exc_info=True)
-                self.experiment_run.add_error(e, f"{language.value}-{strategy.value}")
-                results.append(EvaluationResult(strategy=strategy.value, language=language, num_samples=0))
+        tasks = [
+            self._run_single_strategy_with_components(strategy, documents, queries, language)
+            for strategy in ChunkingStrategy
+        ]
+        strategy_results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        for i, result in enumerate(strategy_results):
+            strategy = list(ChunkingStrategy)[i]
+            if isinstance(result, Exception):
+                logger.error(f"{strategy.value} 전략 실행 중 오류 발생: {result}", exc_info=True)
+                self.experiment_run.add_error(str(result), f"{language.value}-{strategy.value}")
+                # 모든 필드를 채워서 EvaluationResult 객체 생성
+                results.append(EvaluationResult(
+                    strategy=strategy.value, language=language, num_samples=0,
+                    hallucination_auroc=0.0, context_relevance_rmse=0.0,
+                    utilization_rmse=0.0, recall_at_k=0.0, mrr=0.0
+                ))
+            elif result:
+                results.append(result)
+                self.experiment_run.add_result(result)
+                self._log_strategy_completion(result)
 
         return results
 
-    def _initialize_components(self, language: Language) -> Dict[str, Any]:
-        """언어별 컴포넌트 초기화"""
-        chunkers = {
+    async def _run_single_strategy_with_components(
+            self, strategy: ChunkingStrategy, documents: List[Document],
+            queries: List[Query], language: Language
+    ) -> Optional[EvaluationResult]:
+        """각 전략별로 독립적인 컴포넌트를 사용하여 실행"""
+        logger.info(f"[{language.value.upper()}] - [{strategy.value}] 전략 실험 시작")
+        components = self._initialize_components_for_strategy(strategy, language)
+        return await self._run_single_strategy(strategy, documents, queries, components, language)
+
+    def _initialize_components_for_strategy(self, strategy: ChunkingStrategy, language: Language) -> Dict[str, Any]:
+        """특정 전략을 위한 컴포넌트 초기화 (병렬 처리용)"""
+        chunker_map = {
             ChunkingStrategy.FIXED_SIZE: FixedSizeChunker(language),
             ChunkingStrategy.SEMANTIC: SemanticChunker(language),
             ChunkingStrategy.KEYWORD: KeywordChunker(language),
             ChunkingStrategy.QUERY_AWARE: QueryAwareChunker(language),
             ChunkingStrategy.RECURSIVE: RecursiveChunker(language),
-            ChunkingStrategy.LANGCHAIN_SEMANTIC: EmbeddingSemanticChunker(language)
+            ChunkingStrategy.TEXT_SIMILARITY: Text_Similarity(language)
         }
-        if self.enable_embedding_storage:
-            embedder = OpenAIEmbedderWithStorage(
-                language=language, enable_storage=True, storage_path=self.storage_path
-            )
-        else:
-            embedder = OpenAIEmbedder(language)
-
-        retriever = VectorRetriever(embedder)
-        generator = GPTGenerator(language) if self.evaluation_mode == 'e2e' else None
-        evaluator = RAGEvaluator(language)
+        embedder = OpenAIEmbedderWithStorage(
+            language=language,
+            enable_storage=self.enable_embedding_storage,
+            storage_path=self.storage_path,
+        ) if self.enable_embedding_storage else OpenAIEmbedder(language)
 
         return {
-            "chunkers": chunkers, "embedder": embedder, "retriever": retriever,
-            "generator": generator, "evaluator": evaluator
+            "chunker": chunker_map[strategy],
+            "embedder": embedder,
+            "retriever": VectorRetriever(embedder),
+            "generator": GPTGenerator(language) if self.evaluation_mode == 'e2e' else None,
+            "evaluator": RAGEvaluator(language)
         }
 
+    def _log_strategy_completion(self, result: EvaluationResult):
+        """전략 완료 로깅"""
+        if self.evaluation_mode == 'retrieval':
+            mrr_score = result.mrr
+            k_value = self.config.experiment.top_k_retrieval
+            # metadata['at_k']의 키가 정수일 수도 문자열일 수도 있으므로 확인
+            at_k_data = result.metadata.get('at_k', {})
+            hit_at_k = at_k_data.get(k_value, at_k_data.get(str(k_value), {})).get('hit_at_k', result.recall_at_k)
+
+            logger.success(
+                f"{result.strategy} 완료 (검색 평가) - "
+                f"Hit@{k_value}: {hit_at_k:.3f}, "
+                f"MRR: {mrr_score:.3f}"
+            )
+        else:
+            logger.success(
+                f"{result.strategy} 완료 (E2E 평가) - "
+                f"AUROC: {result.hallucination_auroc:.3f}, "
+                f"Context RMSE: {result.context_relevance_rmse:.3f}"
+            )
+
+    # _process_single_item 메서드를 클래스 레벨로 이동 (들여쓰기 수정)
     async def _process_single_item(
             self, doc: Document, query: Query, strategy: ChunkingStrategy,
             components: Dict[str, Any], language: Language
-    ) -> Tuple[RAGResponse, str, Dict[str, float]]:
-        """단일 아이템(문서-쿼리 쌍)을 처리하고 결과와 처리 시간을 반환합니다."""
-        chunker = components["chunkers"][strategy]
+    ) -> Tuple[Optional[RAGResponse], Optional[str], Dict[str, float]]:
+        chunker = components["chunker"]
         embedder = components["embedder"]
         retriever = components["retriever"]
         generator = components["generator"]
@@ -202,54 +250,83 @@ class RAGExperimentPipeline:
             "chunking": 0.0, "embedding_storage": 0.0,
             "retrieval": 0.0, "generation": 0.0
         }
+        chunks = []
+
+        loaded_from_storage = False
+        if self.enable_embedding_storage and isinstance(embedder, OpenAIEmbedderWithStorage):
+            try:
+                stored_data = embedder.storage.load_chunk_embeddings(doc.id, strategy.value)
+                if stored_data and strategy.value in stored_data.get("chunk_types", {}):
+                    chunk_info = stored_data["chunk_types"][strategy.value]
+                    if "chunks" in chunk_info and "embeddings" in chunk_info:
+                        restored_chunks = [Chunk(**c_data) for c_data in chunk_info["chunks"]]
+                        if restored_chunks:
+                            chunks = restored_chunks
+                            loaded_from_storage = True
+                            logger.info(f"문서 {doc.id}에 대한 '{strategy.value}' 청크/임베딩을 저장소에서 로드했습니다. ({len(chunks)}개)")
+            except Exception as e:
+                logger.warning(f"저장된 임베딩 로드 중 오류 발생 (문서 ID: {doc.id}, 전략: {strategy.value}): {e}. 새로 생성합니다.")
+
+        if not loaded_from_storage:
+            try:
+                chunk_start = time.time()
+                if strategy == ChunkingStrategy.QUERY_AWARE:
+                    chunks = await chunker.query_aware_chunk(doc, query)  # query 객체를 그대로 전달
+                else:
+                    chunks = await chunker.chunk_document(doc)
+
+                for chunk in chunks:
+                    if not hasattr(chunk, 'doc_id'):
+                        chunk.doc_id = doc.id
+                processing_times["chunking"] = time.time() - chunk_start
+
+                if not chunks:
+                    logger.warning(f"문서 {doc.id}에 대한 청크가 생성되지 않았습니다.")
+                    return None, None, processing_times
+
+                if self.enable_embedding_storage and isinstance(embedder, OpenAIEmbedderWithStorage):
+                    storage_start = time.time()
+                    await embedder.embed_and_store_chunks(chunks=chunks, chunk_type=strategy.value, document_id=doc.id)
+                    processing_times["embedding_storage"] = time.time() - storage_start
+                else:
+                    await embedder.embed_chunks(chunks)
+
+            except Exception as e:
+                logger.error(f"청킹/임베딩 처리 실패 - 문서: {doc.id}, 오류: {e}", exc_info=True)
+                return None, None, processing_times
+        logger.debug("=" * 20 + " DEBUGGING " + "=" * 20)
+        logger.debug(f"Processing doc_id: {doc.id}")
+        logger.debug(f"Received query type: {type(query)}")
+        logger.debug(f"Received query content: {query}")
+        logger.debug("=" * 53)
+
+        logger.info(f"DEBUG: Type of query variable is now [ {type(query)} ] before retrieval/generation.")
 
         try:
-            # 1. 청킹
-            chunk_start = time.time()
-            if strategy == ChunkingStrategy.QUERY_AWARE:
-                chunks = await chunker.query_aware_chunk(doc, query)
-            else:
-                chunks = await chunker.chunk_document(doc)
-            for chunk in chunks:
-                if not hasattr(chunk, 'doc_id'):
-                    chunk.doc_id = doc.id
-            processing_times["chunking"] = time.time() - chunk_start
-
-            if not chunks:
-                logger.warning(f"문서 {doc.id}에 대한 청크가 생성되지 않았습니다.")
-                return None, None, processing_times
-
-            # 2. 임베딩 및 저장
-            if self.enable_embedding_storage and isinstance(embedder, OpenAIEmbedderWithStorage):
-                storage_start = time.time()
-                await embedder.embed_and_store_chunks(chunks=chunks, chunk_type=strategy.value, document_id=doc.id)
-                processing_times["embedding_storage"] = time.time() - storage_start
-
-            # 3. 검색
             retrieval_start = time.time()
-            retrieved_chunks = await retriever.retrieve(query, chunks, k=self.config.experiment.top_k_retrieval)
+            # retriever.retrieve는 query '객체'가 아닌 query '문자열'을 받도록 수정
+            retrieved_chunks = await retriever.retrieve(query.question, chunks,
+                                                        k=self.config.experiment.top_k_retrieval)
+
             processing_times["retrieval"] = time.time() - retrieval_start
 
             if self.evaluation_mode == "retrieval":
                 processing_times["generation"] = 0.0
-
-                # [수정] 오류 메시지에 나온 모든 필수 인자를 채워서 RAGResponse 객체 생성
                 response = RAGResponse(
                     strategy=strategy,
                     query=query.question,
                     query_id=query.id,
-                    response="",  # 생성된 답변이 없으므로 빈 문자열
+                    response="[GENERATION BYPASSED FOR TEST]",
                     chunks_used=retrieved_chunks if retrieved_chunks else [],
-                    confidence=0.0  # 생성된 답변이 없으므로 0.0
+                    confidence=0.0
                 )
-            else:  # e2e mode
+            else:
                 if not generator:
                     raise ValueError("E2E 모드에서는 Generator가 초기화되어야 합니다.")
                 generation_start = time.time()
                 response = await generator.generate_response(query, retrieved_chunks)
                 processing_times["generation"] = time.time() - generation_start
 
-            # 평가용 raw Top-K 주입
             if retrieved_chunks:
                 ranked = []
                 for i, ch in enumerate(retrieved_chunks, 1):
@@ -260,9 +337,6 @@ class RAGExperimentPipeline:
                         source="retrieval", doc_id=doc.id
                     )
                     ranked.append(chunk_obj)
-
-                # RAGResponse 객체에 retrieved_chunks 속성을 할당
-                # (클래스 정의에 따라 init=False 필드일 수 있음)
                 response.retrieved_chunks = ranked
             else:
                 if not hasattr(response, 'retrieved_chunks'):
@@ -271,13 +345,13 @@ class RAGExperimentPipeline:
             return response, query.expected_answer, processing_times
 
         except Exception as e:
-            logger.error(f"아이템 처리 실패 - 문서: {doc.id}, 오류: {e}", exc_info=True)
+            logger.error(f"검색/생성 처리 실패 - 문서: {doc.id}, 오류: {e}", exc_info=True)
             return None, None, processing_times
 
     async def _run_single_strategy(
             self, strategy: ChunkingStrategy, documents: List[Document],
             queries: List[Query], components: Dict[str, Any], language: Language
-    ) -> EvaluationResult:
+    ) -> Optional[EvaluationResult]:  # 반환 타입에 Optional 추가
         """단일 청킹 전략을 모든 샘플에 대해 동시에 실행합니다."""
         strategy_start_time = time.time()
         sample_size = min(len(documents), len(queries), self.config.experiment.sample_size)
@@ -290,17 +364,20 @@ class RAGExperimentPipeline:
         responses, ground_truths, total_processing_times = [], [], {
             "chunking": [], "retrieval": [], "generation": [], "embedding_storage": []
         }
-        for response, ground_truth, p_times in results:
-            if response and ground_truth is not None:
-                responses.append(response)
-                ground_truths.append(ground_truth)
-                for key, value in p_times.items():
-                    if value is not None:
-                        total_processing_times[key].append(value)
+        for res in results:
+            if res is not None:
+                response, ground_truth, p_times = res
+                if response and ground_truth is not None:
+                    responses.append(response)
+                    ground_truths.append(ground_truth)
+                    for key, value in p_times.items():
+                        if value is not None:
+                            total_processing_times[key].append(value)
 
         if responses:
             eval_start = time.time()
-            eval_result = await components["evaluator"].evaluate_responses(responses, ground_truths)
+            evaluator = components["evaluator"]
+            eval_result = await evaluator.evaluate_responses(responses, ground_truths)
             eval_time = time.time() - eval_start
             eval_result.strategy = strategy.value
 
@@ -326,7 +403,7 @@ class RAGExperimentPipeline:
             return eval_result
 
         logger.warning(f"{strategy.value} 전략에 대한 유효한 응답이 없어 평가를 건너뜁니다.")
-        return None
+        return None  # 유효한 응답이 없을 경우 None 반환
 
     async def _save_results(self, results: List[EvaluationResult], analysis: Dict[str, Any]):
         """결과를 비동기적으로 저장합니다."""
@@ -360,7 +437,7 @@ class RAGExperimentPipeline:
 
     def _create_summary(self, results: List[EvaluationResult]) -> Dict[str, Any]:
         """실험 요약 생성"""
-        valid_results = [r for r in results if r]
+        valid_results = [r for r in results if r and r.num_samples > 0]
         if not valid_results: return {}
 
         if self.evaluation_mode == 'retrieval':
@@ -373,7 +450,8 @@ class RAGExperimentPipeline:
             }
             for r in valid_results:
                 k_value = self.config.experiment.top_k_retrieval
-                hit_at_k = r.metadata.get('at_k', {}).get(str(k_value), {}).get('hit_at_k', r.recall_at_k)
+                at_k_data = r.metadata.get('at_k', {})
+                hit_at_k = at_k_data.get(k_value, at_k_data.get(str(k_value), {})).get('hit_at_k', r.recall_at_k)
                 summary["strategy_retrieval_scores"][r.strategy] = {
                     "mrr": r.mrr,
                     f"hit_at_{k_value}": hit_at_k
@@ -395,7 +473,6 @@ class RAGExperimentPipeline:
                             "auroc": result.hallucination_auroc,
                             "improvement_over_baseline": f"{improvement_pct:.1f}%"
                         }
-
             return {
                 "evaluation_mode": "e2e",
                 "baseline_strategy": "fixed_size",
@@ -405,34 +482,6 @@ class RAGExperimentPipeline:
                 "improvement_over_baseline": f"{improvement:.1f}%",
                 "strategy_comparisons": strategy_improvements,
             }
-
-
-class DataProcessor:
-    async def load_data(self, language: Language) -> Tuple[List[Document], List[Query]]:
-        data_path = config.paths.data_dir / config.dataset.data_path
-        try:
-            async with aiofiles.open(data_path, "r", encoding="utf-8") as f:
-                content = await f.read()
-            data = json.loads(content)
-        except Exception as e:
-            logger.error(f"데이터 파일 로드 실패: {data_path}, 오류: {e}")
-            return [], []
-
-        documents, queries = [], []
-        sample_size = min(len(data), config.experiment.sample_size)
-        for i, item in enumerate(data[:sample_size]):
-            if "context" not in item or "question" not in item:
-                continue
-            doc_id = str(i)
-            documents.append(Document(id=doc_id, content=item["context"], language=language))
-            queries.append(Query(id=doc_id, question=item["question"], language=language,
-                                 expected_answer=item.get("answer", ""), context_id=doc_id))
-        return documents, queries
-
-
-class StatisticalAnalyzer:
-    def analyze_results(self, results: List[EvaluationResult]) -> Dict[str, Any]:
-        return {"descriptive_stats": {}, "statistical_tests": {}}
 
 
 if __name__ == "__main__":
@@ -478,6 +527,11 @@ if __name__ == "__main__":
 
         try:
             results_data = await pipeline.run_full_experiment()
+
+            # 여기서 결과 저장을 명시적으로 한 번만 호출
+            logger.info("결과 저장 시작")
+            await pipeline._save_results(results_data["results"], results_data["analysis"])
+
             summary = results_data.get("summary", {})
             if summary:
                 print("\n" + "=" * 50)
