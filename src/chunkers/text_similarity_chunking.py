@@ -16,7 +16,7 @@ from src.data_structures import Document, Query, Chunk
 from .base_chunker import BaseChunker
 
 
-class EmbeddingSemanticChunker(BaseChunker):
+class Text_Similarity(BaseChunker):
     def __init__(
         self,
         language: Language,
@@ -27,7 +27,7 @@ class EmbeddingSemanticChunker(BaseChunker):
         super().__init__(language, chunk_size_limit)
 
         # ✅ 명확히 전략 지정
-        self.strategy = ChunkingStrategy.LANGCHAIN_SEMANTIC
+        self.strategy = ChunkingStrategy.TEXT_SIMILARITY
 
         self.group_size = max(1, group_size)
         self.similarity_threshold = similarity_threshold

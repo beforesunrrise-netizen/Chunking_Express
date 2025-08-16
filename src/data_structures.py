@@ -8,7 +8,7 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 from enum import Enum
 
-from config import Language, ChunkingStrategy, EnsembleMethod
+from src.config import Language, ChunkingStrategy, EnsembleMethod
 
 
 @dataclass

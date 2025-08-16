@@ -28,7 +28,7 @@ def iter_squad_examples(split_url, seed=42):
                         "answer": answer_text,
                     }
 
-def sample_and_save(n=500):
+def sample_and_save(n=None):
     out = f"data/rag_squad_train_{n}_samples.json"
     os.makedirs(os.path.dirname(out), exist_ok=True)
 
@@ -45,4 +45,4 @@ def sample_and_save(n=500):
     print(f"✅ 저장: {out}  ({len(buf)} samples)")
 
 if __name__ == "__main__":
-    sample_and_save(n=2000)
+    sample_and_save(n=1000)

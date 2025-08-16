@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Tuple
 import numpy as np
 from loguru import logger
-from config import (
+from src.config import (
     config, Language, ChunkingStrategy, EnsembleMethod
 )
 from src.data_structures import (

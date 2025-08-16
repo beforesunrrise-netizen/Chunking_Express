@@ -9,7 +9,7 @@ from .keyword_chunker import KeywordChunker
 from .query_aware_chunker import QueryAwareChunker
 from .fixed_size_chunker import FixedSizeChunker
 from .recursive_chunker import RecursiveChunker
-from .semantic_embedding_chunker import EmbeddingSemanticChunker
+from .text_similarity_chunking import Text_Similarity
 
 __all__ = [
     'BaseChunker',

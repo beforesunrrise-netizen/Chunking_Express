@@ -23,13 +23,14 @@ class VectorRetriever(BaseRetriever):
         self.chunk_embeddings: Dict[str, np.ndarray] = {}
         self.chunk_map: Dict[int, str] = {}
 
-    async def retrieve(self, query: Query, chunks: List[Chunk], k: int = 5) -> List[Chunk]:
+    async def retrieve(self, query_text: str, chunks: List[Chunk], k: int = 5) -> List[Chunk]:
         """쿼리에 대해 관련 청크 검색"""
         if not chunks:
             logger.warning("검색할 청크가 없어 빈 리스트를 반환합니다.")
             return []
 
-        query_embedding = await self.embedder.embed_text(query.question)
+        question_string = query_text.question
+        query_embedding = await self.embedder.embed_text(question_string)
 
         # 항상 현재 청크들로 인덱스를 새로 구축
         await self.build_index(chunks)
