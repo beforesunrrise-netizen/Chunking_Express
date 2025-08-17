@@ -90,7 +90,7 @@ class KeywordChunker(BaseChunker):
             prompt = self._create_key_sentence_prompt(content)
 
             response = await self.client.chat.completions.create(
-                model="gpt-4.1-mini",
+                model="gpt-4o-mini",
                 messages=[
                     {
                         "role": "system",
@@ -152,7 +152,7 @@ class KeywordChunker(BaseChunker):
             prompt = self._create_keyword_extraction_prompt(query)
 
             response = await self.client.chat.completions.create(
-                model="gpt-4.1-mini",
+                model="gpt-4o-mini",
                 messages=[
                     {
                         "role": "system",
@@ -185,7 +185,7 @@ class KeywordChunker(BaseChunker):
             prompt = self._create_query_aware_key_sentence_prompt(content, query_keywords)
 
             response = await self.client.chat.completions.create(
-                model="gpt-4.1-mini",
+                model="gpt-4o-mini",
                 messages=[
                     {
                         "role": "system",
