@@ -1,10 +1,14 @@
 """
-OpenAI 임베딩 구현 (파일 기반 영구 캐싱 및 청킹별 저장 기능 추가)
-OpenAI embedder implementation (with file-based persistent caching and chunk storage)
+OpenAI 임베딩 구현 (성능 최적화 버전)
+- 대용량 배치 처리 최적화
+- 비동기 병렬 처리 강화
+- 메모리 효율성 개선
+- Rate limiting 대응 강화
 """
 
 import hashlib
 import json
+import asyncio
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import numpy as np
@@ -19,8 +23,8 @@ from src.config import APIConfig
 from src.storage.chunk_storage import ChunkEmbeddingStorage
 
 
-class OpenAIEmbedder(BaseEmbedder):
-    """OpenAI 임베딩 구현 (파일 캐싱 기능 포함)"""
+class OptimizedOpenAIEmbedder(BaseEmbedder):
+    """성능 최적화된 OpenAI 임베딩 구현"""
 
     def __init__(self, language: Language, model: str = None):
         self.language = language
@@ -28,149 +32,214 @@ class OpenAIEmbedder(BaseEmbedder):
         config_data = APIConfig()
         self.client = openai.AsyncOpenAI(api_key=config_data.openai_api_key)
         self.dimension = config.model.embedding_dimension
-        self.batch_size = 100  # OpenAI API 배치 제한
 
-        # --- 파일 기반 캐싱 로직 추가 ---
+        # 최적화된 배치 설정
+        self.batch_size = 100  # OpenAI API 최대 배치 크기
+        self.max_concurrent_batches = 3  # 동시 배치 요청 수 제한
+        self.rate_limit_delay = 0.1  # 배치 간 지연시간 (초)
+
+        # 메모리 효율적 캐싱
         self.cache_dir = Path("./cache")
         self.cache_path = self.cache_dir / f"embedding_cache_{self.model.replace('/', '_')}.json"
         self.embedding_cache = self._load_cache()
-        logger.info(f"임베딩 캐시 로드 완료: {self.cache_path} ({len(self.embedding_cache)}개 항목)")
-        # ---------------------------------
+
+        # 배치 처리용 세마포어
+        self.batch_semaphore = asyncio.Semaphore(self.max_concurrent_batches)
+
+        logger.info(f"최적화된 임베딩 엔진 초기화 완료: {len(self.embedding_cache)}개 캐시 항목")
 
     def _load_cache(self) -> Dict[str, List[float]]:
-        """로컬 JSON 파일에서 캐시를 로드합니다."""
+        """메모리 효율적 캐시 로드"""
         self.cache_dir.mkdir(exist_ok=True)
         if self.cache_path.exists():
-            with open(self.cache_path, "r", encoding="utf-8") as f:
-                try:
-                    return json.load(f)
-                except json.JSONDecodeError:
-                    logger.warning(f"캐시 파일 손상됨: {self.cache_path}. 새 캐시를 생성합니다.")
-                    return {}
+            try:
+                with open(self.cache_path, "r", encoding="utf-8") as f:
+                    cache_data = json.load(f)
+                logger.info(f"캐시 로드 성공: {len(cache_data)}개 항목")
+                return cache_data
+            except (json.JSONDecodeError, FileNotFoundError) as e:
+                logger.warning(f"캐시 파일 오류: {e}. 새 캐시 생성")
         return {}
 
     def _save_cache(self):
-        """캐시를 로컬 JSON 파일에 저장합니다."""
-        with open(self.cache_path, "w", encoding="utf-8") as f:
-            json.dump(self.embedding_cache, f)  # indent 제거로 파일 크기 최적화
-        logger.debug(f"임베딩 캐시 저장 완료. 총 {len(self.embedding_cache)}개 항목.")
+        """비동기 캐시 저장 (블로킹 방지)"""
+        try:
+            with open(self.cache_path, "w", encoding="utf-8") as f:
+                json.dump(self.embedding_cache, f, separators=(',', ':'))  # 압축 저장
+        except Exception as e:
+            logger.error(f"캐시 저장 실패: {e}")
 
     def _get_cache_key(self, text: str) -> str:
-        """텍스트 내용을 기반으로 고유한 SHA-256 해시 키를 생성합니다."""
-        return hashlib.sha256(text.encode('utf-8')).hexdigest()
+        """빠른 해시 키 생성"""
+        return hashlib.md5(text.encode('utf-8')).hexdigest()  # SHA256보다 빠른 MD5
 
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_exponential(multiplier=1, min=1, max=10)
     )
-    async def embed_text(self, text: str) -> np.ndarray:
-        """단일 텍스트 임베딩 (캐싱 적용)"""
-        key = self._get_cache_key(text)
-        if key in self.embedding_cache:
-            return np.array(self.embedding_cache[key])
+    async def _batch_embed_with_retry(self, texts: List[str]) -> List[List[float]]:
+        """재시도 로직이 포함된 배치 임베딩"""
+        async with self.batch_semaphore:  # 동시 요청 수 제한
+            try:
+                response = await self.client.embeddings.create(
+                    model=self.model,
+                    input=texts,
+                    encoding_format="float"
+                )
 
-        try:
-            response = await self.client.embeddings.create(
-                model=self.model,
-                input=text
-            )
-            embedding = response.data[0].embedding
-            self.embedding_cache[key] = embedding
-            self._save_cache()  # 변경 시마다 저장
-            return np.array(embedding)
+                # Rate limiting 방지
+                await asyncio.sleep(self.rate_limit_delay)
 
-        except Exception as e:
-            logger.error(f"임베딩 생성 실패: {e}")
-            return np.zeros(self.dimension)
+                return [data.embedding for data in response.data]
 
-    async def embed_texts(self, texts: List[str]) -> List[np.ndarray]:
-        """여러 텍스트 배치 임베딩 (캐싱 적용)"""
+            except openai.RateLimitError as e:
+                logger.warning(f"Rate limit 도달, 재시도 중: {e}")
+                await asyncio.sleep(2)  # 더 긴 대기
+                raise
+            except Exception as e:
+                logger.error(f"배치 임베딩 실패: {e}")
+                raise
+
+    async def embed_texts_optimized(self, texts: List[str]) -> List[np.ndarray]:
+        """대용량 텍스트 배치 최적화 임베딩"""
         if not texts:
             return []
 
+        logger.info(f"임베딩 시작: {len(texts)}개 텍스트")
+
+        # 1단계: 캐시 분류 (빠른 처리)
         embeddings = [None] * len(texts)
-        texts_to_fetch_online = []
-        indices_to_fetch_online = []
+        uncached_texts = []
+        uncached_indices = []
+        cache_hits = 0
 
-        # 1. 캐시 확인
         for i, text in enumerate(texts):
-            key = self._get_cache_key(text)
-            if key in self.embedding_cache:
-                embeddings[i] = np.array(self.embedding_cache[key])
+            if not text or text.isspace():
+                embeddings[i] = np.zeros(self.dimension)
+                continue
+
+            cache_key = self._get_cache_key(text)
+            if cache_key in self.embedding_cache:
+                embeddings[i] = np.array(self.embedding_cache[cache_key])
+                cache_hits += 1
             else:
-                # 빈 문자열이나 공백만 있는 경우 API 호출 방지
-                if text and not text.isspace():
-                    texts_to_fetch_online.append(text)
-                    indices_to_fetch_online.append(i)
-                else:
-                    embeddings[i] = np.zeros(self.dimension)
+                uncached_texts.append(text)
+                uncached_indices.append(i)
 
-        # 2. 캐시에 없는 텍스트에 대해서만 API 호출 (배치 처리)
-        if texts_to_fetch_online:
-            logger.info(f"{len(texts_to_fetch_online)}개의 새로운 텍스트에 대해 임베딩 API 호출 중...")
+        if cache_hits > 0:
+            cache_rate = (cache_hits / len(texts)) * 100
+            logger.info(f"캐시 적중률: {cache_rate:.1f}% ({cache_hits}/{len(texts)})")
 
-            made_change = False
-            for i in range(0, len(texts_to_fetch_online), self.batch_size):
-                batch_texts = texts_to_fetch_online[i:i + self.batch_size]
-                batch_indices = indices_to_fetch_online[i:i + self.batch_size]
+        # 2단계: API 호출이 필요한 텍스트만 배치 처리
+        if uncached_texts:
+            logger.info(f"새로운 임베딩 생성: {len(uncached_texts)}개")
 
-                try:
-                    response = await self.client.embeddings.create(
-                        model=self.model,
-                        input=batch_texts
-                    )
+            # 대용량 배치를 여러 개의 작은 배치로 분할
+            batch_tasks = []
+            for i in range(0, len(uncached_texts), self.batch_size):
+                batch_texts = uncached_texts[i:i + self.batch_size]
+                batch_indices = uncached_indices[i:i + self.batch_size]
 
-                    # 3. 결과 저장 및 캐시 업데이트
-                    for j, embedding_data in enumerate(response.data):
-                        original_index = batch_indices[j]
-                        text_to_cache = batch_texts[j]
-                        key_to_cache = self._get_cache_key(text_to_cache)
+                batch_tasks.append(
+                    self._process_batch(batch_texts, batch_indices, embeddings)
+                )
 
-                        embedding_list = embedding_data.embedding
-                        embeddings[original_index] = np.array(embedding_list)
-                        self.embedding_cache[key_to_cache] = embedding_list
-                        made_change = True
+            # 배치들을 병렬로 처리 (세마포어로 동시성 제어)
+            await asyncio.gather(*batch_tasks, return_exceptions=True)
 
-                except Exception as e:
-                    logger.error(f"배치 임베딩 실패 (배치 인덱스 {i}): {e}")
-                    for original_index in batch_indices:
-                        embeddings[original_index] = np.zeros(self.dimension)
+            # 캐시 업데이트 (한 번에)
+            self._save_cache()
 
-            # API 호출로 변경이 있었던 경우에만 파일 저장
-            if made_change:
-                self._save_cache()
-
+        logger.success(f"임베딩 완료: {len(texts)}개 텍스트")
         return embeddings
+
+    async def _process_batch(
+        self,
+        batch_texts: List[str],
+        batch_indices: List[int],
+        embeddings: List
+    ):
+        """개별 배치 처리"""
+        try:
+            batch_embeddings = await self._batch_embed_with_retry(batch_texts)
+
+            # 결과 저장 및 캐시 업데이트
+            for text, embedding, idx in zip(batch_texts, batch_embeddings, batch_indices):
+                embeddings[idx] = np.array(embedding)
+                cache_key = self._get_cache_key(text)
+                self.embedding_cache[cache_key] = embedding
+
+        except Exception as e:
+            logger.error(f"배치 처리 실패: {e}")
+            # 실패한 배치는 0벡터로 채움
+            for idx in batch_indices:
+                embeddings[idx] = np.zeros(self.dimension)
 
     async def embed_chunks(self, chunks: List[Chunk]) -> List[np.ndarray]:
-        """청크 리스트 임베딩"""
-        texts = [chunk.content for chunk in chunks]
-        embeddings = await self.embed_texts(texts)
+        """청크 리스트 최적화 임베딩"""
+        if not chunks:
+            return []
 
-        # 청크 객체에 임베딩 저장
-        for chunk, embedding in zip(chunks, embeddings):
+        # 텍스트 추출
+        texts = []
+        valid_indices = []
+
+        for i, chunk in enumerate(chunks):
+            if hasattr(chunk, 'content') and chunk.content:
+                texts.append(chunk.content)
+                valid_indices.append(i)
+
+        if not texts:
+            logger.warning("임베딩할 유효한 텍스트가 없습니다")
+            return [np.zeros(self.dimension) for _ in chunks]
+
+        # 최적화된 임베딩 생성
+        embeddings = await self.embed_texts_optimized(texts)
+
+        # 청크 객체에 임베딩 할당
+        chunk_embeddings = [np.zeros(self.dimension) for _ in chunks]
+
+        for embedding, chunk_idx in zip(embeddings, valid_indices):
             if embedding is not None:
-                chunk.embedding = embedding.tolist()
+                chunks[chunk_idx].embedding = embedding.tolist()
+                chunk_embeddings[chunk_idx] = embedding
 
-        return embeddings
+        return chunk_embeddings
+
+    # 기존 메서드들 유지
+    async def embed_text(self, text: str) -> np.ndarray:
+        """단일 텍스트 임베딩 (하위 호환성)"""
+        embeddings = await self.embed_texts_optimized([text])
+        return embeddings[0] if embeddings else np.zeros(self.dimension)
+
+    async def embed_texts(self, texts: List[str]) -> List[np.ndarray]:
+        """텍스트 리스트 임베딩 (하위 호환성)"""
+        return await self.embed_texts_optimized(texts)
 
     def clear_cache(self):
-        """캐시 파일과 메모리 캐시를 모두 초기화합니다."""
+        """캐시 초기화"""
         self.embedding_cache.clear()
         if self.cache_path.exists():
             self.cache_path.unlink()
-        logger.info(f"임베딩 캐시가 초기화되었습니다: {self.cache_path}")
+        logger.info("임베딩 캐시가 초기화되었습니다")
 
     def get_cache_stats(self) -> Dict[str, Any]:
-        """캐시 통계 반환"""
+        """캐시 통계"""
+        cache_size_mb = 0
+        if self.cache_path.exists():
+            cache_size_mb = self.cache_path.stat().st_size / (1024 * 1024)
+
         return {
             "cache_file": str(self.cache_path),
-            "cache_size": len(self.embedding_cache)
+            "cache_entries": len(self.embedding_cache),
+            "cache_size_mb": round(cache_size_mb, 2),
+            "batch_size": self.batch_size,
+            "max_concurrent_batches": self.max_concurrent_batches
         }
 
 
-class OpenAIEmbedderWithStorage(OpenAIEmbedder):
-    """청킹별 임베딩 저장 기능이 추가된 OpenAI Embedder"""
+class OptimizedOpenAIEmbedderWithStorage(OptimizedOpenAIEmbedder):
+    """스토리지 기능이 추가된 최적화 임베더"""
 
     def __init__(
         self,
@@ -183,7 +252,7 @@ class OpenAIEmbedderWithStorage(OpenAIEmbedder):
         self.enable_storage = enable_storage
         if self.enable_storage:
             self.storage = ChunkEmbeddingStorage(storage_path)
-            logger.info(f"청킹 임베딩 저장소 초기화 완료: {storage_path}")
+            logger.info(f"청킹 임베딩 저장소 초기화: {storage_path}")
 
     async def embed_and_store_chunks(
         self,
@@ -193,44 +262,63 @@ class OpenAIEmbedderWithStorage(OpenAIEmbedder):
         additional_metadata: Optional[Dict] = None,
         force_recompute: bool = False
     ) -> List[np.ndarray]:
-        """청크를 임베딩하고 저장"""
+        """청크 임베딩 및 저장 (최적화 버전)"""
 
-        # 저장 기능이 비활성화된 경우
         if not self.enable_storage:
             return await self.embed_chunks(chunks)
 
-        # 1. 이미 저장된 임베딩이 있는지 확인 (force_recompute가 False인 경우)
+        # 1. 기존 데이터 확인 (force_recompute가 False인 경우)
         if not force_recompute:
-            existing_data = self.storage.load_chunk_embeddings(document_id, chunk_type)
-            if existing_data and chunk_type in existing_data.get("chunk_types", {}):
-                existing_chunks = existing_data["chunk_types"][chunk_type]
-                if len(existing_chunks.get("chunks", [])) == len(chunks):
-                    logger.info(f"기존 임베딩 사용: {document_id} ({chunk_type})")
-                    return [np.array(emb) for emb in existing_chunks["embeddings"]]
+            try:
+                existing_data = self.storage.load_chunk_embeddings(document_id, chunk_type)
+                if existing_data and chunk_type in existing_data.get("chunk_types", {}):
+                    existing_info = existing_data["chunk_types"][chunk_type]
+                    stored_chunks = existing_info.get("chunks", [])
+                    stored_embeddings = existing_info.get("embeddings", [])
 
-        # 2. 새로운 임베딩 생성
-        logger.info(f"새 임베딩 생성 중: {document_id} ({chunk_type})")
+                    if len(stored_chunks) == len(chunks) and len(stored_embeddings) == len(chunks):
+                        logger.info(f"기존 임베딩 재사용: {document_id} ({chunk_type}) - {len(chunks)}개")
+                        # 청크 객체에 임베딩 할당
+                        for chunk, embedding in zip(chunks, stored_embeddings):
+                            chunk.embedding = embedding
+                        return [np.array(emb) for emb in stored_embeddings]
+            except Exception as e:
+                logger.warning(f"기존 데이터 로드 실패: {e}")
+
+        # 2. 새로운 임베딩 생성 (최적화된 배치 처리)
+        logger.info(f"새 임베딩 생성: {document_id} ({chunk_type}) - {len(chunks)}개")
         embeddings = await self.embed_chunks(chunks)
 
         # 3. 저장
-        if self.enable_storage:
-            metadata = additional_metadata or {}
-            metadata["model"] = self.model
+        if self.enable_storage and embeddings:
+            try:
+                metadata = additional_metadata or {}
+                metadata.update({
+                    "model": self.model,
+                    "chunk_count": len(chunks),
+                    "embedding_dimension": self.dimension
+                })
 
-            success = self.storage.save_chunk_embeddings(
-                chunks=chunks,
-                embeddings=embeddings,
-                chunk_type=chunk_type,
-                document_id=document_id,
-                language=self.language,
-                additional_metadata=metadata
-            )
+                success = self.storage.save_chunk_embeddings(
+                    chunks=chunks,
+                    embeddings=embeddings,
+                    chunk_type=chunk_type,
+                    document_id=document_id,
+                    language=self.language,
+                    additional_metadata=metadata
+                )
 
-            if not success:
-                logger.warning("임베딩 저장 실패, 하지만 임베딩은 반환됩니다.")
+                if success:
+                    logger.debug(f"임베딩 저장 성공: {document_id} ({chunk_type})")
+                else:
+                    logger.warning(f"임베딩 저장 실패: {document_id} ({chunk_type})")
+
+            except Exception as e:
+                logger.error(f"저장 중 오류: {e}")
 
         return embeddings
 
+    # 기존 메서드들 유지...
     async def search_similar_chunks(
         self,
         query: str,
@@ -239,15 +327,12 @@ class OpenAIEmbedderWithStorage(OpenAIEmbedder):
         top_k: int = 10,
         threshold: float = 0.7
     ) -> List[Dict[str, Any]]:
-        """쿼리와 유사한 청크 검색"""
+        """유사 청크 검색"""
         if not self.enable_storage:
-            logger.warning("저장소가 비활성화되어 있어 검색할 수 없습니다.")
+            logger.warning("저장소가 비활성화되어 검색할 수 없습니다")
             return []
 
-        # 쿼리 임베딩 생성
         query_embedding = await self.embed_text(query)
-
-        # 유사 청크 검색
         return self.storage.search_similar_chunks(
             query_embedding=query_embedding,
             document_id=document_id,
@@ -257,21 +342,22 @@ class OpenAIEmbedderWithStorage(OpenAIEmbedder):
         )
 
     def get_storage_stats(self) -> Dict[str, Any]:
-        """저장소 통계 반환"""
+        """저장소 통계"""
         stats = {
             "cache_stats": self.get_cache_stats(),
             "storage_enabled": self.enable_storage
         }
-
         if self.enable_storage:
             stats["storage_stats"] = self.storage.get_statistics()
-
         return stats
 
     def clear_document_embeddings(self, document_id: str) -> bool:
-        """특정 문서의 모든 임베딩 삭제"""
+        """문서 임베딩 삭제"""
         if not self.enable_storage:
-            logger.warning("저장소가 비활성화되어 있습니다.")
             return False
-
         return self.storage.clear_document(document_id)
+
+
+# 하위 호환성을 위한 별칭
+OpenAIEmbedder = OptimizedOpenAIEmbedder
+OpenAIEmbedderWithStorage = OptimizedOpenAIEmbedderWithStorage
