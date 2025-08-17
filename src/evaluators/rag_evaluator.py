@@ -163,8 +163,6 @@ class RAGEvaluator(BaseEvaluator):
             "ndcg": ndcg_at_k,
         }
 
-    # ---------- IR helpers ----------
-
     def _get_ranked_chunks(self, response: RAGResponse, k: int) -> List[str]:
         """
         평가용 Top-K 랭크 리스트(텍스트 배열).

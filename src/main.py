@@ -436,6 +436,23 @@ class RAGExperimentPipeline:
                         chunks_used=retrieved_chunks if retrieved_chunks else [],
                         confidence=0.0
                     )
+
+                    if retrieved_chunks:
+                        ranked = []
+                        # 문서 ID를 찾기 위해 query의 context_id를 사용합니다.
+                        doc_id_for_chunks = query.context_id
+                        for i, ch in enumerate(retrieved_chunks, 1):
+                            text = getattr(ch, 'content', getattr(ch, 'page_content', getattr(ch, 'text', '')))
+                            chunk_obj = SimpleNamespace(
+                                content=text, rank=i,
+                                score=getattr(ch, "score", 1.0),
+                                source="retrieval", doc_id=doc_id_for_chunks
+                            )
+                            ranked.append(chunk_obj)
+                        response.retrieved_chunks = ranked
+                    else:
+                        response.retrieved_chunks = []
+
                     return response, query.expected_answer
                 except Exception as e:
                     logger.error(f"쿼리 {query.id} 처리 중 오류: {e}")
