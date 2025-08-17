@@ -404,13 +404,40 @@ class RAGExperimentPipeline:
 
         logger.success(f"[{strategy.value}] 1단계 완료: 총 {len(all_chunks)}개 청크 생성.")
 
-        # --- 2단계: 모든 청크 임베딩 및 단일 인덱스 구축 ---
-        logger.info(f"[{strategy.value}] 2단계: 전체 청크에 대한 임베딩 및 단일 FAISS 인덱스 구축 시작...")
+        # --- 2단계: 모든 청크 임베딩 및 저장(문서별·전략별) ---
+        logger.info(f"[{strategy.value}] 2단계: 전체 청크 임베딩/저장 시작...")
         embedding_start_time = time.time()
-        await embedder.embed_chunks(all_chunks)  # embed_chunks가 리스트를 처리한다고 가정
 
-        # VectorRetriever가 내부적으로 인덱스를 만들거나, 여기서 명시적으로 생성
-        # retriever.build_index(all_chunks) 와 같은 메소드가 필요할 수 있습니다.
+        try:
+            # 저장 가능한 임베더면 문서별로 저장 호출
+            if hasattr(embedder, "embed_and_store_chunks"):
+                from collections import defaultdict
+                chunks_by_doc = defaultdict(list)
+                for ch in all_chunks:
+                    if not getattr(ch, "doc_id", None):
+                        # 1단계에서 보장하지만 혹시 모를 누락 방지
+                        raise ValueError("chunk.doc_id 누락: 저장 경로 매핑 불가")
+                    chunks_by_doc[ch.doc_id].append(ch)
+
+                for doc_id, doc_chunks in chunks_by_doc.items():
+                    await embedder.embed_and_store_chunks(
+                        chunks=doc_chunks,
+                        chunk_type=strategy.value,  # <- by_chunk_type 하위에 전략별로 분기
+                        document_id=doc_id  # <- 문서별 디렉터리
+                    )
+            else:
+                # 저장 기능 없는 임베더면 기존 경로 유지
+                await embedder.embed_chunks(all_chunks)
+
+            # (옵션) 검색기가 in-memory 임베딩을 요구한다면 보강
+            if not getattr(all_chunks[0], "embedding", None):
+                # 구현체가 chunk.embedding을 채우지 않았다면 한 번 더 메모리용 임베딩
+                await embedder.embed_chunks(all_chunks)
+
+        except Exception as e:
+            logger.error(f"[{strategy.value}] 임베딩/저장 단계 실패: {e}", exc_info=True)
+            raise
+
         embedding_time = time.time() - embedding_start_time
         logger.success(f"[{strategy.value}] 2단계 완료. (소요 시간: {embedding_time:.2f}초)")
 
