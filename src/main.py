@@ -365,7 +365,7 @@ class RAGExperimentPipeline:
 
         # 동시 실행 작업 수를 제어하기 위한 세마포어 (API Rate Limit 및 CPU 부하 방지)
         # CPU 부하가 큰 'semantic'의 경우 값을 낮추고, 나머지는 높여도 좋습니다.
-        concurrency_limit = 10 if strategy == ChunkingStrategy.SEMANTIC else 50
+        concurrency_limit = 3 if strategy == ChunkingStrategy.SEMANTIC else 5
         semaphore = asyncio.Semaphore(concurrency_limit)
 
         chunker = components["chunker"]

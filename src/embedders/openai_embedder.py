@@ -21,7 +21,21 @@ from src.data_structures import Chunk
 from .base_embedder import BaseEmbedder
 from src.config import APIConfig
 from src.storage.chunk_storage import ChunkEmbeddingStorage
+import re
+import random
 
+def _extract_retry_after_seconds(err_msg: str, default_seconds: float = 0.25) -> float:
+    """
+    OpenAI 오류 메시지에 포함된 'Try again in XXms'를 파싱해 초 단위로 반환.
+    없으면 기본값(지수백오프와 함께) 사용.
+    """
+    if not err_msg:
+        return default_seconds
+    m = re.search(r"Try again in\s+(\d+)ms", err_msg)
+    if m:
+        # 약간의 지터 추가
+        return max(int(m.group(1)) / 1000.0, default_seconds) + random.uniform(0.05, 0.15)
+    return default_seconds
 
 class OptimizedOpenAIEmbedder(BaseEmbedder):
     """성능 최적화된 OpenAI 임베딩 구현"""
@@ -35,8 +49,8 @@ class OptimizedOpenAIEmbedder(BaseEmbedder):
 
         # 최적화된 배치 설정
         self.batch_size = 100  # OpenAI API 최대 배치 크기
-        self.max_concurrent_batches = 3  # 동시 배치 요청 수 제한
-        self.rate_limit_delay = 0.1  # 배치 간 지연시간 (초)
+        self.max_concurrent_batches = 1  # 동시 배치 요청 수 제한
+        self.rate_limit_delay = 0.25  # 배치 간 지연시간 (초)
 
         # 메모리 효율적 캐싱
         self.cache_dir = Path("./cache")
@@ -78,7 +92,6 @@ class OptimizedOpenAIEmbedder(BaseEmbedder):
         wait=wait_exponential(multiplier=1, min=1, max=10)
     )
     async def _batch_embed_with_retry(self, texts: List[str]) -> List[List[float]]:
-        """재시도 로직이 포함된 배치 임베딩"""
         async with self.batch_semaphore:  # 동시 요청 수 제한
             try:
                 response = await self.client.embeddings.create(
@@ -86,16 +99,17 @@ class OptimizedOpenAIEmbedder(BaseEmbedder):
                     input=texts,
                     encoding_format="float"
                 )
-
-                # Rate limiting 방지
+                # 고정 대기(배치 간) — 소폭 상향
                 await asyncio.sleep(self.rate_limit_delay)
-
                 return [data.embedding for data in response.data]
 
             except openai.RateLimitError as e:
-                logger.warning(f"Rate limit 도달, 재시도 중: {e}")
-                await asyncio.sleep(2)  # 더 긴 대기
+                # 동적 대기: 오류 메시지에 포함된 ms를 사용
+                wait_s = _extract_retry_after_seconds(str(e), default_seconds=0.5)
+                logger.warning(f"Rate limit 도달, {wait_s:.2f}s 대기 후 재시도: {e}")
+                await asyncio.sleep(wait_s)
                 raise
+
             except Exception as e:
                 logger.error(f"배치 임베딩 실패: {e}")
                 raise

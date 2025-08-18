@@ -42,7 +42,7 @@ def sample_and_save(n=None):
     with open(out, "w", encoding="utf-8") as f:
         json.dump(buf, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 저장: {out}  ({len(buf)} samples)")
+    print(f"저장: {out}  ({len(buf)} samples)")
 
 if __name__ == "__main__":
-    sample_and_save(n=5)
+    sample_and_save(n=1000)
