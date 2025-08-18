@@ -8,3 +8,7 @@ config.yml
 *.env
 .env
 src/results/
+src/env/config.yml
+config.yml
+.env
+*.env
