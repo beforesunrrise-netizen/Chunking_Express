@@ -23,3 +23,12 @@ class APIConfig:
 
 # 전역 인스턴스
 api_config = APIConfig()
+
+
+# config.yml 파일에 아래와 같이 작성해서 사용하시면 됩니다..!
+# openai:
+#   api_key: "sk-여기에_API_KEY_입력"
+#   org_id: null
+#   request_timeout: 30
+#   max_retries: 3
+#   retry_delay: 1.0
