@@ -12,3 +12,8 @@ src/env/config.yml
 config.yml
 .env
 *.env
+# local large/derived data
+/src/data/
+/src/results/
+/cache/
+/.idea/
