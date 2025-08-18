@@ -26,6 +26,7 @@ api_config = APIConfig()
 
 
 # config.yml 파일에 아래와 같이 작성해서 사용하시면 됩니다..!
+# 위치 env.config.yml
 # openai:
 #   api_key: "sk-여기에_API_KEY_입력"
 #   org_id: null
