@@ -430,7 +430,7 @@ class RAGExperimentPipeline:
                 await embedder.embed_chunks(all_chunks)
 
             # (옵션) 검색기가 in-memory 임베딩을 요구한다면 보강
-            if not getattr(all_chunks[0], "embedding", None):
+            if getattr(all_chunks[0], "embedding", None) is None:
                 # 구현체가 chunk.embedding을 채우지 않았다면 한 번 더 메모리용 임베딩
                 await embedder.embed_chunks(all_chunks)
 

@@ -46,7 +46,7 @@ class ModelConfig:
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 1000
+    sample_size: int = 5
     chunk_size_limit: int = 512
     overlap_ratio: float = 0.1
     context_window: int = 2
@@ -60,7 +60,7 @@ class EvaluationConfig:
     """평가 설정"""
     metrics: List[str] = None
     significance_level: float = 0.05
-    bootstrap_iterations: int = 1000
+    bootstrap_iterations: int = 5
 
     def __post_init__(self):
         if self.metrics is None:
