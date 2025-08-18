@@ -7,3 +7,4 @@ src/env/config.yml
 config.yml
 *.env
 .env
+src/results/
