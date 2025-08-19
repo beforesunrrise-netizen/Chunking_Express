@@ -124,8 +124,8 @@ class EvaluationResult:
     hallucination_auroc: float
     context_relevance_rmse: float
     utilization_rmse: float
-    recall_at_k: float   # <--- 수정된 부분
-    mrr: float           # <--- 수정된 부분
+    recall_at_k: float
+    mrr: float
     num_samples: int = 0
     ensemble_method: Optional[EnsembleMethod] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
@@ -139,8 +139,8 @@ class EvaluationResult:
             "hallucination_auroc": self.hallucination_auroc,
             "context_relevance_rmse": self.context_relevance_rmse,
             "utilization_rmse": self.utilization_rmse,
-            "recall_at_k": self.recall_at_k, # <--- 수정된 부분
-            "mrr": self.mrr,                 # <--- 수정된 부분
+            "recall_at_k": self.recall_at_k,
+            "mrr": self.mrr,
             "num_samples": self.num_samples,
             "ensemble_method": self.ensemble_method.value if self.ensemble_method else None,
             "metadata": self.metadata,
