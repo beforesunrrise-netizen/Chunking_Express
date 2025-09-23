@@ -33,6 +33,12 @@ from chunkers import (
     SemanticChunker, KeywordChunker, QueryAwareChunker, FixedSizeChunker, RecursiveChunker, Text_Similarity
 )
 
+# 지능형 청킹 에이전트 시스템
+from _agents import ChunkingAgent, ChunkingRouter, TextAnalyzer
+
+# 다중 데이터셋 로더
+from data.multi_dataset_loader import MultiDatasetLoader
+
 # 임베딩 및 검색
 from embedders import OpenAIEmbedder
 from retrievers import VectorRetriever
@@ -62,7 +68,11 @@ class NumpyJSONEncoder(json.JSONEncoder):
 
 # 클래스 정의를 스크립트 상단으로 이동
 class DataProcessor:
+    def __init__(self):
+        self.multi_loader = MultiDatasetLoader()
+
     async def load_data(self, language: Language) -> Tuple[List[Document], List[Query]]:
+        """기존 JSON 파일 로드 방식 (하위 호환성)"""
         data_path = config.paths.data_dir / config.dataset.data_path
         try:
             async with aiofiles.open(data_path, "r", encoding="utf-8") as f:
@@ -82,6 +92,25 @@ class DataProcessor:
             queries.append(Query(id=doc_id, question=item["question"], language=language,
                                  expected_answer=item.get("answer", ""), context_id=doc_id))
         return documents, queries
+
+    async def load_multi_datasets(
+        self,
+        dataset_names: List[str],
+        language: Language,
+        samples_per_dataset: int = 100
+    ) -> Tuple[List[Document], List[Query]]:
+        """다중 허깅페이스 데이터셋 로드"""
+        return await self.multi_loader.load_datasets(
+            dataset_names, samples_per_dataset, language
+        )
+
+    def get_available_datasets(self) -> Dict[str, str]:
+        """사용 가능한 데이터셋 목록"""
+        return self.multi_loader.get_available_datasets()
+
+    def get_recommended_datasets(self, language: Language) -> List[str]:
+        """언어별 추천 데이터셋"""
+        return self.multi_loader.get_recommended_datasets_for_language(language)
 
 
 class StatisticalAnalyzer:
@@ -106,6 +135,53 @@ class RAGExperimentPipeline:
         self.enable_embedding_storage = True
         self.storage_path = self.config.paths.embedding_storage_path
         self.evaluation_mode = "retrieval"
+
+        # 지능형 청킹 에이전트 초기화
+        self.use_intelligent_chunking = False  # 기본적으로 기존 방식 사용
+        self.chunking_agent = None
+
+        # 다중 데이터셋 설정
+        self.use_multi_datasets = False
+        self.dataset_names = []
+        self.samples_per_dataset = 100
+
+    def enable_intelligent_chunking(self, context: str = "balanced", force_no_api: bool = False):
+        """지능형 청킹 에이전트를 활성화합니다."""
+        self.use_intelligent_chunking = True
+        self.chunking_agent = ChunkingAgent(
+            language=Language.ENGLISH,  # 기본값, 실행 시 조정 가능
+            chunk_size_limit=self.config.experiment.chunk_size_limit,
+            overlap_ratio=self.config.experiment.overlap_ratio,
+            default_context=context
+        )
+        logger.info(f"지능형 청킹 에이전트 활성화 (컨텍스트: {context})")
+
+    def disable_intelligent_chunking(self):
+        """지능형 청킹 에이전트를 비활성화합니다."""
+        self.use_intelligent_chunking = False
+        self.chunking_agent = None
+        logger.info("지능형 청킹 에이전트 비활성화 - 기존 방식 사용")
+
+    def enable_multi_datasets(self, dataset_names: List[str], samples_per_dataset: int = 100):
+        """다중 데이터셋 모드를 활성화합니다."""
+        self.use_multi_datasets = True
+        self.dataset_names = dataset_names
+        self.samples_per_dataset = samples_per_dataset
+        logger.info(f"다중 데이터셋 모드 활성화: {len(dataset_names)}개 데이터셋, 각 {samples_per_dataset}개 샘플")
+        for name in dataset_names:
+            logger.info(f"  - {name}")
+
+    def list_available_datasets(self, language: Language):
+        """사용 가능한 데이터셋 목록을 출력합니다."""
+        available = self.data_processor.get_available_datasets()
+        recommended = self.data_processor.get_recommended_datasets(language)
+
+        logger.info("=== 사용 가능한 데이터셋 ===")
+        for name, description in available.items():
+            status = " [추천]" if name in recommended else ""
+            logger.info(f"{name}: {description}{status}")
+
+        return available, recommended
 
     async def run_full_experiment(self) -> Dict[str, Any]:
         """전체 실험 실행"""
@@ -145,38 +221,224 @@ class RAGExperimentPipeline:
 
     async def run_language_experiment(self, language: Language) -> List[EvaluationResult]:
         results = []
-        documents, queries = await self.data_processor.load_data(language)
+
+        # 데이터 로드 방식 선택
+        if self.use_multi_datasets and self.dataset_names:
+            logger.info(f"다중 데이터셋 모드로 데이터 로드 중...")
+            documents, queries = await self.data_processor.load_multi_datasets(
+                self.dataset_names, language, self.samples_per_dataset
+            )
+        else:
+            logger.info(f"기존 JSON 파일 모드로 데이터 로드 중...")
+            documents, queries = await self.data_processor.load_data(language)
+
         if not documents or not queries:
             logger.error(f"{language.value} 데이터셋 로드에 실패하여 실험을 중단합니다.")
             return []
 
         logger.info(f"{language.value} 데이터 로드 완료: {len(documents)}개 문서, {len(queries)}개 쿼리")
 
-        logger.info("모든 청킹 전략을 병렬로 실행합니다...")
+        # 지능형 자동 선택 모드 체크
+        if (self.use_intelligent_chunking and
+            hasattr(self, '_intelligent_mode') and
+            self._intelligent_mode == "auto_select"):
+            logger.info("지능형 자동 전략 선택 모드로 실행합니다...")
+            results = await self._run_intelligent_auto_select(documents, queries, language)
+        else:
+            logger.info("모든 청킹 전략을 병렬로 실행합니다...")
+            tasks = [
+                self._run_single_strategy_with_components(strategy, documents, queries, language)
+                for strategy in ChunkingStrategy
+            ]
+            strategy_results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        tasks = [
-            self._run_single_strategy_with_components(strategy, documents, queries, language)
-            for strategy in ChunkingStrategy
-        ]
-        strategy_results = await asyncio.gather(*tasks, return_exceptions=True)
-
-        for i, result in enumerate(strategy_results):
-            strategy = list(ChunkingStrategy)[i]
-            if isinstance(result, Exception):
-                logger.error(f"{strategy.value} 전략 실행 중 오류 발생: {result}", exc_info=True)
-                self.experiment_run.add_error(str(result), f"{language.value}-{strategy.value}")
-                # 모든 필드를 채워서 EvaluationResult 객체 생성
-                results.append(EvaluationResult(
-                    strategy=strategy.value, language=language, num_samples=0,
-                    hallucination_auroc=0.0, context_relevance_rmse=0.0,
-                    utilization_rmse=0.0, recall_at_k=0.0, mrr=0.0
-                ))
-            elif result:
-                results.append(result)
-                self.experiment_run.add_result(result)
-                self._log_strategy_completion(result)
+            for i, result in enumerate(strategy_results):
+                strategy = list(ChunkingStrategy)[i]
+                if isinstance(result, Exception):
+                    logger.error(f"{strategy.value} 전략 실행 중 오류 발생: {result}", exc_info=True)
+                    self.experiment_run.add_error(str(result), f"{language.value}-{strategy.value}")
+                    # 모든 필드를 채워서 EvaluationResult 객체 생성
+                    results.append(EvaluationResult(
+                        strategy=strategy.value, language=language, num_samples=0,
+                        hallucination_auroc=0.0, context_relevance_rmse=0.0,
+                        utilization_rmse=0.0, recall_at_k=0.0, mrr=0.0
+                    ))
+                elif result:
+                    results.append(result)
+                    self.experiment_run.add_result(result)
+                    self._log_strategy_completion(result)
 
         return results
+
+    async def _run_intelligent_auto_select(
+        self,
+        documents: List[Document],
+        queries: List[Query],
+        language: Language
+    ) -> List[EvaluationResult]:
+        """지능형 자동 전략 선택 모드로 실험을 실행합니다."""
+
+        if not self.chunking_agent:
+            logger.error("청킹 에이전트가 초기화되지 않았습니다.")
+            return []
+
+        logger.info("각 문서마다 최적의 전략을 자동 선택하여 청킹합니다...")
+
+        # 전략별 결과를 수집할 딕셔너리
+        strategy_results = {}
+        strategy_counts = {}
+
+        # 샘플 크기 제한
+        sample_size = min(len(documents), len(queries), self.config.experiment.sample_size)
+
+        # 각 문서에 대해 최적 전략 선택 및 청킹
+        for i in range(sample_size):
+            doc = documents[i]
+            query = queries[i] if i < len(queries) else None
+
+            try:
+                # 라우터를 통해 최적 전략 추천
+                recommendation = await self.chunking_agent.router.recommend_strategy(
+                    doc, query, self.chunking_agent.default_context
+                )
+
+                selected_strategy = recommendation.primary_strategy
+                logger.info(f"문서 {doc.id}: 선택된 전략 = {selected_strategy.value} "
+                           f"(신뢰도: {recommendation.confidence:.2f})")
+
+                # 선택된 전략으로 청킹 수행
+                chunking_result = await self.chunking_agent.chunk_document(
+                    doc, query, force_strategy=selected_strategy
+                )
+
+                if chunking_result.success:
+                    # 전략별 결과 수집
+                    strategy_name = selected_strategy.value
+                    if strategy_name not in strategy_results:
+                        strategy_results[strategy_name] = []
+                        strategy_counts[strategy_name] = 0
+
+                    strategy_results[strategy_name].append((doc, query, chunking_result.chunks))
+                    strategy_counts[strategy_name] += 1
+                else:
+                    logger.warning(f"문서 {doc.id} 청킹 실패: {chunking_result.error_message}")
+
+            except Exception as e:
+                logger.error(f"문서 {doc.id} 처리 중 오류: {e}")
+
+        # 전략별 성능 평가
+        logger.info("전략별 성능 평가를 시작합니다...")
+        evaluation_results = []
+
+        for strategy_name, doc_results in strategy_results.items():
+            if not doc_results:
+                continue
+
+            try:
+                # 각 전략별로 평가 수행
+                strategy_enum = ChunkingStrategy(strategy_name)
+                components = self._initialize_components_for_strategy(strategy_enum, language)
+
+                # 평가 로직 (간소화된 버전)
+                eval_result = await self._evaluate_strategy_results(
+                    strategy_enum, doc_results, components, language
+                )
+
+                if eval_result:
+                    evaluation_results.append(eval_result)
+                    self.experiment_run.add_result(eval_result)
+
+                logger.success(f"전략 {strategy_name} 평가 완료 "
+                              f"(사용된 문서: {strategy_counts[strategy_name]}개)")
+
+            except Exception as e:
+                logger.error(f"전략 {strategy_name} 평가 실패: {e}")
+
+        # 전략 사용 통계 로그
+        logger.info("=== 전략 사용 통계 ===")
+        total_docs = sum(strategy_counts.values())
+        for strategy_name, count in strategy_counts.items():
+            percentage = (count / total_docs) * 100 if total_docs > 0 else 0
+            logger.info(f"{strategy_name}: {count}개 문서 ({percentage:.1f}%)")
+
+        return evaluation_results
+
+    async def _evaluate_strategy_results(
+        self,
+        strategy: ChunkingStrategy,
+        doc_results: List[Tuple[Document, Query, List[Chunk]]],
+        components: Dict[str, Any],
+        language: Language
+    ) -> Optional[EvaluationResult]:
+        """전략별 결과를 평가합니다."""
+
+        try:
+            retriever = components["retriever"]
+            evaluator = components["evaluator"]
+
+            responses = []
+            ground_truths = []
+
+            # 모든 청크를 수집
+            all_chunks = []
+            for doc, query, chunks in doc_results:
+                all_chunks.extend(chunks)
+
+            # 각 쿼리에 대해 검색 및 응답 생성
+            for doc, query, chunks in doc_results:
+                try:
+                    # 검색 수행
+                    retrieved_chunks = await retriever.retrieve(
+                        query.question, all_chunks,
+                        k=self.config.experiment.top_k_retrieval
+                    )
+
+                    # 응답 생성
+                    response = RAGResponse(
+                        strategy=strategy,
+                        query=query.question,
+                        query_id=query.id,
+                        response="[INTELLIGENT AUTO-SELECT MODE]",
+                        chunks_used=retrieved_chunks if retrieved_chunks else [],
+                        confidence=0.0
+                    )
+
+                    # retrieved_chunks 추가
+                    if retrieved_chunks:
+                        ranked = []
+                        for i, ch in enumerate(retrieved_chunks, 1):
+                            text = getattr(ch, 'content', getattr(ch, 'page_content', ''))
+                            chunk_obj = SimpleNamespace(
+                                content=text, rank=i,
+                                score=getattr(ch, "score", 1.0),
+                                source="retrieval", doc_id=doc.id
+                            )
+                            ranked.append(chunk_obj)
+                        response.retrieved_chunks = ranked
+                    else:
+                        response.retrieved_chunks = []
+
+                    responses.append(response)
+                    ground_truths.append(query.expected_answer)
+
+                except Exception as e:
+                    logger.error(f"쿼리 {query.id} 처리 실패: {e}")
+
+            # 평가 수행
+            if responses:
+                eval_result = await evaluator.evaluate_responses(responses, ground_truths)
+                eval_result.strategy = f"{strategy.value}_intelligent"
+                eval_result.metadata.update({
+                    "intelligent_mode": True,
+                    "documents_processed": len(doc_results),
+                    "auto_selected": True
+                })
+                return eval_result
+
+        except Exception as e:
+            logger.error(f"전략 {strategy.value} 평가 중 오류: {e}")
+
+        return None
 
     async def _run_single_strategy_with_components(
             self, strategy: ChunkingStrategy, documents: List[Document],
@@ -277,14 +539,38 @@ class RAGExperimentPipeline:
         if not loaded_from_storage:
             try:
                 chunk_start = time.time()
-                if strategy == ChunkingStrategy.QUERY_AWARE:
-                    chunks = await chunker.query_aware_chunk(doc, query)  # query 객체를 그대로 전달
-                else:
-                    chunks = await chunker.chunk_document(doc)
 
+                # 지능형 청킹 에이전트 사용 여부 확인
+                if self.use_intelligent_chunking and self.chunking_agent:
+                    # 지능형 에이전트를 사용한 청킹
+                    logger.info(f"문서 {doc.id}에 지능형 청킹 에이전트 사용")
+
+                    # 언어 설정 업데이트
+                    self.chunking_agent.language = language
+
+                    # 전략 강제 지정 (기존 실험과의 호환성을 위해)
+                    chunking_result = await self.chunking_agent.chunk_document(
+                        doc, query, force_strategy=strategy
+                    )
+
+                    if chunking_result.success:
+                        chunks = chunking_result.chunks
+                        logger.info(f"지능형 에이전트 청킹 성공: {len(chunks)}개 청크 생성")
+                    else:
+                        logger.warning(f"지능형 에이전트 청킹 실패: {chunking_result.error_message}")
+                        chunks = []
+                else:
+                    # 기존 청킹 방식 사용
+                    if strategy == ChunkingStrategy.QUERY_AWARE:
+                        chunks = await chunker.query_aware_chunk(doc, query)  # query 객체를 그대로 전달
+                    else:
+                        chunks = await chunker.chunk_document(doc)
+
+                # 청크 후처리
                 for chunk in chunks:
                     if not hasattr(chunk, 'doc_id'):
                         chunk.doc_id = doc.id
+
                 processing_times["chunking"] = time.time() - chunk_start
 
                 if not chunks:
@@ -608,6 +894,37 @@ if __name__ == "__main__":
         "--storage_path", type=str, default=str(config.paths.embedding_storage_path),
         help="임베딩 저장 경로"
     )
+    parser.add_argument(
+        "--use_intelligent_chunking", action="store_true",
+        help="지능형 청킹 에이전트를 활성화합니다"
+    )
+    parser.add_argument(
+        "--chunking_context", type=str, default="balanced",
+        choices=["quality_focused", "speed_focused", "balanced", "cost_conscious"],
+        help="청킹 컨텍스트: quality_focused, speed_focused, balanced, cost_conscious"
+    )
+    parser.add_argument(
+        "--intelligent_mode", type=str, default="strategy_override",
+        choices=["strategy_override", "auto_select"],
+        help="지능형 모드: strategy_override (기존 전략 유지), auto_select (자동 전략 선택)"
+    )
+    parser.add_argument(
+        "--use_multi_datasets", action="store_true",
+        help="다중 허깅페이스 데이터셋을 사용합니다"
+    )
+    parser.add_argument(
+        "--datasets", type=str, nargs="+",
+        default=["squad", "squad_v2", "natural_questions", "ms_marco", "hotpot_qa"],
+        help="사용할 데이터셋 목록 (예: --datasets squad squad_v2 natural_questions)"
+    )
+    parser.add_argument(
+        "--samples_per_dataset", type=int, default=100,
+        help="각 데이터셋에서 가져올 샘플 수"
+    )
+    parser.add_argument(
+        "--list_datasets", action="store_true",
+        help="사용 가능한 데이터셋 목록을 출력하고 종료합니다"
+    )
     args = parser.parse_args()
 
     config.dataset.data_path = args.data_path
@@ -621,14 +938,38 @@ if __name__ == "__main__":
         pipeline = RAGExperimentPipeline()
         pipeline.evaluation_mode = args.mode
 
+        # 데이터셋 목록 출력 모드
+        if args.list_datasets:
+            logger.info("사용 가능한 데이터셋 목록:")
+            available, recommended = pipeline.list_available_datasets(Language.ENGLISH)
+            return
+
         if args.enable_embedding_storage:
             pipeline.enable_embedding_storage = True
         pipeline.storage_path = Path(args.storage_path)
+
+        # 다중 데이터셋 설정
+        if args.use_multi_datasets:
+            pipeline.enable_multi_datasets(args.datasets, args.samples_per_dataset)
+
+        # 지능형 청킹 설정
+        if args.use_intelligent_chunking:
+            force_no_api = args.mode == "retrieval" and args.chunking_context == "cost_conscious"
+            pipeline.enable_intelligent_chunking(
+                context=args.chunking_context,
+                force_no_api=force_no_api
+            )
+            # 지능형 모드 설정
+            pipeline._intelligent_mode = args.intelligent_mode
 
         logger.info("=" * 50)
         logger.info(f"RAG 청킹 전략 비교 연구 시작 (모드: {pipeline.evaluation_mode})")
         if args.enable_embedding_storage:
             logger.info(f"임베딩 저장 활성화: {pipeline.storage_path}")
+        if args.use_multi_datasets:
+            logger.info(f"다중 데이터셋 모드: {len(args.datasets)}개 데이터셋 ({args.samples_per_dataset}개씩)")
+        if args.use_intelligent_chunking:
+            logger.info(f"지능형 청킹 활성화 (컨텍스트: {args.chunking_context}, 모드: {args.intelligent_mode})")
         logger.info("=" * 50)
 
         try:
