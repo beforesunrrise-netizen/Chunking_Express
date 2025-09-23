@@ -5,9 +5,9 @@ Configuration file for RAG Chunking Strategy Comparison Study
 
 import os
 from pathlib import Path
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List, Optional
-from enum import Enum
+from enum import Enum, auto
 from src.env.config_yml import api_config
 
 
@@ -18,19 +18,146 @@ class Language(Enum):
 
 
 class ChunkingStrategy(Enum):
+    """청킹 전략"""
     FIXED_SIZE = "fixed_size"
     SEMANTIC = "semantic"
     KEYWORD = "keyword"
     QUERY_AWARE = "query_aware"
     RECURSIVE = "recursive"
     TEXT_SIMILARITY = "text_similarity"
+    ADAPTIVE = "adaptive"  # LangGraph 기반 적응형 전략 추가
 
-
+# +++ FIX: Added the missing EnsembleMethod Enum +++
 class EnsembleMethod(Enum):
-    """앙상블 방법"""
-    VOTING = "voting"
-    RERANKING = "reranking"
-    FUSION = "fusion"
+    """Defines the methods for ensembling or combining chunking strategies."""
+    RANK_FUSION = auto()
+    WEIGHTED_AVERAGE = auto()
+    MAJORITY_VOTE = auto()
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+class DatasetType(Enum):
+    """데이터셋 타입"""
+    SQUAD = "squad"
+    SQUAD_V2 = "squad_v2"
+    NEWSQA = "newsqa"
+    TECHQA = "techqa"
+    COVID_QA = "covid_qa"
+    NARRATIVEQA = "deepmind/narrativeqa"
+    CUSTOM = "custom"
+
+
+@dataclass
+class DatasetConfig:
+    """데이터셋 설정"""
+    # 기본 데이터셋
+    default_dataset: DatasetType = DatasetType.SQUAD
+
+    # 데이터셋별 설정
+    dataset_configs: Dict[str, Dict] = field(default_factory=lambda: {
+        "squad": {
+            "path": "squad",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        },
+        "squad_v2": {
+            "path": "squad_v2",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        },
+        "newsqa": {
+            "path": "newsqa",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        },
+        "techqa": {
+            "path": "techqa",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        },
+        "covid_qa": {
+            "path": "covid_qa",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        },
+        "deepmind/narrativeqa": {
+            "path": "deepmind/narrativeqa",
+            "split": "train",
+            "sample_size": 100,
+            "format": "standardized"
+        }
+    })
+
+    # 통합 데이터셋 설정
+    combined_dataset_path: str = "combined_qa_dataset.jsonl"
+    use_combined: bool = False
+
+    # 데이터 분할
+    train_split: float = 0.8
+    val_split: float = 0.1
+    test_split: float = 0.1
+    random_seed: int = 42
+
+    def get_dataset_config(self, dataset_name: str) -> Dict:
+        """특정 데이터셋 설정 반환"""
+        if dataset_name in self.dataset_configs:
+            return self.dataset_configs[dataset_name]
+        return self.dataset_configs.get(self.default_dataset.value, {})
+
+
+@dataclass
+class AdaptiveChunkingConfig:
+    """적응형 청킹 설정"""
+    enable_adaptive: bool = True
+    use_llm_analysis: bool = True
+    llm_model: str = "gpt-4"
+
+    # 카테고리별 전략 매핑
+    category_strategies: Dict[str, Dict[str, List[str]]] = field(default_factory=lambda: {
+        "science": {
+            "high_complexity": ["semantic", "recursive"],
+            "medium_complexity": ["semantic"],
+            "low_complexity": ["fixed_size"]
+        },
+        "technology": {
+            "high_complexity": ["keyword", "semantic"],
+            "medium_complexity": ["keyword"],
+            "low_complexity": ["fixed_size"]
+        },
+        "business": {
+            "high_complexity": ["semantic", "keyword"],
+            "medium_complexity": ["keyword"],
+            "low_complexity": ["fixed_size"]
+        },
+        "medical": {
+            "high_complexity": ["semantic", "keyword"],
+            "medium_complexity": ["semantic"],
+            "low_complexity": ["keyword"]
+        },
+        "news": {
+            "high_complexity": ["semantic"],
+            "medium_complexity": ["fixed_size"],
+            "low_complexity": ["fixed_size"]
+        },
+        "literature": {
+            "high_complexity": ["text_similarity", "semantic"],
+            "medium_complexity": ["semantic"],
+            "low_complexity": ["fixed_size"]
+        }
+    })
+
+    # 성능 학습 설정
+    enable_learning: bool = True
+    history_file: str = "chunking_history.json"
+    min_history_size: int = 10
+
+    # 품질 임계값
+    quality_threshold: float = 0.6
+    enable_backup_strategies: bool = True
 
 
 @dataclass
@@ -46,13 +173,21 @@ class ModelConfig:
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 5
+    sample_size: int = 100
     chunk_size_limit: int = 512
     overlap_ratio: float = 0.1
     context_window: int = 2
     top_k_retrieval: int = 5
     batch_size: int = 10
     num_workers: int = 4
+
+    # 실험 모드
+    experiment_mode: str = "adaptive"  # adaptive, traditional, comparison
+    compare_baseline: bool = False
+
+    # 병렬 처리
+    max_concurrent: int = 5
+    use_async: bool = True
 
 
 @dataclass
@@ -65,9 +200,11 @@ class EvaluationConfig:
     def __post_init__(self):
         if self.metrics is None:
             self.metrics = [
-                "hallucination_auroc",
-                "context_relevance_rmse",
-                "utilization_rmse",
+                "mrr",  # Mean Reciprocal Rank
+                "hit_at_k",  # Hit@K
+                "recall",
+                "precision",
+                "f1_score"
             ]
 
 
@@ -86,10 +223,9 @@ class PathConfig:
         self.results_dir = self.root_dir / "results"
         self.logs_dir = self.root_dir / "logs"
         self.cache_dir = self.root_dir / "cache"
-
-        # NOTE: 필요 시 환경변수로 치환 가능 (예: os.getenv("EMBEDDING_STORE", ...))
         self.embedding_storage_path = Path(
-            "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data"
+            os.getenv("EMBEDDING_STORE_PATH",
+                      "/Users/jaeyoung/Desktop/Projects/Chunking_Express/src/data")
         )
 
         for dir_path in [
@@ -104,7 +240,7 @@ class PathConfig:
 
 @dataclass
 class APIConfig:
-    """API 설정 (YAML에서 불러오기)"""
+    """API 설정"""
     openai_api_key: str = api_config.openai_api_key
     openai_org_id: Optional[str] = api_config.openai_org_id
     request_timeout: int = api_config.request_timeout
@@ -121,20 +257,15 @@ class LoggingConfig:
     retention: str = "7 days"
 
     def setup_logging(self, log_dir: Path):
-        """로깅 설정 초기화"""
         from loguru import logger
-
-        # 기본 로거 제거
         logger.remove()
 
-        # 콘솔 출력
         logger.add(
             sink=lambda msg: print(msg, end=""),
             format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
             level=self.level,
         )
 
-        # 파일 출력
         logger.add(
             log_dir / "rag_experiment_{time}.log",
             rotation=self.file_rotation,
@@ -147,28 +278,13 @@ class LoggingConfig:
 
 
 @dataclass
-class DatasetConfig:
-    """데이터셋 설정"""
-    data_path: str = "rag_squad_train_1000_samples.json"
-    train_split: float = 0.8
-    val_split: float = 0.1
-    test_split: float = 0.1
-    random_seed: int = 42
-
-
-@dataclass
 class CostConfig:
     """비용 관련 설정"""
-    # GPT-4o-mini pricing (per 1K tokens)
     gpt4_input_cost: float = 0.005
     gpt4_output_cost: float = 0.015
-
-    # Embedding pricing (per 1K tokens)
     embedding_cost: float = 0.00013
-
-    # 예산 제한
-    max_budget: float = 100.0  # USD
-    warning_threshold: float = 50.0  # USD
+    max_budget: float = 100.0
+    warning_threshold: float = 50.0
 
 
 class Config:
@@ -182,56 +298,27 @@ class Config:
         self.api = APIConfig()
         self.logging = LoggingConfig()
         self.dataset = DatasetConfig()
+        self.adaptive = AdaptiveChunkingConfig()
         self.cost = CostConfig()
 
         # 로거 설정
         self.logger = self.logging.setup_logging(self.paths.logs_dir)
 
-        # API 키 확인 (YAML 기반)
-        if not self.api.openai_api_key or not isinstance(self.api.openai_api_key, str):
-            raise ValueError("OpenAI API 키가 설정되지 않았습니다. config.yml을 확인하세요.")
+        # API 키 확인
+        if not self.api.openai_api_key:
+            raise ValueError("OpenAI API 키가 설정되지 않았습니다.")
 
-    def get_model_config(self, language: Language) -> Dict:
-        """언어별 모델 설정 반환"""
-        if language == Language.KOREAN:
-            return {
-                "gpt_model": self.model.gpt_model,
-                "embedding_model": "text-embedding-3-large",  # 다국어 지원
-                "temperature": self.model.temperature,
-            }
-        else:
-            return {
-                "gpt_model": self.model.gpt_model,
-                "embedding_model": self.model.embedding_model,
-                "temperature": self.model.temperature,
-            }
+    def get_dataset_path(self, dataset_name: str) -> Path:
+        """데이터셋 경로 반환"""
+        config = self.dataset.get_dataset_config(dataset_name)
+        path = config.get("path", dataset_name)
 
-    def get_data_path(self, language: Language) -> Path:
-        p = Path(self.dataset.data_path)
+        # 통합 데이터셋 사용 시
+        if self.dataset.use_combined:
+            return self.paths.data_dir / self.dataset.combined_dataset_path
 
-        # 절대경로면 그대로
-        if p.is_absolute():
-            return p
-
-        # 상대경로인데 이미 data/로 시작하면 root_dir 기준으로만 결합
-        if str(p).startswith(("data/", "data\\")):
-            return (self.paths.root_dir / p).resolve()
-
-        # 그 외엔 data_dir/파일명
-        return (self.paths.data_dir / p.name).resolve()
-
-    def estimate_cost(self, input_tokens: int, output_tokens: int, embedding_tokens: int) -> float:
-        """예상 비용 계산"""
-        input_cost = (input_tokens / 1000) * self.cost.gpt4_input_cost
-        output_cost = (output_tokens / 1000) * self.cost.gpt4_output_cost
-        embedding_cost = (embedding_tokens / 1000) * self.cost.embedding_cost
-
-        total_cost = input_cost + output_cost + embedding_cost
-
-        if total_cost > self.cost.warning_threshold:
-            self.logger.warning(f"예상 비용이 경고 임계값을 초과합니다: ${total_cost:.2f}")
-
-        return total_cost
+        # 개별 데이터셋
+        return self.paths.data_dir / f"{path.replace('/', '_')}_processed.jsonl"
 
     def to_dict(self) -> Dict:
         """설정을 딕셔너리로 변환"""
@@ -239,7 +326,16 @@ class Config:
             "model": self.model.__dict__,
             "experiment": self.experiment.__dict__,
             "evaluation": self.evaluation.__dict__,
-            "dataset": self.dataset.__dict__,
+            "dataset": {
+                "default": self.dataset.default_dataset.value,
+                "configs": self.dataset.dataset_configs,
+                "use_combined": self.dataset.use_combined
+            },
+            "adaptive": {
+                "enabled": self.adaptive.enable_adaptive,
+                "llm_analysis": self.adaptive.use_llm_analysis,
+                "category_strategies": self.adaptive.category_strategies
+            },
             "cost": self.cost.__dict__,
         }
 

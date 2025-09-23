@@ -89,7 +89,8 @@ class RAGEvaluator(BaseEvaluator):
         if not responses:
             return self._create_empty_result()
 
-        Ks = sorted(set([1, 3, self.k]))
+        # Ks = sorted(set([1, 3, self.k]))
+        Ks = sorted(self.k)
         aggregate: Dict[int, Dict[str, List[float]]] = {
             K: {m: [] for m in ("hit_at_k", "precision_at_k", "recall_at_k", "mrr", "map", "ndcg")} for K in Ks
         }
@@ -116,7 +117,11 @@ class RAGEvaluator(BaseEvaluator):
         }
 
         # legacy 호환: recall_at_k는 Hit@K로 매핑 (single-label 리콜과 동일)
-        final_legacy_recall_at_k = summary_at_k[self.k]["hit_at_k"]
+        # final_legacy_recall_at_k = summary_at_k[self.k]["hit_at_k"]
+        k = int(self.k)
+        legacy = summary_at_k.get(k) or summary_at_k.get(max(Ks))
+        final_legacy_recall_at_k = legacy.get("hit_at_k", 0.0) if legacy else 0.0
+
         final_mrr = summary_at_k[self.k]["mrr"]
         strategy = responses[0].strategy.value if responses and responses[0].strategy else "unknown"
 
