@@ -34,7 +34,7 @@ from chunkers import (
 )
 
 # 지능형 청킹 에이전트 시스템
-from _agents import ChunkingAgent, ChunkingRouter, TextAnalyzer
+from agents import ChunkingAgent, ChunkingRouter, TextAnalyzer
 
 # 다중 데이터셋 로더
 from data.multi_dataset_loader import MultiDatasetLoader
