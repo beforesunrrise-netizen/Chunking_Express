@@ -42,6 +42,9 @@ class TextCharacteristics:
     has_technical_terms: bool
     readability_score: float  # 0.0-1.0 (가독성)
 
+    # Document 참조 (도메인 정보 접근용)
+    document: Optional[Document] = None
+
 
 class TextAnalyzer:
     """텍스트 분석기"""
@@ -139,7 +142,10 @@ class TextAnalyzer:
 
             # 기타
             has_technical_terms=has_technical,
-            readability_score=readability
+            readability_score=readability,
+
+            # Document 참조 (도메인 정보 접근용)
+            document=document
         )
 
         logger.info(f"문서 {document.id} 분석 완료: "

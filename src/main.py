@@ -288,6 +288,15 @@ class RAGExperimentPipeline:
         strategy_results = {}
         strategy_counts = {}
 
+        # 논문 작성용 분석 데이터 수집
+        strategy_analysis_data = {
+            "documents_processed": [],
+            "strategy_selections": [],
+            "domain_strategy_mapping": {},
+            "confidence_scores": [],
+            "reasoning_patterns": []
+        }
+
         # 샘플 크기 제한
         sample_size = min(len(documents), len(queries), self.config.experiment.sample_size)
 
@@ -305,6 +314,27 @@ class RAGExperimentPipeline:
                 selected_strategy = recommendation.primary_strategy
                 logger.info(f"문서 {doc.id}: 선택된 전략 = {selected_strategy.value} "
                            f"(신뢰도: {recommendation.confidence:.2f})")
+
+                # 논문 작성용 데이터 수집
+                doc_domain = doc.metadata.get('domain', 'unknown') if hasattr(doc, 'metadata') else 'unknown'
+                strategy_analysis_data["documents_processed"].append({
+                    "doc_id": doc.id,
+                    "domain": doc_domain,
+                    "length": len(doc.content),
+                    "selected_strategy": selected_strategy.value,
+                    "confidence": recommendation.confidence,
+                    "reasoning": recommendation.reasoning
+                })
+
+                strategy_analysis_data["strategy_selections"].append(selected_strategy.value)
+                strategy_analysis_data["confidence_scores"].append(recommendation.confidence)
+                strategy_analysis_data["reasoning_patterns"].append(recommendation.reasoning)
+
+                # 도메인-전략 매핑 업데이트
+                if doc_domain not in strategy_analysis_data["domain_strategy_mapping"]:
+                    strategy_analysis_data["domain_strategy_mapping"][doc_domain] = {}
+                domain_mapping = strategy_analysis_data["domain_strategy_mapping"][doc_domain]
+                domain_mapping[selected_strategy.value] = domain_mapping.get(selected_strategy.value, 0) + 1
 
                 # 선택된 전략으로 청킹 수행
                 chunking_result = await self.chunking_agent.chunk_document(
@@ -360,6 +390,17 @@ class RAGExperimentPipeline:
         for strategy_name, count in strategy_counts.items():
             percentage = (count / total_docs) * 100 if total_docs > 0 else 0
             logger.info(f"{strategy_name}: {count}개 문서 ({percentage:.1f}%)")
+
+        # 논문 작성용 분석 결과 저장
+        await self._save_strategy_analysis(strategy_analysis_data)
+
+        # 평가 결과에 분석 데이터 추가
+        for result in evaluation_results:
+            if hasattr(result, 'metadata'):
+                result.metadata.update({
+                    "strategy_analysis": strategy_analysis_data,
+                    "auto_selection_mode": True
+                })
 
         return evaluation_results
 
@@ -827,6 +868,62 @@ class RAGExperimentPipeline:
         await asyncio.gather(*save_tasks)
         logger.info(f"결과 저장 완료: {results_dir}")
 
+    async def _save_strategy_analysis(self, analysis_data: Dict[str, Any]):
+        """전략 분석 데이터를 논문 작성용으로 저장"""
+        try:
+            from collections import Counter
+            import numpy as np
+
+            # 통계 분석
+            strategy_counter = Counter(analysis_data["strategy_selections"])
+            confidence_scores = analysis_data["confidence_scores"]
+
+            analysis_summary = {
+                "experiment_metadata": {
+                    "run_id": self.run_id,
+                    "timestamp": datetime.now().isoformat(),
+                    "total_documents": len(analysis_data["documents_processed"]),
+                    "evaluation_mode": self.evaluation_mode
+                },
+                "strategy_distribution": dict(strategy_counter),
+                "strategy_percentages": {
+                    strategy: (count / len(analysis_data["strategy_selections"])) * 100
+                    for strategy, count in strategy_counter.items()
+                },
+                "confidence_statistics": {
+                    "mean": float(np.mean(confidence_scores)),
+                    "std": float(np.std(confidence_scores)),
+                    "min": float(np.min(confidence_scores)),
+                    "max": float(np.max(confidence_scores)),
+                    "median": float(np.median(confidence_scores))
+                },
+                "domain_analysis": analysis_data["domain_strategy_mapping"],
+                "detailed_decisions": analysis_data["documents_processed"]
+            }
+
+            # 저장 경로 설정
+            results_dir = self.config.paths.results_dir / "strategy_analysis" / self.run_id
+            results_dir.mkdir(exist_ok=True, parents=True)
+
+            # JSON 저장
+            analysis_path = results_dir / "strategy_analysis.json"
+            async with aiofiles.open(analysis_path, "w", encoding="utf-8") as f:
+                await f.write(json.dumps(analysis_summary, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder))
+
+            # CSV 저장 (스프레드시트 분석용)
+            try:
+                import pandas as pd
+                df = pd.DataFrame(analysis_data["documents_processed"])
+                csv_path = results_dir / "strategy_decisions.csv"
+                df.to_csv(csv_path, index=False, encoding="utf-8")
+            except ImportError:
+                logger.warning("pandas가 설치되지 않아 CSV 파일을 저장할 수 없습니다.")
+
+            logger.info(f"전략 분석 결과 저장 완료: {results_dir}")
+
+        except Exception as e:
+            logger.error(f"전략 분석 저장 실패: {e}")
+
     def _create_summary(self, results: List[EvaluationResult]) -> Dict[str, Any]:
         """실험 요약 생성"""
         valid_results = [r for r in results if r and r.num_samples > 0]
@@ -925,9 +1022,17 @@ if __name__ == "__main__":
         "--list_datasets", action="store_true",
         help="사용 가능한 데이터셋 목록을 출력하고 종료합니다"
     )
+    parser.add_argument(
+        "-n", "--sample_size", type=int, default=None,
+        help="실험에 사용할 샘플 크기를 설정합니다. 설정하지 않으면 config 기본값을 사용합니다."
+    )
     args = parser.parse_args()
 
     config.dataset.data_path = args.data_path
+
+    # sample_size 인자가 주어진 경우 config 업데이트
+    if args.sample_size is not None:
+        config.experiment.sample_size = args.sample_size
 
     if not config.api.openai_api_key or "sk-" not in config.api.openai_api_key:
         logger.error("오류: OPENAI_API_KEY가 유효하지 않습니다. 환경 변수를 확인해주세요.")

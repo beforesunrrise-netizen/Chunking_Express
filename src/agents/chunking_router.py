@@ -29,7 +29,7 @@ class ChunkingRouter:
         self.language = language
         self.text_analyzer = TextAnalyzer(language)
 
-        # 전략별 특성 정의
+        # 전략별 특성 정의 (도메인 특화 업데이트)
         self.strategy_profiles = {
             ChunkingStrategy.SEMANTIC: {
                 "complexity_weight": 0.8,
@@ -37,9 +37,10 @@ class ChunkingRouter:
                 "quality_priority": 0.9,
                 "speed_priority": 0.2,
                 "api_cost": "high",
-                "best_for": ["academic", "technical", "scientific"],
+                "best_for": ["academic", "technical", "scientific", "medical", "narrative"],
+                "domains": ["technical", "medical", "narrative"],
                 "min_text_length": 500,
-                "description": "의미 단위 기반 고품질 청킹"
+                "description": "의미 단위 기반 고품질 청킹 - 복잡한 도메인에 최적"
             },
             ChunkingStrategy.KEYWORD: {
                 "complexity_weight": 0.4,
@@ -48,8 +49,9 @@ class ChunkingRouter:
                 "speed_priority": 0.3,
                 "api_cost": "medium",
                 "best_for": ["business", "news", "structured"],
+                "domains": ["news", "wikipedia"],
                 "min_text_length": 300,
-                "description": "메타데이터 기반 구조화 청킹"
+                "description": "키워드 기반 구조화 청킹 - 뉴스와 정보성 텍스트에 최적"
             },
             ChunkingStrategy.FIXED_SIZE: {
                 "complexity_weight": 0.0,
@@ -58,8 +60,9 @@ class ChunkingRouter:
                 "speed_priority": 1.0,
                 "api_cost": "none",
                 "best_for": ["simple", "fast_processing"],
+                "domains": [],  # 모든 도메인의 baseline
                 "min_text_length": 0,
-                "description": "고정 크기 기반 빠른 청킹"
+                "description": "고정 크기 기반 빠른 청킹 - 모든 도메인의 기준선"
             },
             ChunkingStrategy.QUERY_AWARE: {
                 "complexity_weight": 0.7,
@@ -68,8 +71,9 @@ class ChunkingRouter:
                 "speed_priority": 0.3,
                 "api_cost": "high",
                 "best_for": ["query_specific", "targeted_search"],
+                "domains": ["wikipedia", "technical", "medical"],
                 "min_text_length": 200,
-                "description": "질의 특화 청킹"
+                "description": "질의 특화 청킹 - 정확한 정보 검색이 중요한 도메인"
             },
             ChunkingStrategy.RECURSIVE: {
                 "complexity_weight": 0.5,
@@ -78,6 +82,7 @@ class ChunkingRouter:
                 "speed_priority": 0.5,
                 "api_cost": "low",
                 "best_for": ["long_documents", "hierarchical"],
+                "domains": ["narrative", "wikipedia"],
                 "min_text_length": 1000,
                 "description": "재귀적 계층 청킹"
             },
@@ -161,6 +166,11 @@ class ChunkingRouter:
         scores = {}
         context_weight = self.context_weights.get(context, self.context_weights["balanced"])
 
+        # 도메인 정보 추출 (Document 메타데이터에서)
+        document_domain = None
+        if hasattr(characteristics, 'document') and characteristics.document:
+            document_domain = characteristics.document.metadata.get('domain')
+
         for strategy, profile in self.strategy_profiles.items():
             # API 사용 제한 검사
             if force_no_api and profile["api_cost"] in ["high", "medium"]:
@@ -170,6 +180,9 @@ class ChunkingRouter:
             # 기본 적합도 점수
             base_score = self._calculate_base_score(strategy, characteristics, profile)
 
+            # 도메인 특화 보너스 계산
+            domain_bonus = self._calculate_domain_bonus(strategy, document_domain)
+
             # 쿼리 특화 보너스
             query_bonus = self._calculate_query_bonus(strategy, query)
 
@@ -178,8 +191,8 @@ class ChunkingRouter:
                 strategy, profile, context_weight
             )
 
-            # 최종 점수 계산
-            final_score = (base_score * 0.5 + query_bonus * 0.2 + context_score * 0.3)
+            # 최종 점수 계산 (도메인 보너스 추가)
+            final_score = (base_score * 0.4 + domain_bonus * 0.3 + query_bonus * 0.15 + context_score * 0.15)
             scores[strategy] = min(final_score, 1.0)
 
         return scores
@@ -196,7 +209,9 @@ class ChunkingRouter:
 
         # 텍스트 길이 적합성
         min_length = profile["min_text_length"]
-        if characteristics.length >= min_length:
+        if min_length == 0:
+            length_score = 1.0  # min_length가 0인 경우 (FIXED_SIZE 등)
+        elif characteristics.length >= min_length:
             length_score = min(characteristics.length / (min_length * 3), 1.0)
         else:
             length_score = characteristics.length / min_length * 0.5
@@ -438,3 +453,67 @@ class ChunkingRouter:
             }
 
         return comparison
+
+    def _calculate_domain_bonus(self, strategy: ChunkingStrategy, document_domain: Optional[str]) -> float:
+        """도메인 기반 전략 보너스 점수 계산"""
+        if not document_domain:
+            return 0.5  # 도메인 정보 없으면 중간값
+
+        profile = self.strategy_profiles.get(strategy, {})
+        preferred_domains = profile.get("domains", [])
+
+        # 해당 전략이 이 도메인에 특화되어 있으면 보너스
+        if document_domain in preferred_domains:
+            bonus = 1.0
+            logger.debug(f"{strategy.value} gets domain bonus for {document_domain}")
+        else:
+            # 도메인별 특별 룰
+            bonus = self._get_domain_specific_bonus(strategy, document_domain)
+
+        return bonus
+
+    def _get_domain_specific_bonus(self, strategy: ChunkingStrategy, domain: str) -> float:
+        """도메인별 특별 보너스 룰"""
+
+        # NewsQA (뉴스): 구조화된 정보가 중요
+        if domain == "news":
+            if strategy == ChunkingStrategy.KEYWORD:
+                return 0.9  # 뉴스는 키워드 기반이 효과적
+            elif strategy == ChunkingStrategy.RECURSIVE:
+                return 0.7  # 뉴스 구조에도 괜찮음
+            return 0.4
+
+        # NarrativeQA (서사): 긴 맥락과 의미가 중요
+        elif domain == "narrative":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.95  # 서사는 의미 기반이 최고
+            elif strategy == ChunkingStrategy.RECURSIVE:
+                return 0.8  # 긴 문서에 좋음
+            return 0.3
+
+        # TechQA (기술): 정확성과 구체성이 중요
+        elif domain == "technical":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.9  # 기술 문서는 의미 기반
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.85  # 정확한 정보 검색
+            return 0.4
+
+        # COVID-QA (의료): 정확성이 매우 중요
+        elif domain == "medical":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.95  # 의료는 의미가 매우 중요
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.9  # 정확한 답변 필요
+            return 0.3
+
+        # SQUAD (위키피디아): 균형잡힌 접근
+        elif domain == "wikipedia":
+            if strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.8  # 위키는 질의 기반이 좋음
+            elif strategy == ChunkingStrategy.KEYWORD:
+                return 0.75  # 구조화된 정보
+            return 0.6
+
+        # 기본값
+        return 0.5

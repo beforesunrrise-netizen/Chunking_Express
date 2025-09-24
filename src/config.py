@@ -46,7 +46,7 @@ class ModelConfig:
 @dataclass
 class ExperimentConfig:
     """실험 설정"""
-    sample_size: int = 5
+    sample_size: int = 100
     chunk_size_limit: int = 512
     overlap_ratio: float = 0.1
     context_window: int = 2
