@@ -37,9 +37,9 @@ class ChunkingRouter:
                 "quality_priority": 0.9,
                 "speed_priority": 0.2,
                 "api_cost": "high",
-                "best_for": ["academic", "technical", "scientific", "medical", "narrative"],
-                "domains": ["technical", "medical", "narrative"],
-                "min_text_length": 500,
+                "best_for": ["academic", "technical", "scientific", "medical", "narrative", "legal"],
+                "domains": ["technical", "medical", "narrative", "legal", "scientific"],
+                "min_text_length": 200,
                 "description": "의미 단위 기반 고품질 청킹 - 복잡한 도메인에 최적"
             },
             ChunkingStrategy.KEYWORD: {
@@ -48,9 +48,9 @@ class ChunkingRouter:
                 "quality_priority": 0.7,
                 "speed_priority": 0.3,
                 "api_cost": "medium",
-                "best_for": ["business", "news", "structured"],
-                "domains": ["news", "wikipedia"],
-                "min_text_length": 300,
+                "best_for": ["business", "news", "structured", "legal"],
+                "domains": ["news", "wikipedia", "legal"],
+                "min_text_length": 150,
                 "description": "키워드 기반 구조화 청킹 - 뉴스와 정보성 텍스트에 최적"
             },
             ChunkingStrategy.FIXED_SIZE: {
@@ -71,8 +71,8 @@ class ChunkingRouter:
                 "speed_priority": 0.3,
                 "api_cost": "high",
                 "best_for": ["query_specific", "targeted_search"],
-                "domains": ["wikipedia", "technical", "medical"],
-                "min_text_length": 200,
+                "domains": ["wikipedia", "technical", "medical", "scientific"],
+                "min_text_length": 100,
                 "description": "질의 특화 청킹 - 정확한 정보 검색이 중요한 도메인"
             },
             ChunkingStrategy.RECURSIVE: {
@@ -83,7 +83,7 @@ class ChunkingRouter:
                 "api_cost": "low",
                 "best_for": ["long_documents", "hierarchical"],
                 "domains": ["narrative", "wikipedia"],
-                "min_text_length": 1000,
+                "min_text_length": 500,
                 "description": "재귀적 계층 청킹"
             },
             ChunkingStrategy.TEXT_SIMILARITY: {
@@ -93,7 +93,7 @@ class ChunkingRouter:
                 "speed_priority": 0.4,
                 "api_cost": "medium",
                 "best_for": ["repetitive", "similar_content"],
-                "min_text_length": 400,
+                "min_text_length": 200,
                 "description": "텍스트 유사도 기반 청킹"
             }
         }
@@ -507,13 +507,53 @@ class ChunkingRouter:
                 return 0.9  # 정확한 답변 필요
             return 0.3
 
-        # SQUAD (위키피디아): 균형잡힌 접근
+        # SQUAD/Wikipedia: 균형잡힌 접근
         elif domain == "wikipedia":
             if strategy == ChunkingStrategy.QUERY_AWARE:
                 return 0.8  # 위키는 질의 기반이 좋음
             elif strategy == ChunkingStrategy.KEYWORD:
                 return 0.75  # 구조화된 정보
             return 0.6
+
+        # Web Search 도메인: 다양한 소스, 키워드가 중요
+        elif domain == "web_search":
+            if strategy == ChunkingStrategy.KEYWORD:
+                return 0.85  # 웹 검색은 키워드 기반이 효과적
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.8   # 쿼리 관련성도 중요
+            elif strategy == ChunkingStrategy.SEMANTIC:
+                return 0.7   # 의미 기반도 유용
+            return 0.4
+
+        # Multi-hop 도메인: 복잡한 추론, 의미와 쿼리 기반이 중요
+        elif domain == "multi_hop":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.9   # 복잡한 추론에는 의미 기반이 최고
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.85  # 쿼리 기반 추론도 중요
+            elif strategy == ChunkingStrategy.RECURSIVE:
+                return 0.75  # 계층적 구조 처리에 좋음
+            return 0.3
+
+        # Legal 도메인: 정확성과 구조가 중요
+        elif domain == "legal":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.9  # 법률 문서는 의미 기반이 최적
+            elif strategy == ChunkingStrategy.KEYWORD:
+                return 0.85  # 구조화된 법률 텍스트
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.8  # 정확한 법률 정보 검색
+            return 0.4
+
+        # Scientific 도메인: 정확성과 기술적 내용 중요
+        elif domain == "scientific":
+            if strategy == ChunkingStrategy.SEMANTIC:
+                return 0.95  # 과학 논문은 의미 기반이 최고
+            elif strategy == ChunkingStrategy.QUERY_AWARE:
+                return 0.9   # 정확한 과학 정보 검색
+            elif strategy == ChunkingStrategy.KEYWORD:
+                return 0.7   # 구조화된 과학 텍스트
+            return 0.3
 
         # 기본값
         return 0.5

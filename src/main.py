@@ -110,11 +110,13 @@ class DataProcessor:
         self,
         dataset_names: List[str],
         language: Language,
-        samples_per_dataset: int = 100
+        samples_per_dataset: int = 100,
+        max_text_length: Optional[int] = None,
+        min_text_length: Optional[int] = None
     ) -> Tuple[List[Document], List[Query]]:
         """다중 허깅페이스 데이터셋 로드"""
         return await self.multi_loader.load_datasets(
-            dataset_names, samples_per_dataset, language
+            dataset_names, samples_per_dataset, language, max_text_length, min_text_length
         )
 
     def get_available_datasets(self) -> Dict[str, str]:
@@ -542,6 +544,10 @@ class RAGExperimentPipeline:
         self.dataset_names = []
         self.samples_per_dataset = 100
 
+        # 텍스트 길이 필터링 설정 (짧은 글 실험용)
+        self.max_text_length = 2000
+        self.min_text_length = 50
+
     def enable_intelligent_chunking(self, context: str = "balanced", force_no_api: bool = False):
         """지능형 청킹 에이전트를 활성화합니다."""
         self.use_intelligent_chunking = True
@@ -626,7 +632,8 @@ class RAGExperimentPipeline:
         elif self.use_multi_datasets and self.dataset_names:
             logger.info(f"다중 데이터셋 모드로 데이터 로드 중...")
             documents, queries = await self.data_processor.load_multi_datasets(
-                self.dataset_names, language, self.samples_per_dataset
+                self.dataset_names, language, self.samples_per_dataset,
+                self.max_text_length, self.min_text_length
             )
         else:
             logger.info(f"기존 JSON 파일 모드로 데이터 로드 중...")
@@ -1439,6 +1446,18 @@ if __name__ == "__main__":
         "--quick_test", action="store_true",
         help="빠른 테스트 모드 (소규모 샘플, 제한된 도메인)"
     )
+    parser.add_argument(
+        "--max_text_length", type=int, default=2000,
+        help="최대 텍스트 길이 (짧은 글 실험용)"
+    )
+    parser.add_argument(
+        "--min_text_length", type=int, default=50,
+        help="최소 텍스트 길이 (너무 짧은 텍스트 필터링)"
+    )
+    parser.add_argument(
+        "--run_comparison", action="store_true",
+        help="Baseline(6개 전략) vs Agent(자동선택) 성능 비교 실험 실행"
+    )
     args = parser.parse_args()
 
     # 실험 모드 설정
@@ -1462,6 +1481,15 @@ if __name__ == "__main__":
 
 
     async def run_experiment():
+        if args.run_comparison:
+            # Baseline vs Agent 비교 실험 실행
+            await run_baseline_vs_agent_comparison(args)
+        else:
+            # 기존 단일 실험 실행
+            await run_single_experiment(args)
+
+    async def run_single_experiment(args):
+        """기존 단일 실험 실행"""
         pipeline = RAGExperimentPipeline()
         pipeline.evaluation_mode = args.mode
 
@@ -1475,9 +1503,25 @@ if __name__ == "__main__":
             pipeline.enable_embedding_storage = True
         pipeline.storage_path = Path(args.storage_path)
 
-        # 다중 데이터셋 설정
-        if args.use_multi_datasets:
-            pipeline.enable_multi_datasets(args.datasets, args.samples_per_dataset)
+        # 다중 데이터셋 설정 (기본적으로 활성화)
+        if args.use_multi_datasets or not hasattr(args, 'data_path') or not Path(args.data_path).exists():
+            # 기본 데이터셋으로 실험 실행
+            default_datasets = ["squad", "newsqa", "bioasq"] if not args.use_multi_datasets else args.datasets
+            pipeline.enable_multi_datasets(default_datasets, args.samples_per_dataset)
+            pipeline.use_multi_datasets = True
+            logger.info(f"자동으로 다중 데이터셋 모드 활성화: {default_datasets}")
+
+        # 텍스트 길이 필터링 설정
+        pipeline.max_text_length = args.max_text_length
+        pipeline.min_text_length = args.min_text_length
+
+        # 지능형 청킹을 기본으로 활성화 (명시적으로 비활성화하지 않는 한)
+        if not hasattr(args, 'use_intelligent_chunking') or args.use_intelligent_chunking:
+            if not hasattr(args, 'use_intelligent_chunking'):
+                args.use_intelligent_chunking = True
+                args.chunking_context = "balanced"
+                args.intelligent_mode = "auto_select"
+                logger.info("자동으로 지능형 청킹 모드 활성화")
 
         # 지능형 청킹 설정
         if args.use_intelligent_chunking:
@@ -1493,10 +1537,12 @@ if __name__ == "__main__":
         logger.info(f"RAG 청킹 전략 비교 연구 시작 (모드: {pipeline.evaluation_mode})")
         if args.enable_embedding_storage:
             logger.info(f"임베딩 저장 활성화: {pipeline.storage_path}")
-        if args.use_multi_datasets:
-            logger.info(f"다중 데이터셋 모드: {len(args.datasets)}개 데이터셋 ({args.samples_per_dataset}개씩)")
+        if pipeline.use_multi_datasets:
+            dataset_names = pipeline.dataset_names if hasattr(pipeline, 'dataset_names') else ["squad", "newsqa", "bioasq"]
+            logger.info(f"다중 데이터셋 모드: {len(dataset_names)}개 데이터셋 ({args.samples_per_dataset}개씩)")
         if args.use_intelligent_chunking:
             logger.info(f"지능형 청킹 활성화 (컨텍스트: {args.chunking_context}, 모드: {args.intelligent_mode})")
+        logger.info(f"텍스트 길이 설정: {args.min_text_length}~{args.max_text_length}자")
         logger.info("=" * 50)
 
         try:
@@ -1532,5 +1578,9 @@ if __name__ == "__main__":
         finally:
             logger.info("실험 종료")
 
+    async def run_baseline_vs_agent_comparison(args):
+        """Baseline vs Agent 비교 실험"""
+        from src.comparison_experiment import run_baseline_vs_agent_comparison as run_comparison
+        await run_comparison(args)
 
     asyncio.run(run_experiment())
