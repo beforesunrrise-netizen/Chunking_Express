@@ -6,7 +6,7 @@ from typing import Optional
 @dataclass
 class APIConfig:
     """API 설정 (환경변수 기반)"""
-    openai_api_key: str = os.getenv("OPENAI_API_KEY", "***REMOVED***")
+
     openai_org_id: Optional[str] = os.getenv("OPENAI_ORG_ID")
     request_timeout: int = int(os.getenv("OPENAI_REQUEST_TIMEOUT", "30"))
     max_retries: int = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
