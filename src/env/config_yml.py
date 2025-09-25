@@ -1,24 +1,16 @@
-import yaml
+import os
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
 
-# config.yml 경로
-CONFIG_PATH = Path(__file__).parent / "config.yml"
-
-# YAML 파일 로드
-with open(CONFIG_PATH, "r") as f:
-    yaml_config = yaml.safe_load(f)
-
-
 @dataclass
 class APIConfig:
-    """API 설정 (YAML 기반)"""
-    openai_api_key: str = yaml_config["openai"]["api_key"]
-    openai_org_id: Optional[str] = yaml_config["openai"].get("org_id")
-    request_timeout: int = yaml_config["openai"].get("request_timeout", 30)
-    max_retries: int = yaml_config["openai"].get("max_retries", 3)
-    retry_delay: float = yaml_config["openai"].get("retry_delay", 1.0)
+    """API 설정 (환경변수 기반)"""
+    openai_api_key: str = os.getenv("OPENAI_API_KEY", "***REMOVED***")
+    openai_org_id: Optional[str] = os.getenv("OPENAI_ORG_ID")
+    request_timeout: int = int(os.getenv("OPENAI_REQUEST_TIMEOUT", "30"))
+    max_retries: int = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
+    retry_delay: float = float(os.getenv("OPENAI_RETRY_DELAY", "1.0"))
 
 
 # 전역 인스턴스

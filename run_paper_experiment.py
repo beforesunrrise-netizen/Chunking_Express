@@ -33,14 +33,16 @@ def run_experiment():
         "--enable_embedding_storage"  # 임베딩 저장 활성화
     ]
 
-    print("실행 명령어:")
+    print("🚀 실행 명령어:")
     print(" ".join(command))
-    print("\n실험 설정:")
+    print("\n📋 실험 설정:")
     print("- 다중 데이터셋: squad, newsqa")
     print("- 각 데이터셋별 샘플 수: 300")
     print("- 평가 모드: retrieval")
-    print("- 지능형 청킹: 자동 전략 선택")
+    print("- 🤖 지능형 청킹: auto_select (Agent 자동 전략 선택)")
     print("- 컨텍스트: balanced")
+    print("\n🔍 중요: Agent가 각 문서를 분석하여 최적 전략을 자동 선택합니다!")
+    print("📊 결과는 results/strategy_analysis/ 에 저장됩니다.")
     print("\n실험 시작...")
 
     try:

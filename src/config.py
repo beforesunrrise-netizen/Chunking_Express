@@ -54,6 +54,15 @@ class ExperimentConfig:
     batch_size: int = 10
     num_workers: int = 4
 
+    # 통계 분석 관련
+    significance_level: float = 0.05
+    confidence_interval: float = 0.95
+    effect_size_threshold: float = 0.5
+
+    # 실험 모드 관련
+    paper_mode: bool = False
+    quick_test: bool = False
+
 
 @dataclass
 class EvaluationConfig:
